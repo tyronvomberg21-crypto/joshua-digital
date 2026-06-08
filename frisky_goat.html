@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frisky Goat Coffee Roastery — Thornton, Cape Town</title>
+<meta name="description" content="Specialty-grade, ethically sourced coffee roasted in Thornton, Cape Town on our Proudly-SA roaster, Frisky #1. Retail, wholesale & contract roasting. The G.O.A.T of Cape Town coffee.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0c0a08;--dark:#14110d;--card:#1c1813;--border:#2c261e;
+  --text:#f3ede2;--muted:#9a8f7d;--dim:#534b3e;
+  --accent:#d98c3f;--accent2:#f0b566;--cream:#e8dcc6;
+  --green:#25D366;
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--black);color:var(--text);line-height:1.6}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(12,10,8,0.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  padding:0 5vw;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{font-family:Georgia,serif;font-size:21px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+.nav-logo span{font-size:22px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1px;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{
+  background:var(--accent);color:var(--black);
+  font-size:13px;font-weight:700;padding:10px 20px;
+  text-decoration:none;letter-spacing:0.5px;border-radius:2px;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--accent2)}
+
+/* HERO */
+.hero{
+  min-height:92vh;padding:80px 5vw 60px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:radial-gradient(ellipse at 70% 20%,#3a2410 0%,#1a1109 45%,#0c0a08 80%);
+}
+.hero-pattern{
+  position:absolute;inset:0;z-index:0;opacity:0.05;
+  background-image:radial-gradient(circle,var(--accent) 1px,transparent 1.5px);
+  background-size:26px 26px;
+}
+.hero-steam{
+  position:absolute;right:8vw;top:14vh;z-index:1;
+  font-size:clamp(90px,16vw,220px);opacity:0.10;line-height:1;
+  filter:grayscale(0.2);user-select:none;
+}
+.hero-content{position:relative;z-index:2;max-width:680px}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin-bottom:24px;
+}
+.hero-tag::before{content:'';width:32px;height:1px;background:var(--accent)}
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(44px,6.4vw,86px);
+  font-weight:700;line-height:1.02;
+  letter-spacing:-2px;margin-bottom:22px;color:var(--cream);
+}
+h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:17px;color:var(--muted);font-weight:300;max-width:440px;margin-bottom:40px;line-height:1.75}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{
+  background:var(--accent);color:var(--black);
+  font-size:15px;font-weight:700;padding:16px 32px;border-radius:2px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:all .2s;
+}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-outline{
+  background:transparent;color:var(--text);
+  border:1px solid var(--border);border-radius:2px;
+  font-size:14px;font-weight:600;padding:16px 28px;
+  text-decoration:none;transition:all .2s;
+}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* TRUST BAR */
+.trust{
+  background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:22px 5vw;display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:center;
+}
+.trust-item{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:9px}
+.trust-item b{color:var(--cream);font-weight:600}
+
+/* SECTIONS */
+section{padding:84px 5vw}
+.section-label{
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:'';width:24px;height:1px;background:var(--accent)}
+h2{
+  font-family:Georgia,serif;
+  font-size:clamp(28px,3.6vw,46px);
+  font-weight:700;letter-spacing:-1.5px;margin-bottom:48px;line-height:1.1;color:var(--cream);
+}
+h2 em{font-style:italic;color:var(--accent)}
+
+/* ABOUT */
+.about-section{background:var(--dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-text p{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--cream);font-weight:600}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat-card{background:var(--card);border:1px solid var(--border);padding:26px;text-align:center;border-radius:3px}
+.stat-num{font-family:Georgia,serif;font-size:40px;font-weight:700;color:var(--accent);line-height:1}
+.stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+/* SHOP */
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product-card{
+  background:var(--card);border:1px solid var(--border);border-radius:4px;
+  overflow:hidden;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;
+}
+.product-card:hover{border-color:rgba(217,140,63,0.4);transform:translateY(-4px)}
+.product-top{
+  height:150px;display:flex;align-items:center;justify-content:center;
+  font-size:60px;position:relative;
+  background:linear-gradient(135deg,#241a10,#160f09);
+}
+.product-roast{
+  position:absolute;top:12px;right:12px;
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;
+  padding:5px 10px;border-radius:2px;background:rgba(217,140,63,0.15);color:var(--accent2);
+  border:1px solid rgba(217,140,63,0.3);
+}
+.product-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.product-name{font-family:Georgia,serif;font-size:21px;font-weight:700;margin-bottom:4px}
+.product-origin{font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+.product-notes{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;flex:1}
+.product-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.product-price{font-family:Georgia,serif;font-size:22px;font-weight:700;color:var(--cream)}
+.product-price small{font-size:12px;color:var(--muted);font-family:-apple-system,sans-serif;font-weight:400}
+.product-add{
+  background:var(--accent);color:var(--black);border:none;border-radius:2px;
+  font-size:13px;font-weight:700;padding:10px 16px;cursor:pointer;transition:background .2s;
+  font-family:-apple-system,sans-serif;
+}
+.product-add:hover{background:var(--accent2)}
+
+/* WHOLESALE */
+.wholesale-section{background:var(--dark)}
+.wholesale-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ws-card{
+  background:var(--card);padding:34px 28px;border:1px solid var(--border);
+  transition:border-color .2s,transform .2s;position:relative;overflow:hidden;
+}
+.ws-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.ws-card:hover{border-color:rgba(217,140,63,0.3);transform:translateY(-3px)}
+.ws-card:hover::before{transform:scaleX(1)}
+.ws-icon{font-size:30px;margin-bottom:16px;display:block}
+.ws-name{font-family:Georgia,serif;font-size:21px;font-weight:700;margin-bottom:10px}
+.ws-desc{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--card);border:1px solid var(--border);padding:30px 26px;position:relative;border-radius:3px}
+.review-card::before{
+  content:'\201C';font-family:Georgia,serif;font-size:80px;font-weight:700;
+  color:var(--accent);opacity:0.15;position:absolute;top:-6px;left:16px;line-height:1;
+}
+.stars{color:var(--accent);font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.review-text{font-size:14px;color:rgba(243,237,226,0.72);line-height:1.75;font-style:italic;margin-bottom:18px}
+.reviewer{font-size:13px;font-weight:600;color:var(--text)}
+
+/* VISIT / CONTACT */
+.visit-section{background:var(--dark)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.visit-info h3{font-family:Georgia,serif;font-size:25px;font-weight:700;margin-bottom:16px;color:var(--cream)}
+.visit-info p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px}
+.contact-item{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:14px}
+.contact-icon{
+  width:38px;height:38px;background:rgba(217,140,63,0.1);border:1px solid rgba(217,140,63,0.22);
+  display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;border-radius:3px;
+}
+.contact-label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.contact-value{color:var(--text);font-weight:500}
+.wa-big{
+  display:inline-flex;align-items:center;gap:12px;background:var(--green);color:#fff;
+  font-size:15px;font-weight:700;padding:16px 28px;text-decoration:none;margin-top:8px;border-radius:2px;
+  transition:all .2s;width:100%;justify-content:center;
+}
+.wa-big:hover{background:#20ba57}
+.wa-big svg{width:22px;height:22px;fill:#fff}
+
+/* FORM */
+.form-card{background:var(--card);border:1px solid var(--border);padding:34px;border-radius:4px}
+.form-title{font-family:Georgia,serif;font-size:21px;font-weight:700;margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:600}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;background:#231d16;border:1px solid var(--border);color:var(--text);padding:12px 14px;
+  font-family:-apple-system,sans-serif;font-size:14px;outline:none;transition:border-color .2s;border-radius:2px;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group select option{background:#231d16}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit{
+  width:100%;background:var(--accent);color:var(--black);border:none;padding:16px;border-radius:2px;
+  font-size:15px;font-weight:700;cursor:pointer;letter-spacing:0.5px;transition:background .2s;
+  font-family:-apple-system,sans-serif;margin-top:4px;
+}
+.btn-submit:hover{background:var(--accent2)}
+.form-success{display:none;text-align:center;padding:24px;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.2);border-radius:3px}
+.form-success-icon{font-size:40px;margin-bottom:12px}
+.form-success p{color:var(--green);font-weight:600}
+
+/* FOOTER */
+footer{
+  background:var(--black);border-top:1px solid var(--border);padding:34px 5vw;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+}
+.footer-logo{font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--accent)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-copy{font-size:12px;color:var(--dim)}
+.footer-built{font-size:11px;color:var(--dim)}
+.footer-built a{color:rgba(217,140,63,0.55);text-decoration:none}
+
+/* CONCEPT RIBBON */
+.concept{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--accent);color:var(--black);text-align:center;
+  font-size:12px;font-weight:600;letter-spacing:0.3px;padding:9px 16px;
+}
+.concept a{color:var(--black);font-weight:800}
+.concept b{font-weight:800}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-content>*{animation:fadeUp .7s ease both}
+.hero-content>*:nth-child(1){animation-delay:.1s}
+.hero-content>*:nth-child(2){animation-delay:.2s}
+.hero-content>*:nth-child(3){animation-delay:.3s}
+.hero-content>*:nth-child(4){animation-delay:.45s}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .about-grid,.visit-grid{grid-template-columns:1fr}
+  .shop-grid,.wholesale-grid,.reviews-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .hero-steam{display:none}
+  .trust{gap:20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>🐐</span> Frisky Goat</div>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#shop">Shop Beans</a></li>
+    <li><a href="#wholesale">Wholesale</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a href="#shop" class="nav-cta">Shop Coffee</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-steam">☕</div>
+  <div class="hero-content">
+    <div class="hero-tag">Roasted in Thornton, Cape Town</div>
+    <h1>The <em>G.O.A.T</em> of<br>Cape Town coffee.</h1>
+    <p class="hero-sub">Specialty-grade, ethically sourced, 100% arabica — roasted fresh on Frisky #1, our Proudly-South-African roaster. Greatest Of All Time, one cup at a time.</p>
+    <div class="hero-btns">
+      <a href="#shop" class="btn-primary">Shop the Beans →</a>
+      <a href="#story" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item">☕ <b>100% Arabica</b></div>
+  <div class="trust-item">🌍 <b>Ethically Sourced</b></div>
+  <div class="trust-item">🔥 <b>Roasted to Order</b></div>
+  <div class="trust-item">🇿🇦 <b>Proudly Local</b></div>
+  <div class="trust-item">🚚 <b>Nationwide Delivery</b></div>
+</div>
+
+<section id="story" class="about-section">
+  <div class="section-label">Who We Are</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Born frisky in <em>2021</em></h2>
+      <p>Frisky Goat started during lockdown with one obsession: roasting coffee good enough to earn the name <strong>G.O.A.T — Greatest Of All Time</strong>. It's also a wink to the legend of Khaldi, the Ethiopian goat-herder whose goats first discovered the buzz of the coffee cherry.</p>
+      <p>Every batch is roasted by hand in <strong>Thornton</strong> on our 6kg Genio roaster — affectionately named <strong>Frisky #1</strong> — using only specialty-grade, ethically sourced 100% arabica beans. No shortcuts, no bitterness, no nonsense.</p>
+      <p>Pop into our café for a fresh cup and a toastie, grab a bag of beans, or let us roast for your business. However you take it, we roast it to be the best in the room.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Arabica</div></div>
+      <div class="stat-card"><div class="stat-num">6kg</div><div class="stat-label">Genio roaster</div></div>
+      <div class="stat-card"><div class="stat-num">2021</div><div class="stat-label">Roasting since</div></div>
+      <div class="stat-card"><div class="stat-num">☕</div><div class="stat-label">Café in Thornton</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="section-label">Fresh Roasted</div>
+  <h2>Shop our <em>beans</em></h2>
+  <div class="shop-grid">
+
+    <div class="product-card">
+      <div class="product-top">🐐<span class="product-roast">Medium</span></div>
+      <div class="product-body">
+        <div class="product-name">Frisky House Blend</div>
+        <div class="product-origin">Signature Blend</div>
+        <div class="product-notes">Smooth, chocolatey and dangerously drinkable. Our everyday all-rounder — brilliant in a moka pot, espresso machine or french press.</div>
+        <div class="product-foot">
+          <div class="product-price">R145 <small>/ 250g</small></div>
+          <button class="product-add" onclick="orderBean('Frisky House Blend — R145/250g')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top">🇪🇹<span class="product-roast">Light</span></div>
+      <div class="product-body">
+        <div class="product-name">Ethiopia Yirgacheffe</div>
+        <div class="product-origin">Single Origin</div>
+        <div class="product-notes">Bright and floral with notes of jasmine, citrus and stone fruit. A nod to where it all began — pour-over heaven.</div>
+        <div class="product-foot">
+          <div class="product-price">R185 <small>/ 250g</small></div>
+          <button class="product-add" onclick="orderBean('Ethiopia Yirgacheffe — R185/250g')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top">🔥<span class="product-roast">Dark</span></div>
+      <div class="product-body">
+        <div class="product-name">G.O.A.T Espresso</div>
+        <div class="product-origin">Espresso Roast</div>
+        <div class="product-notes">Bold, full-bodied and built for milk. Dark chocolate, toasted hazelnut and a thick crema that begs for a flat white.</div>
+        <div class="product-foot">
+          <div class="product-price">R165 <small>/ 250g</small></div>
+          <button class="product-add" onclick="orderBean('G.O.A.T Espresso — R165/250g')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top">🌽<span class="product-roast">Medium</span></div>
+      <div class="product-body">
+        <div class="product-name">Colombia Supremo</div>
+        <div class="product-origin">Single Origin</div>
+        <div class="product-notes">Caramel sweetness, red apple and a clean nutty finish. The crowd-pleaser — easy to love, hard to put down.</div>
+        <div class="product-foot">
+          <div class="product-price">R175 <small>/ 250g</small></div>
+          <button class="product-add" onclick="orderBean('Colombia Supremo — R175/250g')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top">🌿<span class="product-roast">Medium</span></div>
+      <div class="product-body">
+        <div class="product-name">Decaf Kick</div>
+        <div class="product-origin">Swiss Water Decaf</div>
+        <div class="product-notes">All the flavour, none of the jitters. Chemical-free Swiss Water process — cocoa, brown sugar and a soft, round body.</div>
+        <div class="product-foot">
+          <div class="product-price">R175 <small>/ 250g</small></div>
+          <button class="product-add" onclick="orderBean('Decaf Kick — R175/250g')">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-top">🎁<span class="product-roast">Gift</span></div>
+      <div class="product-body">
+        <div class="product-name">The Whole Herd</div>
+        <div class="product-origin">Tasting Bundle</div>
+        <div class="product-notes">Four 250g bags of your choice + a Frisky Goat enamel mug. The perfect gift, or just spoil yourself — you've earned it.</div>
+        <div class="product-foot">
+          <div class="product-price">R650 <small>/ bundle</small></div>
+          <button class="product-add" onclick="orderBean('The Whole Herd tasting bundle — R650')">Add</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="wholesale" class="wholesale-section">
+  <div class="section-label">For Business</div>
+  <h2>Wholesale &amp; <em>contract roasting</em></h2>
+  <div class="wholesale-grid">
+    <div class="ws-card">
+      <span class="ws-icon">🏪</span>
+      <div class="ws-name">Café & Restaurant Supply</div>
+      <div class="ws-desc">Consistent, fresh-roasted beans delivered on your schedule — plus barista training and machine support to keep every cup on point.</div>
+    </div>
+    <div class="ws-card">
+      <span class="ws-icon">🏷️</span>
+      <div class="ws-name">Private Label Roasting</div>
+      <div class="ws-desc">Your brand, our craft. We roast, blend and bag under your own label — perfect for guesthouses, offices and retail.</div>
+    </div>
+    <div class="ws-card">
+      <span class="ws-icon">📦</span>
+      <div class="ws-name">Office & Bulk Orders</div>
+      <div class="ws-desc">Keep the team caffeinated. Bulk bags and recurring deliveries for offices, events and Airbnbs across Cape Town and beyond.</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-label">Word on the Street</div>
+  <h2>What the herd <em>says</em></h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Easily the best coffee I've found in the northern suburbs. The House Blend is my daily and the café team are absolute legends. Worth the drive to Thornton."</div>
+      <div class="reviewer">— Megan R.</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"We switched our café over to Frisky Goat six months ago and our customers immediately noticed. Fresh, consistent, and the support is first-class."</div>
+      <div class="reviewer">— Daniël, café owner</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"That G.O.A.T Espresso makes the smoothest flat white I've ever had at home. Order arrived two days later, roasted that week. Customer for life."</div>
+      <div class="reviewer">— Sind­hu P.</div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit-section">
+  <div class="section-label">Come Say Hi</div>
+  <h2>Visit the <em>roastery</em></h2>
+  <div class="visit-grid">
+
+    <div class="visit-info">
+      <h3>26 Thor Circle, Thornton</h3>
+      <p>Watch Frisky #1 do its thing, grab a fresh cup and a toastie, and take home beans roasted just metres away. Fastest way to order beans or set up wholesale? Message us on WhatsApp — we usually reply within the hour.</p>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone / WhatsApp</div>
+          <div class="contact-value">064 809 8976</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Roastery & Café</div>
+          <div class="contact-value">26 Thor Circle, Thornton, Cape Town, 7460</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-label">Café Hours</div>
+          <div class="contact-value">Mon–Fri: 7:30am – 2:30pm</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">info@friskygoat.co.za</div>
+        </div>
+      </div>
+      <a href="https://wa.me/27648098976?text=Hi%20Frisky%20Goat!%20I'd%20like%20to%20order%20some%20beans." class="wa-big" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.886c-.073.267.163.504.43.43l6.086-1.474A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.863 9.863 0 01-5.022-1.374l-.36-.214-3.733.904.922-3.67-.235-.376A9.862 9.862 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118c5.466 0 9.882 4.415 9.882 9.882 0 5.466-4.416 9.882-9.882 9.882z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+
+    <div class="form-card" id="orderForm">
+      <div class="form-title">Order or enquire</div>
+      <div class="form-sub">Beans, wholesale or just a question — drop your details and we'll sort you out via WhatsApp.</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="fname" placeholder="e.g. Megan">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="fphone" placeholder="e.g. 082 555 0101">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>What can we get you?</label>
+        <select id="ftype">
+          <option value="">Choose...</option>
+          <option value="Retail beans (home)">Retail beans — for home</option>
+          <option value="Wholesale / café supply">Wholesale / café supply</option>
+          <option value="Private label roasting">Private label roasting</option>
+          <option value="Office / bulk order">Office / bulk order</option>
+          <option value="General enquiry">General enquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell us more (optional)</label>
+        <textarea id="fnotes" placeholder="e.g. 2x House Blend, 1x G.O.A.T Espresso — whole bean please"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitOrder()">Send via WhatsApp →</button>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">✅</div>
+        <p>Opening WhatsApp with your order...</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">🐐 Frisky Goat</div>
+  <div class="footer-links">
+    <a href="#story">Story</a>
+    <a href="#shop">Shop</a>
+    <a href="#wholesale">Wholesale</a>
+    <a href="#visit">Visit</a>
+  </div>
+  <div>
+    <div class="footer-copy">© 2026 Frisky Goat Coffee Roastery · Thornton, Cape Town</div>
+    <div class="footer-built">Concept redesign by <a href="#">Joshua.digital</a></div>
+  </div>
+</footer>
+
+<div class="concept">
+  ☕ <b>Concept mockup</b> — a modern redesign idea for Frisky Goat, built by <a href="#">Joshua.digital</a>. Not the live site.
+</div>
+
+<script>
+function orderBean(item){
+  var msg = 'Hi Frisky Goat! I would like to order: ' + item;
+  window.open('https://wa.me/27648098976?text=' + encodeURIComponent(msg), '_blank');
+}
+
+function submitOrder(){
+  var name  = document.getElementById('fname').value.trim();
+  var phone = document.getElementById('fphone').value.trim();
+  var type  = document.getElementById('ftype').value;
+  var notes = document.getElementById('fnotes').value.trim();
+
+  if(!name || !phone || !type){
+    alert('Please fill in your name, phone number, and what you need.');
+    return;
+  }
+
+  var msg = 'Hi Frisky Goat!\n\n'
+    + 'Name: ' + name + '\n'
+    + 'Phone: ' + phone + '\n'
+    + 'Looking for: ' + type + '\n'
+    + (notes ? 'Details: ' + notes : '');
+
+  document.getElementById('formSuccess').style.display = 'block';
+
+  setTimeout(function(){
+    window.open('https://wa.me/27648098976?text=' + encodeURIComponent(msg), '_blank');
+  }, 600);
+}
+</script>
+</body>
+</html>
