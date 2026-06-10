@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polish Me — Nail Studio, Wynberg · Cape Town</title>
+<meta name="description" content="Polish Me — boutique home nail studio in Wynberg, Cape Town. Gel polish, gel & acrylic extensions and custom nail art. Book your set on WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#faf5f3;--paper:#fffdfc;--soft:#f3e9e6;--line:#ecdfdb;
+  --ink:#3a2d2c;--muted:#9b897f;--dim:#cbb8b0;
+  --mauve:#a96e7c;--mauve-d:#8a5563;--lilac:#efe2e6;--rosegold:#c19a78;
+  --green:#25D366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(250,245,243,0.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);padding:0 5vw;height:66px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;letter-spacing:0.5px;display:flex;align-items:center;gap:8px}
+.nav-logo span{color:var(--mauve)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1.3px;transition:color .2s}
+.nav-links a:hover{color:var(--mauve)}
+.nav-cta{background:var(--mauve);color:#fff;font-size:13px;font-weight:500;padding:10px 22px;text-decoration:none;letter-spacing:0.5px;border-radius:40px;transition:background .2s}
+.nav-cta:hover{background:var(--mauve-d)}
+
+.hero{min-height:88vh;padding:90px 5vw 70px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 82% 5%,var(--lilac) 0%,transparent 55%),radial-gradient(ellipse at 0% 100%,#f4ebe7 0%,transparent 50%),var(--bg)}
+.hero-content{position:relative;z-index:2;max-width:560px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mauve);font-weight:600;margin-bottom:22px}
+.hero-tag::before{content:'';width:30px;height:1px;background:var(--mauve)}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6.4vw,82px);font-weight:600;line-height:1.02;letter-spacing:-0.5px;margin-bottom:20px}
+h1 em{font-style:italic;color:var(--mauve)}
+.hero-sub{font-size:17px;color:var(--muted);font-weight:300;max-width:420px;margin-bottom:36px;line-height:1.75}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--mauve);color:#fff;font-size:15px;font-weight:500;padding:15px 30px;border-radius:40px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .2s}
+.btn-primary:hover{background:var(--mauve-d);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--dim);border-radius:40px;font-size:14px;font-weight:500;padding:15px 28px;text-decoration:none;transition:all .2s}
+.btn-outline:hover{border-color:var(--mauve);color:var(--mauve)}
+.hero-art{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
+.hero-disc{width:min(420px,82%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff 0%,var(--lilac) 58%,var(--mauve) 130%);
+  display:flex;align-items:center;justify-content:center;font-size:clamp(120px,19vw,200px);box-shadow:0 40px 80px -30px rgba(169,110,124,0.55);position:relative}
+.hero-disc::after{content:'';position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--lilac)}
+.hero-spark{position:absolute;font-size:26px;opacity:0.85;animation:tw 5s ease-in-out infinite}
+.hero-spark.s1{top:8%;left:16%}.hero-spark.s2{bottom:12%;right:12%;animation-delay:1.6s}.hero-spark.s3{top:42%;right:3%;font-size:18px;animation-delay:3s}
+@keyframes tw{0%,100%{transform:scale(0.9);opacity:0.5}50%{transform:scale(1.15);opacity:1}}
+
+.trust{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 5vw;display:flex;gap:42px;flex-wrap:wrap;justify-content:center;align-items:center}
+.trust-item{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
+.trust-item b{color:var(--ink);font-weight:600}
+
+section{padding:88px 5vw}
+.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mauve);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:24px;height:1px;background:var(--mauve)}
+.section-label.center{justify-content:center}.section-label.center::before{display:none}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.2vw,52px);font-weight:600;letter-spacing:-0.3px;margin-bottom:46px;line-height:1.1}
+h2 em{font-style:italic;color:var(--mauve)}
+.center{text-align:center}
+
+.about-section{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:54px;align-items:center}
+.about-visual{aspect-ratio:4/5;border-radius:8px;background:linear-gradient(160deg,var(--lilac),#fff 70%);display:flex;align-items:center;justify-content:center;font-size:130px;box-shadow:0 30px 60px -34px rgba(169,110,124,0.5)}
+.about-text p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:18px}
+.about-text p:last-child{margin-bottom:0}.about-text strong{color:var(--ink);font-weight:600}
+.signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;color:var(--mauve);margin-top:24px}
+
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px}
+.menu-card{background:var(--paper);padding:28px 30px;border:1px solid var(--line);transition:border-color .2s,transform .2s;position:relative;overflow:hidden;display:flex;align-items:center;gap:20px}
+.menu-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--mauve);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.menu-card:hover{border-color:rgba(169,110,124,0.4);transform:translateY(-3px)}
+.menu-card:hover::before{transform:scaleY(1)}
+.menu-icon{font-size:32px;flex-shrink:0}
+.menu-main{flex:1}
+.menu-name{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;margin-bottom:2px}
+.menu-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.menu-price{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--mauve);flex-shrink:0}
+
+.gallery-section{background:var(--paper)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery-tile{aspect-ratio:1;border-radius:10px;background:linear-gradient(150deg,var(--soft),var(--lilac));display:flex;align-items:center;justify-content:center;font-size:46px;transition:transform .25s}
+.gallery-tile:hover{transform:scale(1.04)}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:30px 26px;position:relative}
+.stars{color:var(--rosegold);font-size:14px;letter-spacing:3px;margin-bottom:14px}
+.review-text{font-size:14.5px;color:#6f615b;line-height:1.78;font-style:italic;margin-bottom:18px;font-family:'Cormorant Garamond',serif;font-size:17px}
+.reviewer{font-size:13px;font-weight:600;color:var(--ink)}
+
+.book-section{background:linear-gradient(160deg,var(--lilac) 0%,var(--bg) 45%)}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.book-info h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:16px}
+.book-info p{font-size:14.5px;color:var(--muted);line-height:1.78;margin-bottom:24px}
+.contact-item{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:14px}
+.contact-icon{width:40px;height:40px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;border-radius:50%}
+.contact-label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.contact-value{color:var(--ink);font-weight:500}
+.wa-big{display:inline-flex;align-items:center;gap:12px;background:var(--green);color:#fff;font-size:15px;font-weight:600;padding:15px 28px;text-decoration:none;margin-top:10px;border-radius:40px;transition:all .2s;width:100%;justify-content:center}
+.wa-big:hover{background:#20ba57}.wa-big svg{width:22px;height:22px;fill:#fff}
+
+.form-card{background:var(--paper);border:1px solid var(--line);padding:34px;border-radius:12px;box-shadow:0 30px 60px -40px rgba(58,45,44,0.3)}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:600}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:12px 14px;font-family:'Outfit';font-size:14px;outline:none;transition:border-color .2s;border-radius:8px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--mauve)}
+.form-group select option{background:#fff}.form-group textarea{resize:vertical;min-height:80px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit{width:100%;background:var(--mauve);color:#fff;border:none;padding:16px;border-radius:40px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;font-family:'Outfit';margin-top:4px}
+.btn-submit:hover{background:var(--mauve-d)}
+.form-success{display:none;text-align:center;padding:24px;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);border-radius:8px}
+.form-success-icon{font-size:40px;margin-bottom:12px}.form-success p{color:#1c9b4e;font-weight:600}
+
+footer{background:var(--paper);border-top:1px solid var(--line);padding:36px 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700}
+.footer-logo span{color:var(--mauve)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
+.footer-links a:hover{color:var(--mauve)}
+.footer-copy{font-size:12px;color:var(--dim)}
+.footer-built{font-size:11px;color:var(--dim)}.footer-built a{color:var(--mauve);text-decoration:none;opacity:0.75}
+
+.concept{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--mauve);color:#fff;text-align:center;font-size:12px;font-weight:500;letter-spacing:0.2px;padding:9px 16px}
+.concept a{color:#fff;font-weight:700}.concept b{font-weight:700}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-content>*{animation:fadeUp .7s ease both}
+.hero-content>*:nth-child(1){animation-delay:.1s}.hero-content>*:nth-child(2){animation-delay:.2s}
+.hero-content>*:nth-child(3){animation-delay:.3s}.hero-content>*:nth-child(4){animation-delay:.45s}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;text-align:center}.hero-content{margin:0 auto}
+  .hero-tag,.section-label{justify-content:center}.hero-art{order:-1}
+  .about-grid,.book-grid{grid-template-columns:1fr}
+  .menu-grid,.reviews-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}
+  .about-visual{max-width:320px;margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Polish <span>Me</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#book">Book</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">Book a Set</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Boutique Nail Studio · Wynberg</div>
+    <h1>Nails worth <em>showing off</em>.</h1>
+    <p class="hero-sub">Gel polish, extensions and custom nail art, done with care in a cosy home studio in Wynberg. Sit back, switch off, and leave with a set you can't stop staring at.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">View the Menu →</a>
+      <a href="#book" class="btn-outline">Book Your Set</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-disc">
+      💅
+      <span class="hero-spark s1">✨</span><span class="hero-spark s2">💖</span><span class="hero-spark s3">✨</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item">💅 <b>Gel & Acrylic</b></div>
+  <div class="trust-item">🎨 <b>Custom Nail Art</b></div>
+  <div class="trust-item">🏡 <b>Cosy Home Studio</b></div>
+  <div class="trust-item">✨ <b>Hygiene First</b></div>
+  <div class="trust-item">📍 <b>Wynberg, Cape Town</b></div>
+</div>
+
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-visual">💖</div>
+    <div class="about-text">
+      <div class="section-label">The Studio</div>
+      <h2>Your me-time, <em>perfected</em></h2>
+      <p>Welcome to <strong>Polish Me</strong> — a boutique nail studio tucked away in Wynberg, where it's just you, good vibes, and a fresh set going on. No rushed conveyor-belt salon energy here.</p>
+      <p>I specialise in <strong>long-lasting gel</strong>, <strong>gel & acrylic extensions</strong> and <strong>custom nail art</strong> — from clean and classy to full glam. Every set is shaped, prepped and finished properly, so your nails stay flawless for weeks.</p>
+      <p>Booked through a quick WhatsApp, done in a relaxed space, and posted to the gram before you've even left. Come treat yourself.</p>
+      <div class="signature">— Polish Me 💅</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="section-label">Nail Menu</div>
+  <h2>Services &amp; <em>prices</em></h2>
+  <div class="menu-grid">
+    <div class="menu-card"><span class="menu-icon">💅</span><div class="menu-main"><div class="menu-name">Gel Overlay</div><div class="menu-desc">Gel on your natural nails — strong, glossy, chip-free.</div></div><div class="menu-price">R250</div></div>
+    <div class="menu-card"><span class="menu-icon">💎</span><div class="menu-main"><div class="menu-name">Gel Extensions</div><div class="menu-desc">Added length & shape with a flawless gel finish.</div></div><div class="menu-price">R350</div></div>
+    <div class="menu-card"><span class="menu-icon">✨</span><div class="menu-main"><div class="menu-name">Acrylic Full Set</div><div class="menu-desc">Durable acrylic sculpted to your perfect shape.</div></div><div class="menu-price">R380</div></div>
+    <div class="menu-card"><span class="menu-icon">🎨</span><div class="menu-main"><div class="menu-name">Nail Art</div><div class="menu-desc">Chrome, French, hand-painted designs & more.</div></div><div class="menu-price">from R40</div></div>
+    <div class="menu-card"><span class="menu-icon">🤍</span><div class="menu-main"><div class="menu-name">Luxury Manicure</div><div class="menu-desc">Shape, cuticle care, buff & gloss. Pure pamper.</div></div><div class="menu-price">R220</div></div>
+    <div class="menu-card"><span class="menu-icon">🧖‍♀️</span><div class="menu-main"><div class="menu-name">Soak-off & Refresh</div><div class="menu-desc">Gentle removal plus a brand-new set.</div></div><div class="menu-price">R150</div></div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+  <div class="section-label center">Recent Sets</div>
+  <h2 class="center">A little <em>inspo</em></h2>
+  <div class="gallery-grid">
+    <div class="gallery-tile">💅</div><div class="gallery-tile">✨</div><div class="gallery-tile">🎨</div><div class="gallery-tile">💖</div>
+    <div class="gallery-tile">🤍</div><div class="gallery-tile">💎</div><div class="gallery-tile">🌸</div><div class="gallery-tile">💅</div>
+  </div>
+  <p class="center" style="margin-top:24px;color:var(--muted);font-size:14px">Swap these for real photos from <a href="https://www.instagram.com/polishmecpt/" style="color:var(--mauve)">@polishmecpt</a> 💕</p>
+</section>
+
+<section id="reviews">
+  <div class="section-label center">Happy Clients</div>
+  <h2 class="center">What they <em>say</em></h2>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Best nail tech in the southern suburbs! My gel set lasted nearly four weeks and the art was exactly what I asked for. The studio is so cosy too."</div><div class="reviewer">— Tasneem</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Booked on WhatsApp, super easy, and she took her time to get everything perfect. Obsessed with my nails every single time. My happy place!"</div><div class="reviewer">— Chloé</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Hands down the most relaxing nail appointment I've had. Beautiful work, spotless hygiene, and the chrome finish is unreal. Highly recommend."</div><div class="reviewer">— Aneeqah</div></div>
+  </div>
+</section>
+
+<section id="book" class="book-section">
+  <div class="book-grid">
+    <div class="book-info">
+      <div class="section-label">Get Booked In</div>
+      <h2>Reserve your <em>appointment</em></h2>
+      <p>Slots fill up fast, especially weekends! Send a quick WhatsApp with your preferred set and day, and I'll confirm your time. Can't wait to do your nails. 💕</p>
+      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">WhatsApp</div><div class="contact-value">065 611 3957</div></div></div>
+      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Studio</div><div class="contact-value">Wynberg, Cape Town</div></div></div>
+      <div class="contact-item"><div class="contact-icon">📸</div><div><div class="contact-label">Instagram</div><div class="contact-value">@polishmecpt</div></div></div>
+      <a href="#" id="waBig" class="wa-big" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.886c-.073.267.163.504.43.43l6.086-1.474A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.863 9.863 0 01-5.022-1.374l-.36-.214-3.733.904.922-3.67-.235-.376A9.862 9.862 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118c5.466 0 9.882 4.415 9.882 9.882 0 5.466-4.416 9.882-9.882 9.882z"/></svg>
+        Book on WhatsApp
+      </a>
+    </div>
+    <div class="form-card">
+      <div class="form-title">Request a slot</div>
+      <div class="form-sub">Pop in your details and I'll confirm on WhatsApp 💕</div>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" id="fname" placeholder="e.g. Chloé"></div>
+        <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" id="fphone" placeholder="e.g. 082 555 0101"></div>
+      </div>
+      <div class="form-group"><label>Service</label>
+        <select id="fservice">
+          <option value="">Choose a service...</option>
+          <option value="Gel Overlay - R250">Gel Overlay — R250</option>
+          <option value="Gel Extensions - R350">Gel Extensions — R350</option>
+          <option value="Acrylic Full Set - R380">Acrylic Full Set — R380</option>
+          <option value="Nail Art add-on">Nail Art (add-on)</option>
+          <option value="Luxury Manicure - R220">Luxury Manicure — R220</option>
+          <option value="Soak-off & Refresh - R150">Soak-off & Refresh — R150</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Preferred Date</label><input type="date" id="fdate"></div>
+        <div class="form-group"><label>Preferred Time</label>
+          <select id="ftime"><option value="">Choose time...</option>
+            <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+            <option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label>Any design ideas? (optional)</label><textarea id="fnotes" placeholder="e.g. almond shape, chrome French, soft pink"></textarea></div>
+      <button class="btn-submit" onclick="submitBooking()">Book via WhatsApp →</button>
+      <div class="form-success" id="formSuccess"><div class="form-success-icon">💅</div><p>Opening WhatsApp with your booking...</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Polish <span>Me</span></div>
+  <div class="footer-links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#book">Book</a></div>
+  <div>
+    <div class="footer-copy">© 2026 Polish Me · Wynberg, Cape Town</div>
+    <div class="footer-built">Concept design by <a href="#">Joshua.digital</a></div>
+  </div>
+</footer>
+
+<div class="concept">💅 <b>Concept mockup</b> — a website idea for Polish Me, designed by <a href="#">Joshua.digital</a>. Not the live site.</div>
+
+<script>
+var PHONE = "27656113957"; // Polish Me WhatsApp
+function waLink(t){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(t);}
+document.getElementById('waBig').href = waLink("Hi Polish Me! I'd love to book a set 💅");
+
+function submitBooking(){
+  var name=document.getElementById('fname').value.trim();
+  var phone=document.getElementById('fphone').value.trim();
+  var service=document.getElementById('fservice').value;
+  var date=document.getElementById('fdate').value;
+  var time=document.getElementById('ftime').value;
+  var notes=document.getElementById('fnotes').value.trim();
+  if(!name||!phone||!service){alert('Please add your name, phone number, and choose a service.');return;}
+  var msg='Hi Polish Me! I would love to book a set 💅\n\n'
+    +'Name: '+name+'\n'+'Phone: '+phone+'\n'+'Service: '+service+'\n'
+    +(date?'Date: '+date+'\n':'')+(time?'Time: '+time+'\n':'')+(notes?'Design: '+notes:'');
+  document.getElementById('formSuccess').style.display='block';
+  setTimeout(function(){window.open(waLink(msg),'_blank');},600);
+}
+var today=new Date().toISOString().split('T')[0];
+document.getElementById('fdate').min=today;
+</script>
+</body>
+</html>
