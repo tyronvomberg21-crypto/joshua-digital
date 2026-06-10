@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packages & Pricing — Joshua.digital</title>
+<meta name="description" content="Beautiful, conversion-focused websites for Cape Town small businesses. Simple monthly plans — hosting, domain & updates included.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0c0b;--bg2:#131210;--surface:#1a1815;--card:#1f1d19;--border:rgba(255,255,255,0.08);
+  --text:#f0ece4;--muted:#8a8479;--dim:#56504a;--accent:#ff5c1a;--accent2:#ff8c5a;--gold:#d4a843;--green:#25D366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(13,12,11,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+  padding:0 6vw;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-size:21px;font-weight:700}
+.nav-logo span{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;border-radius:40px;transition:background .2s}
+.nav-cta:hover{background:var(--accent2)}
+
+.hero{text-align:center;padding:80px 6vw 40px;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 50% -10%,rgba(255,92,26,0.12) 0%,transparent 60%)}
+.tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5.5vw,64px);font-weight:700;line-height:1.05;letter-spacing:-1px;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--muted);font-size:17px;max-width:520px;margin:0 auto;line-height:1.7}
+
+.plans{padding:50px 6vw 30px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px;margin:0 auto}
+.plan{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:34px 30px;display:flex;flex-direction:column;position:relative;transition:transform .25s,border-color .25s}
+.plan:hover{transform:translateY(-6px);border-color:rgba(255,92,26,0.4)}
+.plan.featured{border-color:var(--accent);background:linear-gradient(180deg,rgba(255,92,26,0.07),var(--card))}
+.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:30px}
+.plan-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:4px}
+.plan-for{font-size:13px;color:var(--muted);margin-bottom:22px;min-height:38px}
+.plan-price{display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+.plan-price .amt{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--accent2)}
+.plan-price .per{font-size:14px;color:var(--muted)}
+.plan-setup{font-size:13px;color:var(--muted);margin-bottom:24px}
+.plan-setup b{color:var(--text)}
+.feat{list-style:none;margin-bottom:28px;flex:1}
+.feat li{font-size:14px;color:#cfc9bd;padding:9px 0 9px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,0.04)}
+.feat li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700}
+.plan-btn{display:block;text-align:center;background:var(--surface);color:var(--text);border:1px solid var(--border);
+  padding:14px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s}
+.plan-btn:hover{border-color:var(--accent);color:var(--accent2)}
+.plan.featured .plan-btn{background:var(--accent);color:#fff;border-color:var(--accent)}
+.plan.featured .plan-btn:hover{background:var(--accent2)}
+
+.included{max-width:1100px;margin:10px auto 0;padding:20px 6vw;text-align:center;color:var(--muted);font-size:14px}
+.included b{color:var(--text)}
+
+.founding{max-width:760px;margin:46px auto;padding:34px 36px;background:linear-gradient(135deg,rgba(212,168,67,0.12),var(--surface));
+  border:1px solid rgba(212,168,67,0.35);border-radius:14px;text-align:center}
+.founding .tag{color:var(--gold)}
+.founding h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;margin-bottom:10px}
+.founding p{color:var(--muted);font-size:15px;line-height:1.7;max-width:540px;margin:0 auto}
+.founding .big{color:var(--gold);font-weight:700}
+
+.addons{max-width:1100px;margin:40px auto;padding:0 6vw}
+.addons h2,.faq h2{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;text-align:center;margin-bottom:28px}
+.addons h2 em,.faq h2 em{font-style:italic;color:var(--accent)}
+.addon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.addon{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px 18px;text-align:center}
+.addon-icon{font-size:26px;margin-bottom:8px}
+.addon-name{font-size:14px;font-weight:600;margin-bottom:4px}
+.addon-price{font-family:'Playfair Display',serif;font-size:18px;color:var(--accent2);font-weight:700}
+
+.faq{max-width:760px;margin:50px auto;padding:0 6vw}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
+.faq-q{font-size:16px;font-weight:600;margin-bottom:8px}
+.faq-a{font-size:14.5px;color:var(--muted);line-height:1.7}
+
+.cta{text-align:center;padding:60px 6vw 90px}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:700;margin-bottom:14px}
+.cta h2 em{font-style:italic;color:var(--accent)}
+.cta p{color:var(--muted);margin-bottom:28px;font-size:16px}
+.cta-btn{background:var(--accent);color:#fff;font-size:16px;font-weight:600;padding:16px 36px;border-radius:40px;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-btn:hover{background:var(--accent2);transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--border);padding:30px 6vw;text-align:center;color:var(--dim);font-size:13px}
+footer .footer-logo{font-family:'Playfair Display',serif;font-size:17px;color:var(--text);margin-bottom:6px}
+footer .footer-logo span{color:var(--accent)}
+
+@media(max-width:860px){
+  .plans{grid-template-columns:1fr;max-width:420px}
+  .addon-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Joshua<span>.digital</span></div>
+  <a href="#contact" class="nav-cta">Get Started</a>
+</nav>
+
+<section class="hero">
+  <div class="tag">Websites for Small Business</div>
+  <h1>A beautiful website,<br>for the price of <em>one client a month</em>.</h1>
+  <p>Conversion-focused websites for Cape Town businesses — designed, hosted and looked after for you. Simple monthly plans, no big upfront bill, cancel anytime.</p>
+</section>
+
+<div class="plans">
+
+  <div class="plan">
+    <div class="plan-name">Starter</div>
+    <div class="plan-for">Perfect for a single-page site — barbers, bakers, cafés & solo businesses.</div>
+    <div class="plan-price"><span class="amt">R299</span><span class="per">/ month</span></div>
+    <div class="plan-setup">+ <b>R1,200</b> once-off setup</div>
+    <ul class="feat">
+      <li>Custom one-page website</li>
+      <li>WhatsApp ordering / booking</li>
+      <li>Mobile-perfect design</li>
+      <li>Hosting + your domain included</li>
+      <li>2 small edits / month</li>
+      <li>WhatsApp support</li>
+    </ul>
+    <a href="#contact" class="plan-btn">Choose Starter</a>
+  </div>
+
+  <div class="plan featured">
+    <div class="plan-badge">Most Popular</div>
+    <div class="plan-name">Standard</div>
+    <div class="plan-for">A bigger site — galleries, multiple sections, full product or service menus.</div>
+    <div class="plan-price"><span class="amt">R449</span><span class="per">/ month</span></div>
+    <div class="plan-setup">+ <b>R2,000</b> once-off setup</div>
+    <ul class="feat">
+      <li>Everything in Starter, plus:</li>
+      <li>Multi-section / multi-page site</li>
+      <li>Photo gallery & product showcase</li>
+      <li>Google / maps & socials integrated</li>
+      <li>4 edits / month</li>
+      <li>Basic SEO setup</li>
+    </ul>
+    <a href="#contact" class="plan-btn">Choose Standard</a>
+  </div>
+
+  <div class="plan">
+    <div class="plan-name">Pro</div>
+    <div class="plan-for">The full package — multi-page, bookings, and everything dialled in.</div>
+    <div class="plan-price"><span class="amt">R699</span><span class="per">/ month</span></div>
+    <div class="plan-setup">+ <b>R3,500</b> once-off setup</div>
+    <ul class="feat">
+      <li>Everything in Standard, plus:</li>
+      <li>Full multi-page website</li>
+      <li>Online booking / enquiry system</li>
+      <li>Priority support</li>
+      <li>Unlimited small edits</li>
+      <li>Monthly performance check-in</li>
+    </ul>
+    <a href="#contact" class="plan-btn">Choose Pro</a>
+  </div>
+
+</div>
+
+<div class="included">🔒 <b>No lock-in.</b> Every plan includes hosting, your own domain and updates. Cancel any time — your site, your call.</div>
+
+<div class="founding">
+  <div class="tag">Limited — First Clients Only</div>
+  <h3>🎁 Founding Client Offer</h3>
+  <p>Be one of my first Cape Town clients and get <span class="big">R0 setup + just R199/month</span> — in exchange for a quick review and letting me feature your site in my portfolio. Only a few spots.</p>
+</div>
+
+<section class="addons">
+  <h2>Optional <em>add-ons</em></h2>
+  <div class="addon-grid">
+    <div class="addon"><div class="addon-icon">🎨</div><div class="addon-name">Logo Design</div><div class="addon-price">R500</div></div>
+    <div class="addon"><div class="addon-icon">📸</div><div class="addon-name">Pro Photos</div><div class="addon-price">R600</div></div>
+    <div class="addon"><div class="addon-icon">✍️</div><div class="addon-name">Written Copy</div><div class="addon-price">R400</div></div>
+    <div class="addon"><div class="addon-icon">📄</div><div class="addon-name">Extra Page</div><div class="addon-price">R350</div></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Common <em>questions</em></h2>
+  <div class="faq-item">
+    <div class="faq-q">Why monthly instead of one big payment?</div>
+    <div class="faq-a">It keeps your upfront cost low and means your site is always hosted, updated and looked after — you're never left with a site that breaks and no one to fix it. If it brings you one extra customer a month, it's already paid for itself.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do I own my website?</div>
+    <div class="faq-a">Yes. The domain is registered in your name and the site is yours. No lock-in contracts — cancel whenever you like.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How long does it take?</div>
+    <div class="faq-a">Most one-page sites go live within a few days of getting your details and photos. Bigger sites take about a week.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if I need changes later?</div>
+    <div class="faq-a">That's what the monthly covers — just WhatsApp me your changes (new prices, photos, hours) and I'll handle them.</div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Let's get you <em>online</em>.</h2>
+  <p>Tell me about your business and I'll build you a free concept — no obligation.</p>
+  <a href="mailto:hello@joshua.digital?subject=I'd%20like%20a%20website" class="cta-btn">Get My Free Concept →</a>
+</section>
+
+<footer>
+  <div class="footer-logo">Joshua<span>.digital</span></div>
+  <div>Digital Growth Studio · Cape Town · hello@joshua.digital</div>
+</footer>
+
+</body>
+</html>
