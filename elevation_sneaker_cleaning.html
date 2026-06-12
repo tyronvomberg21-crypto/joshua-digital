@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elevation Sneaker Cleaning — Cape Town · Pickup & Delivery</title>
+<meta name="description" content="Elevation Sneaker Cleaning — pro sneaker cleaning & restoration in Cape Town. Pickup & delivery across Lansdowne, Kenwyn & Milnerton. Bring your kicks back to life.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4f6f4;--paper:#ffffff;--soft:#eaeee9;--line:#e0e5df;--ink:#15191c;
+  --muted:#71807a;--dim:#aab4ad;
+  --green:#10b981;--green-d:#0d9268;--mint:#d7f5ea;--lime:#bff35e;--char:#15191c;
+  --wa:#25D366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(244,246,244,0.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+  padding:0 6vw;height:70px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+.nav-logo .mark{width:30px;height:30px;background:var(--ink);color:var(--lime);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:11px 22px;text-decoration:none;border-radius:40px;transition:all .2s}
+.nav-cta:hover{background:var(--green);transform:translateY(-1px)}
+
+.hero{padding:80px 6vw 70px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;right:-5%;width:50%;height:140%;background:radial-gradient(ellipse,var(--mint),transparent 70%);z-index:0;filter:blur(10px)}
+.hero-left{position:relative;z-index:2;max-width:580px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);font-size:12px;font-weight:600;
+  color:var(--ink);padding:8px 16px;border-radius:40px;margin-bottom:24px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,0.18)}
+h1{font-family:'Sora',sans-serif;font-size:clamp(42px,6vw,80px);font-weight:800;line-height:0.98;letter-spacing:-2.5px;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--green)}
+.hero-sub{font-size:18px;color:var(--muted);max-width:440px;margin-bottom:36px;line-height:1.7;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-dark{background:var(--ink);color:#fff;font-size:15px;font-weight:600;padding:16px 30px;border-radius:40px;text-decoration:none;transition:all .2s}
+.btn-dark:hover{background:var(--green);transform:translateY(-2px)}
+.btn-ghost{color:var(--ink);font-size:15px;font-weight:600;text-decoration:none;padding:16px 8px;border-bottom:2px solid var(--lime);transition:border-color .2s}
+.btn-ghost:hover{border-color:var(--green)}
+/* hero before/after card */
+.hero-right{position:relative;z-index:2}
+.ba-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 40px 80px -40px rgba(21,25,28,0.35)}
+.ba-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ba-tile{border-radius:14px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:54px}
+.ba-tile.before{background:linear-gradient(160deg,#e6e3dc,#d3cfc4)}
+.ba-tile.after{background:linear-gradient(160deg,var(--mint),#fff)}
+.ba-label{font-family:'Sora',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.ba-tile.after .ba-label{color:var(--green-d)}
+.ba-foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding:4px 6px}
+.ba-foot b{font-family:'Sora',sans-serif;font-size:14px}
+.ba-foot span{font-size:12px;color:var(--muted)}
+
+.stats{background:var(--ink);color:#fff;padding:30px 6vw;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .n{font-family:'Sora',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--lime);line-height:1}
+.stat .l{font-size:12px;color:#9aa6a0;text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+section{padding:90px 6vw}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green-d);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--green)}
+.eyebrow.center{justify-content:center}.eyebrow.center::before{display:none}
+h2{font-family:'Sora',sans-serif;font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-1.2px;margin-bottom:46px;line-height:1.04}
+h2 em{font-style:normal;color:var(--green)}
+.center{text-align:center}
+
+.about-section{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.about-text p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:18px}.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--ink);font-weight:600}
+.about-visual{aspect-ratio:1;border-radius:24px;background:linear-gradient(150deg,var(--ink),#2a3138);display:flex;align-items:center;justify-content:center;font-size:130px;position:relative;overflow:hidden}
+.about-visual::after{content:'ELEVATION';position:absolute;bottom:18px;font-family:'Sora',sans-serif;font-size:13px;letter-spacing:6px;color:var(--lime);font-weight:700}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(21,25,28,0.25)}
+.price-card.pop{background:var(--ink);color:#fff;border-color:var(--ink)}
+.price-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green-d);margin-bottom:14px}
+.price-card.pop .price-tag{color:var(--lime)}
+.price-name{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px}
+.price-amt{font-family:'Sora',sans-serif;font-size:38px;font-weight:800;color:var(--green);margin-bottom:4px}
+.price-card.pop .price-amt{color:var(--lime)}
+.price-amt small{font-size:14px;color:var(--muted);font-weight:400;font-family:'Hanken Grotesk'}
+.price-card.pop .price-amt small{color:#9aa6a0}
+.price-desc{font-size:13.5px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.price-card.pop .price-desc{color:#b8c1bb}
+.price-list{list-style:none;flex:1;margin-bottom:24px}
+.price-list li{font-size:13.5px;padding:8px 0 8px 24px;position:relative;border-bottom:1px solid var(--line)}
+.price-card.pop .price-list li{border-color:rgba(255,255,255,0.1);color:#dfe5e1}
+.price-list li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+.price-card.pop .price-list li::before{color:var(--lime)}
+.price-btn{display:block;text-align:center;background:var(--soft);color:var(--ink);padding:13px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s}
+.price-btn:hover{background:var(--green);color:#fff}
+.price-card.pop .price-btn{background:var(--lime);color:var(--ink)}.price-card.pop .price-btn:hover{background:#fff}
+
+/* PROCESS */
+.process-section{background:var(--paper)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.proc{position:relative;padding:28px 22px;background:var(--bg);border:1px solid var(--line);border-radius:18px;transition:all .25s}
+.proc:hover{border-color:var(--green);transform:translateY(-4px)}
+.proc-num{font-family:'Sora',sans-serif;font-size:13px;font-weight:800;color:#fff;background:var(--ink);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.proc-icon{font-size:30px;margin-bottom:10px}
+.proc-name{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px}
+.proc-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* GALLERY before/after */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .25s}
+.gal-card:hover{transform:scale(1.02)}
+.gal-split{display:grid;grid-template-columns:1fr 1fr;height:170px}
+.gal-half{display:flex;align-items:center;justify-content:center;font-size:46px;position:relative}
+.gal-half.b{background:linear-gradient(160deg,#e6e3dc,#cfcabd)}
+.gal-half.a{background:linear-gradient(160deg,var(--mint),#fff)}
+.gal-half .tag{position:absolute;top:10px;left:10px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,0.8);padding:3px 8px;border-radius:20px;color:var(--muted)}
+.gal-half.a .tag{color:var(--green-d)}
+.gal-cap{padding:16px 18px;font-size:13.5px;font-weight:600}
+.gal-cap span{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:2px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why{padding:28px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.why-icon{font-size:30px;margin-bottom:12px}
+.why-name{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
+.why-desc{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* REVIEWS */
+.reviews-section{background:var(--paper)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:28px 24px}
+.stars{color:var(--green);font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.review-text{font-size:14.5px;color:#4f5a54;line-height:1.75;margin-bottom:16px}
+.reviewer{font-family:'Sora',sans-serif;font-size:13px;font-weight:700}
+
+/* FAQ */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:12px}
+.faq-q{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;display:flex;gap:10px}
+.faq-q::before{content:'?';color:var(--green);font-weight:800}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.7;padding-left:24px}
+
+/* BOOK */
+.book-section{background:var(--ink);color:#fff}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.book-section .eyebrow{color:var(--lime)}.book-section .eyebrow::before{background:var(--lime)}
+.book-section h2{color:#fff}.book-section h2 em{color:var(--lime)}
+.book-info p{font-size:15px;color:#aab4ad;line-height:1.75;margin-bottom:24px}
+.areas-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.area-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:40px;padding:9px 18px;font-size:13.5px;font-weight:500}
+.area-chip.more{background:rgba(191,243,94,0.14);border-color:rgba(191,243,94,0.4);color:var(--lime)}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:14px}
+.contact-ic{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:16px}
+.btn-ig{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--lime);color:var(--ink);font-weight:700;padding:15px;border-radius:40px;text-decoration:none;margin-top:8px;transition:all .2s}
+.btn-ig:hover{background:#fff}
+.form-card{background:var(--paper);color:var(--ink);border-radius:22px;padding:34px}
+.form-title{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:22px}
+.fg{margin-bottom:15px}
+.fg label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:600}
+.fg input,.fg select{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:13px 14px;font-family:'Hanken Grotesk';font-size:14px;outline:none;border-radius:10px;transition:border-color .2s}
+.fg input:focus,.fg select:focus{border-color:var(--green)}
+.fg select option{background:#fff}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit{width:100%;background:var(--ink);color:#fff;border:none;padding:16px;border-radius:40px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Sora';transition:background .2s;margin-top:4px}
+.btn-submit:hover{background:var(--green)}
+.form-ok{display:none;text-align:center;padding:22px;background:var(--mint);border-radius:12px;margin-top:14px}
+.form-ok p{color:var(--green-d);font-weight:700}
+
+footer{background:var(--ink);color:#9aa6a0;border-top:1px solid rgba(255,255,255,0.08);padding:36px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--lime)}
+.footer-links{display:flex;gap:22px}
+.footer-links a{color:#9aa6a0;text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--lime)}
+.footer-built a{color:var(--lime);text-decoration:none}
+
+.concept{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--lime);color:var(--ink);text-align:center;font-size:12px;font-weight:600;padding:9px 16px}
+.concept a{color:var(--ink);font-weight:800}.concept b{font-weight:800}
+
+@keyframes pop{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero-left>*{animation:pop .7s ease both}
+.hero-left>*:nth-child(2){animation-delay:.1s}.hero-left>*:nth-child(3){animation-delay:.2s}.hero-left>*:nth-child(4){animation-delay:.3s}
+.hero-right{animation:pop .8s ease .25s both}
+
+@media(max-width:880px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;gap:36px}.hero-right{max-width:380px}
+  .stats{grid-template-columns:1fr 1fr;gap:24px}
+  .about-grid,.book-grid{grid-template-columns:1fr}
+  .price-grid,.proc-grid,.gal-grid,.why-grid,.reviews-grid{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}.about-visual{max-width:320px;margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span class="mark">👟</span>Elevation</div>
+  <ul class="nav-links">
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#gallery">Results</a></li>
+    <li><a href="#book">Book</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">Book a Clean</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="pill"><span class="dot"></span>Cape Town · Pickup &amp; Delivery</div>
+    <h1>Bring your<br>kicks <em>back to life.</em></h1>
+    <p class="hero-sub">Pro sneaker cleaning &amp; restoration, collected from your door and returned looking box-fresh. Lansdowne, Kenwyn &amp; Milnerton.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-dark">Book a Clean →</a>
+      <a href="#pricing" class="btn-ghost">See pricing</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="ba-card">
+      <div class="ba-row">
+        <div class="ba-tile before">👟<span class="ba-label">Before</span></div>
+        <div class="ba-tile after">✨<span class="ba-label">After</span></div>
+      </div>
+      <div class="ba-foot"><b>Air Force 1 · Deep Clean</b><span>48 hr turnaround</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="n">295+</div><div class="l">Pairs revived</div></div>
+  <div class="stat"><div class="n">48hr</div><div class="l">Turnaround</div></div>
+  <div class="stat"><div class="n">3</div><div class="l">Pickup zones</div></div>
+  <div class="stat"><div class="n">5★</div><div class="l">Rated</div></div>
+</div>
+
+<section id="about" class="about-section reveal">
+  <div class="about-grid">
+    <div class="about-visual">👟</div>
+    <div class="about-text">
+      <div class="eyebrow">The Plug</div>
+      <h2>Sneaker care, <em>done right</em></h2>
+      <p>At <strong>Elevation</strong>, we treat your sneakers like the grails they are. Every pair is cleaned <strong>by hand</strong> — laces out, insoles out, deep into the midsoles — using the right products for every material, from canvas to suede to mesh.</p>
+      <p>No machines, no shortcuts, no damage. Just a careful, proper clean that brings the white back to your soles and the life back to your kicks. We've revived <strong>295+ pairs</strong> across Cape Town and counting.</p>
+      <p><strong>We collect, we clean, we deliver.</strong> You don't even leave the house.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="reveal">
+  <div class="eyebrow center">The Menu</div>
+  <h2 class="center">Cleaning <em>packages</em></h2>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-tag">Everyday</div>
+      <div class="price-name">Standard Clean</div>
+      <div class="price-amt">R150<small> / pair</small></div>
+      <div class="price-desc">A fresh, thorough clean for your everyday rotation.</div>
+      <ul class="price-list"><li>Uppers, midsoles &amp; outsoles</li><li>Laces washed</li><li>Deodorised</li><li>48hr turnaround</li></ul>
+      <a href="#book" class="price-btn">Book Standard</a>
+    </div>
+    <div class="price-card pop">
+      <div class="price-tag">Most Popular</div>
+      <div class="price-name">Deep Clean</div>
+      <div class="price-amt">R220<small> / pair</small></div>
+      <div class="price-desc">For tougher stains &amp; well-loved pairs that need extra love.</div>
+      <ul class="price-list"><li>Everything in Standard</li><li>Deep stain treatment</li><li>Midsole whitening</li><li>New laces option</li><li>Protectant spray</li></ul>
+      <a href="#book" class="price-btn">Book Deep Clean</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tag">Grails</div>
+      <div class="price-name">Restoration</div>
+      <div class="price-amt">From R350</div>
+      <div class="price-desc">Bringing tired or yellowed pairs back from the dead.</div>
+      <ul class="price-list"><li>Sole de-yellowing</li><li>Re-paint &amp; touch-ups</li><li>Suede / nubuck revival</li><li>Quote per pair</li></ul>
+      <a href="#book" class="price-btn">Enquire</a>
+    </div>
+  </div>
+  <p class="center" style="margin-top:20px;color:var(--muted);font-size:13.5px">Free pickup &amp; delivery in our zones. *Prices to confirm with Elevation.</p>
+</section>
+
+<section id="process" class="process-section reveal">
+  <div class="eyebrow center">Easy As</div>
+  <h2 class="center">How it <em>works</em></h2>
+  <div class="proc-grid">
+    <div class="proc"><div class="proc-num">1</div><div class="proc-icon">📲</div><div class="proc-name">Book</div><div class="proc-desc">DM or fill the form with your pair &amp; pickup area.</div></div>
+    <div class="proc"><div class="proc-num">2</div><div class="proc-icon">🚗</div><div class="proc-name">We Collect</div><div class="proc-desc">We swing by and grab your kicks from your door.</div></div>
+    <div class="proc"><div class="proc-num">3</div><div class="proc-icon">🧼</div><div class="proc-name">We Clean</div><div class="proc-desc">Hand-cleaned &amp; restored, the right way, every time.</div></div>
+    <div class="proc"><div class="proc-num">4</div><div class="proc-icon">✨</div><div class="proc-name">We Deliver</div><div class="proc-desc">Box-fresh kicks back at your door in ~48hrs.</div></div>
+  </div>
+</section>
+
+<section id="gallery" class="reveal">
+  <div class="eyebrow center">The Proof</div>
+  <h2 class="center">Before &amp; <em>after</em></h2>
+  <div class="gal-grid">
+    <div class="gal-card"><div class="gal-split"><div class="gal-half b">👟<span class="tag">Before</span></div><div class="gal-half a">✨<span class="tag">After</span></div></div><div class="gal-cap">Air Force 1 <span>Deep clean + midsole whitening</span></div></div>
+    <div class="gal-card"><div class="gal-split"><div class="gal-half b">👟<span class="tag">Before</span></div><div class="gal-half a">✨<span class="tag">After</span></div></div><div class="gal-cap">Jordan 1 <span>Restoration + de-yellow</span></div></div>
+    <div class="gal-card"><div class="gal-split"><div class="gal-half b">👟<span class="tag">Before</span></div><div class="gal-half a">✨<span class="tag">After</span></div></div><div class="gal-cap">Yeezy 350 <span>Standard clean</span></div></div>
+  </div>
+  <p class="center" style="margin-top:24px;color:var(--muted);font-size:14px">Swap these for real before/afters from <a href="https://www.instagram.com/elevation_sneaker_cleaning/" style="color:var(--green-d);font-weight:600">@elevation_sneaker_cleaning</a> 🔥</p>
+</section>
+
+<section class="why-section reveal" style="background:var(--paper)">
+  <div class="eyebrow center">Why Elevation</div>
+  <h2 class="center">Your kicks are in <em>good hands</em></h2>
+  <div class="why-grid">
+    <div class="why"><div class="why-icon">✋</div><div class="why-name">Hand-Cleaned</div><div class="why-desc">No machines that wreck your sneakers — every pair done carefully by hand.</div></div>
+    <div class="why"><div class="why-icon">🚪</div><div class="why-name">Door-to-Door</div><div class="why-desc">Free pickup &amp; delivery in our zones. Zero effort on your side.</div></div>
+    <div class="why"><div class="why-icon">⚡</div><div class="why-name">48hr Turnaround</div><div class="why-desc">Fast, reliable, back on your feet in no time.</div></div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section reveal">
+  <div class="eyebrow center">The Word</div>
+  <h2 class="center">Happy <em>feet</em></h2>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Brought my AF1s back from the grave 😭 thought they were done but they look brand new. Pickup and delivery made it so easy."</div><div class="reviewer">— Aphiwe</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"The restoration on my Jordan 1s is insane. De-yellowed the soles perfectly. Elevation is the only plug now."</div><div class="reviewer">— Tristan</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Fast, professional and my kicks smell fresh again 😅 Booked on the DM, collected next day. 10/10."</div><div class="reviewer">— Zsa</div></div>
+  </div>
+</section>
+
+<section class="faq-section reveal">
+  <div class="eyebrow center">Good To Know</div>
+  <h2 class="center">Questions, <em>answered</em></h2>
+  <div class="faq-wrap">
+    <div class="faq-item"><div class="faq-q">Do you really pick up and drop off?</div><div class="faq-a">Yep — free pickup &amp; delivery anywhere in our zones (Lansdowne, Kenwyn, Milnerton &amp; nearby). Outside those? Message us, we'll sort something out.</div></div>
+    <div class="faq-item"><div class="faq-q">How long does it take?</div><div class="faq-a">Most cleans are back with you within about 48 hours. Restorations can take a little longer — we'll let you know upfront.</div></div>
+    <div class="faq-item"><div class="faq-q">Can you clean suede / mesh / knit?</div><div class="faq-a">Absolutely. We match the method and products to your sneaker's material, so delicate uppers are safe with us.</div></div>
+    <div class="faq-item"><div class="faq-q">Will it damage my sneakers?</div><div class="faq-a">Never. Everything is done by hand with sneaker-safe products — no harsh machines, no risk.</div></div>
+  </div>
+</section>
+
+<section id="book" class="book-section reveal">
+  <div class="book-grid">
+    <div class="book-info">
+      <div class="eyebrow">Book In</div>
+      <h2>Fresh kicks, <em>one tap away</em></h2>
+      <p>Tell us your pair and your pickup area, and we'll confirm a collection time. Easiest way? Slide into the DMs or fill the form.</p>
+      <div class="areas-row">
+        <span class="area-chip">Lansdowne</span>
+        <span class="area-chip">Kenwyn</span>
+        <span class="area-chip">Milnerton</span>
+        <span class="area-chip more">+ ask about your area</span>
+      </div>
+      <div class="contact-line"><div class="contact-ic">📸</div><div><div style="font-size:12px;color:#9aa6a0;text-transform:uppercase;letter-spacing:1px">Instagram</div><div style="font-weight:600;color:#fff">@elevation_sneaker_cleaning</div></div></div>
+      <div class="contact-line"><div class="contact-ic">🚗</div><div><div style="font-size:12px;color:#9aa6a0;text-transform:uppercase;letter-spacing:1px">Service</div><div style="font-weight:600;color:#fff">Free pickup &amp; delivery</div></div></div>
+      <a href="https://www.instagram.com/elevation_sneaker_cleaning/" class="btn-ig" target="_blank">📲 Book on Instagram</a>
+    </div>
+    <div class="form-card">
+      <div class="form-title">Request a pickup</div>
+      <div class="form-sub">Fill in your details and we'll confirm your collection.</div>
+      <div class="frow">
+        <div class="fg"><label>Your Name</label><input type="text" id="fname" placeholder="e.g. Aphiwe"></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" id="fphone" placeholder="e.g. 082 555 0101"></div>
+      </div>
+      <div class="fg"><label>Service</label>
+        <select id="fservice"><option value="">Choose...</option><option value="Standard Clean - R150">Standard Clean — R150</option><option value="Deep Clean - R220">Deep Clean — R220</option><option value="Restoration - from R350">Restoration — from R350</option></select>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Sneaker / Pair</label><input type="text" id="fpair" placeholder="e.g. Air Force 1"></div>
+        <div class="fg"><label>Pickup Area</label><input type="text" id="farea" placeholder="e.g. Kenwyn"></div>
+      </div>
+      <button class="btn-submit" onclick="submitBooking()">Request Pickup →</button>
+      <div class="form-ok" id="formOk"><p>👟 Opening WhatsApp with your booking...</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Elev<span>ation</span></div>
+  <div class="footer-links"><a href="#pricing">Pricing</a><a href="#process">How It Works</a><a href="#gallery">Results</a><a href="#book">Book</a></div>
+  <div class="footer-built" style="font-size:11px">Concept by <a href="#">Joshua.digital</a></div>
+</footer>
+
+<div class="concept">👟 <b>Concept mockup</b> — a website idea for Elevation Sneaker Cleaning, designed by <a href="#">Joshua.digital</a>. Not the live site.</div>
+
+<script>
+// ⚠️ Replace with Elevation's real WhatsApp number (international, no +). For now booking opens WhatsApp; until then, the "Book on Instagram" button is the live CTA.
+var PHONE = "27000000000";
+function waLink(t){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(t);}
+
+function submitBooking(){
+  var name=document.getElementById('fname').value.trim();
+  var phone=document.getElementById('fphone').value.trim();
+  var service=document.getElementById('fservice').value;
+  var pair=document.getElementById('fpair').value.trim();
+  var area=document.getElementById('farea').value.trim();
+  if(!name||!phone||!service){alert('Please add your name, number, and choose a service.');return;}
+  var msg='Yo Elevation! I want to book a sneaker clean 👟\n\n'
+    +'Name: '+name+'\nPhone: '+phone+'\nService: '+service+'\n'
+    +(pair?'Pair: '+pair+'\n':'')+(area?'Pickup area: '+area+'\n':'');
+  document.getElementById('formOk').style.display='block';
+  setTimeout(function(){window.open(waLink(msg),'_blank');},600);
+}
+
+// scroll reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
