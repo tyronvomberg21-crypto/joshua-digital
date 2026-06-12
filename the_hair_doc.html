@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hair Doc — Precision Barber, Cape Town · Shop & House Calls</title>
+<meta name="description" content="The Hair Doc — precision fades & grooming in Cape Town. In-shop appointments on Hengelaar Street, plus premium mobile grooming that comes to you. Book online or on WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0f0e;--bg2:#11150f;--card:#161b18;--line:#232a26;--ink:#eef3ef;
+  --muted:#869089;--dim:#4a534d;
+  --teal:#2fd6a6;--teal-d:#1fae87;--mint:#0f2a22;--cream:#f1f6f1;--gold:#d9b46a;
+  --wa:#25D366;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(12,15,14,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+  padding:0 6vw;height:70px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:21px;font-weight:800;letter-spacing:-0.5px;display:flex;align-items:center;gap:9px}
+.nav-logo .cross{color:var(--teal)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--teal);color:#06120d;font-size:13px;font-weight:700;padding:11px 22px;text-decoration:none;border-radius:8px;transition:all .2s}
+.nav-cta:hover{background:var(--teal-d);transform:translateY(-1px)}
+
+.hero{padding:80px 6vw 70px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-25%;right:-8%;width:55%;height:150%;background:radial-gradient(ellipse,rgba(47,214,166,0.16),transparent 70%);z-index:0;filter:blur(14px)}
+.hero-left{position:relative;z-index:2;max-width:580px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--cream);padding:8px 16px;border-radius:40px;margin-bottom:24px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(47,214,166,0.18)}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(44px,6.2vw,84px);font-weight:800;line-height:0.95;letter-spacing:-2.5px;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--teal)}
+.hero-sub{font-size:18px;color:var(--muted);max-width:450px;margin-bottom:36px;line-height:1.7;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-teal{background:var(--teal);color:#06120d;font-size:15px;font-weight:700;padding:16px 30px;border-radius:10px;text-decoration:none;transition:all .2s}
+.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-out{background:transparent;color:var(--cream);border:1px solid var(--line);font-size:15px;font-weight:600;padding:16px 28px;border-radius:10px;text-decoration:none;transition:all .2s}
+.btn-out:hover{border-color:var(--teal);color:var(--teal)}
+.hero-right{position:relative;z-index:2}
+.card-stack{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 40px 80px -40px rgba(0,0,0,0.7)}
+.cs-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.cs-ic{width:46px;height:46px;border-radius:13px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:22px}
+.cs-top b{font-family:'Bricolage Grotesque',sans-serif;font-size:17px}.cs-top span{display:block;font-size:12px;color:var(--muted)}
+.cs-line{display:flex;justify-content:space-between;padding:13px 0;border-top:1px solid var(--line);font-size:14px}
+.cs-line .p{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--teal)}
+
+.stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 6vw;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .n{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3.4vw,38px);font-weight:800;color:var(--teal);line-height:1}
+.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+section{padding:90px 6vw}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--teal)}
+.eyebrow.center{justify-content:center}.eyebrow.center::before{display:none}
+h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-1.2px;margin-bottom:46px;line-height:1.04}
+h2 em{font-style:normal;color:var(--teal)}
+.center{text-align:center}
+
+.about-section{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.about-text p{font-size:15.5px;color:var(--muted);line-height:1.85;margin-bottom:18px}.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--ink);font-weight:600}
+.about-visual{aspect-ratio:1;border-radius:24px;background:radial-gradient(circle at 50% 35%,#1a221d,#0c0f0e);display:flex;align-items:center;justify-content:center;font-size:120px;position:relative;border:1px solid var(--line)}
+.about-visual .rx{position:absolute;top:20px;left:24px;font-family:'Bricolage Grotesque',sans-serif;font-size:13px;letter-spacing:4px;color:var(--teal);font-weight:700}
+
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px;transition:transform .25s,border-color .25s;display:flex;flex-direction:column}
+.price-card:hover{transform:translateY(-6px);border-color:var(--teal)}
+.price-card.pop{background:linear-gradient(180deg,rgba(47,214,166,0.08),var(--card));border-color:rgba(47,214,166,0.45)}
+.price-tag{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.price-name{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px}
+.price-amt{font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:800;color:var(--cream);margin-bottom:4px}
+.price-amt small{font-size:14px;color:var(--muted);font-weight:400;font-family:'Hanken Grotesk'}
+.price-desc{font-size:13.5px;color:var(--muted);margin-bottom:20px;line-height:1.6;min-height:40px}
+.price-list{list-style:none;flex:1;margin-bottom:24px}
+.price-list li{font-size:13.5px;padding:8px 0 8px 24px;position:relative;border-bottom:1px solid var(--line);color:#cdd5cf}
+.price-list li::before{content:'＋';position:absolute;left:0;color:var(--teal);font-weight:700}
+.price-btn{display:block;text-align:center;background:transparent;border:1px solid var(--line);color:var(--ink);padding:13px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s}
+.price-btn:hover{border-color:var(--teal);color:var(--teal)}
+.price-card.pop .price-btn{background:var(--teal);color:#06120d;border-color:var(--teal)}.price-card.pop .price-btn:hover{background:var(--teal-d)}
+
+/* MOBILE FEATURE */
+.feature-section{background:var(--bg2)}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;background:linear-gradient(135deg,var(--mint),var(--card));border:1px solid var(--line);border-radius:26px;padding:48px;overflow:hidden}
+.feature-visual{aspect-ratio:1.1;border-radius:18px;background:radial-gradient(circle at 60% 40%,#1c2620,#0c0f0e);display:flex;align-items:center;justify-content:center;font-size:96px;border:1px solid var(--line)}
+.feature h3{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;letter-spacing:-1px;margin-bottom:14px;line-height:1.05}
+.feature h3 em{color:var(--teal);font-style:normal}
+.feature p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:22px}
+.feature .pr{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:700;color:var(--cream);margin-bottom:22px}
+.feature .pr span{color:var(--teal)}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proc{padding:28px 24px;background:var(--card);border:1px solid var(--line);border-radius:18px;transition:all .25s}
+.proc:hover{border-color:var(--teal);transform:translateY(-4px)}
+.proc-num{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:800;color:#06120d;background:var(--teal);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.proc-name{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
+.proc-desc{font-size:13.5px;color:var(--muted);line-height:1.6}
+
+/* GALLERY */
+.gal-section{background:var(--bg2)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal-tile{aspect-ratio:1;border-radius:16px;background:radial-gradient(circle at 50% 40%,#1a221d,#0c0f0e);display:flex;align-items:center;justify-content:center;font-size:42px;border:1px solid var(--line);transition:all .25s}
+.gal-tile:hover{border-color:var(--teal);transform:scale(1.04)}
+
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px}
+.stars{color:var(--teal);font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.review-text{font-size:14.5px;color:#bcc4bd;line-height:1.75;margin-bottom:16px}
+.reviewer{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:700}
+
+/* FAQ */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:12px}
+.faq-q{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;display:flex;gap:10px}
+.faq-q::before{content:'＋';color:var(--teal)}
+.faq-a{font-size:14px;color:var(--muted);line-height:1.7;padding-left:24px}
+
+/* BOOK */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.book-info p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px}
+.contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:14px}
+.contact-ic{width:40px;height:40px;border-radius:11px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.c-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.c-val{font-weight:600;color:var(--ink)}
+.book-btns{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.bb{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;padding:15px;border-radius:12px;text-decoration:none;transition:all .2s}
+.bb.wa{background:var(--wa);color:#fff}.bb.wa:hover{background:#20ba57}.bb.wa svg{width:20px;height:20px;fill:#fff}
+.bb.set{background:var(--teal);color:#06120d}.bb.set:hover{background:var(--teal-d)}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px}
+.form-title{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:22px}
+.fg{margin-bottom:15px}
+.fg label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:600}
+.fg input,.fg select{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:13px 14px;font-family:'Hanken Grotesk';font-size:14px;outline:none;border-radius:10px;transition:border-color .2s}
+.fg input:focus,.fg select:focus{border-color:var(--teal)}.fg select option{background:var(--bg)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit{width:100%;background:var(--teal);color:#06120d;border:none;padding:16px;border-radius:40px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Bricolage Grotesque';transition:background .2s;margin-top:4px}
+.btn-submit:hover{background:var(--teal-d)}
+.form-ok{display:none;text-align:center;padding:22px;background:var(--mint);border-radius:12px;margin-top:14px}
+.form-ok p{color:var(--teal);font-weight:700}
+
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:36px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:800}
+.footer-logo .cross{color:var(--teal)}
+.footer-links{display:flex;gap:22px}.footer-links a{color:var(--muted);text-decoration:none;font-size:13px}.footer-links a:hover{color:var(--teal)}
+.footer-copy{font-size:12px;color:var(--dim)}.footer-built{font-size:11px;color:var(--dim)}.footer-built a{color:var(--teal);text-decoration:none}
+
+.concept{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--teal);color:#06120d;text-align:center;font-size:12px;font-weight:600;padding:9px 16px}
+.concept a{color:#06120d;font-weight:800}.concept b{font-weight:800}
+
+@keyframes pop{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero-left>*{animation:pop .7s ease both}
+.hero-left>*:nth-child(2){animation-delay:.1s}.hero-left>*:nth-child(3){animation-delay:.2s}.hero-left>*:nth-child(4){animation-delay:.3s}
+.hero-right{animation:pop .8s ease .25s both}
+
+@media(max-width:880px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;gap:36px}.hero-right{max-width:380px}
+  .stats{grid-template-columns:1fr 1fr;gap:24px}
+  .about-grid,.book-grid,.feature{grid-template-columns:1fr}.feature{padding:32px}
+  .price-grid,.proc-grid,.reviews-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr}
+  .frow{grid-template-columns:1fr}.about-visual{max-width:320px;margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">The Hair <span class="cross">Doc✚</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#mobile">House Calls</a></li>
+    <li><a href="#book">Book</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">Book Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="pill"><span class="dot"></span>Cape Town · Open Wed–Sat</div>
+    <h1>Precision cuts.<br>Doctor's <em>orders.</em></h1>
+    <p class="hero-sub">Clean fades, sharp line-ups and proper grooming — in the chair on Hengelaar Street, or brought right to your door.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-teal">Book a Cut →</a>
+      <a href="#services" class="btn-out">View Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="card-stack">
+      <div class="cs-top"><div class="cs-ic">✂️</div><div><b>The Hair Doc</b><span>Cape Town · 4.9 ★</span></div></div>
+      <div class="cs-line"><span>Fade / Blade Fade</span><span class="p">R160</span></div>
+      <div class="cs-line"><span>Fade with Beard</span><span class="p">R180</span></div>
+      <div class="cs-line"><span>Premium Mobile Grooming</span><span class="p">R450</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="n">✚</div><div class="l">Precision first</div></div>
+  <div class="stat"><div class="n">4.9★</div><div class="l">Client rated</div></div>
+  <div class="stat"><div class="n">2</div><div class="l">Ways to book</div></div>
+  <div class="stat"><div class="n">🏠</div><div class="l">House calls</div></div>
+</div>
+
+<section id="about" class="about-section reveal">
+  <div class="about-grid">
+    <div class="about-visual"><span class="rx">℞ FRESH CUTS</span>💈</div>
+    <div class="about-text">
+      <div class="eyebrow">The Doc</div>
+      <h2>Your hair, <em>diagnosed</em></h2>
+      <p>At <strong>The Hair Doc</strong>, every cut starts with a proper consultation — your hair, your shape, your style. No guesswork, no rushed jobs. Just clean, precise fades and grooming done with a steady hand and an eye for detail.</p>
+      <p>Whether you're after a sharp blade fade, a tidy beard line-up, or the full treatment, you leave the chair looking sharp and feeling like the best version of yourself.</p>
+      <p><strong>In the shop or at your door</strong> — the Doc comes to you when you need it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="reveal">
+  <div class="eyebrow center">The Treatment</div>
+  <h2 class="center">Services &amp; <em>prices</em></h2>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-tag">The Classic</div>
+      <div class="price-name">Fade / Blade Fade</div>
+      <div class="price-amt">R160</div>
+      <div class="price-desc">A clean, sharp fade tailored to you.</div>
+      <ul class="price-list"><li>Consultation</li><li>Skin or blade fade</li><li>Sharp line-up</li><li>Styled &amp; finished</li></ul>
+      <a href="#book" class="price-btn">Book Fade</a>
+    </div>
+    <div class="price-card pop">
+      <div class="price-tag">Most Booked</div>
+      <div class="price-name">Fade with Beard</div>
+      <div class="price-amt">R180</div>
+      <div class="price-desc">Full fade plus a sculpted, lined-up beard.</div>
+      <ul class="price-list"><li>Everything in the Fade</li><li>Beard shape &amp; line-up</li><li>Hot finish</li><li>The complete look</li></ul>
+      <a href="#book" class="price-btn">Book Cut + Beard</a>
+    </div>
+    <div class="price-card">
+      <div class="price-tag">Premium</div>
+      <div class="price-name">Mobile Grooming</div>
+      <div class="price-amt">R450</div>
+      <div class="price-desc">The full grooming experience, at your door.</div>
+      <ul class="price-list"><li>Cut + beard at your place</li><li>Premium service</li><li>No travel, no waiting</li><li>By appointment</li></ul>
+      <a href="#book" class="price-btn">Book House Call</a>
+    </div>
+  </div>
+</section>
+
+<section id="mobile" class="feature-section reveal">
+  <div class="feature">
+    <div class="feature-visual">🏠✂️</div>
+    <div>
+      <div class="eyebrow">House Calls</div>
+      <h3>The barber that <em>comes to you</em></h3>
+      <p>Too busy to sit in a shop? The Hair Doc's <strong>Premium Mobile Grooming</strong> brings the full setup to your home or office — same precision, zero travel. Perfect for busy professionals, grooms on the morning of, or anyone who values their time.</p>
+      <div class="pr">Premium Mobile Grooming · <span>R450</span></div>
+      <a href="#book" class="btn-teal">Book a House Call →</a>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="reveal">
+  <div class="eyebrow center">Simple</div>
+  <h2 class="center">How to <em>book</em></h2>
+  <div class="proc-grid">
+    <div class="proc"><div class="proc-num">1</div><div class="proc-name">Pick your service</div><div class="proc-desc">Fade, cut &amp; beard, or a premium house call.</div></div>
+    <div class="proc"><div class="proc-num">2</div><div class="proc-name">Book your slot</div><div class="proc-desc">Online in seconds, or send a quick WhatsApp.</div></div>
+    <div class="proc"><div class="proc-num">3</div><div class="proc-name">Get sharp</div><div class="proc-desc">Pull up to the chair — or we pull up to you.</div></div>
+  </div>
+</section>
+
+<section id="gallery" class="gal-section reveal">
+  <div class="eyebrow center">The Work</div>
+  <h2 class="center">Fresh <em>fades</em></h2>
+  <div class="gal-grid">
+    <div class="gal-tile">💈</div><div class="gal-tile">✂️</div><div class="gal-tile">🔥</div><div class="gal-tile">🧔</div>
+    <div class="gal-tile">💈</div><div class="gal-tile">✂️</div><div class="gal-tile">🔥</div><div class="gal-tile">🧔</div>
+  </div>
+  <p class="center" style="margin-top:24px;color:var(--muted);font-size:14px">Swap these for real cut pics from <a href="https://www.instagram.com/the_hairdoc/" style="color:var(--teal);font-weight:600">@the_hairdoc</a> 💈</p>
+</section>
+
+<section id="reviews" class="reveal">
+  <div class="eyebrow center">The Reviews</div>
+  <h2 class="center">Sharp <em>every time</em></h2>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Cleanest fade in Cape Town, hands down. The Doc takes his time and the line-up is razor sharp. My regular now."</div><div class="reviewer">— Junaid</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Booked the mobile grooming for my wedding morning — came to the venue, sorted me and the groomsmen. Absolute lifesaver."</div><div class="reviewer">— Daniel</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><div class="review-text">"Proper consultation, not just a quick buzz. You can tell he actually cares about the cut. Beard line-up is unreal."</div><div class="reviewer">— Aphiwe</div></div>
+  </div>
+</section>
+
+<section class="faq-section reveal" style="background:var(--bg2)">
+  <div class="eyebrow center">Good To Know</div>
+  <h2 class="center">Questions, <em>answered</em></h2>
+  <div class="faq-wrap">
+    <div class="faq-item"><div class="faq-q">Where are you based?</div><div class="faq-a">In-chair appointments are at 93 Hengelaar Street, Cape Town. For the Premium Mobile Grooming, the Doc comes to you.</div></div>
+    <div class="faq-item"><div class="faq-q">What are your hours?</div><div class="faq-a">Wednesday to Saturday, 7am–6pm. Closed Sunday to Tuesday. Book ahead to lock in your slot.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I book?</div><div class="faq-a">Easiest is to book online in seconds, or send a WhatsApp. House calls are by appointment — just message to arrange a time.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you do beard work?</div><div class="faq-a">Definitely — the Fade with Beard (R160 + R20) includes a full beard shape and line-up for the complete look.</div></div>
+  </div>
+</section>
+
+<section id="book" class="reveal">
+  <div class="book-grid">
+    <div class="book-info">
+      <div class="eyebrow">Book In</div>
+      <h2>Get in the <em>chair</em></h2>
+      <p>Two easy ways to book — online in seconds, or a quick WhatsApp. For house calls, drop a message and we'll arrange a time.</p>
+      <div class="contact-line"><div class="contact-ic">📞</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val">081 341 6774</div></div></div>
+      <div class="contact-line"><div class="contact-ic">📍</div><div><div class="c-label">Shop</div><div class="c-val">93 Hengelaar Street, Cape Town</div></div></div>
+      <div class="contact-line"><div class="contact-ic">🕐</div><div><div class="c-label">Hours</div><div class="c-val">Wed–Sat · 7am–6pm</div></div></div>
+      <div class="contact-line"><div class="contact-ic">📸</div><div><div class="c-label">Socials</div><div class="c-val">@the_hairdoc</div></div></div>
+      <div class="book-btns">
+        <a href="https://brooklynthebarbercpt.setmore.com/" class="bb set" target="_blank">📅 Book Online</a>
+        <a href="#" id="waBig" class="bb wa" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.886c-.073.267.163.504.43.43l6.086-1.474A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.863 9.863 0 01-5.022-1.374l-.36-.214-3.733.904.922-3.67-.235-.376A9.862 9.862 0 012.118 12C2.118 6.533 6.533 2.118 12 2.118c5.466 0 9.882 4.415 9.882 9.882 0 5.466-4.416 9.882-9.882 9.882z"/></svg>
+          Book on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="form-card">
+      <div class="form-title">Request a slot</div>
+      <div class="form-sub">Fill in your details and the Doc will confirm on WhatsApp.</div>
+      <div class="frow">
+        <div class="fg"><label>Your Name</label><input type="text" id="fname" placeholder="e.g. Junaid"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="fphone" placeholder="e.g. 082 555 0101"></div>
+      </div>
+      <div class="fg"><label>Service</label>
+        <select id="fservice"><option value="">Choose...</option><option value="Fade / Blade Fade - R160">Fade / Blade Fade — R160</option><option value="Fade with Beard - R180">Fade with Beard — R180</option><option value="Premium Mobile Grooming - R450">Premium Mobile Grooming — R450</option></select>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Shop or House Call?</label><select id="floc"><option value="">Choose...</option><option>At the shop</option><option>House call</option></select></div>
+        <div class="fg"><label>Preferred Day</label><input type="text" id="fday" placeholder="e.g. Saturday AM"></div>
+      </div>
+      <button class="btn-submit" onclick="submitBooking()">Book via WhatsApp →</button>
+      <div class="form-ok" id="formOk"><p>💈 Opening WhatsApp with your booking...</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">The Hair <span class="cross">Doc✚</span></div>
+  <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#mobile">House Calls</a><a href="#book">Book</a></div>
+  <div>
+    <div class="footer-copy">© 2026 The Hair Doc · 93 Hengelaar Street, Cape Town</div>
+    <div class="footer-built">Concept redesign by <a href="#">Joshua.digital</a></div>
+  </div>
+</footer>
+
+<div class="concept">💈 <b>Concept redesign</b> — a website idea for The Hair Doc, designed by <a href="#">Joshua.digital</a>. Not the live site.</div>
+
+<script>
+var PHONE = "27813416774"; // The Hair Doc — 081 341 6774
+function waLink(t){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(t);}
+document.getElementById('waBig').href = waLink("Hi Doc! I'd like to book a cut.");
+
+function submitBooking(){
+  var name=document.getElementById('fname').value.trim();
+  var phone=document.getElementById('fphone').value.trim();
+  var service=document.getElementById('fservice').value;
+  var loc=document.getElementById('floc').value;
+  var day=document.getElementById('fday').value.trim();
+  if(!name||!phone||!service){alert('Please add your name, number, and choose a service.');return;}
+  var msg='Hi Doc! I would like to book.\n\n'
+    +'Name: '+name+'\nPhone: '+phone+'\nService: '+service+'\n'
+    +(loc?'Where: '+loc+'\n':'')+(day?'Preferred: '+day+'\n':'');
+  document.getElementById('formOk').style.display='block';
+  setTimeout(function(){window.open(waLink(msg),'_blank');},600);
+}
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
