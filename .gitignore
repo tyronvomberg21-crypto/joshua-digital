@@ -1,0 +1,17 @@
+# Never let private business notes / data / secrets into this PUBLIC repo
+.DS_Store
+*.md
+*.xlsx
+*.csv
+*.numbers
+.env*
+*secret*
+*token*
+keys*
+credentials*
+handoffs/
+*GAME-PLAN*
+ACTIVE-WORK*
+REPLY-KIT*
+JOSHUA-PROJECT*
+leads*

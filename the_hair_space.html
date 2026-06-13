@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Hair Space — Blonde Specialist · Somerset West</title>
 <meta name="description" content="The Hair Space — Somerset West's blonde specialist. Balayage, highlights, blonde correction, cuts & upstyles in Paardevlei Estate.">
+<!-- Social share / link preview (WhatsApp, iMessage, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Hair Space — Blonde Specialist · Somerset West">
+<meta property="og:description" content="Balayage, highlights, blonde correction, cuts & upstyles in Paardevlei Estate. Book on WhatsApp.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/hairspace-1.jpg">
+<meta property="og:url" content="https://joshuavomberg.co.za/the_hair_space.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Hair Space — Blonde Specialist · Somerset West">
+<meta name="twitter:description" content="Balayage, highlights, blonde correction & cuts in Paardevlei Estate. Book on WhatsApp.">
+<meta name="twitter:image" content="https://joshuavomberg.co.za/images/hairspace-1.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232c2622'/><text x='16' y='22' font-family='Georgia,serif' font-size='14' fill='%23b89668' text-anchor='middle'>HS</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -245,6 +256,21 @@
   footer a{color:var(--gold)}
   .made{margin-top:18px;font-size:.72rem;letter-spacing:.08em;opacity:.7}
 
+  /* mobile sticky booking bar */
+  .mobile-cta{display:none}
+  @media(max-width:760px){
+    .mobile-cta{
+      display:flex;position:fixed;bottom:0;left:0;right:0;z-index:130;
+      background:rgba(44,38,34,.97);backdrop-filter:blur(8px);padding:11px 14px;gap:10px;
+      box-shadow:0 -8px 26px -12px rgba(0,0,0,.55);
+    }
+    .mobile-cta a{
+      flex:1;text-align:center;background:var(--gold);color:#fff;padding:13px;border-radius:50px;
+      font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;
+    }
+    body{padding-bottom:66px}
+  }
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.3,1)}
   .reveal.in{opacity:1;transform:none}
@@ -272,23 +298,25 @@
       <h1 class="reveal d1">Your <span class="serif-i">blonde</span>,<br>perfected.</h1>
       <p class="reveal d2">The Hair Space is a boutique salon and dedicated blonde specialist — balayage, highlights, flawless toning and timeless cuts, all crafted to suit you.</p>
       <div class="btns reveal d3">
-        <a href="https://wa.me/27732112071?text=Hi%20The%20Hair%20Space!%20I'd%20love%20to%20book%20an%20appointment%20%E2%9C%A8" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a href="https://wa.me/27732112071?text=Hi%20The%20Hair%20Space!%20I%27d%20love%20to%20book%20an%20appointment%20%E2%9C%A8" class="btn btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
         <a href="#pricing" class="btn btn-ghost">View pricing</a>
       </div>
       <div class="hero-stats reveal d4">
         <div class="st"><b>100%</b><span>Blonde<br>focused</span></div>
-        <div class="st"><b>248</b><span>Looks<br>shared</span></div>
-        <div class="st"><b>5.0</b><span>Client<br>love</span></div>
+        <div class="st"><b>3</b><span>Signature<br>packages</span></div>
+        <div class="st"><b>1:1</b><span>Personal<br>care</span></div>
       </div>
     </div>
     <div class="hero-visual reveal d2">
       <div class="hv-card hv-1">
+        <img src="images/hairspace-3.jpg" alt="Blonde balayage transformation by The Hair Space" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(44,38,34,.5),rgba(156,124,79,.55))"></div>
         <div class="hv-emblem">
           <div class="mk2">THE HAIR SPACE</div>
           <small>Blonde Specialist</small>
         </div>
       </div>
-      <div class="hv-card hv-2"><img src="images/hairspace-1.png" alt="Blonde balayage by The Hair Space" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="hv-card hv-2"><img src="images/hairspace-1.jpg" alt="Blonde balayage by The Hair Space" style="width:100%;height:100%;object-fit:cover"></div>
       <div class="hv-tag">
         <b>Balayage</b>
         <span>Signature service</span>
@@ -308,7 +336,9 @@
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-visual reveal">
-      <div class="quote">"A space where your<br>hair feels truly<br>looked after."</div>
+      <img src="images/hairspace-2.jpg" alt="Cool sleek blonde by The Hair Space" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(44,38,34,.62),rgba(156,124,79,.5))"></div>
+      <div class="quote" style="position:relative;z-index:2">"A space where your<br>hair feels truly<br>looked after."</div>
     </div>
     <div class="about-copy reveal d1">
       <div class="eyebrow">The Hair Space</div>
@@ -316,7 +346,7 @@
       <p>Going lighter is a craft — and it's ours. From soft, sun-kissed balayage to bold platinum, every shade is mixed and placed by hand to flatter your skin tone and keep your hair healthy.</p>
       <p>Tucked into Paardevlei Estate in Somerset West, The Hair Space is calm, unhurried and personal. You're never just another booking — you're looked after from consultation to final mirror.</p>
       <div class="pills">
-        <span class="pill">Olaplex bond care</span>
+        <span class="pill">Bond-care treatment</span>
         <span class="pill">Gentle on hair</span>
         <span class="pill">Tailored consults</span>
         <span class="pill">Free parking</span>
@@ -363,7 +393,7 @@
           <li>Precision cut <b>✓</b></li>
           <li>Style &amp; finish <b>✓</b></li>
         </ul>
-        <a href="https://wa.me/27732112071?text=Hi!%20I'd%20like%20to%20book%20the%20Bronze%20package%20(Botox%20%2B%20Cut)%20please." class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:24px">Book Bronze</a>
+        <a href="https://wa.me/27732112071?text=Hi!%20I%27d%20like%20to%20book%20the%20Bronze%20package%20(Botox%20%2B%20Cut)%20please." class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:24px">Book Bronze</a>
       </div>
       <div class="price-card feat reveal d1">
         <div class="feat-tag">Most popular</div>
@@ -377,7 +407,7 @@
           <li>Long <b>R1100</b></li>
           <li>X-Long <b>R1300</b></li>
         </ul>
-        <a href="https://wa.me/27732112071?text=Hi!%20I'd%20like%20to%20book%20the%20Silver%20package%20(Fullhead%20Tint)%20please." class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:24px">Book Silver</a>
+        <a href="https://wa.me/27732112071?text=Hi!%20I%27d%20like%20to%20book%20the%20Silver%20package%20(Fullhead%20Tint)%20please." class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:24px">Book Silver</a>
       </div>
       <div class="price-card reveal d2">
         <div class="tier">Gold</div>
@@ -389,7 +419,7 @@
           <li>Toner &amp; treatment <b>✓</b></li>
           <li>Cut &amp; blow-dry <b>✓</b></li>
         </ul>
-        <a href="https://wa.me/27732112071?text=Hi!%20I'd%20like%20to%20book%20the%20Gold%20package%20(Halfhead%20Highlights)%20please." class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:24px">Book Gold</a>
+        <a href="https://wa.me/27732112071?text=Hi!%20I%27d%20like%20to%20book%20the%20Gold%20package%20(Halfhead%20Highlights)%20please." class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:24px">Book Gold</a>
       </div>
     </div>
     <p class="price-foot">Extra-long hair or a new application is charged a little more for botox &amp; highlights. Chat to us for a quick quote. ✨</p>
@@ -421,9 +451,9 @@
       <p>Real blonde, real clients — a few of our recent transformations.</p>
     </div>
     <div class="gal reveal d1">
-      <figure class="gtile"><img src="images/hairspace-1.png" alt="Lived-in balayage waves by The Hair Space" loading="lazy"><figcaption>Lived-in balayage</figcaption></figure>
-      <figure class="gtile"><img src="images/hairspace-2.png" alt="Cool sleek blonde bob by The Hair Space" loading="lazy"><figcaption>Cool &amp; sleek</figcaption></figure>
-      <figure class="gtile"><img src="images/hairspace-3.png" alt="Bright blonde waves by The Hair Space" loading="lazy"><figcaption>Bright blonde waves</figcaption></figure>
+      <figure class="gtile"><img src="images/hairspace-1.jpg" alt="Lived-in balayage waves by The Hair Space" loading="lazy"><figcaption>Lived-in balayage</figcaption></figure>
+      <figure class="gtile"><img src="images/hairspace-2.jpg" alt="Cool sleek blonde bob by The Hair Space" loading="lazy"><figcaption>Cool &amp; sleek</figcaption></figure>
+      <figure class="gtile"><img src="images/hairspace-3.jpg" alt="Bright blonde waves by The Hair Space" loading="lazy"><figcaption>Bright blonde waves</figcaption></figure>
     </div>
   </div>
 </section>
@@ -444,7 +474,7 @@
     <h2>Let's create your<br>perfect blonde.</h2>
     <p>Booking is easy — send us a message and we'll find a time that works for you. New clients always welcome.</p>
     <div class="btns" style="justify-content:center">
-      <a href="https://wa.me/27732112071?text=Hi%20The%20Hair%20Space!%20I'd%20love%20to%20book%20an%20appointment%20%E2%9C%A8" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp us</a>
+      <a href="https://wa.me/27732112071?text=Hi%20The%20Hair%20Space!%20I%27d%20love%20to%20book%20an%20appointment%20%E2%9C%A8" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp us</a>
       <a href="https://www.instagram.com/the_hairspace_/" class="btn btn-ghost" target="_blank" rel="noopener">Instagram</a>
     </div>
     <div class="loc">
@@ -460,6 +490,10 @@
   <div>Blonde Specialist · Somerset West · 073 211 2071 · <a href="https://www.instagram.com/the_hairspace_/" target="_blank" rel="noopener">@the_hairspace_</a></div>
   <div class="made">Concept mockup designed by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — not yet live. Like it? Let's make it yours.</div>
 </footer>
+
+<div class="mobile-cta">
+  <a href="https://wa.me/27732112071?text=Hi%20The%20Hair%20Space!%20I%27d%20love%20to%20book%20an%20appointment%20%E2%9C%A8" target="_blank" rel="noopener">Book on WhatsApp</a>
+</div>
 
 <script>
   // nav scroll state
