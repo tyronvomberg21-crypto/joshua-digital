@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marv Cutz Mobile — Mobile Barber, Kimberley · We Come To You</title>
 <meta name="description" content="Marv Cutz Mobile — the mobile barber trusted by top rugby players, now at your door in Kimberley. Haircuts & hair dye, booked on WhatsApp. We come to you.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marv Cutz Mobile — Mobile Barber, Kimberley · We Come To You">
+<meta property="og:description" content="The barber trusted by top rugby players — now at your door in Kimberley. Sharp cuts & colour, booked on WhatsApp.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/marv-1.jpg">
+<meta property="og:url" content="https://joshuavomberg.co.za/marv_cutz_mobile.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://joshuavomberg.co.za/images/marv-1.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f8bff'/><text x='16' y='23' font-family='Arial,sans-serif' font-weight='bold' font-style='italic' font-size='17' fill='%23fff' text-anchor='middle'>M</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -27,7 +35,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,13,18,0.9);backdrop-fil
 .nav-cta{background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;padding:11px 20px;text-decoration:none;letter-spacing:0.5px;text-transform:uppercase;border-radius:8px;transition:all .2s;box-shadow:0 8px 24px -8px rgba(47,139,255,0.7)}
 .nav-cta:hover{background:var(--blue2);transform:translateY(-1px)}
 
-.hero{min-height:92vh;padding:80px 5vw 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero{min-height:92vh;padding:80px 5vw 60px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-inner{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;border-radius:18px;border:1px solid var(--line);box-shadow:0 44px 90px -34px rgba(0,0,0,.8),0 0 0 1px rgba(47,139,255,.08);display:block}
+.hero-visual .vtag{position:absolute;left:-12px;bottom:22px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 16px;display:flex;align-items:center;gap:9px;box-shadow:0 20px 40px -20px rgba(0,0,0,.7)}
+.hero-visual .vtag .d{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.hero-visual .vtag span{font-size:12.5px;color:var(--text);font-weight:600}
 .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 75% 15%,rgba(47,139,255,0.22),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(34,211,238,0.08),transparent 50%),linear-gradient(160deg,#0a0d12,#0e1219)}
 .hero-grid{position:absolute;inset:0;z-index:0;opacity:0.5;
   background-image:linear-gradient(rgba(47,139,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(47,139,255,0.05) 1px,transparent 1px);
@@ -36,7 +50,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,13,18,0.9);backdrop-fil
 .hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(47,139,255,0.1);border:1px solid rgba(47,139,255,0.3);
   font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--blue2);font-weight:600;padding:8px 16px;border-radius:40px;margin-bottom:26px}
 .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
-h1{font-family:'Archivo',sans-serif;font-size:clamp(48px,8vw,108px);font-weight:900;line-height:0.92;letter-spacing:-2.5px;text-transform:uppercase;margin-bottom:22px}
+h1{font-family:'Archivo',sans-serif;font-size:clamp(44px,6vw,82px);font-weight:900;line-height:0.94;letter-spacing:-2px;text-transform:uppercase;margin-bottom:22px}
 h1 em{font-style:italic;color:var(--blue);font-weight:800}
 .hero-sub{font-size:18px;color:var(--muted);font-weight:300;max-width:480px;margin-bottom:38px;line-height:1.7}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
@@ -74,6 +88,14 @@ h2 em{font-style:italic;color:var(--blue)}
 .service-name{font-family:'Archivo',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:3px}
 .service-desc{font-size:13px;color:var(--muted);line-height:1.5}
 .service-price{font-family:'Archivo',sans-serif;font-size:24px;font-weight:800;color:var(--blue2);flex-shrink:0}
+
+/* GALLERY */
+.gallery-section{background:var(--bg)}
+.cuts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cut{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);box-shadow:0 20px 40px -26px rgba(0,0,0,.8)}
+.cut img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cut:hover img{transform:scale(1.07)}
+@media(max-width:768px){.cuts-grid{grid-template-columns:1fr 1fr}}
 
 /* AREAS */
 .areas-section{background:var(--bg2)}
@@ -135,6 +157,8 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
 
 @media(max-width:768px){
   .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:34px}
+  .hero-visual{max-width:400px}
   .about-grid,.book-grid,.areas-wrap{grid-template-columns:1fr}
   .services-grid,.reviews-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}.about-stats{grid-template-columns:1fr 1fr}
@@ -148,6 +172,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
     <li><a href="#areas">Areas</a></li>
     <li><a href="#book">Book</a></li>
   </ul>
@@ -157,6 +182,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
+  <div class="hero-inner">
   <div class="hero-content">
     <div class="hero-badge"><span class="dot"></span>🏉 Trusted by Top Rugby Players · Kimberley</div>
     <h1>Fresh cuts.<br>At your <em>door.</em></h1>
@@ -168,6 +194,11 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
       </a>
       <a href="#services" class="btn-outline">View Services</a>
     </div>
+  </div>
+  <div class="hero-visual">
+    <img src="images/marv-1.jpg" alt="Sharp waves and fade by Marv Cutz Mobile">
+    <div class="vtag"><span class="d"></span><span>Booking now · Kimberley</span></div>
+  </div>
   </div>
 </section>
 
@@ -211,6 +242,19 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
     <div class="service-card"><span class="service-icon">👥</span><div class="service-main"><div class="service-name">Group / Home Visit</div><div class="service-desc">Multiple cuts, one call-out. Ask for a rate.</div></div><div class="service-price">POA</div></div>
   </div>
   <p class="center" style="margin-top:20px;color:var(--muted);font-size:13.5px">A small call-out fee may apply depending on your area — just ask.</p>
+</section>
+
+<section id="work" class="gallery-section">
+  <div class="section-label center">The Work</div>
+  <h2 class="center">Fresh cuts, <em>fresh waves</em></h2>
+  <div class="cuts-grid">
+    <div class="cut"><img src="images/marv-1.jpg" alt="360 waves with skin fade by Marv Cutz Mobile" loading="lazy"></div>
+    <div class="cut"><img src="images/marv-2.jpg" alt="Waves with razor design and taper fade" loading="lazy"></div>
+    <div class="cut"><img src="images/marv-3.jpg" alt="Crisp buzz cut with sharp line-up" loading="lazy"></div>
+    <div class="cut"><img src="images/marv-4.jpg" alt="Curly top with drop fade" loading="lazy"></div>
+    <div class="cut"><img src="images/marv-5.jpg" alt="360 waves with clean taper fade" loading="lazy"></div>
+  </div>
+  <p class="center" style="margin-top:24px;color:var(--muted);font-size:13.5px">Every cut done at your door — book yours below. 💈</p>
 </section>
 
 <section id="areas" class="areas-section">
@@ -294,11 +338,11 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:34px 5vw;di
   <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#areas">Areas</a><a href="#book">Book</a></div>
   <div>
     <div class="footer-copy">© 2026 Marv Cutz Mobile · Kimberley</div>
-    <div class="footer-built">Concept design by <a href="#">Joshua.digital</a></div>
+    <div class="footer-built">Concept design by <a href="https://joshuavomberg.co.za">Joshua.digital</a></div>
   </div>
 </footer>
 
-<div class="concept">✂️ <b>Concept mockup</b> — a website idea for Marv Cutz Mobile, designed by <a href="#">Joshua.digital</a>. Not the live site.</div>
+<div class="concept">✂️ <b>Concept mockup</b> — a website idea for Marv Cutz Mobile, designed by <a href="https://joshuavomberg.co.za">Joshua.digital</a>. Not the live site.</div>
 
 <script>
 var PHONE = "27780059036"; // Marv Cutz Mobile WhatsApp
