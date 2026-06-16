@@ -241,6 +241,19 @@
   .concept a{color:var(--butter);border-bottom:1px solid transparent;transition:border-color .25s}
   .concept a:hover{border-color:var(--butter)}
 
+  /* ---------- order form ---------- */
+  .order-form{max-width:660px;margin:38px auto 0;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .order-form .full{grid-column:1/-1}
+  .order-form label{display:block;font-family:'Marcellus',serif;text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--sage);margin-bottom:7px}
+  .order-form input,.order-form textarea{width:100%;font-family:'Mulish',sans-serif;font-size:.95rem;color:var(--ink);background:#FFFDF7;border:1px solid var(--line);border-radius:11px;padding:.82em .95em;transition:border-color .2s,box-shadow .2s}
+  .order-form input:focus,.order-form textarea:focus{outline:none;border-color:var(--olive);box-shadow:0 0 0 3px rgba(88,92,66,.13)}
+  .order-form textarea{min-height:120px;resize:vertical}
+  .order-form .submit{grid-column:1/-1;display:flex;justify-content:center;margin-top:6px}
+  .order-msg{grid-column:1/-1;text-align:center;padding:13px 16px;border-radius:11px;font-weight:600;font-size:.92rem;display:none}
+  .order-msg.show{display:block}
+  .order-msg.ok{background:#E9F0E1;color:var(--olive-deep)}
+  .order-msg.err{background:#F6E3D8;color:#9a3a1a}
+
   /* ---------- floating + mobile bar ---------- */
   .fab{position:fixed;right:22px;bottom:24px;z-index:60;width:58px;height:58px;border-radius:50%;
     background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);
@@ -285,7 +298,7 @@
       background:var(--olive-deep);padding:10px 14px;gap:10px;box-shadow:0 -6px 20px -8px rgba(0,0,0,.4)
     }
     .mobile-bar a{flex:1;justify-content:center;padding:.9em 1em}
-    .mobile-bar .btn-primary{background:#25D366;color:#fff}
+    .mobile-bar .btn-primary{background:var(--olive-deep);color:var(--butter-soft)}
     .mobile-bar .btn-ghost{border-color:var(--butter);color:var(--butter)}
     body{padding-bottom:64px}
     footer{padding-bottom:84px}
@@ -303,7 +316,7 @@
       <a href="#gallery">Our Cakes</a>
       <a href="#menu">Menu</a>
       <a href="#visit">Visit</a>
-      <a class="btn btn-primary btn-desktop" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener">Order a Cake</a>
+      <a class="btn btn-primary btn-desktop" href="#order">Order a Cake</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -318,7 +331,7 @@
       <h1 class="reveal">Cake, <span class="serif-it">made</span> like a quiet little luxury.</h1>
       <p class="lead reveal">Handcrafted seasonal layer cakes, Korean macarons and specialty coffee — tucked into the Cape Quarter on Waterkant Street. Pretty enough for the feed, far too good to only look at.</p>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener">Order a Custom Cake</a>
+        <a class="btn btn-primary" href="#order">Order a Custom Cake</a>
         <a class="btn btn-ghost" href="#gallery">See the Cakes</a>
       </div>
     </div>
@@ -444,16 +457,27 @@
   </div>
 </section>
 
-<!-- ORDER CTA -->
-<section class="order pad">
+<!-- ORDER FORM -->
+<section class="order pad" id="order">
   <div class="wrap">
-    <span class="eyebrow reveal" style="display:block;margin-bottom:18px">Custom Cakes</span>
-    <h2 class="reveal">Got a celebration <span class="serif-it">coming up?</span></h2>
-    <p class="reveal">Tell us the date, the vibe and the flavours — we'll make you something worth gathering around. Custom cakes are made to order on WhatsApp.</p>
-    <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake.%20Here%27s%20what%20I%27m%20thinking..." target="_blank" rel="noopener">WhatsApp 068 035 5552</a>
-      <a class="btn btn-ghost" href="https://www.instagram.com/cakesbychiffon/" target="_blank" rel="noopener">@cakesbychiffon</a>
-    </div>
+    <span class="eyebrow reveal" style="display:block;margin-bottom:18px">Order a Cake</span>
+    <h2 class="reveal">Order your <span class="serif-it">custom cake.</span></h2>
+    <p class="reveal">Tell us about your cake — the occasion, flavours, size and the date you need it — and we'll come straight back to you. It's free to enquire, no deposit to ask.</p>
+    <form class="order-form reveal" id="orderForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="REPLACE-WITH-WEB3FORMS-KEY">
+      <input type="hidden" name="subject" value="🍰 New cake order from your Café Chiffon website">
+      <input type="hidden" name="from_name" value="Café Chiffon website">
+      <input type="checkbox" name="botcheck" style="display:none">
+      <div><label>Your name</label><input name="name" required placeholder="First &amp; last name"></div>
+      <div><label>Phone</label><input name="phone" type="tel" placeholder="So we can reach you"></div>
+      <div><label>Email</label><input name="email" type="email" required placeholder="you@email.com"></div>
+      <div><label>Date you need it</label><input name="date_needed" type="date"></div>
+      <div class="full"><label>What would you like?</label><input name="cake" placeholder="e.g. birthday cake · 20cm · vanilla &amp; berries"></div>
+      <div class="full"><label>Details</label><textarea name="details" placeholder="Colours, flavours, a message for the top, any inspiration you've seen…"></textarea></div>
+      <div class="order-msg" id="orderMsg"></div>
+      <div class="submit"><button class="btn btn-primary" type="submit" id="orderBtn">Send my order →</button></div>
+    </form>
+    <p class="reveal" style="margin-top:18px;font-size:.85rem;color:var(--muted)">Or find us on Instagram <a href="https://www.instagram.com/cafechiffon.cpt/" target="_blank" rel="noopener" style="color:var(--mocha)">@cafechiffon.cpt</a></p>
   </div>
 </section>
 
@@ -485,7 +509,7 @@
 
 <!-- mobile bar -->
 <div class="mobile-bar">
-  <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20cake." target="_blank" rel="noopener">Order a Cake</a>
+  <a class="btn btn-primary" href="#order">Order a Cake</a>
   <a class="btn btn-ghost" href="#visit">Visit Us</a>
 </div>
 
@@ -506,6 +530,35 @@
     entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target)}});
   },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // order form
+  const orderForm=document.getElementById('orderForm');
+  if(orderForm){
+    orderForm.addEventListener('submit',async(e)=>{
+      e.preventDefault();
+      const msg=document.getElementById('orderMsg');
+      const btn=document.getElementById('orderBtn');
+      const key=orderForm.querySelector('[name=access_key]').value;
+      if(key.indexOf('REPLACE')>-1){
+        msg.className='order-msg show ok';
+        msg.textContent='✨ Preview — this order form goes live the moment it’s connected to your inbox.';
+        return;
+      }
+      btn.disabled=true;const t=btn.textContent;btn.textContent='Sending…';
+      try{
+        const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(orderForm)});
+        const out=await res.json();
+        if(out.success){
+          orderForm.reset();
+          msg.className='order-msg show ok';
+          msg.textContent='🍰 Thank you! Your order has landed with us — we’ll be in touch very soon.';
+        }else{throw new Error()}
+      }catch(_){
+        msg.className='order-msg show err';
+        msg.textContent='Sorry, something went wrong — please try again, or DM us on Instagram.';
+      }finally{btn.disabled=false;btn.textContent=t}
+    });
+  }
 </script>
 </body>
 </html>
