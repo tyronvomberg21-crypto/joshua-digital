@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Chiffon — Asian-Inspired Dessert Café · Green Point, Cape Town</title>
+<meta name="description" content="Café Chiffon — an Asian-inspired dessert café in Green Point, Cape Town. Handcrafted seasonal layer cakes, Korean macarons, matcha & specialty coffee. Custom cakes to order on WhatsApp.">
+<link rel="canonical" href="https://joshuavomberg.co.za/cafe_chiffon.html">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Café Chiffon — Asian-Inspired Dessert Café, Green Point">
+<meta property="og:description" content="Handcrafted seasonal cakes, Korean macarons & specialty coffee in Green Point, Cape Town. Custom cakes to order.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/chiffon-table.jpg">
+<meta property="og:url" content="https://joshuavomberg.co.za/cafe_chiffon.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Café Chiffon — Asian-Inspired Dessert Café, Green Point">
+<meta name="twitter:description" content="Handcrafted seasonal cakes, Korean macarons & specialty coffee. Custom cakes to order.">
+<meta name="twitter:image" content="https://joshuavomberg.co.za/images/chiffon-table.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23F1E2A6'/%3E%3Ctext x='50' y='62' font-size='34' text-anchor='middle' fill='%235A5E44' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marcellus&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café Chiffon",
+  "description": "Asian-inspired dessert café in Green Point, Cape Town — handcrafted seasonal cakes, Korean macarons and specialty coffee.",
+  "image": "https://joshuavomberg.co.za/images/chiffon-table.jpg",
+  "servesCuisine": ["Dessert", "Cakes", "Coffee", "Asian-inspired"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "72 Waterkant Street",
+    "addressLocality": "Green Point",
+    "addressRegion": "Cape Town",
+    "postalCode": "8001",
+    "addressCountry": "ZA"
+  },
+  "url": "https://joshuavomberg.co.za/cafe_chiffon.html",
+  "sameAs": ["https://www.instagram.com/cafechiffon.cpt/"]
+}
+</script>
+
+<style>
+  :root{
+    --cream:#FAF5EA;
+    --cream-2:#F2E8D6;
+    --butter:#F1E2A6;
+    --butter-soft:#F8EFCB;
+    --olive:#585C42;
+    --olive-deep:#40432E;
+    --sage:#7E8364;
+    --taupe:#B8A98E;
+    --mocha:#8C7C5E;
+    --ink:#34332A;
+    --muted:#6E6D5C;
+    --line:rgba(64,67,46,.14);
+    --shadow:0 24px 60px -28px rgba(64,67,46,.45);
+    --r-arch:46% 46% 12px 12px / 38% 38% 12px 12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Mulish',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--butter);color:var(--olive-deep)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.06;letter-spacing:.4px}
+  .serif-it{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+  .eyebrow{
+    font-family:'Marcellus',serif;
+    text-transform:uppercase;
+    letter-spacing:.34em;
+    font-size:.72rem;
+    color:var(--sage);
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* subtle grain/paper texture */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+    background-image:radial-gradient(rgba(64,67,46,.025) 1px,transparent 1px);
+    background-size:4px 4px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
+    padding:22px 0;
+  }
+  header.scrolled{background:rgba(250,245,234,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:14px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:'Marcellus',serif;font-size:1.32rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive-deep)}
+  .brand span{color:var(--mocha)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.82rem;letter-spacing:.06em;color:var(--olive);transition:color .25s}
+  .nav-links a:hover{color:var(--mocha)}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:'Mulish',sans-serif;font-weight:600;font-size:.84rem;letter-spacing:.04em;
+    padding:.78em 1.5em;border-radius:40px;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary{background:var(--olive-deep);color:var(--butter-soft)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 26px -12px rgba(64,67,46,.6)}
+  .btn-ghost{background:transparent;border-color:var(--olive);color:var(--olive-deep)}
+  .btn-ghost:hover{background:var(--olive-deep);color:var(--butter-soft);transform:translateY(-2px)}
+  .nav .btn{padding:.62em 1.25em}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .hamburger span{width:24px;height:2px;background:var(--olive-deep);transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:170px 0 90px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(1100px 540px at 78% -8%, var(--butter-soft) 0%, transparent 58%),
+      radial-gradient(800px 600px at 6% 110%, #EFE7D3 0%, transparent 60%),
+      var(--cream);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .hero-copy .eyebrow{display:block;margin-bottom:22px}
+  .hero h1{font-size:clamp(3rem,6.6vw,5.4rem);color:var(--olive-deep)}
+  .hero h1 .serif-it{color:var(--mocha)}
+  .hero p.lead{font-size:1.08rem;color:var(--muted);max-width:30em;margin:26px 0 34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-media{position:relative}
+  .hero-media .arch{
+    border-radius:var(--r-arch);overflow:hidden;box-shadow:var(--shadow);
+    aspect-ratio:4/4.7;
+  }
+  .hero-media .arch img{width:100%;height:100%;object-fit:cover}
+  .hero-media .tag{
+    position:absolute;left:-22px;bottom:38px;background:var(--cream);
+    border:1px solid var(--line);border-radius:16px;padding:14px 20px;box-shadow:var(--shadow);
+    font-family:'Marcellus',serif;text-align:center;line-height:1.2;
+  }
+  .hero-media .tag b{display:block;font-size:1.5rem;color:var(--olive-deep)}
+  .hero-media .tag small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+  .hero-media .seal{
+    position:absolute;right:-18px;top:26px;width:104px;height:104px;border-radius:50%;
+    background:var(--butter);color:var(--olive-deep);display:grid;place-items:center;text-align:center;
+    font-family:'Marcellus',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;
+    box-shadow:var(--shadow);animation:spin 26s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ---------- MARQUEE STRIP ---------- */
+  .strip{background:var(--olive-deep);color:var(--butter-soft);padding:18px 0;overflow:hidden;position:relative;z-index:2}
+  .marquee{display:flex;gap:48px;white-space:nowrap;animation:scroll 28s linear infinite;width:max-content}
+  .marquee span{font-family:'Marcellus',serif;letter-spacing:.2em;text-transform:uppercase;font-size:.82rem;display:inline-flex;gap:48px;align-items:center}
+  .marquee span::after{content:"✶";color:var(--butter);font-size:.7rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{position:relative;z-index:2}
+  .pad{padding:96px 0}
+  .sec-head{text-align:center;max-width:40em;margin:0 auto 56px}
+  .sec-head .eyebrow{display:block;margin-bottom:16px}
+  .sec-head h2{font-size:clamp(2.4rem,4.6vw,3.5rem);color:var(--olive-deep)}
+  .sec-head p{color:var(--muted);margin-top:16px}
+
+  /* ---------- STORY ---------- */
+  .story{background:var(--cream-2)}
+  .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:62px;align-items:center}
+  .story-media .arch{border-radius:var(--r-arch);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.6}
+  .story-media .arch img{width:100%;height:100%;object-fit:cover}
+  .story-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);color:var(--olive-deep);margin:14px 0 22px}
+  .story-copy p{color:var(--muted);margin-bottom:18px}
+  .story-copy p strong{color:var(--olive);font-weight:600}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .4s ease, box-shadow .4s ease}
+  .card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .card .ph{aspect-ratio:1/1.16;overflow:hidden}
+  .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .card:hover .ph img{transform:scale(1.06)}
+  .card .cap{padding:22px 24px 26px}
+  .card .cap .eyebrow{font-size:.62rem}
+  .card .cap h3{font-size:1.6rem;color:var(--olive-deep);margin:8px 0 6px}
+  .card .cap p{font-size:.92rem;color:var(--muted)}
+
+  /* ---------- MENU ---------- */
+  .menu{background:var(--olive-deep);color:var(--butter-soft)}
+  .menu .eyebrow{color:var(--butter)}
+  .menu .sec-head h2{color:var(--cream)}
+  .menu .sec-head p{color:rgba(248,239,203,.7)}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:54px 72px;max-width:920px;margin:0 auto}
+  .menu-block h3{font-family:'Marcellus',serif;font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase;color:var(--butter);margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid rgba(248,239,203,.22)}
+  .menu-item{display:flex;justify-content:space-between;gap:14px;padding:11px 0;align-items:baseline}
+  .menu-item .nm{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--cream)}
+  .menu-item .ds{font-size:.82rem;color:rgba(248,239,203,.62);text-align:right;max-width:15em}
+  .menu-note{text-align:center;margin-top:48px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--butter)}
+
+  /* ---------- VISIT ---------- */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .visit-card{background:var(--cream-2);border-radius:24px;padding:46px 44px;border:1px solid var(--line)}
+  .visit-card h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--olive-deep);margin-bottom:8px}
+  .visit-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .visit-row:last-of-type{border-bottom:0}
+  .visit-row .ic{font-size:1.2rem;line-height:1.4;flex-shrink:0}
+  .visit-row .lab{font-family:'Marcellus',serif;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--sage);margin-bottom:3px}
+  .visit-row .val{color:var(--ink);font-weight:500}
+  .visit-row .val small{display:block;color:var(--muted);font-weight:400;font-size:.86rem}
+  .hours{display:flex;justify-content:space-between;font-size:.92rem;color:var(--muted);padding:5px 0}
+  .hours b{color:var(--ink);font-weight:600}
+  .visit-media .arch{border-radius:var(--r-arch);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.5}
+  .visit-media .arch img{width:100%;height:100%;object-fit:cover}
+
+  /* ---------- ORDER CTA ---------- */
+  .order{position:relative;text-align:center;overflow:hidden;
+    background:radial-gradient(900px 500px at 50% 0%, var(--butter-soft), var(--cream-2))}
+  .order h2{font-size:clamp(2.6rem,5.4vw,4.4rem);color:var(--olive-deep);max-width:13em;margin:0 auto 18px}
+  .order h2 .serif-it{color:var(--mocha)}
+  .order p{color:var(--muted);max-width:34em;margin:0 auto 36px;font-size:1.06rem}
+  .order .hero-cta{justify-content:center}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--olive-deep);color:rgba(248,239,203,.78);padding:64px 0 30px;text-align:center}
+  footer .flogo{width:96px;height:96px;border-radius:50%;margin:0 auto 22px;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.5)}
+  footer .flogo img{width:100%;height:100%;object-fit:cover}
+  footer h3{font-family:'Marcellus',serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);font-size:1.1rem;margin-bottom:10px}
+  footer .fnav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:22px 0;font-size:.84rem}
+  footer .fnav a{color:rgba(248,239,203,.75);transition:color .25s}
+  footer .fnav a:hover{color:var(--butter)}
+  footer .fmeta{font-size:.8rem;color:rgba(248,239,203,.5);margin-top:18px;line-height:1.8}
+  .concept{display:inline-block;margin-top:20px;font-size:.72rem;letter-spacing:.1em;color:rgba(248,239,203,.45)}
+  .concept a{color:var(--butter);border-bottom:1px solid transparent;transition:border-color .25s}
+  .concept a:hover{border-color:var(--butter)}
+
+  /* ---------- floating + mobile bar ---------- */
+  .fab{position:fixed;right:22px;bottom:24px;z-index:60;width:58px;height:58px;border-radius:50%;
+    background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);
+    transition:transform .3s ease}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:30px;height:30px;fill:#fff}
+  .mobile-bar{display:none}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .marquee,.seal{animation:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:920px){
+    .hero-grid,.story-grid,.visit-grid{grid-template-columns:1fr;gap:48px}
+    .story-media{order:-1}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .menu-cols{grid-template-columns:1fr;gap:42px}
+    .hero{padding:140px 0 70px}
+  }
+  @media (max-width:680px){
+    .nav-links{
+      position:fixed;inset:0 0 0 auto;width:74%;max-width:320px;background:var(--cream);
+      flex-direction:column;justify-content:center;gap:30px;padding:40px;
+      transform:translateX(100%);transition:transform .4s ease;box-shadow:var(--shadow);z-index:55
+    }
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:1.05rem}
+    .hamburger{display:flex;z-index:56}
+    .nav .btn-desktop{display:none}
+    .gallery-grid{grid-template-columns:1fr}
+    .hero h1{font-size:clamp(2.7rem,11vw,3.6rem)}
+    .hero-media .seal{display:none}
+    .fab{display:none}
+    .mobile-bar{
+      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background:var(--olive-deep);padding:10px 14px;gap:10px;box-shadow:0 -6px 20px -8px rgba(0,0,0,.4)
+    }
+    .mobile-bar a{flex:1;justify-content:center;padding:.9em 1em}
+    .mobile-bar .btn-primary{background:#25D366;color:#fff}
+    .mobile-bar .btn-ghost{border-color:var(--butter);color:var(--butter)}
+    body{padding-bottom:64px}
+    footer{padding-bottom:84px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand">Café&nbsp;<span>Chiffon</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#story">The Café</a>
+      <a href="#gallery">Our Cakes</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-primary btn-desktop" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener">Order a Cake</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Asian-Inspired Dessert Café · Green Point</span>
+      <h1 class="reveal">Cake, <span class="serif-it">made</span> like a quiet little luxury.</h1>
+      <p class="lead reveal">Handcrafted seasonal layer cakes, Korean macarons and specialty coffee — tucked into the Cape Quarter on Waterkant Street. Pretty enough for the feed, far too good to only look at.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener">Order a Custom Cake</a>
+        <a class="btn btn-ghost" href="#gallery">See the Cakes</a>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="arch"><img src="images/chiffon-table.jpg" alt="A Café Chiffon table with matcha latte, iced coffee, layer-cake slices and Korean macarons" width="978" height="1310"></div>
+      <div class="tag">
+        <b>21k+</b>
+        <small>Cape Town's favourite</small>
+      </div>
+      <div class="seal">Walk-in&nbsp;·&nbsp;No&nbsp;Bookings&nbsp;·&nbsp;Just&nbsp;Pop&nbsp;By&nbsp;·</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Seasonal Layer Cakes</span><span>Korean Macarons</span><span>Matcha &amp; Specialty Coffee</span><span>Custom Celebration Cakes</span><span>72 Waterkant Street</span>
+    <span>Seasonal Layer Cakes</span><span>Korean Macarons</span><span>Matcha &amp; Specialty Coffee</span><span>Custom Celebration Cakes</span><span>72 Waterkant Street</span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story pad" id="story">
+  <div class="wrap story-grid">
+    <div class="story-media reveal">
+      <div class="arch"><img src="images/chiffon-decorating.jpg" alt="A Café Chiffon baker piping buttercream onto a pastel layer cake" width="1018" height="1252"></div>
+    </div>
+    <div class="story-copy">
+      <span class="eyebrow reveal">Handmade, by hand, every day</span>
+      <h2 class="reveal">Small-batch cakes with an Asian-inspired soul.</h2>
+      <p class="reveal">Café Chiffon is a little dessert studio in Green Point where light Japanese-style sponge meets silky buttercream and the kind of finishing that takes real patience — fresh fruit, edible flowers, a careful swirl on top.</p>
+      <p class="reveal">The <strong>menu changes with the season</strong>, so there's always something new in the display fridge. Pair a slice with a matcha latte or a slow specialty coffee, and you've found the prettiest table in the Cape Quarter.</p>
+      <p class="reveal">No bookings, no fuss — <strong>just walk in</strong>. And when you want something for a birthday or a celebration, we make custom cakes to order.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">From the display fridge</span>
+      <h2 class="reveal">A few of our <span class="serif-it">favourites</span></h2>
+      <p class="reveal">A rotating, seasonal line-up — here's a taste of what's been on the counter lately.</p>
+    </div>
+    <div class="gallery-grid">
+      <article class="card reveal">
+        <div class="ph"><img src="images/chiffon-menu.jpg" alt="Seasonal layer cakes from the Café Chiffon April–June menu" width="1048" height="1290"></div>
+        <div class="cap"><span class="eyebrow">Seasonal Range</span><h3>The Cake Lineup</h3><p>A new menu each season — flavours and finishes that change as the months do.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="images/chiffon-cake.jpg" alt="A vanilla buttercream layer cake topped with raspberries and edible flowers" width="896" height="1172"></div>
+        <div class="cap"><span class="eyebrow">Signature</span><h3>Berry &amp; Bloom</h3><p>Soft vanilla sponge, whipped buttercream, fresh raspberries and pressed flowers.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="images/chiffon-table.jpg" alt="Cake slices with matcha latte, iced coffee and Korean macarons at Café Chiffon" width="978" height="1310"></div>
+        <div class="cap"><span class="eyebrow">The Perfect Table</span><h3>Coffee &amp; Macarons</h3><p>Slices, Korean flower macarons, matcha and iced coffee — the full Chiffon sit-down.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu pad" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">What's on</span>
+      <h2 class="reveal">The Chiffon menu</h2>
+      <p class="reveal">A seasonal selection — cakes change through the year, the coffee's always on.</p>
+    </div>
+    <div class="menu-cols">
+      <div class="menu-block reveal">
+        <h3>Cakes &amp; Sweets</h3>
+        <div class="menu-item"><span class="nm">Seasonal Layer Cakes</span><span class="ds">By the slice or whole</span></div>
+        <div class="menu-item"><span class="nm">Berry &amp; Bloom Cake</span><span class="ds">Vanilla, raspberry, flowers</span></div>
+        <div class="menu-item"><span class="nm">Korean Macarons</span><span class="ds">Soft, fluffy, filled</span></div>
+        <div class="menu-item"><span class="nm">Custom Celebration Cakes</span><span class="ds">Made to order on request</span></div>
+      </div>
+      <div class="menu-block reveal">
+        <h3>Coffee &amp; Drinks</h3>
+        <div class="menu-item"><span class="nm">Matcha Latte</span><span class="ds">Hot or iced</span></div>
+        <div class="menu-item"><span class="nm">Specialty Espresso</span><span class="ds">Flat white · cappuccino · latte</span></div>
+        <div class="menu-item"><span class="nm">Iced Coffee</span><span class="ds">Americano · latte · caramel</span></div>
+        <div class="menu-item"><span class="nm">Seasonal Specials</span><span class="ds">Ask at the counter</span></div>
+      </div>
+    </div>
+    <p class="menu-note reveal">Full seasonal menu in-store · prices on the day</p>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="pad" id="visit">
+  <div class="wrap visit-grid">
+    <div class="visit-card reveal">
+      <span class="eyebrow">Come say hi</span>
+      <h2>Find us in Green Point</h2>
+      <div class="visit-row">
+        <span class="ic">📍</span>
+        <div><div class="lab">Where</div><div class="val">72 Waterkant Street<small>Cape Quarter, Green Point, Cape Town 8001</small></div></div>
+      </div>
+      <div class="visit-row">
+        <span class="ic">🚶</span>
+        <div><div class="lab">Bookings</div><div class="val">No bookings — walk right in<small>Grab a table whenever the mood strikes</small></div></div>
+      </div>
+      <div class="visit-row">
+        <span class="ic">🕒</span>
+        <div style="flex:1">
+          <div class="lab">Hours</div>
+          <div class="hours"><span>Mon – Fri</span><b>7:30 – 17:30</b></div>
+          <div class="hours"><span>Saturday</span><b>8:00 – 16:00</b></div>
+          <div class="hours"><span>Sunday</span><b>Closed</b></div>
+        </div>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+Chiffon+72+Waterkant+Street+Green+Point" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/cafechiffon.cpt/" target="_blank" rel="noopener">See Instagram</a>
+      </div>
+    </div>
+    <div class="visit-media reveal">
+      <div class="arch"><img src="images/chiffon-cake.jpg" alt="A Café Chiffon signature cake by the window" width="896" height="1172"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER CTA -->
+<section class="order pad">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="display:block;margin-bottom:18px">Custom Cakes</span>
+    <h2 class="reveal">Got a celebration <span class="serif-it">coming up?</span></h2>
+    <p class="reveal">Tell us the date, the vibe and the flavours — we'll make you something worth gathering around. Custom cakes are made to order on WhatsApp.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20custom%20cake.%20Here%27s%20what%20I%27m%20thinking..." target="_blank" rel="noopener">WhatsApp 068 035 5552</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/cakesbychiffon/" target="_blank" rel="noopener">@cakesbychiffon</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="flogo"><img src="images/chiffon-logo.png" alt="Café Chiffon logo"></div>
+    <h3>Café Chiffon</h3>
+    <p style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--butter)">Asian-inspired dessert café · Green Point</p>
+    <div class="fnav">
+      <a href="#story">The Café</a>
+      <a href="#gallery">Our Cakes</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a href="https://www.instagram.com/cafechiffon.cpt/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="fmeta">
+      72 Waterkant Street, Cape Quarter, Green Point, Cape Town 8001<br>
+      Custom cakes · WhatsApp 068 035 5552 · @cakesbychiffon
+    </div>
+    <span class="concept">Concept website by <a href="https://joshuavomberg.co.za" target="_blank" rel="noopener">Joshua.digital</a></span>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a class="fab" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!" target="_blank" rel="noopener" aria-label="WhatsApp Café Chiffon">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.518 5.26l-.999 3.648 3.748-.979zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- mobile bar -->
+<div class="mobile-bar">
+  <a class="btn btn-primary" href="https://wa.me/27680355552?text=Hi%20Caf%C3%A9%20Chiffon!%20I%27d%20love%20to%20order%20a%20cake." target="_blank" rel="noopener">Order a Cake</a>
+  <a class="btn btn-ghost" href="#visit">Visit Us</a>
+</div>
+
+<script>
+  // nav scroll state
+  const header=document.getElementById('top');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>30);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // mobile menu
+  const burger=document.getElementById('hamburger');
+  const links=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+  // reveal on scroll
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
