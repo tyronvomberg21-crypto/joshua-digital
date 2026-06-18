@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cake Lot — Home Bakery, Ottery · Cape Town</title>
+<meta name="description" content="The Cake Lot — a home bakery in Ottery, Cape Town. Custom celebration cakes, bento cakes, cupcakes, dessert boxes & treats. Love at first bite. Order on Instagram.">
+<link rel="canonical" href="https://joshuavomberg.co.za/the_cake_lot.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Cake Lot — Home Bakery, Ottery · Cape Town">
+<meta property="og:description" content="Custom celebration cakes, bento cakes, cupcakes & dessert boxes. Love at first bite. Made to order in Ottery, Cape Town.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/cakelot-teddy.jpg">
+<meta property="og:url" content="https://joshuavomberg.co.za/the_cake_lot.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Cake Lot — Home Bakery, Ottery">
+<meta name="twitter:description" content="Custom cakes, cupcakes & dessert boxes. Love at first bite.">
+<meta name="twitter:image" content="https://joshuavomberg.co.za/images/cakelot-teddy.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23F5E6DD'/%3E%3Ctext x='50' y='64' font-size='40' text-anchor='middle' fill='%23BE6F66' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Bakery",
+  "name":"The Cake Lot",
+  "description":"Home bakery in Ottery, Cape Town — custom celebration cakes, bento cakes, cupcakes and dessert boxes. Love at first bite.",
+  "image":"https://joshuavomberg.co.za/images/cakelot-teddy.jpg",
+  "servesCuisine":["Cakes","Cupcakes","Desserts"],
+  "address":{"@type":"PostalAddress","addressLocality":"Ottery","addressRegion":"Cape Town","addressCountry":"ZA"},
+  "url":"https://joshuavomberg.co.za/the_cake_lot.html",
+  "sameAs":["https://www.instagram.com/thecakelot/"],
+  "openingHours":"Tu,We,Th,Fr 09:00-17:00"
+}
+</script>
+
+<style>
+  :root{
+    --cream:#FBF3ED;--cream-2:#F5E6DD;--blush:#F0CFC8;
+    --rose:#D38B82;--rose-deep:#BE6F66;
+    --cocoa:#4A352E;--cocoa-soft:#7A5F57;--muted:#8C746C;
+    --gold:#CDA86A;--line:rgba(74,53,46,.12);
+    --shadow:0 26px 56px -30px rgba(74,53,46,.5);
+    --r:24px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',sans-serif;color:var(--cocoa);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--blush);color:var(--rose-deep)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.05}
+  .script{font-family:'Caveat',cursive;font-weight:600}
+  .eyebrow{font-family:'Caveat',cursive;font-weight:600;font-size:1.4rem;color:var(--rose)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:.4s}
+  header.scrolled{background:rgba(251,243,237,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:11px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--rose-deep)}
+  .brand img{height:40px;width:40px;border-radius:50%;object-fit:cover}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:.9rem;font-weight:600;color:var(--cocoa-soft);transition:color .25s}
+  .nav-links a:hover{color:var(--rose-deep)}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;padding:.78em 1.5em;border-radius:40px;cursor:pointer;border:2px solid transparent;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+  .btn-primary{background:var(--rose-deep);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 26px -12px rgba(190,111,102,.6)}
+  .btn-ghost{background:transparent;border-color:var(--rose-deep);color:var(--rose-deep)}
+  .btn-ghost:hover{background:var(--rose-deep);color:#fff;transform:translateY(-2px)}
+  .nav .btn{padding:.6em 1.2em}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .hamburger span{width:24px;height:2.5px;background:var(--rose-deep);border-radius:2px;transition:.3s}
+
+  .hero{padding:152px 0 80px;position:relative;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 480px at 80% -6%,var(--blush) 0%,transparent 58%),radial-gradient(700px 520px at 4% 108%,var(--cream-2) 0%,transparent 60%),var(--cream)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero .eyebrow{display:block;margin-bottom:8px}
+  .hero h1{font-size:clamp(3.2rem,7vw,5.6rem);color:var(--rose-deep)}
+  .hero h1 em{font-style:italic;color:var(--cocoa)}
+  .hero p.lead{font-size:1.1rem;color:var(--muted);max-width:30em;margin:22px 0 32px}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-media{position:relative}
+  .hero-media .pic{border-radius:280px 280px 26px 26px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.7;border:8px solid #fff}
+  .hero-media .pic img{width:100%;height:100%;object-fit:cover}
+  .hero-media .badge{position:absolute;right:-14px;bottom:30px;width:118px;height:118px;border-radius:50%;background:#fff;color:var(--rose-deep);display:grid;place-items:center;text-align:center;box-shadow:var(--shadow);transform:rotate(-6deg)}
+  .hero-media .badge .script{font-size:1.5rem;line-height:1;color:var(--rose)}
+  .hero-media .badge small{font-family:'DM Serif Display',serif;font-size:.7rem;letter-spacing:.04em;display:block;margin-top:2px}
+
+  .strip{background:var(--rose-deep);color:#fff;padding:15px 0;overflow:hidden;position:relative;z-index:2}
+  .marquee{display:flex;gap:40px;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content}
+  .marquee span{font-family:'DM Serif Display',serif;font-size:1.05rem;display:inline-flex;gap:40px;align-items:center}
+  .marquee span::after{content:"🎂";font-size:.85rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  section{position:relative;z-index:2}
+  .pad{padding:92px 0}
+  .sec-head{text-align:center;max-width:40em;margin:0 auto 52px}
+  .sec-head .eyebrow{display:block;margin-bottom:6px}
+  .sec-head h2{font-size:clamp(2.3rem,4.6vw,3.4rem);color:var(--rose-deep)}
+  .sec-head h2 em{font-style:italic;color:var(--cocoa)}
+  .sec-head p{color:var(--muted);margin-top:14px}
+
+  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .gcard{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+  .gcard .ph{overflow:hidden;aspect-ratio:4/3.4}
+  .gcard.tall .ph{aspect-ratio:4/4.6}
+  .gcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .gcard:hover .ph img{transform:scale(1.05)}
+  .gcard .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 24px 20px;background:linear-gradient(to top,rgba(74,53,46,.78),transparent);color:#fff}
+  .gcard .cap .k{font-family:'Caveat',cursive;font-size:1.3rem;color:#F4D9D2}
+  .gcard .cap h3{font-size:1.5rem;line-height:1.1}
+
+  .bakes{background:var(--cream-2)}
+  .bake-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .bake{background:var(--cream);border-radius:var(--r);padding:30px 28px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+  .bake:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .bake .ic{font-size:1.8rem}
+  .bake h3{font-size:1.45rem;color:var(--rose-deep);margin:10px 0 6px}
+  .bake p{font-size:.92rem;color:var(--muted)}
+
+  .order-how{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .how-card{background:var(--cream-2);border-radius:28px;padding:42px 40px;border:1px solid var(--line)}
+  .how-card .eyebrow{display:block;margin-bottom:4px}
+  .how-card h2{font-size:clamp(2rem,4vw,2.8rem);color:var(--rose-deep);margin-bottom:18px}
+  .how-step{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .how-step:last-child{border-bottom:0}
+  .how-step .n{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--rose);line-height:1;flex-shrink:0;width:34px}
+  .how-step .t b{display:block;color:var(--cocoa);font-weight:800}
+  .how-step .t span{font-size:.9rem;color:var(--muted)}
+  .how-media{position:relative}
+  .how-media .pic{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/4.4;border:8px solid #fff}
+  .how-media .pic img{width:100%;height:100%;object-fit:cover}
+
+  .info-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:40px;padding:10px 20px;font-weight:600;font-size:.9rem;color:var(--cocoa);display:flex;gap:8px;align-items:center}
+  .chip b{color:var(--rose-deep)}
+
+  .cta{position:relative;text-align:center;overflow:hidden;background:radial-gradient(800px 460px at 50% 0%,var(--blush),var(--cream-2))}
+  .cta h2{font-size:clamp(2.6rem,5.4vw,4.4rem);color:var(--rose-deep);max-width:13em;margin:0 auto 14px}
+  .cta h2 em{font-style:italic;color:var(--cocoa)}
+  .cta p{color:var(--muted);max-width:32em;margin:0 auto 30px;font-size:1.05rem}
+
+  footer{background:var(--rose-deep);color:rgba(255,255,255,.82);padding:60px 0 28px;text-align:center}
+  footer .flogo{width:92px;height:92px;border-radius:50%;margin:0 auto 20px;overflow:hidden;border:4px solid rgba(255,255,255,.3)}
+  footer .flogo img{width:100%;height:100%;object-fit:cover}
+  footer h3{font-family:'DM Serif Display',serif;color:#fff;font-size:1.5rem;margin-bottom:6px}
+  footer .script{font-size:1.5rem;color:#F4D9D2}
+  footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:20px 0;font-size:.9rem;font-weight:600}
+  footer .fnav a{color:rgba(255,255,255,.8)}
+  footer .fnav a:hover{color:#fff}
+  footer .fmeta{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:14px;line-height:1.8}
+  .concept{display:block;margin-top:18px;font-size:.74rem;color:rgba(255,255,255,.55)}
+  .concept a{color:#F4D9D2}
+
+  .fab{position:fixed;right:22px;bottom:24px;z-index:60;width:58px;height:58px;border-radius:50%;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transition:transform .3s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:28px;height:28px;fill:#fff}
+  .mobile-bar{display:none}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.marquee{animation:none}html{scroll-behavior:auto}}
+
+  @media (max-width:920px){
+    .hero-grid,.order-how{grid-template-columns:1fr;gap:44px}
+    .how-media{order:-1}
+    .bake-grid{grid-template-columns:1fr 1fr}
+    .hero{padding:130px 0 64px}
+  }
+  @media (max-width:680px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:76%;max-width:320px;background:var(--cream);flex-direction:column;justify-content:center;gap:28px;padding:40px;transform:translateX(100%);transition:transform .4s;box-shadow:var(--shadow);z-index:55}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:1.05rem}
+    .hamburger{display:flex;z-index:56}
+    .nav .btn-desktop{display:none}
+    .gallery,.bake-grid{grid-template-columns:1fr}
+    .hero-media .badge{display:none}
+    .fab{display:none}
+    .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--rose-deep);padding:10px 14px;gap:10px;box-shadow:0 -6px 20px -8px rgba(0,0,0,.4)}
+    .mobile-bar a{flex:1;justify-content:center;padding:.9em 1em}
+    .mobile-bar .btn-primary{background:#fff;color:var(--rose-deep)}
+    .mobile-bar .btn-ghost{border-color:#fff;color:#fff}
+    body{padding-bottom:64px}
+    footer{padding-bottom:84px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><img src="images/cakelot-logo.png" alt="The Cake Lot logo">The Cake Lot</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#bakes">What we bake</a>
+      <a href="#gallery">The cakes</a>
+      <a href="#how">How to order</a>
+      <a href="#about">About</a>
+      <a class="btn btn-primary btn-desktop" href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener">Order on Instagram</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Home bakery · Ottery, Cape Town</span>
+      <h1 class="reveal">Love at <em>first bite.</em></h1>
+      <p class="lead reveal">Handmade celebration cakes, bento cakes, cupcakes and dessert boxes — baked to order in Ottery and finished with a whole lot of love. Whatever the occasion, we'll make it sweet.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener">Order on Instagram</a>
+        <a class="btn btn-ghost" href="#gallery">See the cakes</a>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="pic"><img src="images/cakelot-teddy.jpg" alt="A white buttercream teddy bear celebration cake by The Cake Lot" width="982" height="1194"></div>
+      <div class="badge"><div><span class="script">6k+</span><small>sweet fans</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Celebration Cakes</span><span>Bento Cakes</span><span>Cupcakes</span><span>Dessert Boxes</span><span>Brownies</span><span>Any Theme</span>
+    <span>Celebration Cakes</span><span>Bento Cakes</span><span>Cupcakes</span><span>Dessert Boxes</span><span>Brownies</span><span>Any Theme</span>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Fresh from the kitchen</span>
+      <h2>A little <em>sweetness</em></h2>
+      <p>A taste of what comes out of the Cake Lot kitchen — every one made fresh, to order.</p>
+    </div>
+    <div class="gallery">
+      <article class="gcard tall reveal">
+        <div class="ph"><img src="images/cakelot-teddy.jpg" alt="Teddy bear buttercream celebration cake" loading="lazy"></div>
+        <div class="cap"><div class="k">For the little ones</div><h3>Celebration Cakes</h3></div>
+      </article>
+      <article class="gcard tall reveal">
+        <div class="ph"><img src="images/cakelot-redbull.jpg" alt="Red Bull themed novelty heart cake" loading="lazy"></div>
+        <div class="cap"><div class="k">Dream it up</div><h3>Any Theme You Like</h3></div>
+      </article>
+      <article class="gcard reveal">
+        <div class="ph"><img src="images/cakelot-biscoff.jpg" alt="Box of Biscoff cream-filled treats" loading="lazy"></div>
+        <div class="cap"><div class="k">Boxed &amp; ready</div><h3>Dessert Boxes</h3></div>
+      </article>
+      <article class="gcard reveal">
+        <div class="ph"><img src="images/cakelot-box.jpg" alt="Mixed box of cupcakes, brownies and treats" loading="lazy"></div>
+        <div class="cap"><div class="k">A bit of everything</div><h3>Treat Boxes</h3></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BAKE -->
+<section class="bakes pad" id="bakes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the menu</span>
+      <h2>What we <em>bake</em></h2>
+    </div>
+    <div class="bake-grid">
+      <div class="bake reveal"><div class="ic">🎂</div><h3>Celebration Cakes</h3><p>Birthdays, baby showers, big moments — buttercream cakes made for the occasion.</p></div>
+      <div class="bake reveal"><div class="ic">🧁</div><h3>Bento Cakes</h3><p>Cute little cakes for two — perfect for a small surprise or a sweet treat.</p></div>
+      <div class="bake reveal"><div class="ic">🍓</div><h3>Cupcakes &amp; Treats</h3><p>Cupcakes, brownies and bites by the box — strawberry, chocolate, caramel &amp; more.</p></div>
+      <div class="bake reveal"><div class="ic">🎁</div><h3>Dessert Boxes</h3><p>A boxed mix of our best bakes — the perfect gift to send to someone you love.</p></div>
+      <div class="bake reveal"><div class="ic">🎨</div><h3>Themed &amp; Novelty</h3><p>Got a wild idea? From brands to characters, we'll bake it to match.</p></div>
+      <div class="bake reveal"><div class="ic">🌙</div><h3>Eid &amp; Seasonal</h3><p>Special bakes for Eid and the moments that matter through the year.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="pad" id="how">
+  <div class="wrap order-how">
+    <div class="how-card reveal">
+      <span class="eyebrow">Easy as can be</span>
+      <h2>How to order</h2>
+      <div class="how-step"><div class="n">1</div><div class="t"><b>Send us a DM</b><span>Message @thecakelot on Instagram with your idea, flavours and the date.</span></div></div>
+      <div class="how-step"><div class="n">2</div><div class="t"><b>Order 2 weeks ahead</b><span>Pop your order in at least two weeks early so we can save your spot.</span></div></div>
+      <div class="how-step"><div class="n">3</div><div class="t"><b>We confirm &amp; quote</b><span>We'll confirm the details and price — replies Tues–Fri, 9am–5pm.</span></div></div>
+      <div class="how-step"><div class="n">4</div><div class="t"><b>Pay &amp; collect</b><span>Pay by EFT or cash on collection. Then it's love at first bite. 🩷</span></div></div>
+    </div>
+    <div class="how-media reveal">
+      <div class="pic"><img src="images/cakelot-biscoff.jpg" alt="A box of fresh Cake Lot treats ready for collection" width="1200" height="1232"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bakes pad" id="about" style="text-align:center">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow reveal">Our story</span>
+    <h2 class="reveal" style="font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3rem);color:var(--rose-deep);margin:6px 0 18px">A home bakery, baking with heart</h2>
+    <p class="reveal" style="color:var(--muted);font-size:1.08rem;margin-bottom:14px">The Cake Lot is a home bakery in Ottery, Cape Town, turning out handmade cakes and treats that taste as good as they look. Every order is baked fresh, to order, and finished by hand.</p>
+    <p class="reveal" style="color:var(--muted);font-size:1.08rem">No two cakes are the same — just tell us what you're celebrating, and we'll bake something worth gathering around. That's the whole idea: <span class="script" style="font-size:1.5rem;color:var(--rose)">love at first bite.</span></p>
+    <div class="info-row reveal" style="margin-top:30px">
+      <div class="chip">📍 <b>Ottery</b>, Cape Town</div>
+      <div class="chip">🕘 <b>Tues–Fri</b> 9am–5pm</div>
+      <div class="chip">🚫 No calls — <b>DM to order</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta pad">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="display:block;margin-bottom:8px">Ready for cake?</span>
+    <h2 class="reveal">Let's bake something <em>special.</em></h2>
+    <p class="reveal">Slide into our DMs with your idea and your date — we'd love to make your next celebration delicious. Remember to order at least two weeks ahead! 🎂</p>
+    <div class="hero-cta reveal" style="justify-content:center">
+      <a class="btn btn-primary" href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener">Order on Instagram</a>
+      <a class="btn btn-ghost" href="#how">How it works</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo"><img src="images/cakelot-logo.png" alt="The Cake Lot logo"></div>
+    <h3>The Cake Lot</h3>
+    <p class="script">Love at first bite</p>
+    <div class="fnav">
+      <a href="#bakes">What we bake</a>
+      <a href="#gallery">The cakes</a>
+      <a href="#how">How to order</a>
+      <a href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="fmeta">Home bakery · Ottery, Cape Town · Replies Tues–Fri 9am–5pm · Order on Instagram @thecakelot</div>
+    <span class="concept">Concept website by <a href="https://joshuavomberg.co.za" target="_blank" rel="noopener">Joshua.digital</a></span>
+  </div>
+</footer>
+
+<a class="fab" href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener" aria-label="The Cake Lot on Instagram">
+  <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.36 2.67.95 3.34.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.12-1.38.66-.66 1.07-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.12-.66-.66-1.33-1.07-2.12-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.41-10.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+</a>
+
+<div class="mobile-bar">
+  <a class="btn btn-primary" href="https://www.instagram.com/thecakelot/" target="_blank" rel="noopener">Order on Instagram</a>
+  <a class="btn btn-ghost" href="#how">How to order</a>
+</div>
+
+<script>
+  const header=document.getElementById('top');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>30);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const burger=document.getElementById('hamburger');
+  const links=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*60);io.unobserve(e.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
