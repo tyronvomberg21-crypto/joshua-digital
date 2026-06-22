@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myron Mobile Nails — Salon Nails, At Your Door · Cape Town</title>
+<meta name="description" content="Myron Mobile Nails brings the salon to you anywhere in Cape Town — acrylics, gel, manicures, pedicures, waxing & massage. Book on WhatsApp.">
+<meta property="og:title" content="Myron Mobile Nails — Salon Nails, At Your Door">
+<meta property="og:description" content="The mobile nail studio that comes to you. Acrylics, gel, mani, pedi, waxing & massage across Cape Town.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232a1320'/%3E%3Ctext x='50' y='70' font-size='62' font-family='Georgia,serif' fill='%23ff5c9e' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#2a1320;--wine2:#3b1a2c;--wine3:#491f37;
+    --blush:#f6dde6;--cream:#fbf3f4;--ink:#1c0e16;
+    --pink:#ff5c9e;--pink2:#ffa3c8;--gold:#e7c89b;
+    --muted:#b78ea1;--line:rgba(246,221,230,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--wine);color:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Prata',serif;font-weight:400;letter-spacing:.2px}
+  .script{font-family:'Parisienne',cursive}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--pink)}
+
+  /* concept ribbon */
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--pink);color:#2a1320;font-family:'Jost',sans-serif;font-weight:600;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 56px;z-index:200;box-shadow:0 8px 22px -8px rgba(0,0,0,.6)}
+
+  /* nav */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(33,15,25,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1140px;margin:0 auto}
+  .brand{font-family:'Prata',serif;font-size:1.3rem;letter-spacing:.5px}
+  .brand b{color:var(--pink);font-weight:400}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blush);opacity:.85;transition:.25s}
+  .nav-links a:hover{opacity:1;color:var(--pink)}
+  .nav-cta{border:1px solid var(--pink);border-radius:40px;padding:9px 20px !important;color:var(--pink)!important;opacity:1!important}
+  .nav-cta:hover{background:var(--pink);color:#2a1320!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:0}
+  .hero::before{width:560px;height:560px;background:radial-gradient(circle,rgba(255,92,158,.32),transparent 65%);top:-120px;right:-120px}
+  .hero::after{width:480px;height:480px;background:radial-gradient(circle,rgba(231,200,155,.16),transparent 65%);bottom:-160px;left:-140px}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--pink2);margin-bottom:24px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--pink2)}
+  .hero h1{font-size:clamp(2.9rem,6vw,4.7rem);line-height:1.04;margin-bottom:10px}
+  .hero h1 .script{display:block;color:var(--pink);font-size:1.18em;line-height:.9;margin:6px 0 2px}
+  .hero p.lead{font-size:1.12rem;color:var(--blush);max-width:440px;margin:24px 0 34px;font-weight:300}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Jost',sans-serif;font-weight:500;font-size:.92rem;letter-spacing:.04em;border-radius:44px;padding:15px 30px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;transition:.3s;border:1px solid transparent}
+  .btn-pink{background:var(--pink);color:#2a1320;box-shadow:0 14px 30px -12px rgba(255,92,158,.7)}
+  .btn-pink:hover{transform:translateY(-3px);box-shadow:0 20px 40px -12px rgba(255,92,158,.85)}
+  .btn-ghost{border-color:var(--line);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--pink);color:var(--pink)}
+  .hero-stats{display:flex;gap:30px;margin-top:42px}
+  .hero-stats .st b{font-family:'Prata',serif;font-size:1.7rem;color:var(--gold);display:block;line-height:1}
+  .hero-stats .st span{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+  /* hero visual — glossy card stack */
+  .hero-visual{position:relative;height:520px}
+  .ph{position:absolute;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.65)}
+  .ph .ph-in{width:100%;height:100%;display:flex;align-items:flex-end;padding:16px;position:relative}
+  .ph .tag{position:relative;z-index:2;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:.9}
+  .ph .swap{position:absolute;top:12px;left:12px;z-index:2;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#ffd5e6;padding:4px 8px;border-radius:20px;backdrop-filter:blur(4px)}
+  .ph1{width:62%;height:78%;top:0;right:0;background:linear-gradient(150deg,#5a2742,#c0617f 55%,#ffb3cd)}
+  .ph2{width:50%;height:54%;bottom:0;left:0;background:linear-gradient(150deg,#3b1a2c,#86305a 60%,#ff8fb8)}
+  .ph3{width:34%;height:30%;bottom:46%;left:40%;background:linear-gradient(150deg,#7a4a2e,#e7c89b);z-index:3}
+  .gloss{position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%)}
+
+  /* sections */
+  section{position:relative;padding:96px 0}
+  .sec-head{text-align:center;max-width:620px;margin:0 auto 60px}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head .eyebrow::after{content:"";width:34px;height:1px;background:var(--pink2)}
+  .sec-head h2{font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-weight:300}
+
+  /* mobile hook band */
+  .band{background:linear-gradient(120deg,var(--wine2),var(--wine3));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .feat{text-align:center;padding:18px}
+  .feat .ic{font-size:1.8rem;margin-bottom:14px}
+  .feat h3{font-size:1.25rem;color:var(--cream);margin-bottom:8px}
+  .feat p{color:var(--muted);font-size:.95rem;font-weight:300}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .svc{background:linear-gradient(160deg,var(--wine2),rgba(59,26,44,.4));border:1px solid var(--line);border-radius:18px;padding:28px 30px;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;transition:.35s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--pink);transform:scaleY(0);transform-origin:top;transition:.35s}
+  .svc:hover{transform:translateY(-4px);border-color:rgba(255,92,158,.4)}
+  .svc:hover::before{transform:scaleY(1)}
+  .svc .s-name{font-family:'Prata',serif;font-size:1.32rem;margin-bottom:6px}
+  .svc .s-desc{color:var(--muted);font-size:.92rem;font-weight:300}
+  .svc .s-num{font-family:'Prata',serif;color:var(--gold);font-size:1rem;opacity:.5}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+  .gal .g{border-radius:16px;overflow:hidden;position:relative}
+  .gal .g .swap{position:absolute;left:10px;bottom:10px;z-index:2;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.4);color:#ffd5e6;padding:4px 8px;border-radius:20px;backdrop-filter:blur(4px)}
+  .g1{grid-row:span 2;background:linear-gradient(150deg,#5a2742,#ff8fb8)}
+  .g2{background:linear-gradient(150deg,#3b1a2c,#c0617f)}
+  .g3{background:linear-gradient(150deg,#7a4a2e,#e7c89b)}
+  .g4{grid-column:span 2;background:linear-gradient(120deg,#86305a,#ffb3cd)}
+  .g5{background:linear-gradient(150deg,#491f37,#ff5c9e)}
+  .g6{background:linear-gradient(150deg,#5a2742,#ffa3c8)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{text-align:center;padding:20px}
+  .step .n{font-family:'Prata',serif;font-size:2.4rem;color:var(--pink);opacity:.85;line-height:1;margin-bottom:14px}
+  .step h3{font-size:1.2rem;color:var(--cream);margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.94rem;font-weight:300}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+  .about-card{height:420px;border-radius:22px;background:linear-gradient(160deg,#5a2742,#86305a 55%,#ff8fb8);position:relative;overflow:hidden;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+  .about-card .swap{position:absolute;top:14px;left:14px;z-index:2;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.4);color:#ffd5e6;padding:5px 10px;border-radius:20px}
+  .about-text h2{font-size:clamp(2rem,4vw,2.7rem);margin-bottom:18px}
+  .about-text p{color:var(--blush);font-weight:300;margin-bottom:16px}
+  .about-text .sig{font-family:'Parisienne',cursive;font-size:2rem;color:var(--pink);margin-top:6px}
+
+  /* cta */
+  .cta{text-align:center;background:radial-gradient(120% 140% at 50% 0%,var(--wine3),var(--wine));border-top:1px solid var(--line)}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px}
+  .cta h2 .script{color:var(--pink)}
+  .cta p{color:var(--blush);font-weight:300;max-width:460px;margin:0 auto 32px}
+  .cta .btns{justify-content:center}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:48px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:10px}
+  footer p{color:var(--muted);font-size:.9rem;font-weight:300}
+  .foot-contact a{display:block;color:var(--blush);font-size:.95rem;margin-bottom:6px}
+  .foot-contact a:hover{color:var(--pink)}
+  .madeby{margin-top:34px;text-align:center;font-size:.8rem;color:var(--muted);letter-spacing:.06em}
+  .madeby a{color:var(--pink)}
+
+  /* floating WA */
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  /* mobile sticky bar */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(33,15,25,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.9rem;font-weight:500}
+  .mbar .m-wa{background:var(--pink);color:#2a1320}
+  .mbar .m-call{border:1px solid var(--line);color:var(--cream)}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-visual{height:360px;order:-1}
+    .band-grid,.steps{grid-template-columns:1fr}
+    .svc-grid{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .g4{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">Myron <b>Mobile Nails</b></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20a%20mobile%20nail%20appointment%20%F0%9F%92%85" class="nav-cta">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Mobile Nail Studio · Cape Town</span>
+      <h1 class="reveal d1">Salon nails.<span class="script">at your door.</span></h1>
+      <p class="lead reveal d2">The nail studio that comes to <em>you</em> — flawless acrylics, gel &amp; pamper treatments in the comfort of your own home, anywhere in Cape Town.</p>
+      <div class="btns reveal d3">
+        <a href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20a%20mobile%20nail%20appointment%20%F0%9F%92%85" class="btn btn-pink">💬 Book on WhatsApp</a>
+        <a href="#services" class="btn btn-ghost">View services</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>100%</b><span>Mobile · we travel</span></div>
+        <div class="st"><b>6+</b><span>Treatments</span></div>
+        <div class="st"><b>7 days</b><span>Flexible booking</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="ph ph1"><div class="ph-in"><span class="swap">swap · @myron_mobile_nail_technician</span><span class="tag">Acrylic full set</span><div class="gloss"></div></div></div>
+      <div class="ph ph2"><div class="ph-in"><span class="swap">swap · real photo</span><span class="tag">Gel & art</span><div class="gloss"></div></div></div>
+      <div class="ph ph3"><div class="gloss"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE HOOK -->
+<section class="band" style="padding:64px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">🚗</div><h3>We come to you</h3><p>Home, office or hotel — your appointment travels to your door across Cape Town.</p></div>
+    <div class="feat reveal d1"><div class="ic">💅</div><h3>Salon-quality</h3><p>Professional acrylics, gel &amp; finishes that last — no salon queue, no rush.</p></div>
+    <div class="feat reveal d2"><div class="ic">🕯️</div><h3>Your space, your vibe</h3><p>Relax with your own music &amp; coffee while we pamper you. Pure me-time.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Treatments that come to you</h2>
+      <p>Everything you'd get in a salon — delivered to your living room.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div><div class="s-name">Acrylic Nails</div><div class="s-desc">Full sets, refills &amp; custom shapes — strong, sculpted &amp; flawless.</div></div><span class="s-num">01</span></div>
+      <div class="svc reveal d1"><div><div class="s-name">Gel Overlays &amp; Polish</div><div class="s-desc">Glossy, chip-free colour &amp; gel overlays that stay perfect for weeks.</div></div><span class="s-num">02</span></div>
+      <div class="svc reveal"><div><div class="s-name">Manicures</div><div class="s-desc">Shaped, buffed &amp; cared-for hands with a finish of your choice.</div></div><span class="s-num">03</span></div>
+      <div class="svc reveal d1"><div><div class="s-name">Pedicures</div><div class="s-desc">Soften, smooth &amp; polish — happy feet without leaving the couch.</div></div><span class="s-num">04</span></div>
+      <div class="svc reveal"><div><div class="s-name">Waxing</div><div class="s-desc">Smooth, gentle waxing as an add-on to your pamper session.</div></div><span class="s-num">05</span></div>
+      <div class="svc reveal d1"><div><div class="s-name">Massage</div><div class="s-desc">A relaxing hand, foot or shoulder massage to round off the treat.</div></div><span class="s-num">06</span></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-weight:300;margin-top:30px;font-size:.92rem">Custom pricing per set &amp; area travelled — <a href="https://wa.me/27784478389?text=Hi%20Myron!%20Could%20I%20get%20a%20price%20list%3F" class="accent">message for a quick quote</a>.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The work</span>
+      <h2>A little nail inspiration</h2>
+      <p>Real sets coming straight from the @myron_mobile_nail_technician feed.</p>
+    </div>
+    <div class="gal">
+      <div class="g g1 reveal"><span class="swap">swap photo</span></div>
+      <div class="g g2 reveal d1"><span class="swap">swap photo</span></div>
+      <div class="g g3 reveal d2"><span class="swap">swap photo</span></div>
+      <div class="g g4 reveal d1"><span class="swap">swap photo</span></div>
+      <div class="g g5 reveal d2"><span class="swap">swap photo</span></div>
+      <div class="g g6 reveal d3"><span class="swap">swap photo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Easy as</span>
+      <h2>How it works</h2>
+      <p>From message to manicure in three simple steps.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Message me</h3><p>WhatsApp me your area, the treatment you'd like &amp; a date that suits you.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>I come to you</h3><p>I arrive with everything set up — you just relax in your own space.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Show them off</h3><p>Leave with gorgeous nails &amp; book your next set before I go.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band">
+  <div class="wrap about-grid">
+    <div class="about-card reveal"><span class="swap">swap · photo of Myron / setup</span><div class="gloss"></div></div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">Meet your nail tech</span>
+      <h2>Hi, I'm Myron 💕</h2>
+      <p>I'm a Cape Town mobile nail technician on a mission to make beautiful, salon-quality nails effortless — by bringing the whole experience to your door.</p>
+      <p>Whether it's a fresh acrylic set, a quick gel fill or a full mani-pedi-and-massage pamper afternoon, I'll set up wherever you're most comfortable and treat you like the queen you are.</p>
+      <div class="sig">Myron x</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Ready for your <span class="script">best nails yet?</span></h2>
+    <p class="reveal d1">Tell me where you are and what you fancy — I'll bring the salon to you.</p>
+    <div class="btns reveal d2">
+      <a href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20a%20mobile%20nail%20appointment%20%F0%9F%92%85" class="btn btn-pink">💬 Book on WhatsApp</a>
+      <a href="tel:+27784478389" class="btn btn-ghost">📞 Call 078 447 8389</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">Myron <b>Mobile Nails</b></div>
+      <p>The mobile nail studio that comes to you.<br>Serving Cape Town &amp; surrounds.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20%F0%9F%92%85">💬 WhatsApp · 078 447 8389</a>
+      <a href="tel:+27784478389">📞 078 447 8389</a>
+      <a href="https://instagram.com/myron_mobile_nail_technician">📸 @myron_mobile_nail_technician</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Myron Mobile Nails 💅</div>
+</footer>
+
+<a class="fab" href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20%F0%9F%92%85" aria-label="WhatsApp">💬</a>
+
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/27784478389?text=Hi%20Myron!%20I'd%20love%20to%20book%20%F0%9F%92%85">💬 Book</a>
+  <a class="m-call" href="tel:+27784478389">📞 Call</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NailSalon","name":"Myron Mobile Nails","description":"Mobile nail technician serving Cape Town — acrylics, gel, manicures, pedicures, waxing and massage at your home.","areaServed":"Cape Town","telephone":"+27784478389","priceRange":"$$","image":"","url":"https://joshuavomberg.co.za/myron_mobile_nails.html"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
