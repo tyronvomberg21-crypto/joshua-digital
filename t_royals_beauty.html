@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T Royals Beauty — Nail Studio · Stellenbosch</title>
+<meta name="description" content="T Royals Beauty — nail studio inside Stijl Hair Studio, Technopark, Stellenbosch. Acrylic, polygel, gel, mani, pedi, threading & tinting. Book on WhatsApp.">
+<meta property="og:title" content="T Royals Beauty — Nail Studio · Stellenbosch">
+<meta property="og:description" content="Where your nails & brows are treated like royalty. Book your appointment on WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23f3e7e0'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Georgia,serif' fill='%23a8746a' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#faf4ef;--ivory2:#f3e9e1;--blush:#f6e3dc;--blush2:#efd4ca;
+    --ink:#3a2a26;--muted:#8a7269;--rose:#c98b7e;--rose-d:#a8746a;--gold:#bd9a64;
+    --line:#e6d6cc;--white:#fffdfb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Italiana',serif;font-weight:400;letter-spacing:.3px}
+  .script{font-family:'Sacramento',cursive}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--rose-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--rose-d);color:#fff;font-weight:600;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;padding:7px 56px;z-index:200;box-shadow:0 8px 22px -10px rgba(58,42,38,.4)}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(250,244,239,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;max-width:1120px;margin:0 auto}
+  .brand{font-family:'Italiana',serif;font-size:1.4rem;letter-spacing:1.5px;color:var(--ink)}
+  .brand span{color:var(--rose-d)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:.25s}
+  .nav-links a:hover{color:var(--rose-d)}
+  .nav-cta{border:1px solid var(--rose-d);border-radius:40px;padding:9px 20px !important;color:var(--rose-d)!important}
+  .nav-cta:hover{background:var(--rose-d);color:#fff!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:150px 0 100px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 65%);top:-100px;right:-120px;z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-d);margin-bottom:22px}
+  .eyebrow::before{content:"";width:36px;height:1px;background:var(--rose)}
+  .hero h1{font-size:clamp(2.9rem,6vw,4.8rem);line-height:1.05;color:var(--ink)}
+  .hero h1 .script{display:block;color:var(--rose-d);font-size:1.15em;line-height:.7;margin-top:6px}
+  .hero p.lead{font-size:1.1rem;color:var(--muted);max-width:430px;margin:26px 0 36px;font-weight:300}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-weight:600;font-size:.9rem;letter-spacing:.03em;border-radius:44px;padding:15px 30px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;transition:.3s;border:1px solid transparent}
+  .btn-rose{background:var(--rose-d);color:#fff;box-shadow:0 14px 30px -14px rgba(168,116,106,.7)}
+  .btn-rose:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(168,116,106,.85)}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--white)}
+  .btn-ghost:hover{border-color:var(--rose-d);color:var(--rose-d)}
+  .hero-stats{display:flex;gap:34px;margin-top:44px}
+  .hero-stats .st b{font-family:'Italiana',serif;font-size:1.8rem;color:var(--rose-d);display:block;line-height:1}
+  .hero-stats .st span{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+  /* hero image frame */
+  .hero-visual{position:relative;height:540px}
+  .hf{position:absolute;border-radius:200px 200px 16px 16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -28px rgba(58,42,38,.35)}
+  .hf-main{width:74%;height:100%;left:13%;background:var(--blush) center/cover}
+  .hf-sm{width:46%;height:42%;right:-2%;bottom:6%;border-radius:14px;background:var(--blush2) center/cover;box-shadow:0 24px 44px -24px rgba(58,42,38,.4)}
+  .ph-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--rose-d);text-align:center;gap:6px}
+  .ph-label .pi{font-size:1.6rem;opacity:.5}
+  .ph-label small{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);opacity:.8}
+
+  section{position:relative;padding:100px 0}
+  .sec-head{text-align:center;max-width:600px;margin:0 auto 60px}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head .eyebrow::after{content:"";width:36px;height:1px;background:var(--rose)}
+  .sec-head h2{font-size:clamp(2.1rem,4vw,3rem);line-height:1.12;margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-weight:300}
+
+  .band{background:var(--ivory2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .feat{text-align:center;padding:14px}
+  .feat .ic{font-size:1.7rem;margin-bottom:14px}
+  .feat h3{font-size:1.2rem;margin-bottom:8px}
+  .feat p{color:var(--muted);font-size:.94rem;font-weight:300}
+
+  /* services two columns: nails / brows */
+  .svc-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .svc-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:38px 36px}
+  .svc-card h3{font-size:1.7rem;margin-bottom:4px}
+  .svc-card .sub{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-d);margin-bottom:22px}
+  .svc-list{list-style:none}
+  .svc-list li{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .svc-list li:last-child{border-bottom:0}
+  .svc-list li span{color:var(--muted);font-size:.84rem;font-weight:300}
+  .svc-list li b{font-weight:500}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:170px;gap:16px}
+  .gal .g{border-radius:16px;overflow:hidden;background:var(--blush);position:relative;border:1px solid var(--line)}
+  .gal .g.b2{background:var(--blush2)}
+  .ga{grid-row:span 2}
+  .gw{grid-column:span 2}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .about-card{height:440px;border-radius:20px;background:var(--blush);border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(58,42,38,.3)}
+  .about-text h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:18px}
+  .about-text p{color:var(--muted);font-weight:300;margin-bottom:16px}
+  .about-text .sig{font-family:'Sacramento',cursive;font-size:2.2rem;color:var(--rose-d);margin-top:4px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Italiana',serif;font-size:2.6rem;color:var(--rose);line-height:1;margin-bottom:14px}
+  .step h3{font-size:1.2rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.94rem;font-weight:300}
+
+  .cta{text-align:center;background:linear-gradient(180deg,var(--blush),var(--ivory));border-top:1px solid var(--line)}
+  .cta h2{font-size:clamp(2.3rem,5vw,3.5rem);margin-bottom:14px}
+  .cta h2 .script{color:var(--rose-d)}
+  .cta p{color:var(--muted);font-weight:300;max-width:440px;margin:0 auto 32px}
+  .cta .btns{justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding:50px 0 110px;background:var(--ivory2)}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:10px}
+  footer p{color:var(--muted);font-size:.9rem;font-weight:300}
+  .foot-contact a{display:block;color:var(--ink);font-size:.95rem;margin-bottom:6px}
+  .foot-contact a:hover{color:var(--rose-d)}
+  .madeby{margin-top:36px;text-align:center;font-size:.8rem;color:var(--muted);letter-spacing:.05em}
+  .madeby a{color:var(--rose-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(37,211,102,.6);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(250,244,239,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.9rem;font-weight:600}
+  .mbar .m-wa{background:var(--rose-d);color:#fff}
+  .mbar .m-call{border:1px solid var(--line);color:var(--ink)}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid,.svc-cols{grid-template-columns:1fr}
+    .hero-visual{height:400px;order:-1}
+    .band-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .gw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">T<span>·</span>Royals Beauty</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Gallery</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20an%20appointment%20%F0%9F%92%85" class="nav-cta">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Nail Studio · Technopark, Stellenbosch</span>
+      <h1 class="reveal d1">Treated like<span class="script">royalty.</span></h1>
+      <p class="lead reveal d2">Flawless acrylics, polygel, gel &amp; perfectly shaped brows — long-lasting treatments at Stijl Hair Studio, Technopark, by a nail artist who loves the details.</p>
+      <div class="btns reveal d3">
+        <a href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20an%20appointment%20%F0%9F%92%85" class="btn btn-rose">💬 Book on WhatsApp</a>
+        <a href="#services" class="btn btn-ghost">View services</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>Nails</b><span>& Brows</span></div>
+        <div class="st"><b>8+</b><span>Treatments</span></div>
+        <div class="st"><b>Stbosch</b><span>Technopark</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="hf hf-main" style="background:url(images/troyals-1.webp) center/cover"></div>
+      <div class="hf hf-sm" style="background:url(images/troyals-3.webp) center/cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<section class="band" style="padding:66px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">👑</div><h3>The royal treatment</h3><p>Every set &amp; shape done with care, patience &amp; an eye for the finest detail.</p></div>
+    <div class="feat reveal d1"><div class="ic">💎</div><h3>Built to last</h3><p>Quality products &amp; technique so your nails &amp; brows stay flawless for weeks.</p></div>
+    <div class="feat reveal d2"><div class="ic">🤍</div><h3>Your me-time</h3><p>A relaxed, friendly space to switch off and leave feeling your absolute best.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Nails &amp; brows, perfected</h2>
+      <p>Everything you need to look polished from fingertips to brows.</p>
+    </div>
+    <div class="svc-cols">
+      <div class="svc-card reveal">
+        <h3>Nails</h3>
+        <div class="sub">Hands &amp; feet</div>
+        <ul class="svc-list">
+          <li><div><b>Acrylic Nails</b><span> · full sets, refills &amp; shapes</span></div></li>
+          <li><div><b>Polygel</b><span> · lightweight, strong &amp; natural</span></div></li>
+          <li><div><b>Gel &amp; Nail Polish</b><span> · glossy, chip-free colour</span></div></li>
+          <li><div><b>Manicures</b><span> · shaped, buffed &amp; cared for</span></div></li>
+          <li><div><b>Pedicures</b><span> · smooth, fresh &amp; polished</span></div></li>
+        </ul>
+      </div>
+      <div class="svc-card reveal d1">
+        <h3>Brows</h3>
+        <div class="sub">Threading &amp; tinting</div>
+        <ul class="svc-list">
+          <li><div><b>Eyebrow Threading</b><span> · precise, clean shaping</span></div></li>
+          <li><div><b>Brow Tint</b><span> · fuller, defined colour</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-weight:300;margin-top:30px;font-size:.92rem">Custom pricing per treatment — <a href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20Could%20I%20get%20a%20price%20list%3F" class="accent">message for a quick price list</a>.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The work</span>
+      <h2>A little inspiration</h2>
+      <p>Real sets &amp; brows straight from the @t_royalsbeauty feed.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background:url(images/troyals-2.webp) center/cover"></div>
+      <div class="g b2 reveal d1" style="background:url(images/troyals-3.webp) center/cover"></div>
+      <div class="g reveal d2" style="background:url(images/troyals-4.webp) center/cover"></div>
+      <div class="g gw reveal d1" style="background:url(images/troyals-1.webp) center/cover"></div>
+      <div class="g reveal d2" style="background:url(images/troyals-2.webp) center/cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Easy as</span>
+      <h2>How to book</h2>
+      <p>Three simple steps to your next appointment.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Message me</h3><p>WhatsApp me the treatment you'd like &amp; a day that suits you.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>Come through</h3><p>Relax &amp; let me work my magic on your nails &amp; brows.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Glow up</h3><p>Leave feeling polished &amp; book your next visit before you go.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background:url(images/troyals-4.webp) center/cover"></div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">Meet your artist</span>
+      <h2>Where beauty meets care</h2>
+      <p>I'm a Stellenbosch nail artist based at Stijl Hair Studio in Technopark, and I believe every client deserves the royal treatment — flawless work, a relaxed vibe and results that make you feel your absolute best.</p>
+      <p>Whether it's a bold acrylic set, a fresh gel mani or perfectly laminated brows, I take the time to get every little detail just right.</p>
+      <div class="sig">T Royals x</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Ready to feel <span class="script">royal?</span></h2>
+    <p class="reveal d1">Tell me what you'd love and let's get you booked in.</p>
+    <div class="btns reveal d2">
+      <a href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20an%20appointment%20%F0%9F%92%85" class="btn btn-rose">💬 Book on WhatsApp</a>
+      <a href="tel:+27748045181" class="btn btn-ghost">📞 Call 074 804 5181</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">T<span>·</span>Royals Beauty</div>
+      <p>Nail studio · Stijl Hair Studio, Technopark, Stellenbosch.<br>Where you're treated like royalty.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20%F0%9F%92%85">💬 WhatsApp · 074 804 5181</a>
+      <a href="tel:+27748045181">📞 074 804 5181</a>
+      <a href="https://instagram.com/t_royalsbeauty">📸 @t_royalsbeauty</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for T Royals Beauty 👑</div>
+</footer>
+
+<a class="fab" href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20%F0%9F%92%85" aria-label="WhatsApp">💬</a>
+
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/27748045181?text=Hi%20T%20Royals!%20I'd%20love%20to%20book%20%F0%9F%92%85">💬 Book</a>
+  <a class="m-call" href="tel:+27748045181">📞 Call</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"T Royals Beauty","description":"Cape Town nail and brow studio — acrylics, gel, manicures, pedicures, threading, brow tinting and lamination.","areaServed":"Stellenbosch","address":"Stijl Hair Studio, 5 Elektron Rd, Technopark, Stellenbosch","telephone":"+27748045181","priceRange":"$$","url":"https://joshuavomberg.co.za/t_royals_beauty.html"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
