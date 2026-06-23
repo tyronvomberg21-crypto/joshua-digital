@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nails by Lauren — Nail Artist & Facilitator · Cape Town</title>
+<meta name="description" content="Nails by Lauren — qualified nail artist & facilitator in Fairways, Cape Town. Custom nail art, sculpted sets & nail workshops. Book on Instagram.">
+<meta property="og:title" content="Nails by Lauren — Nail Artist & Facilitator">
+<meta property="og:description" content="Custom nail art & sculpted sets in Fairways, Cape Town. Where your nails become art.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23181613'/%3E%3Ctext x='50' y='70' font-size='60' font-family='Georgia,serif' fill='%23f15a47' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5f1;--paper2:#efece5;--ink:#181613;--charcoal:#2a2724;
+    --coral:#f15a47;--coral-d:#d8401f;--muted:#8c857c;--line:#e4ded4;--white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--coral-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--ink);color:var(--paper);font-weight:700;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 56px;z-index:200}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(247,245,241,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1140px;margin:0 auto}
+  .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:-.5px}
+  .brand span{color:var(--coral-d)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--charcoal);transition:.25s}
+  .nav-links a:hover{color:var(--coral-d)}
+  .nav-cta{background:var(--ink);border-radius:40px;padding:10px 20px !important;color:var(--paper)!important}
+  .nav-cta:hover{background:var(--coral-d)!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:140px 0 90px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-d);font-weight:700;margin-bottom:22px}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--coral)}
+  .hero h1{font-size:clamp(3rem,6.5vw,5.3rem);line-height:.98;color:var(--ink)}
+  .hero h1 em{font-style:normal;color:var(--coral-d);position:relative}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(241,90,71,.22);z-index:-1}
+  .hero p.lead{font-size:1.12rem;color:var(--charcoal);max-width:430px;margin:26px 0 34px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-weight:700;font-size:.9rem;letter-spacing:.02em;border-radius:44px;padding:15px 28px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:2px solid transparent}
+  .btn-ink{background:var(--ink);color:var(--paper)}
+  .btn-ink:hover{background:var(--coral-d);transform:translateY(-3px)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .hero-stats{display:flex;gap:32px;margin-top:42px}
+  .hero-stats .st b{font-family:'Syne',sans-serif;font-weight:800;font-size:1.7rem;color:var(--ink);display:block;line-height:1}
+  .hero-stats .st span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+  .hero-visual{position:relative;height:520px}
+  .hf{position:absolute;overflow:hidden;border:6px solid var(--white);box-shadow:0 30px 60px -26px rgba(24,22,19,.4)}
+  .hf-main{width:72%;height:100%;right:0;top:0;border-radius:12px;background:#ddd center/cover;rotate:2deg}
+  .hf-sm{width:48%;height:46%;left:0;bottom:8%;border-radius:12px;background:#ccc center/cover;rotate:-3deg;z-index:2}
+  .blob{position:absolute;width:120px;height:120px;background:var(--coral);border-radius:50%;top:-10px;left:8%;z-index:0;opacity:.18;filter:blur(8px)}
+
+  section{position:relative;padding:94px 0}
+  .sec-head{max-width:600px;margin:0 auto 56px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3.1rem);line-height:1.05;margin-bottom:12px}
+  .sec-head p{color:var(--muted)}
+
+  .band{background:var(--ink);color:var(--paper);border-radius:0}
+  .band .feat h3{color:var(--white)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .feat{padding:14px}
+  .feat .ic{font-size:1.7rem;margin-bottom:12px}
+  .feat h3{font-family:'Syne',sans-serif;font-size:1.2rem;margin-bottom:8px}
+  .feat p{color:#b9b3a9;font-size:.94rem}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px 32px;transition:.3s;position:relative}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(24,22,19,.3)}
+  .svc .s-ic{font-size:1.5rem;margin-bottom:12px}
+  .svc h3{font-family:'Syne',sans-serif;font-size:1.3rem;margin-bottom:6px}
+  .svc p{color:var(--muted);font-size:.94rem}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:14px}
+  .gal .g{border-radius:14px;overflow:hidden;background:var(--paper2);border:1px solid var(--line);background-size:cover;background-position:center}
+  .ga{grid-row:span 2}
+  .gw{grid-column:span 2}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+  .about-card{height:440px;border-radius:16px;border:6px solid var(--white);box-shadow:0 30px 60px -28px rgba(24,22,19,.4);background:#ddd center/cover;rotate:-2deg}
+  .about-text h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.05;margin-bottom:18px}
+  .about-text p{color:var(--charcoal);margin-bottom:16px}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .badge{font-size:.78rem;font-weight:600;background:var(--paper2);border:1px solid var(--line);padding:7px 14px;border-radius:30px}
+
+  /* workshops */
+  .work{background:var(--coral);color:#fff;border-radius:26px;padding:54px 50px;display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center;overflow:hidden;position:relative}
+  .work h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.04;margin-bottom:12px}
+  .work p{color:rgba(255,255,255,.92)}
+  .work .btn-w{background:#fff;color:var(--coral-d);margin-top:8px}
+  .work .btn-w:hover{background:var(--ink);color:#fff}
+  .work .big-emoji{font-size:5rem;text-align:center}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{padding:18px}
+  .step .n{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;color:var(--coral);line-height:1;margin-bottom:12px}
+  .step h3{font-family:'Syne',sans-serif;font-size:1.15rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.93rem}
+
+  .cta{text-align:center}
+  .cta-box{background:var(--ink);color:var(--paper);border-radius:28px;padding:70px 40px}
+  .cta-box h2{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:14px}
+  .cta-box h2 em{font-style:normal;color:var(--coral)}
+  .cta-box p{color:#b9b3a9;max-width:440px;margin:0 auto 30px}
+  .cta-box .btns{justify-content:center}
+  .cta-box .btn-ghost{border-color:var(--paper);color:var(--paper)}
+  .cta-box .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);padding:46px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:10px}
+  footer p{color:var(--muted);font-size:.9rem}
+  .foot-contact a{display:block;color:var(--ink);font-size:.95rem;margin-bottom:6px;font-weight:500}
+  .foot-contact a:hover{color:var(--coral-d)}
+  .madeby{margin-top:34px;text-align:center;font-size:.8rem;color:var(--muted)}
+  .madeby a{color:var(--coral-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:18px;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(188,24,136,.6);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(247,245,241,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.9rem;font-weight:700}
+  .mbar .m-ig{background:var(--ink);color:var(--paper)}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid,.svc-grid,.work{grid-template-columns:1fr}
+    .hero-visual{height:380px;order:-1}
+    .band-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .gw{grid-column:span 2}
+    .work .big-emoji{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">Nails by <span>Lauren</span></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Gallery</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#about">About</a>
+      <a href="https://instagram.com/nailsbylauren_cpt" class="nav-cta">Book on Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Nail Artist &amp; Facilitator · Fairways, Cape Town</span>
+      <h1 class="reveal d1">Where nails<br>become <em>art.</em></h1>
+      <p class="lead reveal d2">Custom, hand-painted nail art &amp; beautifully sculpted sets by a qualified Cape Town nail artist — every set designed just for you.</p>
+      <div class="btns reveal d3">
+        <a href="https://instagram.com/nailsbylauren_cpt" class="btn btn-ink">📸 Book on Instagram</a>
+        <a href="#work" class="btn btn-ghost">See the work</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>Custom</b><span>Nail art</span></div>
+        <div class="st"><b>Qualified</b><span>Nail artist</span></div>
+        <div class="st"><b>Workshops</b><span>Learn with me</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="blob"></div>
+      <div class="hf hf-main" style="background-image:url(images/lauren-1.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/lauren-4.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<section class="band" style="padding:60px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">🎨</div><h3>Art on your nails</h3><p>Hand-painted, fully custom designs — from chic French to bold statement sets.</p></div>
+    <div class="feat reveal d1"><div class="ic">🎓</div><h3>Qualified &amp; trusted</h3><p>A trained nail artist &amp; facilitator who takes pride in clean, lasting work.</p></div>
+    <div class="feat reveal d2"><div class="ic">✨</div><h3>Made for you</h3><p>Every set is designed around your style, your shape &amp; your vibe.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>Services</h2>
+      <p>Beautiful, long-lasting nails — with art that's all your own.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="s-ic">💅</div><h3>Sculpted Sets</h3><p>Acrylic &amp; gel full sets shaped to perfection — almond, stiletto, square, you choose.</p></div>
+      <div class="svc reveal d1"><div class="s-ic">🎨</div><h3>Custom Nail Art</h3><p>Hand-painted designs, 3D details, chrome, French twists &amp; statement accents.</p></div>
+      <div class="svc reveal"><div class="s-ic">💎</div><h3>Gel Overlays &amp; Refills</h3><p>Glossy, durable overlays &amp; tidy refills to keep your set looking fresh.</p></div>
+      <div class="svc reveal d1"><div class="s-ic">🧖‍♀️</div><h3>Soak-off &amp; Care</h3><p>Gentle removal &amp; nail care so your natural nails stay healthy underneath.</p></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);margin-top:28px;font-size:.92rem">For the full price list &amp; bookings — <a href="https://instagram.com/nailsbylauren_cpt" class="accent">message me on Instagram</a>.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The gallery</span>
+      <h2>Recent sets</h2>
+      <p>A little look at the art — straight from @nailsbylauren_cpt.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background-image:url(images/lauren-1.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/lauren-2.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/lauren-3.webp)"></div>
+      <div class="g gw reveal d1" style="background-image:url(images/lauren-4.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/lauren-2.webp)"></div>
+      <div class="g reveal d3" style="background-image:url(images/lauren-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section id="workshops">
+  <div class="wrap">
+    <div class="work reveal">
+      <div>
+        <span class="eyebrow" style="color:#fff;opacity:.9">For aspiring nail techs</span>
+        <h2>Learn with Lauren</h2>
+        <p>As a qualified facilitator, I run hands-on nail workshops for beginners &amp; pros looking to level up their skills. Small groups, real practice, proper guidance.</p>
+        <a href="https://instagram.com/nailsbylauren_cpt" class="btn btn-w">📸 Enquire about workshops</a>
+      </div>
+      <div class="big-emoji">🎓💅</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Easy as</span>
+      <h2>How to book</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>DM me</h3><p>Message me on Instagram with your idea &amp; a date that suits you.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>We design it</h3><p>We chat through your set, shape &amp; art so it's perfectly you.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Come create</h3><p>Relax in the chair &amp; leave with nails worth showing off.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background-image:url(images/lauren-3.webp)"></div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">Meet Lauren</span>
+      <h2>Qualified nail artist &amp; facilitator</h2>
+      <p>I'm Lauren — a qualified nail artist based in Fairways, Cape Town, obsessed with clean, creative, long-lasting nails. To me every set is a tiny piece of art made just for you.</p>
+      <p>I also love sharing the craft, running workshops to help the next generation of nail artists grow.</p>
+      <div class="badge-row">
+        <span class="badge">📍 Fairways, Cape Town</span>
+        <span class="badge">🎓 Qualified &amp; facilitator</span>
+        <span class="badge">🎨 Custom art</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Ready for your <em>next set?</em></h2>
+      <p>Send me your inspo on Instagram and let's design something beautiful.</p>
+      <div class="btns">
+        <a href="https://instagram.com/nailsbylauren_cpt" class="btn btn-ink" style="background:var(--coral-d)">📸 Book on Instagram</a>
+        <a href="https://instagram.com/nailsbylauren_cpt" class="btn btn-ghost">View the feed</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">Nails by <span>Lauren</span></div>
+      <p>Qualified nail artist &amp; facilitator.<br>Fairways, Cape Town.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://instagram.com/nailsbylauren_cpt">📸 @nailsbylauren_cpt</a>
+      <a href="https://instagram.com/nailsbylauren_cpt">💬 DM to book</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Nails by Lauren 💅</div>
+</footer>
+
+<a class="fab" href="https://instagram.com/nailsbylauren_cpt" aria-label="Instagram">📸</a>
+
+<div class="mbar">
+  <a class="m-ig" href="https://instagram.com/nailsbylauren_cpt">📸 Book on Instagram</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NailSalon","name":"Nails by Lauren","description":"Qualified nail artist and facilitator in Fairways, Cape Town — custom nail art, sculpted sets and nail workshops.","areaServed":"Cape Town","address":"Fairways, Cape Town","priceRange":"$$","url":"https://joshuavomberg.co.za/nails_by_lauren.html","sameAs":"https://instagram.com/nailsbylauren_cpt"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
