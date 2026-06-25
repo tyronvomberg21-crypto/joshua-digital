@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HALO — Dance & Night Club · Loop Street, Cape Town</title>
+<meta name="description" content="HALO — Cape Town's premier dance & night club on Loop Street. Resident DJs, table bookings & unforgettable nights. Book your table.">
+<meta property="og:title" content="HALO — Dance & Night Club · Cape Town">
+<meta property="og:description" content="Where Cape Town nights come alive. Loop Street. Resident DJs & table bookings.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0d'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%23ff2d9b' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08080b;--bg2:#101016;--bg3:#16161e;--fg:#f4f3f8;--muted:#9b97a8;
+    --magenta:#ff2d9b;--violet:#8b5cff;--cyan:#28e0e6;--gold:#ffd23f;--line:rgba(255,255,255,.1);
+    --holo:linear-gradient(90deg,#ff2d9b,#8b5cff 35%,#28e0e6 70%,#ffd23f);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Unbounded',sans-serif;font-weight:800;letter-spacing:-.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+  .holo-text{background:var(--holo);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tracked{letter-spacing:.28em;text-transform:uppercase}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--magenta);color:#fff;font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 56px;z-index:200;box-shadow:0 0 20px rgba(255,45,155,.6)}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(8,8,11,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1160px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Unbounded',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:1px}
+  .brand .ring{width:20px;height:20px;border-radius:50%;border:3px solid transparent;background:var(--holo) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500;transition:.25s}
+  .nav-links a:hover{color:var(--fg)}
+  .nav-cta{background:var(--magenta);border-radius:40px;padding:11px 22px !important;color:#fff!important;box-shadow:0 0 22px rgba(255,45,155,.5)}
+  .nav-cta:hover{background:#ff48ab!important}
+  @media(max-width:880px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 70px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,255,.28),transparent 60%);top:-160px;right:-120px;filter:blur(40px);z-index:0}
+  .hero::after{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,45,155,.22),transparent 60%);bottom:-180px;left:-140px;filter:blur(50px);z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px;font-weight:500}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--cyan)}
+  .hero h1{font-size:clamp(3rem,7vw,5.6rem);line-height:.96;text-transform:uppercase}
+  .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:430px;margin:26px 0 36px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Outfit',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;border-radius:44px;padding:16px 30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:1px solid transparent}
+  .btn-mag{background:var(--magenta);color:#fff;box-shadow:0 0 28px rgba(255,45,155,.5)}
+  .btn-mag:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(255,45,155,.75)}
+  .btn-ghost{border-color:var(--line);color:var(--fg)}
+  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+  .hero-stats{display:flex;gap:30px;margin-top:44px}
+  .hero-stats .st b{font-family:'Unbounded',sans-serif;font-size:1.5rem;display:block;line-height:1}
+  .hero-stats .st span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .hero-visual{position:relative;height:560px}
+  .hf{position:absolute;overflow:hidden;border-radius:16px;background:#111 center/cover;box-shadow:0 30px 70px -20px rgba(0,0,0,.8)}
+  .hf-main{width:70%;height:100%;right:0;top:0;border:1px solid var(--line)}
+  .hf-sm{width:50%;height:48%;left:0;bottom:6%;z-index:2;border:1px solid var(--line)}
+  .ring-glow{position:absolute;top:-30px;left:2%;width:150px;height:150px;border-radius:50%;border:5px solid transparent;background:var(--holo) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:3;filter:drop-shadow(0 0 14px rgba(255,45,155,.6))}
+
+  section{position:relative;padding:96px 0}
+  .sec-head{max-width:620px;margin:0 auto 56px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3.2rem);line-height:1.05;margin-bottom:12px;text-transform:uppercase}
+  .sec-head p{color:var(--muted)}
+
+  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .info{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:30px 28px;text-align:center;transition:.3s}
+  .info:hover{border-color:rgba(255,45,155,.4);transform:translateY(-4px)}
+  .info .ic{font-size:1.7rem;margin-bottom:12px}
+  .info h3{font-family:'Unbounded',sans-serif;font-size:1.05rem;margin-bottom:6px}
+  .info p{color:var(--muted);font-size:.92rem}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+  .gal .g{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg2) center/cover;position:relative}
+  .gal .g::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,8,11,.4));opacity:0;transition:.3s}
+  .gal .g:hover::after{opacity:1}
+  .ga{grid-row:span 2}
+  .gw{grid-column:span 2}
+
+  /* experience band */
+  .xp{position:relative;border-radius:26px;overflow:hidden;padding:80px 50px;text-align:center;border:1px solid var(--line)}
+  .xp .bgimg{position:absolute;inset:0;background:#111 center/cover;z-index:0}
+  .xp .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,11,.7),rgba(8,8,11,.85));z-index:1}
+  .xp .inner{position:relative;z-index:2}
+  .xp h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase;margin-bottom:14px}
+  .xp p{color:#cbc8d6;max-width:520px;margin:0 auto 26px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Unbounded',sans-serif;font-size:1.9rem;line-height:1;margin-bottom:14px}
+  .step h3{font-family:'Unbounded',sans-serif;font-size:1.05rem;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:.92rem}
+
+  .cta{text-align:center}
+  .cta-box{background:linear-gradient(135deg,rgba(255,45,155,.12),rgba(40,224,230,.1));border:1px solid var(--line);border-radius:28px;padding:72px 40px}
+  .cta-box h2{font-size:clamp(2.2rem,5vw,3.4rem);text-transform:uppercase;margin-bottom:14px}
+  .cta-box p{color:var(--muted);max-width:440px;margin:0 auto 30px}
+  .cta-box .btns{justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding:48px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:12px}
+  footer p{color:var(--muted);font-size:.9rem}
+  .foot-contact a{display:block;color:var(--fg);font-size:.94rem;margin-bottom:6px}
+  .foot-contact a:hover{color:var(--magenta)}
+  .madeby{margin-top:36px;text-align:center;font-size:.78rem;color:var(--muted);letter-spacing:.06em}
+  .madeby a{color:var(--magenta)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;padding:15px 22px;border-radius:44px;background:var(--magenta);color:#fff;font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 28px rgba(255,45,155,.55);transition:.3s}
+  .fab:hover{transform:scale(1.05)}
+  @media(max-width:880px){.fab{bottom:80px;right:14px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(8,8,11,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .mbar .m-bk{background:var(--magenta);color:#fff}
+  @media(max-width:880px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-visual{height:400px;order:-1}
+    .info-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .gw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand"><span class="ring"></span>HALO</div>
+    <nav class="nav-links">
+      <a href="#vibe">The vibe</a>
+      <a href="#visit">Visit</a>
+      <a href="#book">Tables</a>
+      <a href="https://linktr.ee/halocpt" class="nav-cta">Book a table</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Dance &amp; Night Club · Loop Street, Cape Town</span>
+      <h1 class="reveal d1">Where the<br><span class="holo-text">night</span> comes<br>alive.</h1>
+      <p class="lead reveal d2">Cape Town's electric home of late nights, resident DJs &amp; the kind of energy you feel the second you walk in. Pull up to HALO on Loop Street.</p>
+      <div class="btns reveal d3">
+        <a href="https://linktr.ee/halocpt" class="btn btn-mag">🪩 Book a table</a>
+        <a href="#vibe" class="btn btn-ghost">See the vibe</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b class="holo-text">23k+</b><span>In the family</span></div>
+        <div class="st"><b class="holo-text">Loop St</b><span>Cape Town</span></div>
+        <div class="st"><b class="holo-text">Nightly</b><span>Resident DJs</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="ring-glow"></div>
+      <div class="hf hf-main" style="background-image:url(images/halo-1.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/halo-4.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section style="padding:60px 0">
+  <div class="wrap info-grid">
+    <div class="info reveal"><div class="ic">📍</div><h3>71 Loop Street</h3><p>In the heart of Cape Town's nightlife strip.</p></div>
+    <div class="info reveal d1"><div class="ic">🚫</div><h3>No under 20s</h3><p>Strictly 20 &amp; over — bring your ID.</p></div>
+    <div class="info reveal d2"><div class="ic">🍾</div><h3>Table bookings</h3><p>Reserve your spot &amp; bottle service for the night.</p></div>
+  </div>
+</section>
+
+<!-- VIBE / GALLERY -->
+<section id="vibe">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The vibe</span>
+      <h2>Step inside</h2>
+      <p>Lights, decks &amp; a room that doesn't stop moving.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background-image:url(images/halo-1.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/halo-2.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/halo-3.webp)"></div>
+      <div class="g gw reveal d1" style="background-image:url(images/halo-4.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/halo-2.webp)"></div>
+      <div class="g reveal d3" style="background-image:url(images/halo-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <div class="wrap">
+    <div class="xp reveal">
+      <div class="bgimg" style="background-image:url(images/halo-4.webp)"></div>
+      <div class="ov"></div>
+      <div class="inner">
+        <span class="eyebrow" style="justify-content:center;color:var(--magenta)">The HALO experience</span>
+        <h2>Your night, <span class="holo-text">elevated</span></h2>
+        <p>Resident &amp; guest DJs, a sound system that hits, and a crowd that knows how to move. Lock in a table and make it a night to remember.</p>
+        <a href="https://linktr.ee/halocpt" class="btn btn-mag">🪩 Reserve your table</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Tables</span><h2>How to book</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n holo-text">01</div><h3>Tap book</h3><p>Hit the booking link &amp; pick your night.</p></div>
+      <div class="step reveal d1"><div class="n holo-text">02</div><h3>Reserve your table</h3><p>Choose your table &amp; bottle service for the group.</p></div>
+      <div class="step reveal d2"><div class="n holo-text">03</div><h3>Pull up</h3><p>Skip the line, settle in &amp; let the night take over.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>See you on the <span class="holo-text">floor</span></h2>
+      <p>Book your table now &amp; lock in your spot for the weekend.</p>
+      <div class="btns">
+        <a href="https://linktr.ee/halocpt" class="btn btn-mag">🪩 Book a table</a>
+        <a href="https://instagram.com/halocpt" class="btn btn-ghost">Follow @halocpt</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand"><span class="ring"></span>HALO</div>
+      <p>Dance &amp; Night Club.<br>71 Loop Street, Cape Town. · No under 20s.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://linktr.ee/halocpt">🔗 Book a table · linktr.ee/halocpt</a>
+      <a href="https://instagram.com/halocpt">📸 @halocpt</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for HALO 🪩</div>
+</footer>
+
+<a class="fab" href="https://linktr.ee/halocpt">🪩 Book a table</a>
+
+<div class="mbar">
+  <a class="m-bk" href="https://linktr.ee/halocpt">🪩 Book a table</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NightClub","name":"HALO","description":"Dance and night club on Loop Street, Cape Town. Resident DJs and table bookings.","address":"71 Loop Street, Cape Town","areaServed":"Cape Town","url":"https://joshuavomberg.co.za/halo_cpt.html","sameAs":"https://instagram.com/halocpt"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
