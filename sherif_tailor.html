@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sherif Tailor — Bespoke Tailoring & Couture · Midrand</title>
+<meta name="description" content="Sherif Tailor — bespoke, tailor-made suits, couture, traditional & bridal wear. Midrand & online across South Africa. Order on WhatsApp.">
+<meta property="og:title" content="Sherif Tailor — Bespoke Tailoring & Couture">
+<meta property="og:description" content="Tailor-made suits, couture, traditional & bridal wear. Midrand & online. Order on WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232b2620'/%3E%3Ctext x='50' y='68' font-size='48' font-family='Georgia,serif' fill='%23c3b29a' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oat:#f4efe6;--oat2:#eae2d4;--espresso:#2b2620;--espresso2:#3c352c;
+    --taupe:#c3b29a;--gold:#a98f68;--gold-d:#8a7350;--ink:#241f1a;--muted:#8c8175;--line:#e3dac9;--white:#fffdf9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--oat);color:var(--ink);line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:.4px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--gold-d)}
+  .tracked{letter-spacing:.28em;text-transform:uppercase}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--espresso);color:var(--taupe);font-weight:500;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:7px 56px;z-index:200}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(244,239,230,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;max-width:1160px;margin:0 auto}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:1px;color:var(--espresso)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);transition:.25s}
+  .nav-links a:hover{color:var(--gold-d)}
+  .nav-cta{border:1px solid var(--espresso);padding:11px 22px !important;color:var(--espresso)!important}
+  .nav-cta:hover{background:var(--espresso);color:var(--oat)!important}
+  @media(max-width:880px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:148px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+  .eyebrow{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-d);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+  .hero h1{font-size:clamp(3rem,6.5vw,5.4rem);line-height:1;color:var(--espresso)}
+  .hero h1 em{font-style:italic;color:var(--gold-d)}
+  .hero p.lead{font-size:1.08rem;color:var(--ink);max-width:440px;margin:26px 0 36px;font-weight:300}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Jost',sans-serif;font-weight:400;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:16px 32px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:1px solid transparent}
+  .btn-ink{background:var(--espresso);color:var(--oat)}
+  .btn-ink:hover{background:var(--espresso2);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--espresso);color:var(--espresso)}
+  .btn-ghost:hover{background:var(--espresso);color:var(--oat)}
+  .hero-stats{display:flex;gap:38px;margin-top:46px}
+  .hero-stats .st b{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--espresso);display:block;line-height:1.1}
+  .hero-stats .st span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .hero-visual{position:relative;height:580px}
+  .hf{position:absolute;overflow:hidden;background:#ddd center/cover;box-shadow:0 36px 70px -30px rgba(43,38,32,.55)}
+  .hf-main{width:66%;height:100%;right:0;top:0}
+  .hf-sm{width:48%;height:50%;left:0;bottom:6%;z-index:2;border:6px solid var(--oat)}
+  .hf-tag{position:absolute;left:0;bottom:-1px;z-index:3;background:var(--espresso);color:var(--taupe);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:9px 16px}
+
+  section{position:relative;padding:96px 0}
+  .sec-head{max-width:620px;margin:0 auto 56px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head .eyebrow::after{content:"";width:34px;height:1px;background:var(--gold)}
+  .sec-head h2{font-size:clamp(2.2rem,4.5vw,3.2rem);line-height:1.06;margin-bottom:12px;color:var(--espresso)}
+  .sec-head p{color:var(--muted)}
+
+  .band{background:var(--espresso);color:var(--oat)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .feat{text-align:center;padding:14px}
+  .feat .ic{font-size:1.5rem;margin-bottom:12px}
+  .feat h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--taupe);margin-bottom:8px}
+  .feat p{color:#cabfb0;font-size:.92rem;font-weight:300}
+
+  /* collections */
+  .col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .col{background:var(--white);border:1px solid var(--line);padding:32px 30px;transition:.3s;position:relative}
+  .col:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(43,38,32,.35)}
+  .col .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1.1rem}
+  .col h3{font-family:'Cormorant Garamond',serif;font-size:1.55rem;margin:6px 0 4px;color:var(--espresso)}
+  .col p{color:var(--muted);font-size:.9rem;font-weight:300}
+
+  /* lookbook */
+  .look{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .look .l{overflow:hidden;background:var(--oat2) center/cover;aspect-ratio:3/4;transition:.4s}
+  .look .l:hover{filter:brightness(1.05)}
+  .look .lw{grid-column:span 2;aspect-ratio:auto}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:54px;align-items:center}
+  .about-card{aspect-ratio:4/5;background:#444 center/cover;box-shadow:0 36px 70px -34px rgba(43,38,32,.55)}
+  .about-text h2{font-size:clamp(2rem,4vw,2.9rem);line-height:1.06;margin-bottom:18px}
+  .about-text p{color:var(--ink);margin-bottom:16px;font-weight:300}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .badge{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;background:var(--oat2);border:1px solid var(--line);padding:9px 15px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:2.4rem;color:var(--gold);line-height:1;margin-bottom:12px}
+  .step h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.92rem;font-weight:300}
+
+  .cta{text-align:center;background:var(--oat2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cta h2{font-size:clamp(2.3rem,5vw,3.4rem);margin-bottom:14px;color:var(--espresso)}
+  .cta h2 em{font-style:italic;color:var(--gold-d)}
+  .cta p{color:var(--ink);max-width:450px;margin:0 auto 30px;font-weight:300}
+  .cta .btns{justify-content:center}
+
+  footer{padding:50px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:12px}
+  footer p{color:var(--muted);font-size:.88rem;font-weight:300}
+  .foot-contact a{display:block;color:var(--ink);font-size:.92rem;margin-bottom:6px}
+  .foot-contact a:hover{color:var(--gold-d)}
+  .madeby{margin-top:36px;text-align:center;font-size:.76rem;letter-spacing:.08em;color:var(--muted)}
+  .madeby a{color:var(--gold-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(37,211,102,.6);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:880px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(244,239,230,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;padding:13px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+  .mbar .m-wa{background:var(--espresso);color:var(--oat)}
+  @media(max-width:880px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:880px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-visual{height:440px;order:-1}
+    .band-grid,.col-grid,.steps{grid-template-columns:1fr}
+    .look{grid-template-columns:repeat(2,1fr)}
+    .look .lw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">SHERIF TAILOR</div>
+    <nav class="nav-links">
+      <a href="#collections">Collections</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8" class="nav-cta">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Bespoke Tailoring · Midrand &amp; Online</span>
+      <h1 class="reveal d1">Tailor-made,<br><em>just for you.</em></h1>
+      <p class="lead reveal d2">From sharp suits to couture gowns &amp; traditional wear — every piece designed &amp; tailored to fit you perfectly. Made in Midrand, shipped across South Africa.</p>
+      <div class="btns reveal d3">
+        <a href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8" class="btn btn-ink">Order on WhatsApp</a>
+        <a href="#lookbook" class="btn btn-ghost">View lookbook</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>35k+</b><span>Following</span></div>
+        <div class="st"><b>Bespoke</b><span>Made to measure</span></div>
+        <div class="st"><b>Online</b><span>Nationwide</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="hf hf-main" style="background-image:url(images/sherif-3.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/sherif-4.webp)"><span class="hf-tag">Tailored to fit</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band" style="padding:64px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">✂️</div><h3>Made to measure</h3><p>Every garment cut &amp; tailored to your exact measurements &amp; shape.</p></div>
+    <div class="feat reveal d1"><div class="ic">👑</div><h3>Designed with you</h3><p>Bring your vision — fabric, colour, silhouette — and we'll bring it to life.</p></div>
+    <div class="feat reveal d2"><div class="ic">🚚</div><h3>Midrand &amp; online</h3><p>Visit the studio or order online &amp; we'll deliver across South Africa.</p></div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The atelier</span>
+      <h2>Collections</h2>
+      <p>Tailor-made pieces for every occasion.</p>
+    </div>
+    <div class="col-grid">
+      <div class="col reveal"><div class="num">I</div><h3>Bespoke Suits</h3><p>Sharp, made-to-measure suits for the modern gentleman.</p></div>
+      <div class="col reveal d1"><div class="num">II</div><h3>Women's Tailoring</h3><p>Power suits, blazers &amp; sleek separates, cut to flatter.</p></div>
+      <div class="col reveal d2"><div class="num">III</div><h3>Traditional &amp; African</h3><p>Stunning traditional &amp; cultural attire for every celebration.</p></div>
+      <div class="col reveal"><div class="num">IV</div><h3>Bridal &amp; Bridesmaids</h3><p>Couture bridal gowns &amp; coordinated bridesmaid looks.</p></div>
+      <div class="col reveal d1"><div class="num">V</div><h3>Matric Dance</h3><p>Show-stopping matric dance dresses &amp; suits, made to wow.</p></div>
+      <div class="col reveal d2"><div class="num">VI</div><h3>Custom Prints</h3><p>Bold printed pieces &amp; statement designs, uniquely yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section id="lookbook" class="band" style="background:var(--oat)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The lookbook</span>
+      <h2 style="color:var(--espresso)">Recent creations</h2>
+      <p>A glimpse of the atelier — straight from @sherif_tailor.</p>
+    </div>
+    <div class="look">
+      <div class="l reveal" style="background-image:url(images/sherif-1.webp)"></div>
+      <div class="l lw reveal d1" style="background-image:url(images/sherif-2.webp)"></div>
+      <div class="l reveal d2" style="background-image:url(images/sherif-4.webp)"></div>
+      <div class="l reveal" style="background-image:url(images/sherif-3.webp)"></div>
+      <div class="l lw reveal d1" style="background-image:url(images/sherif-2.webp)"></div>
+      <div class="l reveal d2" style="background-image:url(images/sherif-1.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">The process</span><h2>How it works</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">I</div><h3>Message us</h3><p>WhatsApp your idea, occasion &amp; timeline — we'll talk it through.</p></div>
+      <div class="step reveal d1"><div class="n">II</div><h3>Design &amp; measure</h3><p>We finalise the design, fabric &amp; your measurements.</p></div>
+      <div class="step reveal d2"><div class="n">III</div><h3>Tailored &amp; delivered</h3><p>Your piece is handmade to fit &amp; delivered to your door.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band" style="background:var(--oat2)">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background-image:url(images/sherif-2.webp)"></div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">The house</span>
+      <h2 style="color:var(--espresso)">Where every stitch is made for you</h2>
+      <p>Sherif Tailor is a Midrand-based design house creating bespoke, tailor-made clothing for those who want something truly their own — suits, couture, traditional &amp; bridal wear.</p>
+      <p>With a growing community of over 35,000, every piece is designed in collaboration with you and crafted to fit beautifully, wherever you are in South Africa.</p>
+      <div class="badge-row">
+        <span class="badge">📍 Noordwyk, Midrand</span>
+        <span class="badge">✂️ Made to measure</span>
+        <span class="badge">🚚 Nationwide</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Ready to be <em>tailor-made?</em></h2>
+    <p class="reveal d1">Send us your vision on WhatsApp &amp; let's create something made entirely for you.</p>
+    <div class="btns reveal d2">
+      <a href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8" class="btn btn-ink">Order on WhatsApp</a>
+      <a href="https://instagram.com/sherif_tailor" class="btn btn-ghost">View Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">SHERIF TAILOR</div>
+      <p>Bespoke tailoring &amp; couture.<br>5 Bakhout Street, Noordwyk, Midrand, Gauteng.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8">💬 WhatsApp · 083 846 5197</a>
+      <a href="https://instagram.com/sherif_tailor">📸 @sherif_tailor</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Sherif Tailor ✂️</div>
+</footer>
+
+<a class="fab" href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8" aria-label="WhatsApp">💬</a>
+
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/27838465197?text=Hi%20Sherif%20Tailor!%20I'd%20love%20to%20place%20an%20order%20%E2%9C%A8">Order on WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Sherif Tailor","description":"Bespoke tailor-made suits, couture, traditional and bridal wear in Midrand, with online ordering across South Africa.","areaServed":"South Africa","address":"5 Bakhout Street, Noordwyk, Midrand, Gauteng","telephone":"+27838465197","priceRange":"$$$","url":"https://joshuavomberg.co.za/sherif_tailor.html","sameAs":"https://instagram.com/sherif_tailor"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
