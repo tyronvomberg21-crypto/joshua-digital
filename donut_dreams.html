@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donut Dreams — Your Favourite Donut Spot · Cape Town</title>
+<meta name="description" content="Donut Dreams — handmade donuts for every occasion in Cape Town. Weddings, parties, gifting & just because. Order on WhatsApp (orders close 12 noon daily).">
+<meta property="og:title" content="Donut Dreams — Your Favourite Donut Spot">
+<meta property="og:description" content="Handmade donuts for every occasion in Cape Town. Order on WhatsApp 🍩">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ffe1ea'/%3E%3Ccircle cx='50' cy='52' r='26' fill='none' stroke='%23ff7da6' stroke-width='13'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fff7f3;--cream2:#ffeef0;--pink:#ff7da6;--pink-d:#f0608d;--pink-soft:#ffd6e2;
+    --choc:#553523;--choc2:#7a4f35;--ink:#4a2f20;--muted:#a98a78;--line:#f6dfe2;--white:#fff;
+    --yellow:#ffcf4d;--blue:#5ec6e6;--mint:#8fd9a8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Fredoka',sans-serif;font-weight:600;letter-spacing:-.3px}
+  .script{font-family:'Pacifico',cursive;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--pink-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--pink);color:#fff;font-weight:700;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 56px;z-index:200;box-shadow:0 6px 16px -6px rgba(240,96,141,.5)}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(255,247,243,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1120px;margin:0 auto}
+  .brand{font-family:'Pacifico',cursive;font-size:1.5rem;color:var(--pink-d)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:.9rem;font-weight:700;color:var(--choc);transition:.25s}
+  .nav-links a:hover{color:var(--pink-d)}
+  .nav-cta{background:var(--pink);border-radius:40px;padding:11px 22px !important;color:#fff!important;box-shadow:0 8px 18px -8px rgba(240,96,141,.6)}
+  .nav-cta:hover{background:var(--pink-d)!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:128px 0 80px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--pink-soft),transparent 65%);top:-120px;left:-120px;z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--pink-d);margin-bottom:14px}
+  .hero .script-line{font-family:'Pacifico',cursive;font-size:2rem;color:var(--pink);line-height:1;margin-bottom:4px}
+  .hero h1{font-size:clamp(2.9rem,6vw,4.6rem);line-height:1;color:var(--choc)}
+  .hero h1 em{font-style:normal;color:var(--pink-d)}
+  .hero p.lead{font-size:1.1rem;color:var(--choc2);max-width:420px;margin:22px 0 32px;font-weight:600}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Fredoka',sans-serif;font-weight:600;font-size:.98rem;border-radius:44px;padding:15px 30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:2px solid transparent}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:0 14px 30px -12px rgba(240,96,141,.7)}
+  .btn-pink:hover{background:var(--pink-d);transform:translateY(-3px)}
+  .btn-ghost{border-color:var(--choc);color:var(--choc)}
+  .btn-ghost:hover{background:var(--choc);color:var(--cream)}
+  .hero-stats{display:flex;gap:28px;margin-top:38px}
+  .hero-stats .st b{font-family:'Fredoka',sans-serif;font-size:1.5rem;color:var(--pink-d);display:block;line-height:1}
+  .hero-stats .st span{font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .hero-visual{position:relative;height:520px}
+  .hf{position:absolute;overflow:hidden;border-radius:24px;border:7px solid var(--white);box-shadow:0 30px 56px -26px rgba(85,53,35,.4);background:#eee center/cover}
+  .hf-main{width:70%;height:96%;right:0;top:2%}
+  .hf-sm{width:46%;height:44%;left:0;bottom:4%;z-index:2;rotate:-4deg}
+  .sprinkle{position:absolute;font-size:1.9rem;z-index:3}
+  .sprinkle.s1{top:-4px;right:28%;rotate:-12deg}.sprinkle.s2{bottom:6%;right:-2%;rotate:10deg}
+
+  section{position:relative;padding:88px 0}
+  .sec-head{max-width:560px;margin:0 auto 50px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3rem);line-height:1.08;margin-bottom:10px;color:var(--choc)}
+  .sec-head p{color:var(--muted);font-weight:600}
+
+  .band{background:var(--choc);color:var(--cream)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .feat{text-align:center;padding:14px}
+  .feat .ic{font-size:1.8rem;margin-bottom:10px}
+  .feat h3{font-family:'Fredoka',sans-serif;font-size:1.25rem;color:#fff;margin-bottom:6px}
+  .feat p{color:#e8d6cc;font-size:.95rem;font-weight:600}
+
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mcard{background:var(--white);border:2px solid var(--line);border-radius:22px;padding:28px 26px;transition:.3s;text-align:center}
+  .mcard:hover{transform:translateY(-5px);border-color:var(--pink-soft);box-shadow:0 22px 40px -24px rgba(240,96,141,.4)}
+  .mcard .e{font-size:1.9rem;margin-bottom:8px}
+  .mcard h3{font-family:'Fredoka',sans-serif;font-size:1.3rem;margin-bottom:4px;color:var(--choc)}
+  .mcard p{color:var(--muted);font-size:.92rem;font-weight:600}
+
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px}
+  .gal .g{border-radius:18px;overflow:hidden;border:3px solid var(--white);box-shadow:0 14px 30px -20px rgba(85,53,35,.4);background:var(--cream2) center/cover}
+  .ga{grid-row:span 2}.gw{grid-column:span 2}
+
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .about-card{height:420px;border-radius:24px;border:7px solid var(--white);box-shadow:0 30px 56px -28px rgba(85,53,35,.4);background:#eee center/cover;rotate:-2deg}
+  .about-text .script{font-family:'Pacifico',cursive;font-size:1.8rem;color:var(--pink);display:block;margin-bottom:4px}
+  .about-text h2{font-size:clamp(2rem,4vw,2.6rem);line-height:1.05;margin-bottom:16px}
+  .about-text p{color:var(--choc2);margin-bottom:14px;font-weight:600}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .badge{font-size:.82rem;font-weight:700;background:var(--cream2);border:2px solid var(--line);padding:7px 15px;border-radius:30px}
+
+  .note-strip{background:var(--yellow);color:var(--choc);text-align:center;padding:16px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.05rem}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Fredoka',sans-serif;font-size:2.2rem;color:var(--pink);line-height:1;margin-bottom:10px}
+  .step h3{font-family:'Fredoka',sans-serif;font-size:1.2rem;margin-bottom:6px;color:var(--choc)}
+  .step p{color:var(--muted);font-size:.92rem;font-weight:600}
+
+  .cta{text-align:center}
+  .cta-box{background:linear-gradient(160deg,var(--pink-soft),var(--cream2));border-radius:30px;padding:66px 40px}
+  .cta-box .script{font-family:'Pacifico',cursive;font-size:1.9rem;color:var(--pink-d);display:block;margin-bottom:4px}
+  .cta-box h2{font-size:clamp(2.1rem,5vw,3.1rem);margin-bottom:12px;color:var(--choc)}
+  .cta-box p{color:var(--choc2);max-width:420px;margin:0 auto 26px;font-weight:600}
+
+  footer{border-top:2px solid var(--line);padding:44px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:8px}
+  footer p{color:var(--muted);font-size:.92rem;font-weight:600}
+  .foot-contact a{display:block;color:var(--choc);font-size:.96rem;margin-bottom:6px;font-weight:700}
+  .foot-contact a:hover{color:var(--pink-d)}
+  .madeby{margin-top:32px;text-align:center;font-size:.82rem;color:var(--muted);font-weight:600}
+  .madeby a{color:var(--pink-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(37,211,102,.6);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(255,247,243,.96);backdrop-filter:blur(12px);border-top:2px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.95rem;font-weight:700}
+  .mbar .m-wa{background:var(--pink);color:#fff}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-visual{height:380px;order:-1}
+    .band-grid,.menu-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}.gw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">Donut Dreams</div>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#work">Gallery</a>
+      <a href="#how">How to order</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20place%20a%20donut%20order%20%F0%9F%8D%A9" class="nav-cta">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="script-line reveal">your favourite</div>
+      <h1 class="reveal d1">Donut <em>spot.</em> 🍩</h1>
+      <p class="lead reveal d2">Handmade, dreamy donuts for every occasion — weddings, parties, gifting &amp; just because you feel like one. Freshly made in Cape Town &amp; delivered to your door.</p>
+      <div class="btns reveal d3">
+        <a href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20place%20a%20donut%20order%20%F0%9F%8D%A9" class="btn btn-pink">🍩 Order on WhatsApp</a>
+        <a href="#menu" class="btn btn-ghost">See the menu</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>Every</b><span>Occasion</span></div>
+        <div class="st"><b>Fresh</b><span>Made daily</span></div>
+        <div class="st"><b>Cape Town</b><span>Delivered</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <span class="sprinkle s1">🍩</span><span class="sprinkle s2">💕</span>
+      <div class="hf hf-main" style="background-image:url(images/donut-3.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/donut-2.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band" style="padding:58px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">🎉</div><h3>For every occasion</h3><p>Weddings, parties, gifting, boeka boxes — or just because. We've got you.</p></div>
+    <div class="feat reveal d1"><div class="ic">🧁</div><h3>Made fresh</h3><p>Hand-glazed &amp; topped fresh to order — never sitting around.</p></div>
+    <div class="feat reveal d2"><div class="ic">🚗</div><h3>Delivered</h3><p>Order on WhatsApp &amp; we'll get your box of dreams to you.</p></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Dream a little donut</h2>
+      <p>From classic glazed to fully loaded — pick your dream box.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="mcard reveal"><div class="e">🍩</div><h3>Classic Glazed</h3><p>Soft, fluffy &amp; perfectly glazed — the original dream.</p></div>
+      <div class="mcard reveal d1"><div class="e">🌈</div><h3>Sprinkle Boxes</h3><p>Colourful glazed donuts loaded with sprinkles for the table.</p></div>
+      <div class="mcard reveal d2"><div class="e">🍫</div><h3>Loaded Donuts</h3><p>Topped with Ferrero, Toblerone, Flake &amp; more decadent treats.</p></div>
+      <div class="mcard reveal"><div class="e">💗</div><h3>Occasion Boxes</h3><p>Custom donuts for weddings, parties &amp; gifting — your colours &amp; theme.</p></div>
+      <div class="mcard reveal d1"><div class="e">🌙</div><h3>Boeka Treats Box</h3><p>A perfect little mixed box to share at the table.</p></div>
+      <div class="mcard reveal d2"><div class="e">🎁</div><h3>Just Because</h3><p>Because you don't need a reason to treat yourself (or someone). 🥰</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" style="padding-top:14px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The goods</span>
+      <h2>Donut dreams come true</h2>
+      <p>Straight from the @donutdreams_ kitchen.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background-image:url(images/donut-3.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/donut-1.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/donut-2.webp)"></div>
+      <div class="g gw reveal d1" style="background-image:url(images/donut-1.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/donut-2.webp)"></div>
+      <div class="g reveal d3" style="background-image:url(images/donut-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<div class="note-strip reveal">⏰ All orders close at 12 noon, every day — get yours in early!</div>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Easy as</span><h2>How to order</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>WhatsApp us</h3><p>Send your flavours, quantity &amp; the date you need them by.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>We make 'em fresh</h3><p>Your donuts are hand-made &amp; topped fresh to order.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Collect or delivered</h3><p>Grab your box of dreams &amp; enjoy! 🍩</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band" style="background:var(--cream2);color:var(--ink)">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background-image:url(images/donut-1.webp)"></div>
+    <div class="about-text reveal d1">
+      <span class="script">hi, we're Donut Dreams</span>
+      <h2>Your favourite donut spot 🍩</h2>
+      <p>We're a Cape Town donut kitchen on a mission to make every occasion a little sweeter — with fresh, handmade donuts in every flavour, colour &amp; topping you can dream of.</p>
+      <p>Whether it's a wedding, a party, a gift or a treat just for you, we'll make your dream box come true.</p>
+      <div class="badge-row">
+        <span class="badge">📍 Cape Town</span>
+        <span class="badge">🍩 Made to order</span>
+        <span class="badge">🎉 Every occasion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="script">go on, treat yourself</span>
+      <h2>Ready for your donut dreams?</h2>
+      <p>Send us your order on WhatsApp — orders close 12 noon daily!</p>
+      <a href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20place%20a%20donut%20order%20%F0%9F%8D%A9" class="btn btn-pink">🍩 Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">Donut Dreams</div>
+      <p>Your favourite donut spot.<br>Handmade in Cape Town · Orders close 12 noon.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20order%20%F0%9F%8D%A9">💬 WhatsApp · 069 326 9714</a>
+      <a href="https://instagram.com/donutdreams_">📸 @donutdreams_</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Donut Dreams 🍩</div>
+</footer>
+
+<a class="fab" href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20order%20%F0%9F%8D%A9" aria-label="WhatsApp">💬</a>
+
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/27693269714?text=Hi%20Donut%20Dreams!%20I'd%20love%20to%20order%20%F0%9F%8D%A9">🍩 Order on WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Donut Dreams","description":"Handmade donuts for every occasion in Cape Town — weddings, parties, gifting and just because. Order on WhatsApp.","areaServed":"Cape Town","telephone":"+27693269714","priceRange":"$$","url":"https://joshuavomberg.co.za/donut_dreams.html","sameAs":"https://instagram.com/donutdreams_"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
