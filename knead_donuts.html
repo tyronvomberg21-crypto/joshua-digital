@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knead Donuts — Fresh, Soft & Yummy Doughnuts · Gordon's Bay</title>
+<meta name="description" content="Knead Donuts — fresh, soft & yummy Halal doughnuts in Gordon's Bay & Strand. Classic, filled, themed & loaded gourmet donuts. Order on WhatsApp.">
+<meta property="og:title" content="Knead Donuts — Fresh, Soft & Yummy Doughnuts">
+<meta property="og:description" content="Fresh, soft & yummy Halal doughnuts in Gordon's Bay & Strand. You donut want to miss out 🍩">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234a2c1a'/%3E%3Ccircle cx='50' cy='52' r='25' fill='none' stroke='%23d99a4e' stroke-width='13'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf5ea;--cream2:#f6e9d6;--choc:#43281a;--choc2:#5e3a26;--ink:#3a241a;
+    --caramel:#d99a4e;--caramel-d:#bd7e34;--pink:#ef9bad;--muted:#9b8473;--line:#ecdcc4;--white:#fffdf8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mulish',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Baloo 2',sans-serif;font-weight:700;letter-spacing:-.2px}
+  .script{font-family:'Caveat',cursive;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--caramel-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--caramel);color:var(--choc);font-weight:700;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 56px;z-index:200}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(253,245,234,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1120px;margin:0 auto}
+  .brand{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.4rem;color:var(--choc)}
+  .brand span{color:var(--caramel-d)}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:.88rem;font-weight:700;color:var(--choc2);transition:.25s}
+  .nav-links a:hover{color:var(--caramel-d)}
+  .nav-cta{background:var(--choc);border-radius:40px;padding:11px 22px !important;color:var(--cream)!important}
+  .nav-cta:hover{background:var(--choc2)!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:128px 0 80px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(217,154,78,.2),transparent 65%);top:-120px;right:-120px;z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .halal{display:inline-flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--caramel-d);background:var(--cream2);border:1px solid var(--line);padding:6px 14px;border-radius:30px;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.9rem,6vw,4.7rem);line-height:1;color:var(--choc)}
+  .hero h1 em{font-style:normal;color:var(--caramel-d)}
+  .hero .script-line{font-family:'Caveat',cursive;font-size:2rem;color:var(--caramel-d);line-height:1;margin-top:8px;display:block}
+  .hero p.lead{font-size:1.1rem;color:var(--choc2);max-width:430px;margin:20px 0 32px;font-weight:500}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Baloo 2',sans-serif;font-weight:600;font-size:.98rem;border-radius:44px;padding:14px 30px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:2px solid transparent}
+  .btn-choc{background:var(--choc);color:var(--cream);box-shadow:0 14px 30px -14px rgba(67,40,26,.6)}
+  .btn-choc:hover{background:var(--choc2);transform:translateY(-3px)}
+  .btn-ghost{border-color:var(--choc);color:var(--choc)}
+  .btn-ghost:hover{background:var(--choc);color:var(--cream)}
+  .hero-stats{display:flex;gap:28px;margin-top:38px}
+  .hero-stats .st b{font-family:'Baloo 2',sans-serif;font-size:1.5rem;color:var(--caramel-d);display:block;line-height:1}
+  .hero-stats .st span{font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+  .hero-visual{position:relative;height:520px}
+  .hf{position:absolute;overflow:hidden;border-radius:22px;border:7px solid var(--white);box-shadow:0 30px 56px -26px rgba(67,40,26,.5);background:#ddd center/cover}
+  .hf-main{width:70%;height:96%;right:0;top:2%}
+  .hf-sm{width:46%;height:44%;left:0;bottom:4%;z-index:2;rotate:-4deg}
+  .donut-spin{position:absolute;top:-6px;right:30%;font-size:1.9rem;z-index:3;rotate:-12deg}
+
+  section{position:relative;padding:88px 0}
+  .sec-head{max-width:560px;margin:0 auto 50px;text-align:center}
+  .sec-head .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--caramel-d);margin-bottom:8px}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3rem);line-height:1.06;margin-bottom:10px;color:var(--choc)}
+  .sec-head p{color:var(--muted);font-weight:500}
+
+  .band{background:var(--choc);color:var(--cream)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .feat{text-align:center;padding:14px}
+  .feat .ic{font-size:1.8rem;margin-bottom:10px}
+  .feat h3{font-family:'Baloo 2',sans-serif;font-size:1.25rem;color:#fff;margin-bottom:6px}
+  .feat p{color:#e3d2c2;font-size:.95rem;font-weight:500}
+
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .mcard{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px 26px;transition:.3s;text-align:center}
+  .mcard:hover{transform:translateY(-5px);box-shadow:0 22px 40px -24px rgba(67,40,26,.35)}
+  .mcard .e{font-size:1.9rem;margin-bottom:8px}
+  .mcard h3{font-family:'Baloo 2',sans-serif;font-size:1.3rem;margin-bottom:4px;color:var(--choc)}
+  .mcard p{color:var(--muted);font-size:.92rem;font-weight:500}
+
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px}
+  .gal .g{border-radius:18px;overflow:hidden;border:3px solid var(--white);box-shadow:0 14px 30px -20px rgba(67,40,26,.4);background:var(--cream2) center/cover}
+  .ga{grid-row:span 2}.gw{grid-column:span 2}
+
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .about-card{height:420px;border-radius:22px;border:7px solid var(--white);box-shadow:0 30px 56px -28px rgba(67,40,26,.45);background:#ddd center/cover;rotate:2deg}
+  .about-text .script{font-family:'Caveat',cursive;font-size:2rem;color:var(--caramel-d);display:block;margin-bottom:2px}
+  .about-text h2{font-size:clamp(2rem,4vw,2.6rem);line-height:1.05;margin-bottom:16px}
+  .about-text p{color:var(--choc2);margin-bottom:14px;font-weight:500}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .badge{font-size:.82rem;font-weight:700;background:var(--cream2);border:1px solid var(--line);padding:7px 15px;border-radius:30px}
+
+  .stock{background:var(--cream2);border:1px dashed var(--caramel);border-radius:16px;padding:24px 28px;text-align:center;max-width:640px;margin:24px auto 0}
+  .stock h3{font-family:'Baloo 2',sans-serif;font-size:1.2rem;color:var(--choc);margin-bottom:6px}
+  .stock p{color:var(--choc2);font-size:.95rem;font-weight:500}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Baloo 2',sans-serif;font-size:2.2rem;color:var(--caramel);line-height:1;margin-bottom:10px}
+  .step h3{font-family:'Baloo 2',sans-serif;font-size:1.2rem;margin-bottom:6px;color:var(--choc)}
+  .step p{color:var(--muted);font-size:.92rem;font-weight:500}
+
+  .cta{text-align:center}
+  .cta-box{background:linear-gradient(160deg,var(--choc),var(--choc2));border-radius:30px;padding:66px 40px;color:var(--cream)}
+  .cta-box .script{font-family:'Caveat',cursive;font-size:2rem;color:var(--caramel);display:block;margin-bottom:2px}
+  .cta-box h2{font-size:clamp(2.1rem,5vw,3.1rem);margin-bottom:12px;color:#fff}
+  .cta-box p{color:#e3d2c2;max-width:420px;margin:0 auto 26px;font-weight:500}
+
+  footer{border-top:1px solid var(--line);padding:44px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:8px}
+  footer p{color:var(--muted);font-size:.92rem;font-weight:500}
+  .foot-contact a{display:block;color:var(--choc);font-size:.96rem;margin-bottom:6px;font-weight:700}
+  .foot-contact a:hover{color:var(--caramel-d)}
+  .madeby{margin-top:32px;text-align:center;font-size:.82rem;color:var(--muted);font-weight:500}
+  .madeby a{color:var(--caramel-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(37,211,102,.6);transition:.3s;font-size:1.6rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(253,245,234,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.95rem;font-weight:700}
+  .mbar .m-wa{background:var(--choc);color:var(--cream)}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-visual{height:380px;order:-1}
+    .band-grid,.menu-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}.gw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">Knead <span>Donuts</span></div>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#work">Gallery</a>
+      <a href="#how">How to order</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20place%20an%20order%20%F0%9F%8D%A9" class="nav-cta">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="halal reveal">🌙 Halal · Est. 2021</div>
+      <h1 class="reveal d1">Fresh, soft<br>&amp; <em>yummy.</em><span class="script-line">you donut want to miss out 🍩</span></h1>
+      <p class="lead reveal d2">Handmade doughnuts from Gordon's Bay &amp; Strand — fluffy, fresh &amp; loaded with the good stuff. Classic, filled, themed &amp; fully decadent.</p>
+      <div class="btns reveal d3">
+        <a href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20place%20an%20order%20%F0%9F%8D%A9" class="btn btn-choc">🍩 Order on WhatsApp</a>
+        <a href="#menu" class="btn btn-ghost">See the menu</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>Halal</b><span>Certified</span></div>
+        <div class="st"><b>Fresh</b><span>Made daily</span></div>
+        <div class="st"><b>Gordon's Bay</b><span>& Strand</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <span class="donut-spin">🍩</span>
+      <div class="hf hf-main" style="background-image:url(images/knead-1.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/knead-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band" style="padding:58px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">🍩</div><h3>Fresh &amp; soft</h3><p>Made fresh so every doughnut is pillowy, fluffy &amp; delicious.</p></div>
+    <div class="feat reveal d1"><div class="ic">🌙</div><h3>Halal</h3><p>Halal-friendly treats the whole family can enjoy with confidence.</p></div>
+    <div class="feat reveal d2"><div class="ic">⛽</div><h3>Find us around</h3><p>Stocked at local spots around Strand &amp; Gordon's Bay — or order direct.</p></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Something for every craving</h2>
+      <p>From classic glazed to fully loaded — pick your favourites.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="mcard reveal"><div class="e">🍩</div><h3>Classic Glazed</h3><p>Soft, fluffy &amp; sweetly glazed — the one that started it all.</p></div>
+      <div class="mcard reveal d1"><div class="e">🌀</div><h3>Cinnamon</h3><p>Warm, sugary cinnamon doughnuts — a proper comfort treat.</p></div>
+      <div class="mcard reveal d2"><div class="e">🍫</div><h3>Loaded Gourmet</h3><p>Caramel, peanut, Oreo, honeycomb &amp; chocolate — fully topped.</p></div>
+      <div class="mcard reveal"><div class="e">🍮</div><h3>Filled Donuts</h3><p>Soft sugar doughnuts filled with custard &amp; cream.</p></div>
+      <div class="mcard reveal d1"><div class="e">🎉</div><h3>Themed Donuts</h3><p>Custom themed donuts for birthdays, parties &amp; occasions.</p></div>
+      <div class="mcard reveal d2"><div class="e">📦</div><h3>Mixed Boxes</h3><p>Can't choose? Grab a box of mixed favourites to share.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" style="padding-top:14px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The goods</span>
+      <h2>Fresh out the kitchen</h2>
+      <p>Straight from the @knead.donuts feed.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background-image:url(images/knead-1.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/knead-2.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/knead-4.webp)"></div>
+      <div class="g gw reveal d1" style="background-image:url(images/knead-3.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/knead-2.webp)"></div>
+      <div class="g reveal d3" style="background-image:url(images/knead-4.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Easy as</span><h2>How to order</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>WhatsApp or DM</h3><p>Send us your flavours, quantity &amp; the day you need them.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>Made fresh</h3><p>We make &amp; top your doughnuts fresh to order.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Collect &amp; enjoy</h3><p>Grab your box of fresh donuts &amp; tuck in! 🍩</p></div>
+    </div>
+    <div class="stock reveal">
+      <h3>🏪 Want to stock Knead Donuts?</h3>
+      <p>Cafés &amp; shops — email <a href="mailto:mishqohl@gmail.com" class="accent">mishqohl@gmail.com</a> to stock our doughnuts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band" style="background:var(--cream2);color:var(--ink)">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background-image:url(images/knead-4.webp)"></div>
+    <div class="about-text reveal d1">
+      <span class="script">hi, we're Knead Donuts</span>
+      <h2>Doughnuts made with love 🍩</h2>
+      <p>We're a Halal doughnut shop in Gordon's Bay &amp; Strand, baking fresh, soft &amp; seriously yummy doughnuts since 2021.</p>
+      <p>From classic glazed to fully loaded gourmet creations, every doughnut is made fresh — because you donut want to miss out!</p>
+      <div class="badge-row">
+        <span class="badge">📍 Gordon's Bay &amp; Strand</span>
+        <span class="badge">🌙 Halal</span>
+        <span class="badge">🍩 Since 2021</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="script">go on, treat yourself</span>
+      <h2>Ready for fresh donuts?</h2>
+      <p>Send us your order on WhatsApp or DM — we'll make 'em fresh for you.</p>
+      <a href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20place%20an%20order%20%F0%9F%8D%A9" class="btn btn-choc" style="background:var(--caramel);color:var(--choc)">🍩 Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">Knead <span>Donuts</span></div>
+      <p>Fresh, soft &amp; yummy Halal doughnuts.<br>Gordon's Bay &amp; Strand · Est. 2021.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20order%20%F0%9F%8D%A9">💬 WhatsApp · 084 777 9898</a>
+      <a href="https://instagram.com/knead.donuts">📸 @knead.donuts</a>
+      <a href="mailto:mishqohl@gmail.com">✉️ Stock our donuts</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Knead Donuts 🍩</div>
+</footer>
+
+<a class="fab" href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20order%20%F0%9F%8D%A9" aria-label="WhatsApp">💬</a>
+
+<div class="mbar">
+  <a class="m-wa" href="https://wa.me/27847779898?text=Hi%20Knead%20Donuts!%20I'd%20love%20to%20order%20%F0%9F%8D%A9">🍩 Order on WhatsApp</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Knead Donuts","description":"Fresh, soft and yummy Halal doughnuts in Gordon's Bay and Strand. Classic, filled, themed and loaded gourmet donuts. Order on WhatsApp.","areaServed":"Gordon's Bay, Strand, Cape Town","telephone":"+27847779898","email":"mishqohl@gmail.com","priceRange":"$$","url":"https://joshuavomberg.co.za/knead_donuts.html","sameAs":"https://instagram.com/knead.donuts"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
