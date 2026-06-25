@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nails by Jordyn — Nail Artist · Southern Suburbs, Cape Town</title>
+<meta name="description" content="Nails by Jordyn — custom nail art & sculpted sets in the Southern Suburbs, Cape Town. Book online in seconds.">
+<meta property="og:title" content="Nails by Jordyn — Custom Nail Art, Cape Town">
+<meta property="og:description" content="Cute, custom nail art & sculpted sets in the Southern Suburbs. Book online.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23fbe5ec'/%3E%3Ctext x='50' y='70' font-size='58' font-family='Georgia,serif' fill='%234a3127' text-anchor='middle'%3Ej%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf6f3;--cream2:#fbede9;--blush:#fbdce6;--blush2:#f6c6d6;
+    --brown:#4a3127;--brown2:#6b4d40;--pink:#ef85ab;--pink-d:#e0689a;
+    --muted:#a98f83;--line:#f0ddd5;--white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Quicksand',sans-serif;background:var(--cream);color:var(--brown);line-height:1.7;font-weight:500;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:500;letter-spacing:.2px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--pink-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--pink);color:#fff;font-weight:700;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 56px;z-index:200;box-shadow:0 8px 20px -8px rgba(224,104,154,.5)}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(253,246,243,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1120px;margin:0 auto}
+  .brand{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
+  .brand span{color:var(--pink-d)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.82rem;letter-spacing:.06em;font-weight:600;color:var(--brown2);transition:.25s}
+  .nav-links a:hover{color:var(--pink-d)}
+  .nav-cta{background:var(--pink);border-radius:40px;padding:10px 22px !important;color:#fff!important}
+  .nav-cta:hover{background:var(--pink-d)!important}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:140px 0 90px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 65%);top:-120px;left:-140px;z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:50px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pink-d);font-weight:700;margin-bottom:20px}
+  .eyebrow::before{content:"🎀"}
+  .hero h1{font-size:clamp(2.9rem,6vw,4.7rem);line-height:1.03;color:var(--brown)}
+  .hero h1 em{font-style:italic;color:var(--pink-d)}
+  .hero p.lead{font-size:1.1rem;color:var(--brown2);max-width:420px;margin:24px 0 34px;font-weight:500}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.92rem;border-radius:44px;padding:15px 28px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:2px solid transparent}
+  .btn-pink{background:var(--pink);color:#fff;box-shadow:0 14px 30px -14px rgba(224,104,154,.7)}
+  .btn-pink:hover{background:var(--pink-d);transform:translateY(-3px)}
+  .btn-ghost{border-color:var(--brown);color:var(--brown)}
+  .btn-ghost:hover{background:var(--brown);color:var(--cream)}
+  .hero-stats{display:flex;gap:30px;margin-top:42px}
+  .hero-stats .st b{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--brown);display:block;line-height:1}
+  .hero-stats .st span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+  .hero-visual{position:relative;height:520px}
+  .hf{position:absolute;overflow:hidden;border:7px solid var(--white);box-shadow:0 30px 56px -26px rgba(74,49,39,.35);background:#eee center/cover}
+  .hf-main{width:70%;height:96%;right:0;top:2%;border-radius:170px 170px 18px 18px;rotate:2deg}
+  .hf-sm{width:46%;height:44%;left:0;bottom:4%;border-radius:18px;rotate:-4deg;z-index:2}
+  .bow{position:absolute;font-size:2.4rem;z-index:3;top:-6px;right:30%;rotate:-12deg}
+
+  section{position:relative;padding:92px 0}
+  .sec-head{max-width:580px;margin:0 auto 54px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3rem);line-height:1.08;margin-bottom:12px}
+  .sec-head p{color:var(--muted)}
+
+  .band{background:var(--brown);color:var(--cream)}
+  .band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .feat{text-align:center;padding:14px}
+  .feat .ic{font-size:1.7rem;margin-bottom:12px}
+  .feat h3{font-family:'Fraunces',serif;font-size:1.2rem;color:#fff;margin-bottom:8px}
+  .feat p{color:#d9c7bd;font-size:.93rem;font-weight:500}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .svc{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:30px 32px;transition:.3s}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(74,49,39,.3)}
+  .svc .s-ic{font-size:1.5rem;margin-bottom:10px}
+  .svc h3{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:5px}
+  .svc p{color:var(--muted);font-size:.93rem;font-weight:500}
+
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:14px}
+  .gal .g{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--blush) center/cover}
+  .ga{grid-row:span 2}
+  .gw{grid-column:span 2}
+
+  .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:50px;align-items:center}
+  .about-card{height:440px;border-radius:22px;border:7px solid var(--white);box-shadow:0 30px 60px -30px rgba(74,49,39,.35);background:#eee center/cover;rotate:-2deg}
+  .about-text h2{font-size:clamp(2rem,4vw,2.7rem);line-height:1.06;margin-bottom:18px}
+  .about-text p{color:var(--brown2);margin-bottom:16px;font-weight:500}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .badge{font-size:.78rem;font-weight:600;background:var(--cream2);border:1px solid var(--line);padding:8px 15px;border-radius:30px}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--pink);line-height:1;margin-bottom:12px}
+  .step h3{font-family:'Fraunces',serif;font-size:1.2rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.92rem;font-weight:500}
+
+  .cta{text-align:center}
+  .cta-box{background:linear-gradient(160deg,var(--blush),var(--blush2));border-radius:30px;padding:70px 40px;position:relative;overflow:hidden}
+  .cta-box h2{font-size:clamp(2.2rem,5vw,3.3rem);margin-bottom:14px}
+  .cta-box h2 em{font-style:italic;color:var(--pink-d)}
+  .cta-box p{color:var(--brown2);max-width:430px;margin:0 auto 28px;font-weight:500}
+
+  footer{border-top:1px solid var(--line);padding:46px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:10px}
+  footer p{color:var(--muted);font-size:.9rem;font-weight:500}
+  .foot-contact a{display:block;color:var(--brown);font-size:.94rem;margin-bottom:6px;font-weight:600}
+  .foot-contact a:hover{color:var(--pink-d)}
+  .madeby{margin-top:34px;text-align:center;font-size:.8rem;color:var(--muted)}
+  .madeby a{color:var(--pink-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:18px;background:var(--pink);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(224,104,154,.6);transition:.3s;font-size:1.5rem}
+  .fab:hover{transform:scale(1.08);background:var(--pink-d)}
+  @media(max-width:860px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(253,246,243,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.9rem;font-weight:700}
+  .mbar .m-bk{background:var(--pink);color:#fff}
+  @media(max-width:860px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:860px){
+    .hero-grid,.about-grid,.svc-grid{grid-template-columns:1fr}
+    .hero-visual{height:380px;order:-1}
+    .band-grid,.steps{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+    .gw{grid-column:span 2}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">nails by <span>jordyn</span></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Gallery</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="https://nailsbyjordyn.setmore.com/jordynclayford" class="nav-cta">Book online</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Nail Artist · Southern Suburbs, Cape Town</span>
+      <h1 class="reveal d1">Cute nails,<br><em>seriously</em> done.</h1>
+      <p class="lead reveal d2">Custom nail art &amp; perfectly sculpted sets — from soft &amp; pretty to bold &amp; bedazzled. Designed just for you in the Southern Suburbs.</p>
+      <div class="btns reveal d3">
+        <a href="https://nailsbyjordyn.setmore.com/jordynclayford" class="btn btn-pink">🎀 Book online</a>
+        <a href="#work" class="btn btn-ghost">See the work</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>Custom</b><span>Nail art</span></div>
+        <div class="st"><b>Sth Subs</b><span>Cape Town</span></div>
+        <div class="st"><b>Online</b><span>Easy booking</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="bow">🎀</div>
+      <div class="hf hf-main" style="background-image:url(images/jordyn-1.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/jordyn-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band" style="padding:60px 0">
+  <div class="wrap band-grid">
+    <div class="feat reveal"><div class="ic">💅</div><h3>Fully custom</h3><p>Bows, hearts, chrome, French — whatever set you're dreaming of, I'll create it.</p></div>
+    <div class="feat reveal d1"><div class="ic">🎀</div><h3>Cute &amp; clean</h3><p>Neat application &amp; long-lasting wear, every single time.</p></div>
+    <div class="feat reveal d2"><div class="ic">📅</div><h3>Book in seconds</h3><p>Pick your slot online — no back-and-forth, no waiting for a reply.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>Services</h2>
+      <p>Beautiful sets &amp; custom art, all your own.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="s-ic">💅</div><h3>Sculpted Sets</h3><p>Acrylic &amp; gel full sets in any shape — almond, stiletto, coffin, you pick.</p></div>
+      <div class="svc reveal d1"><div class="s-ic">🎨</div><h3>Custom Nail Art</h3><p>Hand-painted designs, 3D bows, chrome, charms &amp; bedazzled accents.</p></div>
+      <div class="svc reveal"><div class="s-ic">💎</div><h3>Gel Overlays &amp; Refills</h3><p>Glossy, durable overlays &amp; tidy refills to keep your set fresh.</p></div>
+      <div class="svc reveal d1"><div class="s-ic">🧖‍♀️</div><h3>Soak-off &amp; Care</h3><p>Gentle removal &amp; nail care to keep your natural nails healthy.</p></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);margin-top:28px;font-size:.92rem">Full price list &amp; live availability on the <a href="https://nailsbyjordyn.setmore.com/jordynclayford" class="accent">booking page</a>.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="work" style="padding-top:18px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The gallery</span>
+      <h2>Recent sets</h2>
+      <p>A little look at the art — straight from @nailsbyjordyn_____.</p>
+    </div>
+    <div class="gal">
+      <div class="g ga reveal" style="background-image:url(images/jordyn-1.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/jordyn-2.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/jordyn-3.webp)"></div>
+      <div class="g gw reveal d1" style="background-image:url(images/jordyn-4.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/jordyn-2.webp)"></div>
+      <div class="g reveal d3" style="background-image:url(images/jordyn-4.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="band" style="background:var(--cream2);color:var(--brown)">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Easy as</span><h2 style="color:var(--brown)">How to book</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Book online</h3><p>Pick your service &amp; time on the booking page — done in a minute.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>Send your inspo</h3><p>Slide me your inspo pics so we nail the exact look you want.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Come create</h3><p>Relax in the chair &amp; leave with a set worth showing off.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-card reveal" style="background-image:url(images/jordyn-2.webp)"></div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">Meet Jordyn</span>
+      <h2>Your Southern Suburbs nail girl 🤍</h2>
+      <p>Hi, I'm Jordyn! I'm a nail artist based in the Southern Suburbs, obsessed with creating cute, custom sets that are as fun as they are flawless.</p>
+      <p>From dainty bows to full bedazzled drama, every set is designed around you — and made to last.</p>
+      <div class="badge-row">
+        <span class="badge">📍 Southern Suburbs, CT</span>
+        <span class="badge">🎀 Custom art</span>
+        <span class="badge">📅 Online booking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Ready for your <em>next set?</em></h2>
+      <p>Book your slot online &amp; let's create something cute together.</p>
+      <a href="https://nailsbyjordyn.setmore.com/jordynclayford" class="btn btn-pink">🎀 Book online now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">nails by <span>jordyn</span></div>
+      <p>Custom nail art &amp; sculpted sets.<br>Southern Suburbs, Cape Town.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://nailsbyjordyn.setmore.com/jordynclayford">📅 Book online</a>
+      <a href="https://instagram.com/nailsbyjordyn_____">📸 @nailsbyjordyn_____</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Nails by Jordyn 🎀</div>
+</footer>
+
+<a class="fab" href="https://nailsbyjordyn.setmore.com/jordynclayford" aria-label="Book online">📅</a>
+
+<div class="mbar">
+  <a class="m-bk" href="https://nailsbyjordyn.setmore.com/jordynclayford">🎀 Book online</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NailSalon","name":"Nails by Jordyn","description":"Custom nail art and sculpted sets in the Southern Suburbs, Cape Town.","areaServed":"Southern Suburbs, Cape Town","priceRange":"$$","url":"https://joshuavomberg.co.za/nails_by_jordyn.html","sameAs":"https://instagram.com/nailsbyjordyn_____"}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
