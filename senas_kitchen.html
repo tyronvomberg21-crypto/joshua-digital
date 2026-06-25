@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sena's Kitchen — Cédric Grolet-Inspired Entremets · Cape Town</title>
+<meta name="description" content="Sena's Kitchen — Cédric Grolet-inspired entremets & artisan desserts, brought to South Africa. Find us at Tygervalley Mall & Biancafe, Cape Town.">
+<meta property="og:title" content="Sena's Kitchen — Artisan Entremets · Cape Town">
+<meta property="og:description" content="Cédric Grolet-inspired entremets & desserts, handcrafted in Cape Town. Find us at Tygervalley Mall & Biancafe.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236e1f24'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Georgia,serif' fill='%23f0d9a8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500;600&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#6e1f24;--wine2:#561318;--cream:#fbf4ec;--cream2:#f4e9da;
+    --ink:#2c1715;--gold:#c19a5b;--gold-d:#a07b3e;--muted:#9a8678;--line:#ecdcc8;--white:#fffdfa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Gilda Display',serif;font-weight:400;letter-spacing:.2px}
+  .script{font-family:'Tangerine',cursive;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+  .accent{color:var(--gold-d)}
+
+  .ribbon{position:fixed;top:18px;right:-46px;transform:rotate(45deg);background:var(--gold);color:var(--wine2);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 56px;z-index:200}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:150;transition:.4s}
+  header.nav.scrolled{background:rgba(251,244,236,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:18px 26px;max-width:1140px;margin:0 auto}
+  .brand{font-family:'Gilda Display',serif;font-size:1.35rem;color:var(--wine)}
+  .brand span{color:var(--gold-d)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);transition:.25s}
+  .nav-links a:hover{color:var(--gold-d)}
+  .nav-cta{background:var(--wine);border-radius:40px;padding:11px 22px !important;color:var(--cream)!important;letter-spacing:.1em}
+  .nav-cta:hover{background:var(--wine2)!important}
+  @media(max-width:880px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:148px 0 90px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,var(--cream2),transparent 65%);top:-100px;right:-140px;z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-d);margin-bottom:10px}
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold)}
+  .hero .script-line{font-family:'Tangerine',cursive;font-size:2.6rem;color:var(--gold-d);line-height:.7;margin-bottom:6px}
+  .hero h1{font-size:clamp(2.7rem,5.6vw,4.4rem);line-height:1.05;color:var(--wine)}
+  .hero p.lead{font-size:1.08rem;color:var(--ink);max-width:440px;margin:24px 0 34px;font-weight:300}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Outfit',sans-serif;font-weight:500;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;border-radius:44px;padding:15px 28px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;transition:.3s;border:1px solid transparent}
+  .btn-wine{background:var(--wine);color:var(--cream)}
+  .btn-wine:hover{background:var(--wine2);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--wine);color:var(--wine)}
+  .btn-ghost:hover{background:var(--wine);color:var(--cream)}
+  .hero-stats{display:flex;gap:32px;margin-top:42px}
+  .hero-stats .st b{font-family:'Gilda Display',serif;font-size:1.5rem;color:var(--wine);display:block;line-height:1.1}
+  .hero-stats .st span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .hero-visual{position:relative;height:540px}
+  .hf{position:absolute;overflow:hidden;border-radius:14px;border:6px solid var(--white);box-shadow:0 34px 64px -28px rgba(44,23,21,.5);background:#eee center/cover}
+  .hf-main{width:72%;height:100%;right:0;top:0}
+  .hf-sm{width:48%;height:46%;left:0;bottom:6%;z-index:2}
+  .seal{position:absolute;top:-6px;left:6%;z-index:3;width:96px;height:96px;border-radius:50%;background:var(--wine);color:var(--gold);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Tangerine',cursive;font-size:1.5rem;line-height:1;padding:8px;box-shadow:0 14px 30px -12px rgba(44,23,21,.6);rotate:-8deg}
+
+  section{position:relative;padding:96px 0}
+  .sec-head{max-width:600px;margin:0 auto 56px;text-align:center}
+  .sec-head .eyebrow{justify-content:center}
+  .sec-head h2{font-size:clamp(2.1rem,4.5vw,3rem);line-height:1.1;margin-bottom:12px;color:var(--wine)}
+  .sec-head p{color:var(--muted)}
+
+  .band{background:var(--wine);color:var(--cream)}
+  .band .eyebrow{color:var(--gold)}
+  .band h2{color:var(--cream)!important}
+  .about-band{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .about-band .script{font-size:2.4rem;color:var(--gold);line-height:.7;display:block;margin-bottom:6px}
+  .about-band h2{font-family:'Gilda Display',serif;font-size:clamp(2rem,4vw,2.7rem);margin-bottom:18px;line-height:1.1}
+  .about-band p{color:#e7d3c4;margin-bottom:14px;font-weight:300}
+  .about-band .card{height:380px;border-radius:14px;border:6px solid rgba(255,255,255,.1);background:#444 center/cover;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .gal .g{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:var(--cream2) center/cover}
+  .gal .cap{margin-top:30px;text-align:center;color:var(--muted);font-size:.92rem}
+
+  /* pops feature */
+  .pops{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .pops .img{border-radius:16px;overflow:hidden;border:6px solid var(--white);box-shadow:0 30px 60px -30px rgba(44,23,21,.4);aspect-ratio:4/5;background:#eee center/cover}
+  .pops h2{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:14px;color:var(--wine)}
+  .pops .script{font-size:2.2rem;color:var(--gold-d);line-height:.7;display:block;margin-bottom:4px}
+  .pops p{color:var(--ink);margin-bottom:16px;font-weight:300}
+
+  /* locations */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .loc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:32px 34px}
+  .loc .pin{font-size:1.6rem;margin-bottom:8px}
+  .loc h3{font-family:'Gilda Display',serif;font-size:1.5rem;color:var(--wine);margin-bottom:10px}
+  .loc .hrs{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
+  .loc .hrs:last-child{border-bottom:0}
+  .loc .hrs span{color:var(--muted)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{text-align:center;padding:18px}
+  .step .n{font-family:'Gilda Display',serif;font-size:2.2rem;color:var(--gold-d);line-height:1;margin-bottom:12px}
+  .step h3{font-family:'Gilda Display',serif;font-size:1.2rem;color:var(--wine);margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.92rem;font-weight:300}
+
+  .cta{text-align:center;background:var(--cream2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cta .script{font-size:2.6rem;color:var(--gold-d);line-height:.7;display:block;margin-bottom:6px}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:14px;color:var(--wine)}
+  .cta p{color:var(--ink);max-width:440px;margin:0 auto 28px;font-weight:300}
+  .cta .btns{justify-content:center}
+
+  footer{padding:48px 0 110px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot-grid .brand{margin-bottom:10px}
+  footer p{color:var(--muted);font-size:.9rem;font-weight:300}
+  .foot-contact a{display:block;color:var(--ink);font-size:.94rem;margin-bottom:6px}
+  .foot-contact a:hover{color:var(--gold-d)}
+  .madeby{margin-top:34px;text-align:center;font-size:.78rem;color:var(--muted)}
+  .madeby a{color:var(--gold-d)}
+
+  .fab{position:fixed;right:22px;bottom:22px;z-index:160;width:58px;height:58px;border-radius:18px;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(188,24,136,.55);transition:.3s;font-size:1.5rem}
+  .fab:hover{transform:scale(1.08)}
+  @media(max-width:880px){.fab{bottom:84px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:160;display:none;background:rgba(251,244,236,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:11px 14px;gap:10px}
+  .mbar a{flex:1;text-align:center;border-radius:40px;padding:13px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+  .mbar .m-ig{background:var(--wine);color:var(--cream)}
+  .mbar .m-find{border:1px solid var(--wine);color:var(--wine)}
+  @media(max-width:880px){.mbar{display:flex}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+  @media(max-width:880px){
+    .hero-grid,.about-band,.pops,.loc-grid{grid-template-columns:1fr}
+    .hero-visual{height:380px;order:-1}
+    .steps,.gal{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <div class="brand">Sena's <span>Kitchen</span></div>
+    <nav class="nav-links">
+      <a href="#creations">Creations</a>
+      <a href="#pops">Pops</a>
+      <a href="#find">Find us</a>
+      <a href="#about">About</a>
+      <a href="https://instagram.com/senaskitchen9" class="nav-cta">Order</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Artisan Entremets · Cape Town</span>
+      <div class="script-line reveal d1">handcrafted</div>
+      <h1 class="reveal d1">Edible art, made<br>to be devoured.</h1>
+      <p class="lead reveal d2">Cédric Grolet-inspired entremets &amp; desserts, brought to South Africa — delicate, sculptural &amp; impossibly delicious. Found at Tygervalley Mall &amp; Biancafe.</p>
+      <div class="btns reveal d3">
+        <a href="https://instagram.com/senaskitchen9" class="btn btn-wine">📸 Order on Instagram</a>
+        <a href="#find" class="btn btn-ghost">Find us</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div class="st"><b>6k+</b><span>Followers</span></div>
+        <div class="st"><b>2</b><span>Locations</span></div>
+        <div class="st"><b>Grolet</b><span>Inspired</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="seal">Chef Sena's Kitchen</div>
+      <div class="hf hf-main" style="background-image:url(images/sena-1.webp)"></div>
+      <div class="hf hf-sm" style="background-image:url(images/sena-3.webp)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BAND -->
+<section id="about" class="band">
+  <div class="wrap about-band">
+    <div class="reveal">
+      <span class="script">a little story</span>
+      <h2>French-inspired artistry, a proudly SA twist 🇿🇦</h2>
+      <p>Sena's Kitchen brings the world of <strong style="color:#fff;font-weight:500">Cédric Grolet</strong> — the famed Parisian pastry chef — to South Africa, with sculptural fruit entremets, silky mousses and surprise centres in every bite.</p>
+      <p>Every dessert is handcrafted in small batches, finished by hand, and made to look as breathtaking as it tastes.</p>
+    </div>
+    <div class="card reveal d1" style="background-image:url(images/sena-2.webp)"></div>
+  </div>
+</section>
+
+<!-- CREATIONS -->
+<section id="creations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The collection</span>
+      <h2>Signature creations</h2>
+      <p>A glimpse of the entremets — each one a tiny work of art.</p>
+    </div>
+    <div class="gal">
+      <div class="g reveal" style="background-image:url(images/sena-1.webp)"></div>
+      <div class="g reveal d1" style="background-image:url(images/sena-2.webp)"></div>
+      <div class="g reveal d2" style="background-image:url(images/sena-3.webp)"></div>
+    </div>
+    <p class="cap reveal">Flavours &amp; designs change with the season — follow along on <a href="https://instagram.com/senaskitchen9" class="accent">Instagram</a> for the latest drops.</p>
+  </div>
+</section>
+
+<!-- POPS -->
+<section id="pops">
+  <div class="wrap pops">
+    <div class="img reveal" style="background-image:url(images/sena-4.webp)"></div>
+    <div class="reveal d1">
+      <span class="script">cool &amp; creamy</span>
+      <h2>Sena's Pops</h2>
+      <p>Beyond the entremets, there's a whole world of frozen treats — small-batch ice cream in fruit-forward flavours like mango, strawberry, blueberry &amp; more.</p>
+      <p style="color:var(--muted);font-size:.94rem">Perfect for markets, events &amp; sharing. Ask about flavours &amp; orders on Instagram.</p>
+      <a href="https://instagram.com/senaskitchen9" class="btn btn-wine" style="margin-top:6px">📸 Enquire about Pops</a>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section id="find" class="band" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Come say hi</span>
+      <h2>Where to find us</h2>
+      <p>Catch Sena's Kitchen fresh at these spots around Cape Town.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc reveal">
+        <div class="pin">📍</div>
+        <h3>Tygervalley Mall</h3>
+        <div class="hrs"><b>Friday</b><span>12:00 – 20:00</span></div>
+        <div class="hrs"><b>Saturday</b><span>09:00 – 20:00</span></div>
+        <div class="hrs"><b>Sunday</b><span>09:00 – 17:00</span></div>
+      </div>
+      <div class="loc reveal d1">
+        <div class="pin">☕</div>
+        <h3>Biancafe</h3>
+        <div class="hrs"><b>Mon – Fri</b><span>08:00 – 16:00</span></div>
+        <div class="hrs"><b>Weekends</b><span>See Tygervalley</span></div>
+        <div class="hrs"><b>Fresh daily</b><span>While stocks last</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Easy as</span><h2>How to order</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Message us</h3><p>DM your order or enquiry on Instagram — for markets, events or custom boxes.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>We craft it</h3><p>Each dessert is handmade fresh, finished with care.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Collect &amp; enjoy</h3><p>Grab them at one of our spots or arrange collection.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="script reveal">treat yourself</span>
+    <h2 class="reveal">Ready for something beautiful?</h2>
+    <p class="reveal d1">Order, enquire or just drool over the latest creations — we're a DM away.</p>
+    <div class="btns reveal d2">
+      <a href="https://instagram.com/senaskitchen9" class="btn btn-wine">📸 Order on Instagram</a>
+      <a href="https://www.tiktok.com/@senas.kitchen" class="btn btn-ghost">🎬 Watch on TikTok</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">Sena's <span>Kitchen</span></div>
+      <p>Cédric Grolet-inspired entremets &amp; desserts.<br>Cape Town · Tygervalley Mall &amp; Biancafe.</p>
+    </div>
+    <div class="foot-contact">
+      <a href="https://instagram.com/senaskitchen9">📸 @senaskitchen9</a>
+      <a href="https://www.tiktok.com/@senas.kitchen">🎬 TikTok · @senas.kitchen</a>
+    </div>
+  </div>
+  <div class="madeby">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · made for Sena's Kitchen 🍓</div>
+</footer>
+
+<a class="fab" href="https://instagram.com/senaskitchen9" aria-label="Instagram">📸</a>
+
+<div class="mbar">
+  <a class="m-ig" href="https://instagram.com/senaskitchen9">📸 Order</a>
+  <a class="m-find" href="#find">📍 Find us</a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Sena's Kitchen","description":"Cédric Grolet-inspired entremets and artisan desserts in Cape Town, found at Tygervalley Mall and Biancafe.","areaServed":"Cape Town","priceRange":"$$","url":"https://joshuavomberg.co.za/senas_kitchen.html","sameAs":["https://instagram.com/senaskitchen9","https://www.tiktok.com/@senas.kitchen"]}
+</script>
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
