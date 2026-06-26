@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scarlet Event Planning — Weddings, Floristry & Décor</title>
+<meta name="description" content="Scarlet Event Planning — unforgettable weddings & events, beautifully orchestrated. Event planning, floristry & décor hire. Johannesburg — and we travel.">
+<meta property="og:title" content="Scarlet Event Planning — Weddings, Floristry & Décor">
+<meta property="og:description" content="Unforgettable weddings & events, beautifully orchestrated. Johannesburg — and we travel.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234d1f2b'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23c8ac79' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#4d1f2b; --wine2:#371520; --winedeep:#2a0f17;
+    --cream:#f4ede1; --cream2:#ece0cf; --paper:#faf5ec;
+    --champ:#c2a576; --champ2:#d8bd91;
+    --ink:#2c2622; --muted:#8a7c6e; --line:rgba(44,38,34,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+  .rev{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .rev.in{opacity:1;transform:none}
+  .lab{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;font-weight:500;color:var(--champ)}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(45,17,24,.78);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .mono{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.5rem;letter-spacing:1px;color:var(--cream)}
+  .mono b{color:var(--champ)}
+  .nlinks{display:flex;gap:34px;align-items:center}
+  .nlinks a{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,237,225,.82);transition:color .25s}
+  .nlinks a:hover{color:var(--champ2)}
+  .nbtn{border:1px solid rgba(244,237,225,.4);padding:9px 18px;border-radius:2px}
+  .nbtn:hover{border-color:var(--champ);background:rgba(194,165,118,.14)}
+  @media(max-width:780px){.nlinks a:not(.nbtn){display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--cream);overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('images/scarlet-bride.webp') center 28%/cover no-repeat;transform:scale(1.06)}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,15,23,.62) 0%,rgba(42,15,23,.34) 38%,rgba(42,15,23,.72) 100%)}
+  .hero .inner{position:relative;z-index:2;padding:120px 24px 90px;max-width:860px}
+  .crest{width:74px;height:74px;margin:0 auto 26px;border:1px solid rgba(216,189,145,.55);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--champ2);position:relative}
+  .crest::after{content:"";position:absolute;inset:6px;border:1px solid rgba(216,189,145,.25);border-radius:50%}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(3.6rem,11vw,7.6rem);line-height:.92;letter-spacing:1px;margin:22px 0 0}
+  .hero h1 .dot{color:var(--champ)}
+  .hero .tg{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(1.2rem,2.6vw,1.7rem);color:rgba(244,237,225,.92);margin-top:14px}
+  .hero .cta{margin-top:38px}
+  .btn{display:inline-block;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500;padding:16px 34px;border-radius:2px;transition:transform .3s,background .3s,color .3s,border-color .3s;cursor:pointer}
+  .btn-champ{background:var(--champ);color:var(--winedeep);border:1px solid var(--champ)}
+  .btn-champ:hover{transform:translateY(-3px);background:var(--champ2);border-color:var(--champ2)}
+  .btn-out{border:1px solid rgba(244,237,225,.45);color:var(--cream)}
+  .btn-out:hover{border-color:var(--champ);color:var(--champ2)}
+  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(244,237,225,.6);display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrollcue .ln{width:1px;height:40px;background:linear-gradient(var(--champ),transparent);animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* section base */
+  section{position:relative}
+  .pad{padding:120px 0}
+  .center{text-align:center;max-width:720px;margin:0 auto}
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.06;letter-spacing:.5px;margin-top:18px}
+  .lead{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.32rem;line-height:1.7;color:#5d544c;margin-top:22px}
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:30px auto 0;color:var(--champ)}
+  .divider .l{width:54px;height:1px;background:var(--champ);opacity:.5}
+  .divider .s{font-size:1.1rem}
+
+  /* intro */
+  .intro{background:var(--cream)}
+  .intro .meta{display:flex;gap:48px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+  .intro .meta div{text-align:center}
+  .intro .meta .n{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--wine)}
+  .intro .meta .t{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:64px}
+  .scard{background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:transform .4s,box-shadow .4s}
+  .scard:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(77,31,43,.5)}
+  .scard .ph{aspect-ratio:4/5;overflow:hidden}
+  .scard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .scard:hover .ph img{transform:scale(1.07)}
+  .scard .bd{padding:26px 26px 32px;text-align:center}
+  .scard h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.6rem}
+  .scard p{font-size:.94rem;color:var(--muted);margin-top:8px}
+  @media(max-width:780px){.svc{grid-template-columns:1fr}}
+
+  /* gallery mosaic */
+  .gal{background:var(--wine);color:var(--cream)}
+  .gal h2,.gal .lead{color:var(--cream)}
+  .gal .lead{color:rgba(244,237,225,.78)}
+  .mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:60px}
+  .mosaic figure{overflow:hidden;position:relative}
+  .mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .9s,filter .6s;filter:saturate(1.02)}
+  .mosaic figure:hover img{transform:scale(1.06)}
+  .m-tall{grid-row:span 2}
+  .m-wide{grid-column:span 2}
+  @media(max-width:780px){.mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.m-wide{grid-column:span 2}}
+
+  /* quote */
+  .quote{background:var(--cream);text-align:center}
+  .quote .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(1.8rem,4vw,2.9rem);line-height:1.32;color:var(--wine);max-width:18ch;margin:0 auto}
+  .quote .script{font-family:'Tangerine',cursive;font-weight:700;font-size:clamp(3rem,7vw,5rem);color:var(--champ);line-height:.8;display:block;margin-bottom:6px}
+
+  /* featured */
+  .feat{text-align:center;background:var(--paper)}
+  .feat .logos{display:flex;gap:54px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:34px}
+  .feat .logos span{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink);opacity:.7;letter-spacing:.5px}
+
+  /* contact */
+  .contact{background:var(--winedeep);color:var(--cream);text-align:center}
+  .contact h2{color:var(--cream)}
+  .contact .lead{color:rgba(244,237,225,.8)}
+  .contact .cta{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .contact .det{margin-top:40px;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,237,225,.6)}
+  .contact .det a{color:var(--champ2)}
+
+  footer{background:var(--winedeep);color:rgba(244,237,225,.5);text-align:center;padding:30px 0;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;letter-spacing:.1em}
+
+  .ribbon{position:fixed;right:14px;bottom:14px;z-index:60;background:rgba(42,15,23,.9);color:var(--champ2);border:1px solid rgba(216,189,145,.4);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;border-radius:30px;backdrop-filter:blur(6px)}
+  .ribbon b{color:var(--cream);font-weight:400}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="mono">Scarlet<b>.</b></div>
+    <div class="nlinks">
+      <a href="#story">Story</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#enquire" class="nbtn">Enquire</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="crest">S</div>
+    <div class="lab">Event Planning · Floristry · Décor</div>
+    <h1>Scarlet<span class="dot">.</span></h1>
+    <p class="tg">Unforgettable weddings, beautifully orchestrated.</p>
+    <div class="cta"><a href="#enquire" class="btn btn-champ">Enquire now</a></div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><span class="ln"></span></div>
+</header>
+
+<!-- STORY -->
+<section class="pad intro" id="story">
+  <div class="wrap center rev">
+    <div class="lab">Who we are</div>
+    <h2>Every detail, considered.</h2>
+    <p class="lead">From the first bloom to the final candle, Scarlet plans, styles and brings to life weddings and events that feel entirely yours. Planning, floristry and décor — all under one roof, all done beautifully.</p>
+    <div class="divider"><span class="l"></span><span class="s serif">✦</span><span class="l"></span></div>
+    <div class="meta">
+      <div><div class="n serif">Johannesburg</div><div class="t">Based in</div></div>
+      <div><div class="n serif">&amp; we travel</div><div class="t">Anywhere you marry</div></div>
+      <div><div class="n serif">All-in-one</div><div class="t">Plan · Florals · Décor</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="center rev">
+      <div class="lab">What we do</div>
+      <h2>Three ways we make it effortless</h2>
+    </div>
+    <div class="svc">
+      <div class="scard rev"><div class="ph"><img src="images/scarlet-tableone.webp" alt="Styled wedding table"></div><div class="bd"><h3>Event Planning</h3><p>Full planning &amp; coordination, so you enjoy the day while we hold every thread.</p></div></div>
+      <div class="scard rev"><div class="ph"><img src="images/scarlet-bride.webp" alt="Bridal bouquet"></div><div class="bd"><h3>Floristry</h3><p>Bespoke bouquets, installations &amp; blooms designed around your story.</p></div></div>
+      <div class="scard rev"><div class="ph"><img src="images/scarlet-wine.webp" alt="Décor and styling"></div><div class="bd"><h3>Décor &amp; Hire</h3><p>Tablescapes, signage, candles &amp; statement pieces — styled, set up, taken down.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad gal" id="gallery">
+  <div class="wrap">
+    <div class="center rev">
+      <div class="lab" style="color:var(--champ2)">The portfolio</div>
+      <h2>Recent celebrations</h2>
+      <p class="lead">A glimpse of the days we've brought to life.</p>
+    </div>
+    <div class="mosaic rev">
+      <figure class="m-tall"><img src="images/scarlet-toast.webp" alt="Couple toasting"></figure>
+      <figure><img src="images/scarlet-vase.webp" alt="Floral centrepiece"></figure>
+      <figure><img src="images/scarlet-menu.webp" alt="Menu card on black plate"></figure>
+      <figure class="m-tall"><img src="images/scarlet-outdoor.webp" alt="Outdoor reception table"></figure>
+      <figure><img src="images/scarlet-reception.webp" alt="Reception with greenery"></figure>
+      <figure><img src="images/scarlet-flatlay.webp" alt="Wedding day flat lay"></figure>
+      <figure class="m-wide"><img src="images/scarlet-wine.webp" alt="Styled banquet table"></figure>
+      <figure class="m-wide"><img src="images/scarlet-tableone.webp" alt="Table one styling"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="pad quote">
+  <div class="wrap rev">
+    <span class="script">Beautifully yours</span>
+    <p class="q">We don't style events. We tell <em>your</em> story — in flowers, light and detail.</p>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="pad feat">
+  <div class="wrap rev">
+    <div class="lab">As featured on</div>
+    <div class="logos">
+      <span>kykNET TV</span>
+      <span>Bows &amp; Chic</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pad contact" id="enquire">
+  <div class="wrap rev">
+    <div class="crest" style="border-color:rgba(216,189,145,.55)">S</div>
+    <div class="lab">Let's begin</div>
+    <h2>Plan something unforgettable.</h2>
+    <p class="lead">Tell us about your day — we'd love to bring it to life.</p>
+    <div class="cta">
+      <a href="https://instagram.com/scarlet_event_planning" class="btn btn-champ">Enquire on Instagram</a>
+      <a href="https://linktr.ee/scarletevents" class="btn btn-out">View our links</a>
+    </div>
+    <div class="det">Johannesburg — and we travel · <a href="https://instagram.com/scarlet_event_planning">@scarlet_event_planning</a></div>
+  </div>
+</section>
+
+<footer>Scarlet Event Planning · Weddings · Floristry · Décor</footer>
+
+<div class="ribbon">Concept · by <b>Joshua.digital</b></div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>60)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
