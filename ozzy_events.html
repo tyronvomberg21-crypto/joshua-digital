@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events by Ozzy — Luxury Event Design</title>
+<meta name="description" content="Events by Ozzy — extraordinary celebrations, designed without limits. Luxury weddings, mitzvahs & milestone events. Floral installations, décor & full design.">
+<meta property="og:title" content="Events by Ozzy — Luxury Event Design">
+<meta property="og:description" content="Extraordinary celebrations, designed without limits. Luxury weddings, mitzvahs & milestone events.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2317121d'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='60' fill='%23c9b489' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16121b; --ink2:#0f0c13; --plum:#241a2e; --plum2:#1c1426;
+    --gold:#c9b489; --gold2:#e0cda3; --lav:#bfa9dc; --lav2:#d4c4e8;
+    --cream:#f2ede7; --muted:#9a8fa6; --line:rgba(255,255,255,.1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--ink);color:var(--cream);line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .rev{opacity:0;transform:translateY(30px);transition:opacity 1.05s cubic-bezier(.2,.7,.2,1),transform 1.05s cubic-bezier(.2,.7,.2,1)}
+  .rev.in{opacity:1;transform:none}
+  .lab{font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;font-weight:400;color:var(--gold)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(15,12,19,.8);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .mono{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.55rem;letter-spacing:.5px;color:var(--cream)}
+  .mono em{font-family:'Tangerine',cursive;font-style:normal;font-size:2.1rem;color:var(--gold2);margin-right:2px}
+  .nlinks{display:flex;gap:32px;align-items:center}
+  .nlinks a{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,231,.82);transition:color .25s}
+  .nlinks a:hover{color:var(--gold2)}
+  .nbtn{border:1px solid rgba(201,180,137,.5);padding:9px 18px;border-radius:2px;color:var(--gold2)}
+  .nbtn:hover{background:rgba(201,180,137,.14)}
+  @media(max-width:820px){.nlinks a:not(.nbtn){display:none}}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('images/ozzy-banquet.webp') center/cover no-repeat;transform:scale(1.06)}
+  .hero .scrim{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(22,18,27,.45),rgba(15,12,19,.82))}
+  .hero .inner{position:relative;z-index:2;padding:120px 24px 90px;max-width:900px}
+  .sprig{font-size:1.4rem;color:var(--lav);letter-spacing:.4em}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(3.2rem,9vw,6.8rem);line-height:.9;letter-spacing:1px;margin-top:4px}
+  .hero h1 em{font-family:'Tangerine',cursive;font-style:normal;font-size:clamp(4.5rem,13vw,9.5rem);color:var(--gold2);display:block;line-height:.7}
+  .hero .by{font-size:.8rem;letter-spacing:.6em;text-transform:uppercase;color:var(--cream);margin-top:6px}
+  .hero .tg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.6vw,1.75rem);color:rgba(242,237,231,.92);margin-top:22px}
+  .hero .cta{margin-top:36px}
+  .btn{display:inline-block;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;font-weight:400;padding:16px 34px;border-radius:2px;transition:transform .3s,background .3s,color .3s,border-color .3s;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#211a12;border:1px solid var(--gold)}
+  .btn-gold:hover{transform:translateY(-3px);background:var(--gold2);border-color:var(--gold2)}
+  .btn-out{border:1px solid rgba(242,237,231,.45);color:var(--cream)}
+  .btn-out:hover{border-color:var(--gold);color:var(--gold2)}
+  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(242,237,231,.6);display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrollcue .ln{width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+  .pad{padding:120px 0}
+  .center{text-align:center;max-width:740px;margin:0 auto}
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.06;letter-spacing:.5px;margin-top:16px}
+  .lead{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.32rem;line-height:1.7;color:#bcb2c6;margin-top:20px}
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px auto 0;color:var(--lav)}
+  .divider .l{width:48px;height:1px;background:var(--lav);opacity:.5}
+
+  .occ{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border:1px solid var(--line)}
+  .occ div{padding:36px 16px;text-align:center;border-right:1px solid var(--line);transition:background .3s}
+  .occ div:last-child{border-right:0}
+  .occ div:hover{background:var(--plum)}
+  .occ .ic{font-size:1.4rem;color:var(--lav)}
+  .occ .t{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-top:8px}
+  @media(max-width:780px){.occ{grid-template-columns:1fr 1fr}.occ div{border-right:0;border-bottom:1px solid var(--line)}}
+
+  .feature{position:relative;height:88vh;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+  .feature .bg{position:absolute;inset:0;background:url('images/ozzy-ballroom.webp') center/cover no-repeat}
+  .feature .scrim{position:absolute;inset:0;background:linear-gradient(rgba(15,12,19,.55),rgba(15,12,19,.55))}
+  .feature .t{position:relative;z-index:2;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,5.5vw,4rem);letter-spacing:.5px;max-width:18ch;line-height:1.15}
+  .feature .t em{font-style:italic;color:var(--gold2)}
+
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px}
+  .gal figure{overflow:hidden;border-radius:3px}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s;display:block}
+  .gal figure:hover img{transform:scale(1.05)}
+  .gal .full{grid-column:span 2;aspect-ratio:16/8}
+  .gal figure:not(.full){aspect-ratio:4/5}
+  @media(max-width:780px){.gal{grid-template-columns:1fr}.gal .full{grid-column:span 1;aspect-ratio:4/5}}
+
+  .quote{background:var(--plum2);text-align:center}
+  .quote .script{font-family:'Tangerine',cursive;font-weight:700;font-size:clamp(3rem,7vw,5rem);color:var(--gold2);line-height:.8;display:block;margin-bottom:4px}
+  .quote .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.7rem,3.8vw,2.7rem);color:var(--cream);max-width:20ch;margin:0 auto;line-height:1.3}
+
+  .contact{background:var(--ink2);text-align:center}
+  .contact .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .contact .det{margin-top:38px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,231,.6)}
+  .contact .det a{color:var(--gold2)}
+
+  footer{background:var(--ink2);color:rgba(242,237,231,.45);text-align:center;padding:28px 0;border-top:1px solid var(--line);font-size:.78rem;letter-spacing:.1em}
+  .ribbon{position:fixed;right:14px;bottom:14px;z-index:60;background:rgba(15,12,19,.9);color:var(--gold2);border:1px solid rgba(201,180,137,.4);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:30px;backdrop-filter:blur(6px)}
+  .ribbon b{color:var(--cream);font-weight:400}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="mono"><em>Events</em> by Ozzy</div>
+    <div class="nlinks">
+      <a href="#story">Story</a>
+      <a href="#celebrations">Celebrations</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#enquire" class="nbtn">Enquire</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="sprig">❦</div>
+    <h1><em>Events</em></h1>
+    <div class="by">by Ozzy</div>
+    <p class="tg">Extraordinary celebrations, designed without limits.</p>
+    <div class="cta"><a href="#enquire" class="btn btn-gold">Enquire now</a></div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><span class="ln"></span></div>
+</header>
+
+<!-- STORY -->
+<section class="pad" id="story">
+  <div class="wrap center rev">
+    <span class="lab">Who we are</span>
+    <h2>Where imagination meets the extraordinary.</h2>
+    <p class="lead">From towering floral installations to rooms transformed beyond recognition, Events by Ozzy designs celebrations that leave guests speechless. Every wedding, every milestone — conceived, styled and executed down to the very last bloom.</p>
+    <div class="divider"><span class="l"></span><span class="serif">❦</span><span class="l"></span></div>
+  </div>
+</section>
+
+<!-- CELEBRATIONS -->
+<section class="pad" id="celebrations" style="background:var(--plum2)">
+  <div class="wrap">
+    <div class="center rev">
+      <span class="lab">What we create</span>
+      <h2>Celebrations of every kind</h2>
+    </div>
+    <div class="occ rev">
+      <div><div class="ic">♥</div><div class="t">Weddings</div></div>
+      <div><div class="ic">✡</div><div class="t">Mitzvahs</div></div>
+      <div><div class="ic">✦</div><div class="t">Milestones</div></div>
+      <div><div class="ic">❀</div><div class="t">Themed Events</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE -->
+<section class="feature">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="t rev">No room too vast. <em>No detail too grand.</em></div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="center rev">
+      <span class="lab">The portfolio</span>
+      <h2>A glimpse of the magic</h2>
+    </div>
+    <div class="gal rev">
+      <figure class="full"><img src="images/ozzy-banquet.webp" alt="Chandelier banquet with floral arches"></figure>
+      <figure><img src="images/ozzy-arch.webp" alt="Floral arch and crystal chandelier"></figure>
+      <figure><img src="images/ozzy-garden.webp" alt="Outdoor garden celebration"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="pad quote">
+  <div class="wrap rev">
+    <span class="script">Unforgettable</span>
+    <p class="q">We don't decorate rooms. We create moments you'll never forget.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pad contact" id="enquire">
+  <div class="wrap rev">
+    <div class="sprig" style="font-size:1.3rem">❦</div>
+    <span class="lab">Let's begin</span>
+    <h2>Dream big. We'll handle the rest.</h2>
+    <p class="lead">Tell us about your celebration — we'd love to design something extraordinary for you.</p>
+    <div class="cta">
+      <a href="https://instagram.com/ozzyevents" class="btn btn-gold">Enquire on Instagram</a>
+      <a href="https://instagram.com/ozzyevents" class="btn btn-out">View our work</a>
+    </div>
+    <div class="det"><a href="https://instagram.com/ozzyevents">@ozzyevents</a></div>
+  </div>
+</section>
+
+<footer>Events by Ozzy · Luxury Event Design · Weddings · Mitzvahs · Celebrations</footer>
+<div class="ribbon">Concept · by <b>Joshua.digital</b></div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>60)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
