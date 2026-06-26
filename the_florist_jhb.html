@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Florist Johannesburg — Premium Floral Designs</title>
+<meta name="description" content="The Florist Johannesburg — premium floral designs for every occasion. A mother-daughter studio. Order on WhatsApp, delivered across Johannesburg.">
+<meta property="og:title" content="The Florist Johannesburg — Premium Floral Designs">
+<meta property="og:description" content="Premium floral designs for every occasion. Order on WhatsApp, delivered across Johannesburg.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23f6ece9'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='62' fill='%23c98a9a' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf4ee; --cream2:#f3e9e1; --paper:#fffaf5;
+    --blush:#edc9d1; --blush2:#f3dbe0; --rose:#c98a9a; --rosedeep:#b06d7e;
+    --ink:#3a2e30; --muted:#9b888c; --line:rgba(58,46,48,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:'Cormorant Garamond',serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .rev{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .rev.in{opacity:1;transform:none}
+  .lab{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;font-weight:400;color:var(--rose)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(255,250,245,.86);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .mono{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.5rem;letter-spacing:.5px;color:var(--ink);transition:color .3s}
+  .mono small{display:block;font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;text-align:center;margin-top:-4px;color:var(--rose)}
+  nav:not(.solid) .mono{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.3)}
+  nav:not(.solid) .mono small{color:#fff}
+  .nlinks{display:flex;gap:32px;align-items:center}
+  .nlinks a{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);transition:color .25s}
+  nav:not(.solid) .nlinks a{color:rgba(255,255,255,.92);text-shadow:0 1px 10px rgba(0,0,0,.3)}
+  .nlinks a:hover{color:var(--rose)}
+  .nbtn{border:1px solid currentColor;padding:9px 18px;border-radius:2px}
+  @media(max-width:780px){.nlinks a:not(.nbtn){display:none}}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('images/florist-peony.webp') center 45%/cover no-repeat;transform:scale(1.06)}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(120,80,90,.28),rgba(120,80,90,.12) 40%,rgba(90,55,65,.45))}
+  .hero .inner{position:relative;z-index:2;padding:120px 24px 90px;max-width:840px}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(3rem,9vw,6.4rem);line-height:.95;letter-spacing:1px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+  .hero .jb{font-size:.8rem;letter-spacing:.5em;text-transform:uppercase;margin-top:8px;font-weight:400}
+  .hero .tg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.6vw,1.7rem);margin-top:20px;text-shadow:0 1px 16px rgba(0,0,0,.3)}
+  .hero .cta{margin-top:36px}
+  .btn{display:inline-block;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;font-weight:400;padding:16px 32px;border-radius:2px;transition:transform .3s,background .3s,color .3s,border-color .3s;cursor:pointer}
+  .btn-rose{background:var(--rose);color:#fff;border:1px solid var(--rose)}
+  .btn-rose:hover{transform:translateY(-3px);background:var(--rosedeep);border-color:var(--rosedeep)}
+  .btn-out{border:1px solid rgba(255,255,255,.6);color:#fff}
+  .btn-out:hover{background:rgba(255,255,255,.16);border-color:#fff}
+  .scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.85);display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scrollcue .ln{width:1px;height:38px;background:linear-gradient(#fff,transparent);animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+  .pad{padding:118px 0}
+  .center{text-align:center;max-width:720px;margin:0 auto}
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.07;letter-spacing:.5px;margin-top:16px}
+  .lead{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.3rem;line-height:1.7;color:#6a5a5d;margin-top:20px}
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:28px auto 0;color:var(--rose)}
+  .divider .l{width:50px;height:1px;background:var(--rose);opacity:.5}
+
+  /* story split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .split .ph{aspect-ratio:4/5;overflow:hidden;border-radius:3px}
+  .split .ph img{width:100%;height:100%;object-fit:cover}
+  .split .tx .lab{margin-bottom:10px;display:block}
+  .split .tx p{margin-top:18px;color:#6a5a5d}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:36px}}
+
+  /* occasions */
+  .occ{background:var(--cream)}
+  .occgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:54px;border:1px solid var(--line)}
+  .occgrid div{padding:30px 14px;text-align:center;border-right:1px solid var(--line);transition:background .3s}
+  .occgrid div:last-child{border-right:0}
+  .occgrid div:hover{background:var(--blush2)}
+  .occgrid .ic{font-size:1.5rem}
+  .occgrid .t{font-family:'Cormorant Garamond',serif;font-size:1.25rem;margin-top:8px}
+  @media(max-width:780px){.occgrid{grid-template-columns:1fr 1fr}.occgrid div{border-right:0;border-bottom:1px solid var(--line)}}
+
+  /* gallery */
+  .gal3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:58px}
+  .gal3 figure{aspect-ratio:3/4;overflow:hidden;border-radius:3px}
+  .gal3 img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+  .gal3 figure:hover img{transform:scale(1.06)}
+  @media(max-width:780px){.gal3{grid-template-columns:1fr 1fr}.gal3 figure:first-child{grid-column:span 2;aspect-ratio:16/10}}
+
+  /* how to order */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+  .stp{text-align:center}
+  .stp .n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--rose)}
+  .stp h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.45rem;margin-top:6px}
+  .stp p{color:var(--muted);font-size:.96rem;margin-top:6px}
+  @media(max-width:780px){.steps{grid-template-columns:1fr}}
+
+  /* quote */
+  .quote{background:var(--blush2);text-align:center}
+  .quote .script{font-family:'Tangerine',cursive;font-weight:700;font-size:clamp(3rem,7vw,5rem);color:var(--rosedeep);line-height:.8;display:block;margin-bottom:4px}
+  .quote .q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.7rem,3.6vw,2.6rem);color:var(--ink);max-width:20ch;margin:0 auto;line-height:1.32}
+
+  /* order */
+  .order{background:var(--rosedeep);color:#fff;text-align:center}
+  .order h2{color:#fff}
+  .order .lead{color:rgba(255,255,255,.85)}
+  .order .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .order .det{margin-top:38px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  .order .det a{color:#fff;border-bottom:1px solid rgba(255,255,255,.5)}
+
+  footer{background:#2e2426;color:rgba(255,255,255,.5);text-align:center;padding:28px 0;font-size:.78rem;letter-spacing:.1em}
+  .ribbon{position:fixed;right:14px;bottom:14px;z-index:60;background:rgba(255,250,245,.92);color:var(--rosedeep);border:1px solid var(--rose);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:30px;backdrop-filter:blur(6px)}
+  .ribbon b{color:var(--ink);font-weight:400}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="mono">The Florist<small>Johannesburg</small></div>
+    <div class="nlinks">
+      <a href="#story">Story</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#order" class="nbtn">Order</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="lab" style="color:rgba(255,255,255,.9)">Est. Johannesburg</div>
+    <h1>The Florist</h1>
+    <div class="jb">Johannesburg</div>
+    <p class="tg">Premium floral designs for every occasion.</p>
+    <div class="cta"><a href="https://wa.me/27721254221?text=Hi%20The%20Florist!%20I'd%20like%20to%20order%20flowers" class="btn btn-rose">Order on WhatsApp</a></div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><span class="ln"></span></div>
+</header>
+
+<!-- STORY -->
+<section class="pad" id="story">
+  <div class="wrap split">
+    <div class="ph rev"><img src="images/florist-duo.webp" alt="The mother-daughter team behind The Florist"></div>
+    <div class="tx rev">
+      <span class="lab">Our story</span>
+      <h2>A mother, a daughter &amp; a love of flowers.</h2>
+      <p>The Florist Johannesburg began with two pairs of hands and a shared obsession with beautiful blooms. Today we create premium arrangements for every occasion — each one designed by hand, wrapped with care, and delivered across the city.</p>
+      <p>No two days, and no two bouquets, are ever the same.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section class="pad occ" id="occasions">
+  <div class="wrap">
+    <div class="center rev">
+      <span class="lab">Flowers for</span>
+      <h2>Every occasion</h2>
+      <p class="lead">Whatever the moment, we have a bloom for it.</p>
+    </div>
+    <div class="occgrid rev">
+      <div><div class="ic">💐</div><div class="t">Romance</div></div>
+      <div><div class="ic">🎂</div><div class="t">Birthdays</div></div>
+      <div><div class="ic">🤍</div><div class="t">Sympathy</div></div>
+      <div><div class="ic">💍</div><div class="t">Weddings</div></div>
+      <div><div class="ic">✨</div><div class="t">Just Because</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="center rev">
+      <span class="lab">The blooms</span>
+      <h2>Designed by hand</h2>
+    </div>
+    <div class="gal3 rev">
+      <figure><img src="images/florist-pastel.webp" alt="Pastel floral arrangement"></figure>
+      <figure><img src="images/florist-peony.webp" alt="Pink peonies"></figure>
+      <figure><img src="images/florist-flatlay.webp" alt="Floral delivery flat lay"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="pad occ">
+  <div class="wrap">
+    <div class="center rev">
+      <span class="lab">How it works</span>
+      <h2>Ordering is easy</h2>
+    </div>
+    <div class="steps rev">
+      <div class="stp"><div class="n">1</div><h3>Message us</h3><p>Send us a WhatsApp with the occasion, your budget &amp; the date.</p></div>
+      <div class="stp"><div class="n">2</div><h3>We design</h3><p>We craft your arrangement by hand from the season's best blooms.</p></div>
+      <div class="stp"><div class="n">3</div><h3>Delivered</h3><p>We deliver across Johannesburg — or collect from our studio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="pad quote">
+  <div class="wrap rev">
+    <span class="script">With love</span>
+    <p class="q">Flowers say the things words can't.</p>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="pad order" id="order">
+  <div class="wrap rev">
+    <span class="lab" style="color:rgba(255,255,255,.85)">Order today</span>
+    <h2>Let's make someone's day.</h2>
+    <p class="lead">Premium blooms, delivered across Johannesburg. Collections available.</p>
+    <div class="cta">
+      <a href="https://wa.me/27721254221?text=Hi%20The%20Florist!%20I'd%20like%20to%20order%20flowers" class="btn btn-rose" style="background:#fff;color:var(--rosedeep);border-color:#fff">Order on WhatsApp</a>
+      <a href="https://instagram.com/theflorist_jhb" class="btn btn-out">Follow on Instagram</a>
+    </div>
+    <div class="det">WhatsApp 072 125 4221 · Johannesburg · <a href="https://instagram.com/theflorist_jhb">@theflorist_jhb</a></div>
+  </div>
+</section>
+
+<footer>The Florist Johannesburg · Premium floral designs for every occasion</footer>
+<div class="ribbon">Concept · by <b>Joshua.digital</b></div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>60)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
