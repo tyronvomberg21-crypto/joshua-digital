@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad-dictions — Google Ads, Web & Graphic Design Experts</title>
+<meta name="description" content="Ad-dictions — Certified Google Partner with 14+ years' experience. Google Ads, websites & graphic design for small and medium businesses. Real results from any budget.">
+<meta property="og:title" content="Ad-dictions — Online Marketing Experts">
+<meta property="og:description" content="Certified Google Partner. Google Ads, websites & graphic design that get real results — from any budget.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2313111a'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-weight='bold' font-size='62' fill='%23e6007e' text-anchor='middle'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141019; --ink2:#0e0b14; --card:#1c1726;
+    --pink:#e6007e; --pink2:#ff4da6; --pinkdeep:#c00069;
+    --paper:#ffffff; --soft:#faf6fa; --soft2:#f3ecf2;
+    --txt:#1b1622; --muted:#6c6676; --line:#ece6ee;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;background:var(--paper);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .dsp{font-family:'Outfit',sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .rev{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rev.in{opacity:1;transform:none}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--pink)}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,backdrop-filter .35s,border-color .35s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(20,16,25,.86);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.5px;color:#fff}
+  .logo span{color:var(--pink)}
+  .nlinks{display:flex;gap:30px;align-items:center}
+  .nlinks a{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.82);transition:color .2s}
+  .nlinks a:hover{color:var(--pink2)}
+  .nbtn{background:var(--pink);color:#fff!important;padding:11px 20px;border-radius:8px;font-family:'Outfit',sans-serif;font-weight:700;font-size:.88rem;transition:transform .2s,box-shadow .2s}
+  .nbtn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px var(--pink)}
+  @media(max-width:880px){.nlinks a:not(.nbtn){display:none}}
+
+  /* hero */
+  .hero{position:relative;background:var(--ink);color:#fff;padding:140px 0 90px;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-120px;right:-100px;width:680px;height:680px;border-radius:50%;background:radial-gradient(closest-side,rgba(230,0,126,.4),transparent 70%);filter:blur(10px)}
+  .hero::after{content:"";position:absolute;bottom:-200px;left:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,77,166,.18),transparent 70%)}
+  .hgrid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 15px;border-radius:30px;color:#fff}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--pink2);box-shadow:0 0 10px var(--pink2)}
+  h1{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,4.3rem);line-height:1.02;letter-spacing:-1.5px;margin:22px 0 0}
+  h1 .g{background:linear-gradient(100deg,var(--pink2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hsub{font-size:1.12rem;color:rgba(255,255,255,.8);margin-top:20px;max-width:46ch}
+  .htrust{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.86rem;color:rgba(255,255,255,.72);font-weight:600}
+  .htrust span{display:flex;align-items:center;gap:7px}
+  .htrust span::before{content:"✓";color:var(--pink2);font-weight:800}
+
+  /* lead form card */
+  .leadcard{background:#fff;color:var(--txt);border-radius:18px;padding:30px 28px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+  .leadcard h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.32rem;letter-spacing:-.3px}
+  .leadcard p{font-size:.92rem;color:var(--muted);margin-top:4px;margin-bottom:18px}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:5px}
+  .field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:'Manrope',sans-serif;font-size:.96rem;background:var(--soft);transition:border-color .2s,background .2s;outline:none}
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--pink);background:#fff}
+  .field textarea{resize:vertical;min-height:64px}
+  .submit{width:100%;background:var(--pink);color:#fff;border:0;border-radius:10px;padding:14px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:transform .2s,background .2s;margin-top:4px}
+  .submit:hover{transform:translateY(-2px);background:var(--pinkdeep)}
+  .leadcard .fine{text-align:center;font-size:.78rem;color:var(--muted);margin-top:10px}
+  @media(max-width:880px){.hgrid{grid-template-columns:1fr;gap:38px}}
+
+  /* sections */
+  .pad{padding:96px 0}
+  .sechead{text-align:center;max-width:640px;margin:0 auto 54px}
+  .sechead h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2rem,4.4vw,3rem);letter-spacing:-1px;margin-top:12px}
+  .sechead p{color:var(--muted);margin-top:14px;font-size:1.05rem}
+
+  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .svc{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 24px 50px -28px rgba(230,0,126,.4);border-color:rgba(230,0,126,.3)}
+  .svc .ic{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--pink2));display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+  .svc h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.28rem}
+  .svc p{color:var(--muted);margin-top:8px;font-size:.96rem}
+  @media(max-width:760px){.services{grid-template-columns:1fr}}
+
+  /* stats */
+  .stats{background:var(--ink);color:#fff}
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .stat .n{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.2rem,4vw,3rem);background:linear-gradient(100deg,var(--pink2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
+  .stat .l{color:rgba(255,255,255,.72);font-size:.92rem;font-weight:600;margin-top:4px}
+  @media(max-width:760px){.statgrid{grid-template-columns:1fr 1fr;gap:34px 18px}}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{padding:30px;border:1px solid var(--line);border-radius:16px;position:relative}
+  .step .n{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;background:var(--pink);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+  .step h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.18rem;margin-top:16px}
+  .step p{color:var(--muted);margin-top:7px;font-size:.96rem}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+  /* cta band */
+  .ctaband{background:linear-gradient(120deg,var(--pinkdeep),var(--pink));color:#fff;text-align:center}
+  .ctaband h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-1px;max-width:18ch;margin:0 auto}
+  .ctaband p{margin-top:14px;font-size:1.08rem;color:rgba(255,255,255,.92)}
+  .ctaband .btns{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;padding:15px 28px;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn-white{background:#fff;color:var(--pinkdeep)}
+  .btn-white:hover{transform:translateY(-3px);box-shadow:0 16px 30px -14px rgba(0,0,0,.4)}
+  .btn-line{border:1px solid rgba(255,255,255,.6);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.14)}
+
+  footer{background:var(--ink2);color:rgba(255,255,255,.6);padding:50px 0 40px}
+  footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:22px;align-items:flex-start}
+  footer .logo{margin-bottom:8px}
+  footer .det{font-size:.92rem;line-height:1.9}
+  footer .det a{color:rgba(255,255,255,.78)}
+  footer .det a:hover{color:var(--pink2)}
+  footer .socials{display:flex;gap:14px}
+  footer .socials a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.78rem;transition:background .2s,border-color .2s}
+  footer .socials a:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+  footer .copy{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.84rem;text-align:center}
+
+  .ribbon{position:fixed;right:14px;bottom:14px;z-index:60;background:rgba(20,16,25,.92);color:var(--pink2);border:1px solid rgba(230,0,126,.5);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:30px;backdrop-filter:blur(6px)}
+  .ribbon b{color:#fff;font-weight:600}
+  .wafloat{position:fixed;left:18px;bottom:18px;z-index:60;background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 12px 26px -8px rgba(37,211,102,.6);transition:transform .2s}
+  .wafloat:hover{transform:scale(1.08)}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <div class="logo">ad<span>-</span>dictions</div>
+    <div class="nlinks">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#how">How it works</a>
+      <a href="#contact" class="nbtn">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hgrid">
+    <div class="rev in">
+      <span class="badge"><span class="dot"></span>Certified Google Partner · 14+ years</span>
+      <h1>More customers.<br><span class="g">From any budget.</span></h1>
+      <p class="hsub">We're Ad-dictions — Google Ads, website &amp; graphic design experts who get small &amp; medium businesses real results. No long-term contracts. Results from month one.</p>
+      <div class="htrust">
+        <span>Certified Google Partner</span>
+        <span>14+ years' experience</span>
+        <span>No long-term contracts</span>
+      </div>
+    </div>
+
+    <div class="leadcard rev in">
+      <h3>Get your free quote</h3>
+      <p>Tell us what you need — we'll be in touch fast.</p>
+      <form onsubmit="return sendLead(event)">
+        <div class="field"><label for="ln">Your name</label><input id="ln" type="text" placeholder="Jane Smith" required></div>
+        <div class="field"><label for="lc">Email or phone</label><input id="lc" type="text" placeholder="So we can reach you" required></div>
+        <div class="field"><label for="lm">What can we help with?</label>
+          <select id="lm">
+            <option>Google Ads</option>
+            <option>A new website</option>
+            <option>Logo &amp; graphic design</option>
+            <option>SEO</option>
+            <option>Not sure yet — let's chat</option>
+          </select>
+        </div>
+        <button class="submit" type="submit">Get my free quote →</button>
+        <div class="fine">Opens WhatsApp with your details ready to send.</div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sechead rev">
+      <div class="eyebrow">What we do</div>
+      <h2>Everything to grow you online</h2>
+      <p>From the ad that gets you found to the website that turns clicks into customers.</p>
+    </div>
+    <div class="services">
+      <div class="svc rev"><div class="ic">🎯</div><h3>Google Ads</h3><p>Search, Display &amp; Remarketing campaigns built to get the best possible return from any budget.</p></div>
+      <div class="svc rev"><div class="ic">💻</div><h3>Websites &amp; Landing Pages</h3><p>Fast, modern sites &amp; landing pages designed to turn your traffic into real enquiries.</p></div>
+      <div class="svc rev"><div class="ic">🎨</div><h3>Logo &amp; Graphic Design</h3><p>Logos, corporate identity, social media &amp; email branding that make you look the part.</p></div>
+      <div class="svc rev"><div class="ic">📈</div><h3>SEO</h3><p>Get found on Google organically, so the customers keep coming long after the ads.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="pad stats" id="why">
+  <div class="wrap">
+    <div class="sechead rev" style="color:#fff">
+      <div class="eyebrow">Why Ad-dictions</div>
+      <h2 style="color:#fff">Results, not promises</h2>
+    </div>
+    <div class="statgrid">
+      <div class="stat rev"><div class="n">14+</div><div class="l">Years' experience</div></div>
+      <div class="stat rev"><div class="n">400%+</div><div class="l">Traffic growth for clients</div></div>
+      <div class="stat rev"><div class="n">R6,000</div><div class="l">Free Google Ads credit</div></div>
+      <div class="stat rev"><div class="n">Certified</div><div class="l">Google Partner</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="pad" id="how">
+  <div class="wrap">
+    <div class="sechead rev">
+      <div class="eyebrow">How it works</div>
+      <h2>Simple, honest, effective</h2>
+    </div>
+    <div class="steps">
+      <div class="step rev"><div class="n">1</div><h3>We chat</h3><p>Tell us your goals and budget. We'll tell you honestly what's possible — no jargon, no pressure.</p></div>
+      <div class="step rev"><div class="n">2</div><h3>We build &amp; launch</h3><p>We set up your ads, website or branding and get everything live, fast.</p></div>
+      <div class="step rev"><div class="n">3</div><h3>You grow</h3><p>We track, tweak and report — so your spend keeps working harder every month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="pad ctaband" id="contact">
+  <div class="wrap rev">
+    <h2>Let's get you more customers.</h2>
+    <p>Free quote, no obligation. Mon–Thu 9–5 · Fri 9–2.</p>
+    <div class="btns">
+      <a class="btn btn-white" href="https://wa.me/27846452989?text=Hi%20Ad-dictions!%20I%27d%20like%20a%20free%20quote.">💬 WhatsApp us</a>
+      <a class="btn btn-line" href="tel:+27846452989">📞 084 645 2989</a>
+      <a class="btn btn-line" href="mailto:info@ad-dictions.co.za">✉️ Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="logo">ad<span>-</span>dictions</div>
+        <div class="det" style="max-width:34ch;color:rgba(255,255,255,.6)">Online marketing experts — Google Ads, websites &amp; graphic design for businesses that want to grow.</div>
+      </div>
+      <div class="det">
+        <b style="color:#fff">Get in touch</b><br>
+        <a href="tel:+27846452989">084 645 2989</a><br>
+        <a href="mailto:info@ad-dictions.co.za">info@ad-dictions.co.za</a><br>
+        Mon–Thu 9:00–17:00 · Fri 9:00–14:00
+      </div>
+      <div>
+        <b style="color:#fff;font-size:.92rem">Follow</b>
+        <div class="socials" style="margin-top:10px">
+          <a href="https://www.instagram.com/ad_dictions_online_marketing/" title="Instagram">IG</a>
+          <a href="https://www.facebook.com/pages/Ad-dictions/297311000394418" title="Facebook">FB</a>
+          <a href="https://www.linkedin.com/company-beta/3134169/" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© Ad-dictions · Online Marketing Experts · South Africa</div>
+  </div>
+</footer>
+
+<a class="wafloat" href="https://wa.me/27846452989?text=Hi%20Ad-dictions!%20I%27d%20like%20a%20free%20quote." title="WhatsApp us">💬</a>
+<div class="ribbon">Concept · by <b>Joshua.digital</b></div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>40)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+  function sendLead(e){
+    e.preventDefault();
+    const n=document.getElementById('ln').value.trim();
+    const c=document.getElementById('lc').value.trim();
+    const m=document.getElementById('lm').value;
+    const txt=encodeURIComponent(`Hi Ad-dictions! I'm ${n}. I'm interested in: ${m}. You can reach me at ${c}.`);
+    window.open('https://wa.me/27846452989?text='+txt,'_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
