@@ -55,19 +55,18 @@
   .htrust span{display:flex;align-items:center;gap:7px}
   .htrust span::before{content:"✓";color:var(--pink2);font-weight:800}
 
-  /* hero visual + WhatsApp */
-  .herovis{display:flex;flex-direction:column;gap:16px}
-  .resultcard{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:26px;overflow:hidden}
-  .resultcard::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 85% 0%,rgba(230,0,126,.28),transparent 60%);pointer-events:none}
-  .rc-badge{position:relative;display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:30px}
-  .rc-stat{position:relative;margin-top:20px}
-  .rc-num{font-family:'Outfit',sans-serif;font-weight:800;font-size:3.2rem;line-height:1;background:linear-gradient(100deg,var(--pink2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
-  .rc-lbl{display:block;color:rgba(255,255,255,.72);margin-top:6px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem}
-  .rc-chart{position:relative;display:flex;align-items:flex-end;gap:7px;height:78px;margin-top:22px}
-  .rc-chart i{flex:1;background:linear-gradient(var(--pink2),var(--pink));border-radius:5px 5px 0 0;opacity:.9}
-  .waBig{display:flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.08rem;padding:17px;border-radius:12px;transition:transform .2s,box-shadow .2s}
-  .waBig:hover{transform:translateY(-3px);box-shadow:0 16px 32px -12px rgba(37,211,102,.6)}
-  .wafine{text-align:center;color:rgba(255,255,255,.6);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem}
+  /* hero capture form */
+  .leadcard{background:#fff;color:var(--txt);border-radius:18px;padding:26px 26px 22px;box-shadow:0 44px 90px -34px rgba(0,0,0,.6)}
+  .lbadge{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;color:var(--pink);background:rgba(230,0,126,.08);border:1px solid rgba(230,0,126,.2);padding:6px 12px;border-radius:30px;margin-bottom:14px}
+  .lh{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.32rem;letter-spacing:-.3px}
+  .lp{font-size:.92rem;color:var(--muted);margin-top:3px;margin-bottom:16px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+  .field input,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:'Manrope',sans-serif;font-size:.96rem;background:var(--soft);outline:none;transition:border-color .2s,background .2s}
+  .field input:focus,.field select:focus{border-color:var(--pink);background:#fff}
+  .lsubmit{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;background:#25d366;color:#fff;border:0;border-radius:10px;padding:14px;font-family:'Outfit',sans-serif;font-weight:700;font-size:1.02rem;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:4px}
+  .lsubmit:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(37,211,102,.6)}
+  .lfine{text-align:center;color:var(--muted);margin-top:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem}
   @media(max-width:920px){.hgrid{grid-template-columns:1fr;gap:38px}}
 
   /* sections */
@@ -208,14 +207,19 @@
         <span>No long-term contracts</span>
       </div>
     </div>
-    <div class="herovis rev in">
-      <div class="resultcard">
-        <span class="rc-badge">✓ Certified Google Partner</span>
-        <div class="rc-stat"><span class="rc-num">+458%</span><span class="rc-lbl">website traffic for a recent client</span></div>
-        <div class="rc-chart"><i style="height:24%"></i><i style="height:36%"></i><i style="height:31%"></i><i style="height:50%"></i><i style="height:60%"></i><i style="height:78%"></i><i style="height:100%"></i></div>
-      </div>
-      <a class="waBig" href="https://wa.me/27846452989?text=Hi%20Ad-dictions!%20I%27d%20like%20a%20free%20quote.">💬 Chat on WhatsApp</a>
-      <div class="wafine">Quick reply · no obligation</div>
+    <div class="leadcard rev in">
+      <div class="lbadge">✓ Certified Google Partner · +458% traffic</div>
+      <div class="lh">Get your free quote</div>
+      <div class="lp">Pop your details in — we'll WhatsApp you straight back.</div>
+      <form onsubmit="return sendLead(event)">
+        <div class="field"><label for="ln">Your name</label><input id="ln" type="text" placeholder="Your name" required></div>
+        <div class="field"><label for="lc">Email or phone</label><input id="lc" type="text" placeholder="So we can reach you" required></div>
+        <div class="field"><label for="lm">What can we help with?</label>
+          <select id="lm"><option>Google Ads</option><option>A new website</option><option>Logo &amp; graphic design</option><option>Not sure yet — let's chat</option></select>
+        </div>
+        <button class="lsubmit" type="submit">💬 Send on WhatsApp</button>
+      </form>
+      <div class="lfine">Quick reply · no obligation</div>
     </div>
   </div>
 </header>
@@ -397,6 +401,15 @@
   addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>40)});
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+  function sendLead(e){
+    e.preventDefault();
+    const n=document.getElementById('ln').value.trim();
+    const c=document.getElementById('lc').value.trim();
+    const m=document.getElementById('lm').value;
+    const txt=encodeURIComponent(`Hi Ad-dictions! I'm ${n}. I'm interested in: ${m}. You can reach me at ${c}.`);
+    window.open('https://wa.me/27846452989?text='+txt,'_blank');
+    return false;
+  }
 </script>
 </body>
 </html>
