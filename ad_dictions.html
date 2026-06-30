@@ -83,13 +83,17 @@
   .about .pts{margin-top:22px;display:flex;flex-direction:column;gap:12px}
   .about .pts div{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:var(--txt)}
   .about .pts .ic{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--pink),var(--pink2));display:flex;align-items:center;justify-content:center;font-size:1rem}
-  .about-vis{position:relative;background:linear-gradient(150deg,var(--ink),#2a1430);border-radius:22px;min-height:380px;padding:36px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:16px}
-  .about-vis::before{content:"";position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(closest-side,rgba(230,0,126,.45),transparent 70%)}
-  .av-big{position:relative;font-family:'Outfit',sans-serif;font-weight:800;font-size:4.6rem;line-height:.9;color:#fff;letter-spacing:-2px}
-  .av-big span{background:linear-gradient(100deg,var(--pink2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .av-sub{position:relative;color:rgba(255,255,255,.82);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem}
-  .av-chips{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-  .av-chips span{font-size:.78rem;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:30px}
+  .about-vis{position:relative;border-radius:22px;overflow:hidden;min-height:360px;box-shadow:0 30px 60px -34px rgba(0,0,0,.4)}
+  .about-vis img{width:100%;height:100%;object-fit:cover;display:block;min-height:360px}
+  .av-chip{position:absolute;left:18px;bottom:18px;background:var(--pink);color:#fff;font-weight:700;font-size:.85rem;padding:9px 16px;border-radius:30px;font-family:'Outfit',sans-serif;box-shadow:0 10px 22px -8px rgba(230,0,126,.7)}
+  /* credentials strip */
+  .creds{padding:34px 0;background:#fff;border-bottom:1px solid var(--line)}
+  .creds-lab{text-align:center;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+  .creds-row{margin-top:20px;display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap}
+  .creds-row img{width:auto;object-fit:contain}
+  .cred-ads{height:58px}
+  .cred-gp{height:64px}
+  .cred-bark{height:72px;border-radius:8px}
   @media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}.about-vis{order:-1;min-height:300px}}
 
   /* services */
@@ -216,6 +220,18 @@
   </div>
 </header>
 
+<!-- CREDENTIALS -->
+<section class="creds">
+  <div class="wrap">
+    <div class="creds-lab">Certified &amp; trusted</div>
+    <div class="creds-row">
+      <img class="cred-ads" src="images/ad-googleads.webp" alt="Google Ads Certified">
+      <img class="cred-gp" src="images/ad-googlepartner.webp" alt="Google Partner">
+      <img class="cred-bark" src="images/ad-bark.webp" alt="Bark Professional">
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="pad" id="about">
   <div class="wrap about">
@@ -230,9 +246,8 @@
       </div>
     </div>
     <div class="about-vis rev">
-      <div class="av-big">14<span>+</span></div>
-      <div class="av-sub">years getting businesses found on Google.</div>
-      <div class="av-chips"><span>Google Ads</span><span>Websites</span><span>Graphic Design</span><span>Any budget</span></div>
+      <img src="images/ad-growth.webp" alt="Helping businesses grow">
+      <span class="av-chip">📈 14+ years of growth</span>
     </div>
   </div>
 </section>
