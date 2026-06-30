@@ -45,12 +45,24 @@
   .hero{position:relative;background:var(--ink);color:#fff;padding:140px 0 90px;overflow:hidden}
   .hero::before{content:"";position:absolute;top:-120px;right:-100px;width:680px;height:680px;border-radius:50%;background:radial-gradient(closest-side,rgba(230,0,126,.4),transparent 70%);filter:blur(10px)}
   .hero::after{content:"";position:absolute;bottom:-200px;left:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,77,166,.18),transparent 70%)}
-  .hgrid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .hero-inner{position:relative;z-index:2}
+  .htext{max-width:760px}
+  .hbtns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn-wa{display:inline-flex;align-items:center;gap:9px;background:#25d366;color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:10px;transition:transform .2s,box-shadow .2s}
+  .btn-wa:hover{transform:translateY(-3px);box-shadow:0 16px 30px -12px rgba(37,211,102,.6)}
+  .btn-dark{display:inline-flex;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;padding:15px 26px;border-radius:10px;transition:background .2s}
+  .btn-dark:hover{background:rgba(255,255,255,.16)}
+  .capbar{position:relative;z-index:2;margin-top:46px;display:flex;gap:10px;background:linear-gradient(120deg,var(--pinkdeep),var(--pink));padding:13px;border-radius:14px;box-shadow:0 34px 66px -30px rgba(230,0,126,.75)}
+  .capbar input{flex:1;min-width:0;border:0;border-radius:9px;padding:14px 16px;font-family:'Manrope',sans-serif;font-size:.96rem;background:rgba(255,255,255,.96);outline:none}
+  .capbar input:focus{background:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.55)}
+  .capbar button{flex:0 0 auto;background:#fff;color:var(--pinkdeep);border:0;border-radius:9px;padding:0 30px;font-family:'Outfit',sans-serif;font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s}
+  .capbar button:hover{transform:translateY(-2px)}
+  @media(max-width:780px){.capbar{flex-direction:column}.capbar button{padding:15px}}
   .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 15px;border-radius:30px;color:#fff}
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--pink2);box-shadow:0 0 10px var(--pink2)}
-  h1{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,4.3rem);line-height:1.02;letter-spacing:-1.5px;margin:22px 0 0}
+  h1{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2.7rem,5.8vw,4.5rem);line-height:1.02;letter-spacing:-1.5px;margin:0}
   h1 .g{background:linear-gradient(100deg,var(--pink2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hsub{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.5rem;line-height:1.5;color:rgba(255,255,255,.88);margin-top:20px;max-width:40ch}
+  .hsub{font-family:'Manrope',sans-serif;font-weight:400;font-size:1.08rem;line-height:1.65;color:rgba(255,255,255,.78);margin-top:18px;max-width:44ch}
   .htrust{font-family:'Manrope',sans-serif;margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.86rem;color:rgba(255,255,255,.72);font-weight:600}
   .htrust span{display:flex;align-items:center;gap:7px}
   .htrust span::before{content:"✓";color:var(--pink2);font-weight:800}
@@ -58,7 +70,7 @@
   /* hero capture form */
   .leadcard{background:#fff;color:var(--txt);border-radius:18px;padding:26px 26px 22px;box-shadow:0 44px 90px -34px rgba(0,0,0,.6)}
   .lbadge{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;color:var(--pink);background:rgba(230,0,126,.08);border:1px solid rgba(230,0,126,.2);padding:6px 12px;border-radius:30px;margin-bottom:14px}
-  .lh{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.32rem;letter-spacing:-.3px}
+  .lh{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.62rem;letter-spacing:0}
   .lp{font-size:.92rem;color:var(--muted);margin-top:3px;margin-bottom:16px}
   .field{margin-bottom:12px}
   .field label{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
@@ -73,12 +85,12 @@
   .pad{padding:96px 0}
   .sechead{text-align:center;max-width:640px;margin:0 auto 54px}
   .sechead h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(2rem,4.4vw,3rem);letter-spacing:-1px;margin-top:12px}
-  .sechead p{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--muted);margin-top:14px;font-size:1.4rem;line-height:1.45}
+  .sechead p{font-family:'Manrope',sans-serif;font-weight:400;color:var(--muted);margin-top:14px;font-size:1.05rem;line-height:1.6}
 
   /* about */
   .about{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
   .about .tx h2{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-1px;margin:12px 0 0}
-  .about .tx .p{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.4rem;line-height:1.55;color:#3f3a47;margin-top:18px}
+  .about .tx .p{font-family:'Manrope',sans-serif;font-weight:400;font-size:1.05rem;line-height:1.7;color:#4a4550;margin-top:16px}
   .about .pts{margin-top:22px;display:flex;flex-direction:column;gap:12px}
   .about .pts div{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:var(--txt)}
   .about .pts .ic{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--pink),var(--pink2));display:flex;align-items:center;justify-content:center;font-size:1rem}
@@ -196,31 +208,21 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="wrap hgrid">
-    <div class="rev in">
-      <span class="badge"><span class="dot"></span>Certified Google Partner · 14+ years</span>
-      <h1>More customers.<br><span class="g">From any budget.</span></h1>
-      <p class="hsub">We're Ad-dictions — Google Ads, website &amp; graphic design experts who get small &amp; medium businesses real results. No long-term contracts. Results from month one.</p>
-      <div class="htrust">
-        <span>Certified Google Partner</span>
-        <span>14+ years' experience</span>
-        <span>No long-term contracts</span>
+  <div class="wrap hero-inner">
+    <div class="rev in htext">
+      <h1>More customers,<br><span class="g">from any budget.</span></h1>
+      <p class="hsub">South Africa's go-to team for Google Ads, websites &amp; graphic design — focused on growing small &amp; medium businesses.</p>
+      <div class="hbtns">
+        <a class="btn-wa" href="https://wa.me/27846452989?text=Hi%20Ad-dictions!%20I%27d%20like%20a%20free%20quote.">💬 WhatsApp Enquiry</a>
+        <a class="btn-dark" href="#services">View Services</a>
       </div>
     </div>
-    <div class="leadcard rev in">
-      <div class="lbadge">✓ Certified Google Partner · +458% traffic</div>
-      <div class="lh">Get your free quote</div>
-      <div class="lp">Pop your details in — we'll WhatsApp you straight back.</div>
-      <form onsubmit="return sendLead(event)">
-        <div class="field"><label for="ln">Your name</label><input id="ln" type="text" placeholder="Your name" required></div>
-        <div class="field"><label for="lc">Email or phone</label><input id="lc" type="text" placeholder="So we can reach you" required></div>
-        <div class="field"><label for="lm">What can we help with?</label>
-          <select id="lm"><option>Google Ads</option><option>A new website</option><option>Logo &amp; graphic design</option><option>Not sure yet — let's chat</option></select>
-        </div>
-        <button class="lsubmit" type="submit">💬 Send on WhatsApp</button>
-      </form>
-      <div class="lfine">Quick reply · no obligation</div>
-    </div>
+    <form class="capbar rev in" onsubmit="return sendLead(event)">
+      <input id="ln" type="text" placeholder="Full Name*" required>
+      <input id="lp" type="text" placeholder="Phone Number*" required>
+      <input id="le" type="email" placeholder="Email Address*" required>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </header>
 
@@ -404,9 +406,9 @@
   function sendLead(e){
     e.preventDefault();
     const n=document.getElementById('ln').value.trim();
-    const c=document.getElementById('lc').value.trim();
-    const m=document.getElementById('lm').value;
-    const txt=encodeURIComponent(`Hi Ad-dictions! I'm ${n}. I'm interested in: ${m}. You can reach me at ${c}.`);
+    const p=document.getElementById('lp').value.trim();
+    const em=document.getElementById('le').value.trim();
+    const txt=encodeURIComponent(`Hi Ad-dictions! I'm ${n} and I'd like a free quote. Phone: ${p} · Email: ${em}`);
     window.open('https://wa.me/27846452989?text='+txt,'_blank');
     return false;
   }
