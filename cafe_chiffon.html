@@ -463,11 +463,7 @@
     <span class="eyebrow reveal" style="display:block;margin-bottom:18px">Order a Cake</span>
     <h2 class="reveal">Order your <span class="serif-it">custom cake.</span></h2>
     <p class="reveal">Tell us about your cake — the occasion, flavours, size and the date you need it — and we'll come straight back to you. It's free to enquire, no deposit to ask.</p>
-    <form class="order-form reveal" id="orderForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="REPLACE-WITH-WEB3FORMS-KEY">
-      <input type="hidden" name="subject" value="🍰 New cake order from your Café Chiffon website">
-      <input type="hidden" name="from_name" value="Café Chiffon website">
-      <input type="checkbox" name="botcheck" style="display:none">
+    <form class="order-form reveal" id="orderForm">
       <div><label>Your name</label><input name="name" required placeholder="First &amp; last name"></div>
       <div><label>Phone</label><input name="phone" type="tel" placeholder="So we can reach you"></div>
       <div><label>Email</label><input name="email" type="email" required placeholder="you@email.com"></div>
@@ -534,29 +530,13 @@
   // order form
   const orderForm=document.getElementById('orderForm');
   if(orderForm){
-    orderForm.addEventListener('submit',async(e)=>{
+    orderForm.addEventListener('submit',(e)=>{
       e.preventDefault();
       const msg=document.getElementById('orderMsg');
-      const btn=document.getElementById('orderBtn');
-      const key=orderForm.querySelector('[name=access_key]').value;
-      if(key.indexOf('REPLACE')>-1){
-        msg.className='order-msg show ok';
-        msg.textContent='✨ Preview — this order form goes live the moment it’s connected to your inbox.';
-        return;
-      }
-      btn.disabled=true;const t=btn.textContent;btn.textContent='Sending…';
-      try{
-        const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(orderForm)});
-        const out=await res.json();
-        if(out.success){
-          orderForm.reset();
-          msg.className='order-msg show ok';
-          msg.textContent='🍰 Thank you! Your order has landed with us — we’ll be in touch very soon.';
-        }else{throw new Error()}
-      }catch(_){
-        msg.className='order-msg show err';
-        msg.textContent='Sorry, something went wrong — please try again, or DM us on Instagram.';
-      }finally{btn.disabled=false;btn.textContent=t}
+      const g=n=>{const el=orderForm.querySelector('[name='+n+']');return el?el.value.trim():''};
+      const txt=encodeURIComponent('Hi Café Chiffon! I\'d like to order a cake.\nName: '+g('name')+'\nPhone: '+g('phone')+'\nEmail: '+g('email')+'\nDate needed: '+g('date_needed')+'\nCake: '+g('cake')+'\nDetails: '+g('details'));
+      window.open('https://wa.me/27680355552?text='+txt,'_blank');
+      if(msg){msg.className='order-msg show ok';msg.textContent='🍰 Opening WhatsApp with your order — just hit send!';}
     });
   }
 </script>
