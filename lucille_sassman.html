@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucille Sassman — Cape Town Wedding Planner</title>
+<meta name="description" content="Lucille Sassman — Cape Town wedding & elopement planner. Full planning, partial planning and events, beautifully orchestrated. Book a complimentary consultation.">
+<meta property="og:title" content="Lucille Sassman — Cape Town Wedding Planner">
+<meta property="og:description" content="Weddings, elopements & events, beautifully orchestrated. Cape Town wedding planner. Book a complimentary consultation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg fill='none' stroke='%235E748C' stroke-width='1.3'%3E%3Cpath d='M16 27C11 20 8 16 8 12a8 8 0 0 1 16 0c0 4-3 8-8 15z'/%3E%3Ccircle cx='16' cy='12' r='3'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1EA;
+    --cream-deep:#EDE5D9;
+    --ink:#20262F;
+    --ink-deep:#161A21;
+    --text:#2B2E33;
+    --muted:#6C6E72;
+    --blue:#8FA3B8;
+    --blue-deep:#5E748C;
+    --gold:#B0925A;
+    --line:rgba(32,38,47,.14);
+    --line-light:rgba(246,241,234,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Karla',sans-serif;background:var(--cream);color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:'Prata',serif;font-weight:400;line-height:1.18}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 30px}
+  .label{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--blue-deep);font-weight:600}
+
+  .ribbon{position:fixed;top:20px;right:-52px;z-index:200;background:var(--blue-deep);color:#fff;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:7px 60px;transform:rotate(45deg);box-shadow:0 6px 22px rgba(0,0,0,.2)}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;padding:24px 44px;transition:.5s}
+  nav.solid{background:rgba(246,241,234,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:16px 44px}
+  .brand{font-family:'Prata',serif;font-size:1.32rem;letter-spacing:.06em;color:#fff;transition:.5s}
+  nav.solid .brand{color:var(--ink)}
+  .brand small{display:block;font-family:'Karla';font-size:.55rem;letter-spacing:.36em;text-transform:uppercase;margin-top:4px;opacity:.85;font-weight:500}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;transition:.4s;opacity:.92;font-weight:500}
+  nav.solid .nav-links a{color:var(--text)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{border:1px solid rgba(255,255,255,.55);padding:10px 22px}
+  nav.solid .nav-cta{border-color:var(--blue-deep)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+  .burger span{width:24px;height:1.5px;background:#fff;transition:.4s}
+  nav.solid .burger span{background:var(--ink)}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+  .hero-bg{position:absolute;inset:0;background:url('images/lucille-1.webp') center 28%/cover no-repeat;transform:scale(1.06);animation:sz 20s ease-out forwards}
+  @keyframes sz{to{transform:scale(1)}}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,26,33,.72),rgba(22,26,33,.35) 55%,rgba(22,26,33,.15));z-index:1}
+  .hero-inner{position:relative;z-index:2;max-width:720px;padding:0 30px}
+  .hero .label{color:var(--blue);margin-bottom:24px;display:block}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:400;letter-spacing:.005em;text-shadow:0 2px 40px rgba(0,0,0,.35)}
+  .hero h1 em{font-style:italic;color:#eef2f6}
+  .hero p{margin:26px 0 0;max-width:500px;font-weight:300;font-size:1.05rem;opacity:.95}
+  .hero-btns{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-block;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:16px 34px;transition:.4s;cursor:pointer;border:1px solid transparent}
+  .btn-solid{background:var(--blue-deep);color:#fff}
+  .btn-solid:hover{background:#4c6076}
+  .btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--ink)}
+  .scrollcue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.8}
+  .scrollcue::after{content:'';display:block;width:1px;height:42px;background:#fff;margin:12px auto 0;animation:cue 2s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4;transform-origin:top}50%{transform:scaleY(1);opacity:1;transform-origin:top}}
+
+  .rev{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.16,.7,.3,1)}
+  .rev.in{opacity:1;transform:none}
+
+  .pad{padding:120px 0}
+  .center{text-align:center}
+  h2.big{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:400}
+  .lead{color:var(--muted);max-width:620px;margin:20px auto 0;font-weight:300;font-size:1.06rem}
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:24px auto 0;color:var(--gold)}
+  .divider::before,.divider::after{content:'';height:1px;width:52px;background:var(--gold);opacity:.6}
+  .eyebrow{display:inline-block;margin-bottom:18px}
+
+  /* intro band */
+  .intro{text-align:center;background:var(--cream)}
+  .intro .wrap{max-width:820px}
+  .intro h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:400;line-height:1.35}
+  .intro h2 span{color:var(--blue-deep);font-style:italic}
+
+  /* meet */
+  .meet{background:var(--cream-deep)}
+  .meet-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+  .meet-img{position:relative}
+  .meet-img img{border-radius:2px;box-shadow:0 30px 70px rgba(32,38,47,.2)}
+  .meet-img .badge{position:absolute;bottom:-24px;right:-24px;background:var(--ink);color:var(--cream);padding:20px 26px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .meet-img .badge b{font-family:'Prata';font-size:1.5rem;display:block;font-weight:400}
+  .meet-img .badge small{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--blue)}
+  .meet h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:400;margin:18px 0 22px}
+  .meet p{color:var(--muted);margin-bottom:18px;font-weight:300}
+  .meet .sign{font-family:'Prata';font-style:italic;font-size:1.5rem;color:var(--blue-deep);margin-top:8px}
+
+  /* services */
+  .svc-list{margin-top:60px;border-top:1px solid var(--line)}
+  .svc{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:40px 8px;border-bottom:1px solid var(--line);transition:.4s}
+  .svc:hover{background:var(--cream-deep);padding-left:24px;padding-right:24px}
+  .svc .num{font-family:'Prata';font-size:1.5rem;color:var(--gold)}
+  .svc .body h3{font-size:1.7rem;font-weight:400;margin-bottom:6px}
+  .svc .body p{color:var(--muted);font-weight:300;max-width:560px}
+  .svc .arw{color:var(--blue-deep);opacity:0;transform:translateX(-10px);transition:.4s}
+  .svc:hover .arw{opacity:1;transform:none}
+
+  /* quote */
+  .quote{background:var(--ink);color:var(--cream);text-align:center}
+  .quote .wrap{max-width:880px}
+  .quote .label{color:var(--gold);margin-bottom:26px;display:block}
+  .quote h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:400;font-style:italic;line-height:1.35}
+  .quote h2 span{color:var(--blue)}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:14px;margin-top:60px}
+  .gal figure{position:relative;overflow:hidden;border-radius:2px}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:1.2s cubic-bezier(.16,.7,.3,1)}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figure::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(22,26,33,.45));opacity:0;transition:.5s}
+  .gal figure:hover::after{opacity:1}
+  .gal figcaption{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:.5s}
+  .gal figure:hover figcaption{opacity:1;transform:none}
+  .g-a{grid-column:span 4;grid-row:span 2}
+  .g-b{grid-column:span 2;grid-row:span 2}
+  .g-c{grid-column:span 3;grid-row:span 2}
+  .g-d{grid-column:span 3;grid-row:span 2}
+  .gal-note{text-align:center;margin-top:26px;color:var(--muted);font-size:.82rem;font-style:italic}
+
+  /* testimonials */
+  .testi{background:var(--cream-deep)}
+  .t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:56px}
+  .t{background:var(--cream);padding:44px 40px;border:1px solid var(--line);position:relative}
+  .t .mark{font-family:'Prata';font-size:3.6rem;color:var(--blue);line-height:.4;height:24px}
+  .t p{font-family:'Prata';font-style:italic;font-weight:400;font-size:1.16rem;color:var(--text);margin:16px 0 20px;line-height:1.55}
+  .t cite{font-style:normal;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue-deep);font-weight:600}
+  .swap{text-align:center;margin-top:24px;color:var(--muted);font-size:.8rem;font-style:italic}
+
+  /* cta */
+  .cta{position:relative;text-align:center;color:#fff;overflow:hidden}
+  .cta-bg{position:absolute;inset:0;background:url('images/lucille-4.webp') center 30%/cover no-repeat}
+  .cta::after{content:'';position:absolute;inset:0;background:rgba(18,22,28,.66);z-index:1}
+  .cta .wrap{position:relative;z-index:2;padding:130px 30px}
+  .cta .label{color:var(--blue);display:block;margin-bottom:22px}
+  .cta h2{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:400}
+  .cta p{max-width:520px;margin:20px auto 0;font-weight:300;opacity:.94}
+  .cta .hero-btns{justify-content:center;margin-top:36px}
+
+  /* footer */
+  footer{background:var(--ink-deep);color:var(--cream);padding:70px 0 40px}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+  .foot .brand{color:#fff;font-size:1.7rem}
+  .foot p{color:rgba(246,241,234,.7);font-weight:300;font-size:.92rem;margin-top:14px;max-width:300px}
+  .foot h4{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;font-family:'Karla';font-weight:600}
+  .foot a,.foot li{color:rgba(246,241,234,.75);font-size:.92rem;font-weight:300;line-height:2;list-style:none}
+  .foot a:hover{color:var(--blue)}
+  .copyr{border-top:1px solid var(--line-light);margin-top:50px;padding-top:26px;text-align:center;font-size:.78rem;color:rgba(246,241,234,.55);letter-spacing:.06em}
+  .copyr a{color:var(--blue)}
+
+  @media(max-width:860px){
+    .nav-links{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:.5s}
+    .nav-links.open{transform:none}
+    .nav-links a{color:#fff!important;font-size:1rem}
+    .burger{display:flex}
+    .meet-grid{grid-template-columns:1fr;gap:56px}
+    .meet-img .badge{right:0}
+    .svc{grid-template-columns:auto 1fr;gap:22px}
+    .svc .arw{display:none}
+    .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+    .g-a,.g-b,.g-c,.g-d{grid-column:span 1;grid-row:span 1}
+    .g-a{grid-column:span 2}
+    .t-grid{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr;gap:34px}
+    .pad{padding:84px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<nav id="nav">
+  <div class="brand">Lucille Sassman<small>Cape Town Wedding Planner</small></div>
+  <div class="nav-links" id="navlinks">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Weddings</a>
+    <a href="#love">Kind Words</a>
+    <a href="#consult" class="nav-cta">Book a consult</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="label">Cape Town · Weddings · Elopements · Events</span>
+    <h1>Weddings,<br><em>beautifully</em> orchestrated</h1>
+    <p>The calm at the centre of your celebration — a Cape Town planner who carries every detail so you can be fully present on the day that matters most.</p>
+    <div class="hero-btns">
+      <a href="https://lucillesassman.setmore.com" target="_blank" rel="noopener" class="btn btn-solid">Book a complimentary consultation</a>
+      <a href="#gallery" class="btn btn-ghost">See the weddings</a>
+    </div>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</header>
+
+<!-- INTRO -->
+<section class="intro pad">
+  <div class="wrap">
+    <span class="label eyebrow rev">A complimentary consultation to begin</span>
+    <h2 class="rev">Your day should feel <span>effortless</span> — because someone who loves the details is holding every one of them. That someone is <span>Lucille</span>.</h2>
+  </div>
+</section>
+
+<!-- MEET -->
+<section class="meet pad" id="about">
+  <div class="wrap meet-grid">
+    <div class="meet-img rev">
+      <img src="images/lucille-2.webp" alt="Lucille Sassman, Cape Town wedding planner, at a styled reception">
+      <div class="badge"><b>Lucille</b><small>Your Planner</small></div>
+    </div>
+    <div class="rev">
+      <span class="label">Meet your planner</span>
+      <h2>Hello, I'm Lucille</h2>
+      <p>I plan weddings, elopements and celebrations across Cape Town and the Winelands — from the very first mood-board to the final send-off under the stars.</p>
+      <p>My couples come to me for calm. For someone who has walked every timeline a hundred times, who knows the venues and the suppliers, and who quietly makes sure that on your wedding day there is nothing left to worry about — only to enjoy.</p>
+      <p>Whether it's an intimate elopement or a full Winelands celebration, I take on a limited number of weddings each season so that yours is given all of me.</p>
+      <div class="sign">Lucille Sassman</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap center">
+    <span class="label eyebrow rev">How we can work together</span>
+    <h2 class="big rev">Ways to plan</h2>
+    <div class="divider rev"></div>
+  </div>
+  <div class="wrap">
+    <div class="svc-list">
+      <div class="svc rev">
+        <div class="num">01</div>
+        <div class="body"><h3>Full Planning</h3><p>From engagement to the last dance — venue, suppliers, design, budget and timeline, all carried by me. The complete, hands-held experience.</p></div>
+        <div class="arw"><svg width="30" height="12" viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 6h28M23 1l5 5-5 5"/></svg></div>
+      </div>
+      <div class="svc rev">
+        <div class="num">02</div>
+        <div class="body"><h3>Partial Planning</h3><p>You've made a start — I step in to shape the details, manage suppliers and choreograph the day so nothing is left to chance.</p></div>
+        <div class="arw"><svg width="30" height="12" viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 6h28M23 1l5 5-5 5"/></svg></div>
+      </div>
+      <div class="svc rev">
+        <div class="num">03</div>
+        <div class="body"><h3>Elopements &amp; Intimate</h3><p>Just the two of you, or your nearest few. Breathtaking Cape Town settings, thoughtfully arranged for a day that's small in guest list, large in meaning.</p></div>
+        <div class="arw"><svg width="30" height="12" viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 6h28M23 1l5 5-5 5"/></svg></div>
+      </div>
+      <div class="svc rev">
+        <div class="num">04</div>
+        <div class="body"><h3>Events &amp; Celebrations</h3><p>Milestone parties, vow renewals and private celebrations — styled and run with the same care as every wedding.</p></div>
+        <div class="arw"><svg width="30" height="12" viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M0 6h28M23 1l5 5-5 5"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote pad">
+  <div class="wrap">
+    <span class="label">The Lucille difference</span>
+    <h2>"A wedding runs on a thousand invisible details.<br>My job is to make sure <span>you never see a single one</span>."</h2>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="pad" id="gallery">
+  <div class="wrap center">
+    <span class="label eyebrow rev">Real weddings</span>
+    <h2 class="big rev">A few celebrations</h2>
+    <div class="divider rev"></div>
+  </div>
+  <div class="wrap">
+    <div class="gal">
+      <figure class="g-a rev"><img src="images/lucille-1.webp" alt="Wedding ceremony exit with petal toss"><figcaption>The Send-Off</figcaption></figure>
+      <figure class="g-b rev"><img src="images/lucille-4.webp" alt="First dance at a Cape Town rooftop reception"><figcaption>First Dance</figcaption></figure>
+      <figure class="g-c rev"><img src="images/lucille-3.webp" alt="Grand heritage reception room styling"><figcaption>The Reception</figcaption></figure>
+      <figure class="g-d rev"><img src="images/lucille-2.webp" alt="Tablescape and styling detail"><figcaption>The Details</figcaption></figure>
+    </div>
+    <p class="gal-note rev">A glimpse — many more on <a href="https://instagram.com/your_wedding_planner_sa" style="color:var(--blue-deep)">@your_wedding_planner_sa</a>.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi pad" id="love">
+  <div class="wrap center">
+    <span class="label eyebrow rev">Kind words</span>
+    <h2 class="big rev">From Lucille's couples</h2>
+    <div class="divider rev"></div>
+  </div>
+  <div class="wrap">
+    <div class="t-grid">
+      <div class="t rev"><div class="mark">&ldquo;</div><p>Real couple review goes here — drop in a favourite and we'll set it beautifully. A line or two about how calm the day felt is all it takes.</p><cite>— Bride &amp; Groom</cite></div>
+      <div class="t rev"><div class="mark">&ldquo;</div><p>A second review here builds instant trust with the next couple browsing your site — the fastest way to turn a visit into an enquiry.</p><cite>— Bride &amp; Groom</cite></div>
+    </div>
+    <p class="swap rev">↑ Placeholder reviews — Lucille to send 2–4 real couple quotes and we'll swap them in.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="consult">
+  <div class="cta-bg"></div>
+  <div class="wrap">
+    <span class="label">Let's begin</span>
+    <h2>Let's plan something unforgettable</h2>
+    <p>Every wedding starts with a complimentary consultation — a relaxed chat about your date, your vision and how I can carry it for you.</p>
+    <div class="hero-btns">
+      <a href="https://lucillesassman.setmore.com" target="_blank" rel="noopener" class="btn btn-solid">Book a complimentary consultation</a>
+      <a href="https://instagram.com/your_wedding_planner_sa" target="_blank" rel="noopener" class="btn btn-ghost">Message on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand">Lucille Sassman</div>
+      <p>Cape Town wedding, elopement &amp; event planner. Weddings, beautifully orchestrated.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="#about">About</a><br>
+      <a href="#services">Services</a><br>
+      <a href="#gallery">Weddings</a><br>
+      <a href="#love">Kind Words</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="https://lucillesassman.setmore.com" target="_blank" rel="noopener">Book a consultation</a></li>
+        <li><a href="https://instagram.com/your_wedding_planner_sa" target="_blank" rel="noopener">@your_wedding_planner_sa</a></li>
+        <li>Cape Town, South Africa</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyr">
+    Concept design by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the official Lucille Sassman website.
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60));
+  const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  burger.onclick=()=>links.classList.toggle('open');
+  links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+  document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=(i%3*90)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
