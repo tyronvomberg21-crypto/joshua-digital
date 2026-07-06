@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mt Bijoux — Luxury Beachfront Guest House, Bloubergstrand · Cape Town</title>
+<meta name="description" content="Mt Bijoux — a four-star beachfront guest house in Bloubergstrand, with the Atlantic and Table Mountain on your doorstep. Eight opulent en-suite rooms, ocean-view breakfasts, solar power and a one-minute walk to the beach. Book direct.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mt Bijoux — Luxury Beachfront Guest House, Bloubergstrand">
+<meta property="og:description" content="Four-star beachfront rooms with Table Mountain across the bay. Eight opulent en-suite rooms, one minute from the sand. Book direct — no commission.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/bijoux-hero.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230F2436'/><text x='16' y='23' font-family='Georgia,serif' font-size='17' fill='%23CBA96A' text-anchor='middle' font-style='italic'>B</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F2436;--ink2:#1B3A50;--navy:#12303F;--ocean:#2C5871;--mist:#8FB0C4;
+  --gold:#CBA96A;--gold-deep:#B08D4C;--champ:#E8DCC4;--ivory:#FBF8F2;--ivory2:#F3ECDF;
+  --line:rgba(15,36,54,0.13);--muted:#6C7C88;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.75;font-weight:300;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.ribbon{position:fixed;top:96px;right:-64px;z-index:200;transform:rotate(45deg);background:var(--gold);color:var(--ink);
+  font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:7px 70px;box-shadow:0 4px 14px rgba(0,0,0,0.3);pointer-events:none}
+
+.label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+.label.light{color:var(--gold)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;height:82px;transition:background .35s,box-shadow .35s}
+nav.solid{background:rgba(15,36,54,0.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(203,169,106,0.25)}
+.nav-logo{text-decoration:none;line-height:1.1}
+.nav-logo .n1{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;letter-spacing:1px;color:#fff}
+.nav-logo .n2{display:block;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:-2px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{text-decoration:none;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:400;color:rgba(255,255,255,0.85);transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-book{border:1px solid var(--gold);color:var(--gold)!important;padding:11px 24px;transition:all .3s!important}
+.nav-book:hover{background:var(--gold);color:var(--ink)!important}
+@media(max-width:860px){.nav-links a:not(.nav-book){display:none}}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/bijoux-hero.webp') center/cover no-repeat;transform:scale(1.05);animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.12)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,36,54,0.86) 0%,rgba(15,36,54,0.55) 48%,rgba(15,36,54,0.30) 100%)}
+.hero-inner{position:relative;z-index:2;padding:110px 6vw 0;max-width:840px;color:#fff}
+.hero-inner>*{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.hero-inner>*:nth-child(2){animation-delay:.15s}.hero-inner>*:nth-child(3){animation-delay:.3s}.hero-inner>*:nth-child(4){animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(44px,7vw,86px);line-height:1.02;margin:20px 0 22px;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:18px;font-weight:300;max-width:500px;color:rgba(255,255,255,0.9);margin-bottom:36px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;padding:17px 34px;transition:all .3s}
+.btn-solid{background:var(--gold);color:var(--ink)}
+.btn-solid:hover{background:var(--champ);transform:translateY(-2px)}
+.btn-line{border:1px solid rgba(255,255,255,0.5);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,0.12);border-color:#fff}
+
+.strip{background:var(--navy);color:rgba(255,255,255,0.88);display:flex;justify-content:center;flex-wrap:wrap;padding:26px 4vw}
+.strip div{padding:6px 38px;font-size:13px;letter-spacing:0.5px;text-align:center}
+.strip div:not(:last-child){border-right:1px solid rgba(203,169,106,0.28)}
+.strip b{display:block;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;color:var(--gold);line-height:1}
+.strip span{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist)}
+@media(max-width:860px){.strip div{border:none!important;padding:10px 20px}}
+
+.rev{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rev.in{opacity:1;transform:none}
+
+section{padding:110px 6vw}
+.sec-head{max-width:660px;margin:0 auto 64px;text-align:center}
+.sec-head h2{font-size:clamp(34px,4.4vw,54px);margin-top:16px;line-height:1.12}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:16.5px}
+
+/* INTRO */
+.intro{display:grid;grid-template-columns:1.05fr 0.95fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.intro-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.intro-imgs img{width:100%;display:block;border-radius:2px;object-fit:cover;height:100%}
+.intro-imgs .tall{grid-row:span 2;height:100%}
+.intro h2{font-size:clamp(32px,3.8vw,48px);line-height:1.14;margin:16px 0 24px}
+.intro h2 em{font-style:italic;color:var(--gold-deep)}
+.intro p{color:var(--ink2);margin-bottom:16px;font-size:16.5px}
+@media(max-width:920px){.intro{grid-template-columns:1fr;gap:48px}}
+
+/* ROOMS */
+.rooms-wrap{background:var(--ink);color:#fff}
+.rooms-wrap .sec-head h2{color:#fff}
+.rooms-wrap .sec-head p{color:var(--mist)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1220px;margin:0 auto}
+.room{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:4/5}
+.room img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.room:hover img{transform:scale(1.07)}
+.room::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,36,54,0.9) 0%,transparent 55%)}
+.room-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px 26px}
+.room-cap h3{font-size:25px;color:#fff;margin-bottom:6px}
+.room-cap p{font-size:13px;color:rgba(255,255,255,0.8);font-weight:300}
+.rooms-note{text-align:center;color:var(--mist);font-size:14px;margin-top:38px;font-style:italic;font-family:'Cormorant Garamond',serif}
+@media(max-width:920px){.rooms{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.rooms{grid-template-columns:1fr;max-width:400px}}
+
+/* VIEW QUOTE */
+.vquote{position:relative;text-align:center;padding:150px 6vw;color:#fff;overflow:hidden}
+.vquote-bg{position:absolute;inset:0;background:url('images/bijoux-view.webp') center/cover no-repeat;background-attachment:fixed}
+.vquote::after{content:'';position:absolute;inset:0;background:rgba(15,36,54,0.72)}
+.vquote-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.vquote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);line-height:1.32;font-weight:500;margin-top:20px}
+.vquote blockquote em{font-style:italic;color:var(--gold)}
+@media(max-width:820px){.vquote-bg{background-attachment:scroll}}
+
+/* EXPERIENCE */
+.exp{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.exp-list{list-style:none}
+.exp-list li{padding:24px 0 24px 46px;border-bottom:1px solid var(--line);position:relative}
+.exp-list li:first-child{padding-top:0}
+.exp-list li::before{content:'✦';position:absolute;left:8px;top:24px;color:var(--gold);font-size:14px}
+.exp-list li:first-child::before{top:0}
+.exp-list h3{font-size:22px;font-weight:600;margin-bottom:2px}
+.exp-list p{font-size:14.5px;color:var(--muted)}
+.exp-img{position:relative}
+.exp-img img{width:100%;display:block;border-radius:2px}
+.exp-img .cap{position:absolute;bottom:-1px;right:-1px;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:10px 18px;font-weight:600}
+@media(max-width:920px){.exp{grid-template-columns:1fr;gap:48px}}
+
+/* LOCATION */
+.loc-wrap{background:var(--ivory2)}
+.loc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1100px;margin:0 auto;background:var(--line);border:1px solid var(--line)}
+.loc-card{background:var(--ivory);padding:40px 24px;text-align:center}
+.loc-card .t{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:var(--ink);line-height:1}
+.loc-card .t span{font-size:17px;color:var(--gold-deep)}
+.loc-card p{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.loc-note{text-align:center;max-width:640px;margin:44px auto 0;color:var(--ink2);font-size:16px}
+@media(max-width:720px){.loc{grid-template-columns:1fr 1fr}}
+
+/* REVIEWS */
+.reviews{max-width:1000px;margin:0 auto;text-align:center}
+.stars-line{font-size:15px;color:var(--ink2);margin-top:16px}
+.stars-line b{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-deep);font-weight:600}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:50px;text-align:left}
+.review{background:var(--ivory2);padding:38px 36px 32px;border-radius:2px;position:relative;border-top:2px solid var(--gold)}
+.review p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--ink2);line-height:1.5}
+.review .who{margin-top:18px;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-family:'Jost',sans-serif;font-style:normal}
+.review-note{margin-top:28px;font-size:12.5px;color:var(--muted);font-style:italic}
+@media(max-width:820px){.review-grid{grid-template-columns:1fr}}
+
+/* BOOK */
+.book{position:relative;overflow:hidden;text-align:center;color:#fff;padding:130px 6vw}
+.book-bg{position:absolute;inset:0;background:url('images/bijoux-exterior.webp') center/cover no-repeat}
+.book::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(15,36,54,0.88),rgba(18,48,63,0.94))}
+.book-inner{position:relative;z-index:2;max-width:720px;margin:0 auto}
+.book h2{font-size:clamp(36px,4.6vw,58px);margin:18px 0 20px;line-height:1.1}
+.book h2 em{font-style:italic;color:var(--gold)}
+.book>div p{font-size:17px;color:rgba(255,255,255,0.9);margin-bottom:40px;font-weight:300}
+.book-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1fb658;transform:translateY(-2px)}
+.book-alt{margin-top:30px;font-size:14.5px;color:rgba(255,255,255,0.78)}
+.book-alt a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(203,169,106,0.4)}
+
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:58px 6vw 44px;text-align:center;font-size:13px}
+footer .f-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff}
+footer .f-sub{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin:4px 0 20px}
+footer .disclaimer{margin-top:28px;padding-top:22px;border-top:1px solid rgba(203,169,106,0.2);font-size:12px;color:rgba(255,255,255,0.42);max-width:660px;margin-left:auto;margin-right:auto}
+footer .disclaimer a{color:var(--gold)}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}.hero-bg,.vquote-bg{animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<nav id="nav">
+  <a class="nav-logo" href="#top"><span class="n1">Mt Bijoux</span><span class="n2">Bloubergstrand</span></a>
+  <div class="nav-links">
+    <a href="#intro">The House</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#experience">Experience</a>
+    <a href="#location">Location</a>
+    <a href="#book" class="nav-book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="label light">Four-Star Beachfront · Bloubergstrand · Cape Town</div>
+    <h1>The Atlantic on one side.<br><em>Table Mountain</em> on the other.</h1>
+    <p>A luxury guest house one minute from the sand, where opulent rooms open to the ocean and breakfast comes with a view most travellers cross the world for.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#book">Book Direct — No Commission</a>
+      <a class="btn btn-line" href="#rooms">View the Rooms</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><b>8</b><span>en-suite rooms</span></div>
+  <div><b>1</b><span>min to the beach</span></div>
+  <div><b>30</b><span>min to the airport</span></div>
+  <div><b>0</b><span>load-shedding · solar</span></div>
+</div>
+
+<section id="intro">
+  <div class="intro">
+    <div class="intro-imgs rev">
+      <img class="tall" src="images/bijoux-suite1.webp" alt="Opulent en-suite room at Mt Bijoux" loading="lazy">
+      <img src="images/bijoux-bath.webp" alt="Roll-top bath in a Mt Bijoux bathroom" loading="lazy">
+      <img src="images/bijoux-courtyard.webp" alt="Slate water feature in the courtyard" loading="lazy">
+    </div>
+    <div class="rev">
+      <div class="label">The House</div>
+      <h2>A little <em>jewel</em> on the West Coast</h2>
+      <p>Mt Bijoux sits right on the Bloubergstrand beachfront, looking across the bay to one of the most photographed views on earth — Table Mountain, rising straight out of the Atlantic.</p>
+      <p>Inside, eight individually decorated rooms bring a quiet, classic opulence: pure cotton linen, air-conditioning, and the kind of detail that makes a stay feel like a gift to yourself. Solar power keeps everything running, whatever the grid is doing.</p>
+      <p>It is the sort of place guests book for one night and extend to three.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rooms-wrap" id="rooms">
+  <div class="sec-head rev">
+    <div class="label light">The Rooms</div>
+    <h2>Eight rooms, no two the same</h2>
+    <p>Every room en-suite and individually styled — several with sea views, all with air-conditioning, satellite TV and a minibar.</p>
+  </div>
+  <div class="rooms rev">
+    <div class="room"><img src="images/bijoux-suite2.webp" alt="Sea-facing luxury suite"><div class="room-cap"><h3>Sea-Facing Suites</h3><p>Wake to the Atlantic and Table Mountain framed in your window.</p></div></div>
+    <div class="room"><img src="images/bijoux-suite3.webp" alt="Classic king room"><div class="room-cap"><h3>Classic King Rooms</h3><p>Tufted headboards, gilt mirrors and pure cotton linen.</p></div></div>
+    <div class="room"><img src="images/bijoux-suite1.webp" alt="Deluxe en-suite room"><div class="room-cap"><h3>Deluxe Rooms</h3><p>Generous, air-conditioned comfort a minute from the sand.</p></div></div>
+  </div>
+  <p class="rooms-note rev">Rates &amp; availability shown live on your own booking system once the site is yours.</p>
+</section>
+
+<section class="vquote">
+  <div class="vquote-bg"></div>
+  <div class="vquote-inner">
+    <div class="label light rev">The View</div>
+    <blockquote class="rev">Breakfast with the ocean in front of you and <em>Table Mountain across the bay</em> — the kind of morning guests remember long after they've flown home.</blockquote>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="exp">
+    <div class="rev">
+      <div class="label">The Experience</div>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);margin:14px 0 30px;line-height:1.15">More than a room for the night</h2>
+      <ul class="exp-list">
+        <li><h3>Ocean-view breakfast</h3><p>A sumptuous breakfast served each morning, with the Atlantic in front of you.</p></li>
+        <li><h3>Braai &amp; wine cellar</h3><p>Traditional South African braais and an exclusive wine cellar to explore.</p></li>
+        <li><h3>Solar-powered throughout</h3><p>Fully backed by solar — load-shedding never reaches your stay.</p></li>
+        <li><h3>Airport transfers &amp; chauffeur</h3><p>Airport pick-ups and chauffeur services arranged on request.</p></li>
+        <li><h3>One minute to the beach</h3><p>Sand, sunset and kitesurfers, a short stroll from your door.</p></li>
+      </ul>
+    </div>
+    <div class="exp-img rev">
+      <img src="images/bijoux-dining.webp" alt="Elegant dining room at Mt Bijoux">
+      <span class="cap">Breakfast with a view</span>
+    </div>
+  </div>
+</section>
+
+<section class="loc-wrap" id="location">
+  <div class="sec-head rev">
+    <div class="label">Where You'll Be</div>
+    <h2>On the beachfront, near everything</h2>
+    <p>Bloubergstrand — the postcard view of Cape Town, with the city an easy drive away.</p>
+  </div>
+  <div class="loc rev">
+    <div class="loc-card"><div class="t">1<span>min</span></div><p>Blouberg Beach</p></div>
+    <div class="loc-card"><div class="t">20<span>min</span></div><p>Cape Town &amp; V&amp;A Waterfront</p></div>
+    <div class="loc-card"><div class="t">30<span>min</span></div><p>Cape Town Int. Airport</p></div>
+    <div class="loc-card"><div class="t">40<span>min</span></div><p>Winelands &amp; West Coast</p></div>
+  </div>
+  <p class="loc-note rev">Right on the Bloubergstrand beachfront — the iconic Table Mountain-across-the-bay view on your doorstep, restaurants and the beach a short walk away.</p>
+</section>
+
+<section id="reviews">
+  <div class="reviews">
+    <div class="label rev">What Guests Say</div>
+    <p class="stars-line rev"><b>Four-star graded</b> · listed across Booking.com, TripAdvisor &amp; more</p>
+    <div class="review-grid rev">
+      <div class="review"><p>[A favourite guest review goes here — pulled word-for-word from your Booking.com or TripAdvisor page, with permission.]</p><div class="who">— Guest review</div></div>
+      <div class="review"><p>[A second real review here — the view and the breakfast are what guests mention most.]</p><div class="who">— Guest review</div></div>
+    </div>
+    <p class="review-note rev">These two spaces are waiting for your real guest reviews — chosen from the ones already written about Mt Bijoux.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="book-bg"></div>
+  <div class="book-inner">
+    <div class="label light rev">Book Direct</div>
+    <div class="rev">
+      <h2>Book direct, <em>keep the difference</em></h2>
+      <p>Booking with us directly means no booking-site commission, the best available rate, and a welcome arranged personally — the way a four-star stay should begin.</p>
+      <div class="book-ctas">
+        <a class="btn btn-solid" href="mailto:info@mtbijoux.co.za?subject=Room%20enquiry%20%E2%80%94%20Mt%20Bijoux&body=Hi%2C%0A%0AI%27d%20like%20to%20enquire%20about%20a%20room.%20My%20dates%20are%3A%20">Email Your Enquiry</a>
+        <a class="btn btn-line" href="tel:+27215541150">Call 021 554 1150</a>
+      </div>
+      <p class="book-alt">Enquiries answered personally — <a href="mailto:info@mtbijoux.co.za">info@mtbijoux.co.za</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Mt Bijoux</div>
+  <div class="f-sub">Luxury Beachfront Guest House · Bloubergstrand</div>
+  <div>Bloubergstrand, Cape Town · 021 554 1150 · info@mtbijoux.co.za</div>
+  <div class="disclaimer">This is a design concept by <a href="https://joshuavomberg.co.za" target="_blank" rel="noopener">Joshua.digital</a> — created as a gift to show what Mt Bijoux could look like online. It is not the official website of Mt Bijoux. Photos are from the guest house's public listings and belong to the property.</div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>60)},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
