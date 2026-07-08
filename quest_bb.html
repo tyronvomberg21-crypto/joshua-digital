@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quest Bed &amp; Breakfast — Melkbosstrand · Cape Town's West Coast</title>
+<meta name="description" content="Quest Bed & Breakfast — a warm, family-run B&B in Melkbosstrand with five comfortable rooms, a sparkling pool, and the beach minutes away. Ten years of happy guests. Book direct with no booking fees.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quest Bed &amp; Breakfast — Melkbosstrand">
+<meta property="og:description" content="A warm, family-run B&B minutes from Melkbos beach — five rooms, a poolside courtyard, and ten years of happy guests. Book direct.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/quest-hero.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23FAF6F0'/><text x='16' y='24' font-family='Georgia,serif' font-weight='700' font-size='19' fill='%238A4A32' text-anchor='middle'>Q</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Rubik:wght@300;400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--cream2:#F2EAE0;--ink:#2C2620;--ink2:#4C4238;
+  --brick:#8A4A32;--brick-soft:#B3714F;--timber:#A9773F;--pool:#35648B;--pool-soft:#C7DAE8;
+  --line:rgba(44,38,32,0.13);--muted:#7A6E60;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Rubik',sans-serif;background:var(--cream);color:var(--ink);line-height:1.72;font-weight:300;overflow-x:hidden}
+h1,h2,h3{font-family:'Bitter',serif;font-weight:600;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pool);outline-offset:3px}
+
+.ribbon{position:fixed;top:96px;right:-64px;z-index:200;transform:rotate(45deg);background:var(--pool);color:#fff;
+  font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:7px 70px;box-shadow:0 4px 14px rgba(0,0,0,0.25);pointer-events:none}
+
+.label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--brick);font-weight:600;font-family:'Rubik',sans-serif}
+.label.c{display:block;text-align:center}
+.label.light{color:#EBC9A8}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;height:78px;transition:background .3s,box-shadow .3s}
+nav.solid{background:rgba(250,246,240,0.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav-logo{text-decoration:none;line-height:1.12}
+.nav-logo .n1{font-family:'Bitter',serif;font-weight:700;font-size:21px;color:#fff;transition:color .3s}
+.nav-logo .n2{display:block;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.78);transition:color .3s;font-weight:400}
+nav.solid .nav-logo .n1{color:var(--ink)}
+nav.solid .nav-logo .n2{color:var(--muted)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:500;color:rgba(255,255,255,0.92);transition:color .3s}
+nav.solid .nav-links a{color:var(--ink2)}
+.nav-links a:hover{color:var(--brick-soft)}
+.nav-book{background:var(--brick);color:#fff!important;padding:12px 24px;border-radius:8px;transition:all .3s!important}
+.nav-book:hover{background:#9C5B3F;transform:translateY(-1px)}
+@media(max-width:840px){.nav-links a:not(.nav-book){display:none}}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/quest-hero.webp') center 60%/cover no-repeat;transform:scale(1.05);animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.11)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(38,28,20,0.85) 0%,rgba(38,28,20,0.30) 50%,rgba(38,28,20,0.22) 100%)}
+.hero-inner{position:relative;z-index:2;padding:150px 6vw 9vh;max-width:860px;color:#fff}
+.hero-inner>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-inner>*:nth-child(2){animation-delay:.15s}.hero-inner>*:nth-child(3){animation-delay:.3s}.hero-inner>*:nth-child(4){animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(38px,5.8vw,66px);margin:18px 0 20px;color:#fff}
+.hero h1 em{font-style:italic;color:#F2C99B}
+.hero p{font-size:17.5px;max-width:540px;color:rgba(255,255,255,0.92);margin-bottom:34px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-family:'Rubik',sans-serif;font-size:13.5px;font-weight:600;padding:16px 32px;border-radius:8px;transition:all .25s}
+.btn-brick{background:var(--brick);color:#fff}
+.btn-brick:hover{background:#9C5B3F;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,0.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,0.12)}
+
+.strip{background:var(--brick);color:#fff;display:flex;justify-content:center;flex-wrap:wrap;padding:22px 4vw}
+.strip div{padding:5px 34px;text-align:center}
+.strip div:not(:last-child){border-right:1px solid rgba(255,255,255,0.25)}
+.strip b{display:block;font-family:'Bitter',serif;font-weight:700;font-size:24px;line-height:1.1}
+.strip span{font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:#EBC9A8}
+@media(max-width:840px){.strip div{border:none!important;padding:8px 18px}}
+
+.rev{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rev.in{opacity:1;transform:none}
+
+section{padding:100px 6vw}
+.sec-head{max-width:640px;margin:0 auto 58px;text-align:center}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:14px}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:16px}
+
+/* WELCOME */
+.welcome{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1150px;margin:0 auto}
+.welcome-img{position:relative}
+.welcome-img img{width:100%;display:block;border-radius:14px;box-shadow:22px 22px 0 var(--cream2)}
+.welcome-img::after{content:'Ten years of guests';position:absolute;bottom:-14px;left:22px;background:var(--pool);color:#fff;
+  font-size:10.5px;letter-spacing:2px;text-transform:uppercase;padding:9px 18px;border-radius:8px;font-weight:600}
+.welcome h2{font-size:clamp(28px,3.4vw,40px);margin:14px 0 22px}
+.welcome h2 em{font-style:italic;color:var(--brick)}
+.welcome p{color:var(--ink2);margin-bottom:15px;font-size:16px}
+@media(max-width:900px){.welcome{grid-template-columns:1fr;gap:48px}}
+
+/* ROOMS */
+.rooms-wrap{background:var(--cream2)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.room{background:var(--cream);border-radius:14px;overflow:hidden;box-shadow:0 1px 0 var(--line);transition:transform .35s,box-shadow .35s}
+.room:hover{transform:translateY(-8px);box-shadow:0 26px 46px -20px rgba(44,38,32,0.32)}
+.room-img{height:230px;overflow:hidden}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.room:hover .room-img img{transform:scale(1.05)}
+.room-body{padding:26px 28px 30px}
+.room-body h3{font-size:20px;margin-bottom:8px}
+.room-body p{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+.room-tags{display:flex;gap:8px;flex-wrap:wrap}
+.room-tags span{font-size:10.5px;letter-spacing:1px;text-transform:uppercase;font-weight:600;color:var(--pool);background:var(--pool-soft);padding:5px 12px;border-radius:6px}
+.rooms-note{text-align:center;color:var(--muted);font-size:14px;margin-top:36px;font-style:italic}
+@media(max-width:900px){.rooms{grid-template-columns:1fr;max-width:440px}}
+
+/* POOL BREAK */
+.poolq{position:relative;text-align:center;padding:150px 6vw;color:#fff;overflow:hidden}
+.poolq-bg{position:absolute;inset:0;background:url('images/quest-pool.webp') center 55%/cover no-repeat}
+.poolq::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(28,42,56,0.55),rgba(28,42,56,0.68))}
+.poolq-inner{position:relative;z-index:2;max-width:780px;margin:0 auto}
+.poolq blockquote{font-family:'Bitter',serif;font-size:clamp(24px,3.6vw,40px);font-weight:600;line-height:1.3;margin-top:18px}
+.poolq blockquote em{font-style:italic;color:#A8D0E8}
+
+/* COMFORTS */
+.comforts{display:grid;grid-template-columns:0.95fr 1.05fr;gap:70px;align-items:center;max-width:1150px;margin:0 auto}
+.comforts-img img{width:100%;display:block;border-radius:14px;box-shadow:-22px 22px 0 var(--cream2)}
+.comforts-list{list-style:none}
+.comforts-list li{padding:19px 0 19px 42px;border-bottom:1px solid var(--line);position:relative;font-size:15.5px;color:var(--ink2)}
+.comforts-list li::before{content:'☀';position:absolute;left:4px;top:19px;color:var(--brick-soft);font-size:16px}
+.comforts-list li b{color:var(--ink);font-weight:600}
+@media(max-width:900px){.comforts{grid-template-columns:1fr;gap:48px}}
+
+/* LOCATION */
+.loc-wrap{background:var(--cream2)}
+.loc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1100px;margin:0 auto}
+.loc-card{background:var(--cream);padding:34px 24px;border-radius:14px;text-align:center;box-shadow:0 1px 0 var(--line)}
+.loc-card .t{font-family:'Bitter',serif;font-weight:700;font-size:32px;color:var(--pool);line-height:1}
+.loc-card .t span{font-size:15px;color:var(--brick-soft)}
+.loc-card p{font-size:11.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);margin-top:11px;font-weight:500}
+.loc-note{text-align:center;max-width:620px;margin:42px auto 0;color:var(--ink2);font-size:15.5px}
+@media(max-width:720px){.loc{grid-template-columns:1fr 1fr}}
+
+/* REVIEWS */
+.reviews{max-width:1000px;margin:0 auto;text-align:center}
+.stars-line{font-size:15px;color:var(--ink2);margin-top:16px}
+.stars-line b{font-family:'Bitter',serif;font-size:26px;color:var(--brick)}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px;text-align:left}
+.review{background:var(--cream2);padding:34px;border-radius:14px;position:relative}
+.review::before{content:'“';font-family:Georgia,serif;font-size:64px;color:var(--brick-soft);opacity:0.4;position:absolute;top:10px;left:20px;line-height:1}
+.review p{font-size:15.5px;color:var(--ink2);font-style:italic;position:relative;z-index:2}
+.review .who{margin-top:16px;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);font-style:normal;font-weight:600}
+.review-note{margin-top:26px;font-size:12.5px;color:var(--muted);font-style:italic}
+@media(max-width:820px){.review-grid{grid-template-columns:1fr}}
+
+/* BOOK */
+.book{position:relative;overflow:hidden;text-align:center;color:#fff;padding:120px 6vw}
+.book-bg{position:absolute;inset:0;background:url('images/quest-patio.webp') center/cover no-repeat}
+.book::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(38,28,20,0.88),rgba(28,42,56,0.92))}
+.book-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.book h2{font-size:clamp(30px,4.2vw,48px);margin:16px 0 18px;color:#fff}
+.book h2 em{font-style:italic;color:#F2C99B}
+.book>div p{font-size:16.5px;color:rgba(255,255,255,0.9);margin-bottom:38px}
+.book-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.book-alt{margin-top:28px;font-size:14.5px;color:rgba(255,255,255,0.78)}
+.book-alt a{color:#F2C99B;text-decoration:none;border-bottom:1px solid rgba(242,201,155,0.4)}
+
+footer{background:#241E18;color:rgba(255,255,255,0.6);padding:54px 6vw 42px;text-align:center;font-size:13px}
+footer .f-logo{font-family:'Bitter',serif;font-weight:700;font-size:21px;color:#fff}
+footer .f-sub{font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:#D8A87C;margin:4px 0 20px}
+footer .disclaimer{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:rgba(255,255,255,0.4);max-width:660px;margin-left:auto;margin-right:auto}
+footer .disclaimer a{color:#D8A87C}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept · by Joshua.digital</div>
+
+<nav id="nav">
+  <a class="nav-logo" href="#top"><span class="n1">Quest B&amp;B</span><span class="n2">Melkbosstrand · West Coast</span></a>
+  <div class="nav-links">
+    <a href="#welcome">Welcome</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#comforts">Comforts</a>
+    <a href="#location">Location</a>
+    <a href="#book" class="nav-book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="label light">Bed &amp; Breakfast · Melkbosstrand · Cape Town's West Coast</div>
+    <h1>The beach village B&amp;B <em>guests come back to</em></h1>
+    <p>Five warm, comfortable rooms around a sparkling courtyard pool — minutes from Melkbos beach, and run with the kind of care you only get after ten years of doing it properly.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-brick" href="#book">Book Direct — No Booking Fees</a>
+      <a class="btn btn-ghost" href="#rooms">See the Rooms</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><b>5</b><span>comfortable rooms</span></div>
+  <div><b>14</b><span>guests at full house</span></div>
+  <div><b>10</b><span>years welcoming guests</span></div>
+  <div><b>5</b><span>min from Melkbos beach</span></div>
+</div>
+
+<section id="welcome">
+  <div class="welcome">
+    <div class="welcome-img rev"><img src="images/quest-dining.webp" alt="Warm brick-and-timber dining area at Quest B&B" loading="lazy"></div>
+    <div class="rev">
+      <div class="label">Welcome</div>
+      <h2>Warm brick, wooden ceilings, <em>and a proper welcome</em></h2>
+      <p>Quest is a family-run bed &amp; breakfast in Melkbosstrand — the laid-back beach village on Cape Town's West Coast where the sunsets are famous and Table Mountain sits on the horizon.</p>
+      <p>Inside it's all warmth: face-brick walls, timber ceilings, comfortable beds and a courtyard pool with its own fountain. For a decade, guests have arrived as bookings and left as regulars.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rooms-wrap" id="rooms">
+  <div class="sec-head rev">
+    <div class="label c">The Rooms</div>
+    <h2>Five rooms — from cosy doubles to the family loft</h2>
+    <p>Four rooms upstairs, one down — comfortable beds, TVs, and kitchenettes in the larger units.</p>
+  </div>
+  <div class="rooms rev">
+    <div class="room">
+      <div class="room-img"><img src="images/quest-room1.webp" alt="Double room with warm brick walls" loading="lazy"></div>
+      <div class="room-body">
+        <h3>Double Rooms</h3>
+        <p>Warm and restful — brick, timber and a comfortable double bed after a day on the beach.</p>
+        <div class="room-tags"><span>Sleeps 2</span><span>TV</span><span>En-suite</span></div>
+      </div>
+    </div>
+    <div class="room">
+      <div class="room-img"><img src="images/quest-room2.webp" alt="Family room with bunk beds" loading="lazy"></div>
+      <div class="room-body">
+        <h3>Family Rooms</h3>
+        <p>Space for the whole crew — double beds plus bunks, and the pool right outside for the kids.</p>
+        <div class="room-tags"><span>Family</span><span>Bunks</span><span>Kitchenette</span></div>
+      </div>
+    </div>
+    <div class="room">
+      <div class="room-img"><img src="images/quest-room3.webp" alt="Twin room with timber ceiling" loading="lazy"></div>
+      <div class="room-body">
+        <h3>Twin Rooms</h3>
+        <p>Two proper single beds under a timber ceiling — ideal for friends or colleagues travelling together.</p>
+        <div class="room-tags"><span>Sleeps 2</span><span>Twin beds</span><span>TV</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="rooms-note rev">Full house? Quest sleeps 14 across all five rooms — perfect for family gatherings.</p>
+</section>
+
+<section class="poolq">
+  <div class="poolq-bg"></div>
+  <div class="poolq-inner">
+    <div class="label light rev">The Courtyard</div>
+    <blockquote class="rev">Mornings by the fountain, afternoons in the pool, and <em>Melkbos sunsets</em> to end every day.</blockquote>
+  </div>
+</section>
+
+<section id="comforts">
+  <div class="comforts">
+    <div class="comforts-img rev"><img src="images/quest-kitchen.webp" alt="Self-catering kitchenette in a Quest B&B unit" loading="lazy"></div>
+    <div class="rev">
+      <div class="label">The Comforts</div>
+      <h2 style="font-size:clamp(26px,3.2vw,38px);margin:14px 0 24px">Everything a stay should come with</h2>
+      <ul class="comforts-list">
+        <li><b>Sparkling courtyard pool</b> with loungers, umbrellas and the fountain going</li>
+        <li><b>Kitchenettes in the larger units</b> — self-cater or stroll to the village restaurants</li>
+        <li><b>Comfortable patio lounge</b> for sundowners after a beach day</li>
+        <li><b>TVs in the rooms</b> and space to properly unwind</li>
+        <li><b>Secure parking</b> on the property</li>
+        <li><b>A host who's done this for ten years</b> — and it shows in the reviews</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="loc-wrap" id="location">
+  <div class="sec-head rev">
+    <div class="label c">Where You'll Be</div>
+    <h2>Melkbosstrand — the West Coast's easy-going beach village</h2>
+  </div>
+  <div class="loc rev">
+    <div class="loc-card"><div class="t">5<span>min</span></div><p>Melkbos Beach &amp; restaurants</p></div>
+    <div class="loc-card"><div class="t">15<span>min</span></div><p>Blouberg &amp; kitesurfing coast</p></div>
+    <div class="loc-card"><div class="t">30<span>min</span></div><p>Cape Town city centre</p></div>
+    <div class="loc-card"><div class="t">30<span>min</span></div><p>Cape Town Int. Airport</p></div>
+  </div>
+  <p class="loc-note rev">Quiet streets, long white beaches, famous sunsets over the Atlantic — with Cape Town and the wine routes an easy drive away.</p>
+</section>
+
+<section>
+  <div class="reviews">
+    <div class="label c rev">What Guests Say</div>
+    <p class="stars-line rev"><b>4.6 / 5</b> across 80+ guest reviews · a decade of happy stays</p>
+    <div class="review-grid rev">
+      <div class="review"><p>[A favourite guest review goes here — pulled word-for-word from your SafariNow or wheretostay reviews, with permission.]</p><div class="who">— Guest review</div></div>
+      <div class="review"><p>[A second real review here — the warmth of the welcome and the pool are what guests mention most.]</p><div class="who">— Guest review</div></div>
+    </div>
+    <p class="review-note rev">These two spaces are waiting for real reviews — there are 80+ to choose from.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="book-bg"></div>
+  <div class="book-inner">
+    <div class="label light rev">Book Direct</div>
+    <div class="rev">
+      <h2>Book directly with us — <em>and pay no booking fees</em></h2>
+      <p>Ten years of guests can't be wrong. Call or email us with your dates and we'll arrange everything personally — no booking-site commission, just the warmest room in Melkbos.</p>
+      <div class="book-ctas">
+        <a class="btn btn-brick" href="tel:+27215532702">Call 021 553 2702</a>
+        <a class="btn btn-ghost" href="mailto:cystersj@mweb.com?subject=Room%20enquiry%20%E2%80%94%20Quest%20B%26B&body=Hi%2C%0A%0AI%27d%20like%20to%20enquire%20about%20a%20room.%20My%20dates%20are%3A%20">Email Your Dates</a>
+      </div>
+      <p class="book-alt">Enquiries answered personally — <a href="mailto:cystersj@mweb.com">cystersj@mweb.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Quest B&amp;B</div>
+  <div class="f-sub">Bed &amp; Breakfast · Melkbosstrand</div>
+  <div>Melkbosstrand, Cape Town · 021 553 2702 · cystersj@mweb.com</div>
+  <div class="disclaimer">This is a design concept by <a href="https://joshuavomberg.co.za" target="_blank" rel="noopener">Joshua.digital</a> — created as a gift to show what Quest Bed &amp; Breakfast could look like online. It is not the official website of Quest Bed &amp; Breakfast. Photos are from the guesthouse's public listings and belong to the property.</div>
+</footer>
+
+<script>
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>60)},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
