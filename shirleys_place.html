@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirley's Place — Guest House with a View · Brackenfell, Cape Town</title>
+<meta name="description" content="Six comfortable rooms on an elevated Brackenfell hillside — indoor pool, braai, sweeping Table Mountain & winelands views, a proper breakfast and secure parking. Midway between the airport and Stellenbosch. Book direct.">
+<meta property="og:title" content="Shirley's Place — Guest House with a View, Brackenfell">
+<meta property="og:description" content="More than just a B&B — indoor pool, panoramic views, home-cooked breakfast, safe parking. 30km from the airport, midway to the winelands. Book direct.">
+<meta property="og:image" content="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA603c37cc133aea0e84eb682a8ff89767df43d364881b5ac95571d28b39f7fe6a54c12caf21f05fb2e6b0c19b1746d5049535">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#182a34;
+  --night-2:#213a46;
+  --teal:#2c7a72;
+  --teal-bright:#43a89c;
+  --sun:#e5a13c;
+  --sun-soft:#f0b862;
+  --clay:#d1795a;
+  --paper:#fbf7f0;
+  --paper-2:#f2ebdf;
+  --cloud:#ffffff;
+  --text:#2f3b3f;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--text);line-height:1.72;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.13}
+.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
+
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--teal);color:var(--cloud);text-align:center;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px}
+.ribbon a{text-decoration:underline}
+
+nav{position:fixed;top:31px;left:0;right:0;z-index:50;background:rgba(251,247,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(44,122,114,.15)}
+.nav-in{max-width:1150px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.4rem;color:var(--night);font-weight:600}
+.logo em{color:var(--clay);font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.84rem;letter-spacing:.03em}
+.nav-links a{color:var(--night);opacity:.78;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--teal)}
+.nav-cta{background:var(--clay);color:var(--cloud)!important;padding:9px 20px;border-radius:40px;opacity:1!important;transition:.25s}
+.nav-cta:hover{background:#c06848;transform:translateY(-1px)}
+.burger{display:none;background:none;border:none;color:var(--night);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 24px 20px;background:var(--paper);border-bottom:1px solid rgba(44,122,114,.15)}
+.mobile-menu a{padding:11px 0;font-size:.95rem;color:var(--night);border-bottom:1px solid rgba(44,122,114,.1)}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:150px 0 82px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA75515422af60f1f5da7aeb958424ec126c16fecc9b8b9d5b355822f76bb6ac12f9dce15d438f42e4d5ed343663ff035765d1?w=1800&fit=max') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,42,52,.5) 0%,rgba(24,42,52,.2) 36%,rgba(24,42,52,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;color:var(--paper)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sun-soft);margin-bottom:20px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--sun)}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.4rem);max-width:15ch;color:var(--cloud);font-weight:500}
+.hero h1 em{font-style:italic;color:var(--sun-soft)}
+.hero p.lede{max-width:52ch;margin:22px 0 36px;font-size:1.12rem;color:rgba(251,247,240,.9)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 32px;font-size:.84rem;letter-spacing:.03em;font-weight:500;border-radius:44px;transition:.25s}
+.btn-solid{background:var(--clay);color:var(--cloud)}
+.btn-solid:hover{background:#c06848;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(251,247,240,.6);color:var(--cloud)}
+.btn-ghost:hover{background:rgba(251,247,240,.12);border-color:var(--cloud)}
+
+/* quick facts */
+.facts{background:var(--night);color:var(--paper)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.fact{padding:32px 18px;text-align:center;position:relative}
+.fact+.fact::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:1px;background:rgba(251,247,240,.16)}
+.fact b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--sun-soft);font-weight:500}
+.fact span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,247,240,.75)}
+
+section{padding:104px 0}
+.kicker{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:14px;font-weight:600}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--night);margin-bottom:22px;font-weight:500}
+h2 em{font-style:italic;color:var(--clay)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two-col p{margin-bottom:16px}
+.frame{position:relative}
+.frame img{width:100%;height:540px;object-fit:cover;border-radius:8px}
+.frame .badge{position:absolute;bottom:22px;left:22px;background:var(--cloud);color:var(--night);padding:12px 20px;border-radius:44px;font-size:.8rem;font-weight:500;box-shadow:0 12px 32px rgba(24,42,52,.2)}
+.frame .badge b{color:var(--clay)}
+
+/* features */
+.features{background:var(--paper-2)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.feat{background:var(--cloud);padding:34px 28px;border-radius:10px;box-shadow:0 10px 30px rgba(24,42,52,.06)}
+.feat .ic{width:44px;height:44px;border-radius:12px;background:var(--teal);color:var(--cloud);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-family:var(--serif);font-size:1.3rem}
+.feat b{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--night);margin-bottom:6px}
+.feat span{font-size:.94rem;color:var(--text);opacity:.85}
+
+/* pool feature */
+.pool{background:var(--night);color:var(--paper)}
+.pool h2{color:var(--cloud)}.pool h2 em{color:var(--sun-soft)}
+.pool .kicker{color:var(--teal-bright)}
+.pool .two-col p{color:rgba(251,247,240,.86)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;border-radius:8px;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.07)}
+.g-wide{grid-column:span 2}.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cloud);background:linear-gradient(transparent,rgba(24,42,52,.85));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* location */
+.loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.loc-cell{border-left:2px solid var(--sun);padding:6px 0 6px 22px}
+.loc-cell b{display:block;font-family:var(--serif);font-size:1.4rem;color:var(--night)}
+.loc-cell span{font-size:.94rem;color:var(--text);opacity:.85}
+
+/* reviews */
+.reviews{background:var(--paper-2)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review{background:var(--cloud);padding:34px;border-radius:10px}
+.review .stars{color:var(--sun);letter-spacing:3px;margin-bottom:12px}
+.review p{font-family:var(--serif);font-size:1.24rem;font-style:italic;color:var(--night);margin-bottom:16px;line-height:1.38}
+.review cite{font-style:normal;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+
+/* book */
+.book{background:var(--night);color:var(--paper);text-align:center}
+.book h2{color:var(--cloud)}.book h2 em{color:var(--sun-soft)}
+.book>.wrap>p{max-width:54ch;margin:0 auto 36px;color:rgba(251,247,240,.85)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;text-align:left}
+.contact-cell{border:1px solid rgba(251,247,240,.2);border-radius:10px;padding:30px}
+.contact-cell b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sun-soft);margin-bottom:9px;font-weight:600}
+.contact-cell a{font-family:var(--serif);font-size:1.24rem;color:var(--cloud)}
+.contact-cell a:hover{color:var(--sun-soft)}
+.contact-cell small{display:block;margin-top:6px;color:rgba(251,247,240,.72);font-size:.82rem}
+
+footer{background:var(--night-2);color:rgba(251,247,240,.75);padding:44px 0;text-align:center;font-size:.82rem}
+footer .logo{color:var(--cloud);margin-bottom:10px}
+footer a{color:var(--sun-soft)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .two-col{grid-template-columns:1fr;gap:42px}
+  .frame img{height:400px}
+  .feat-grid,.review-grid,.loc-grid,.contact-grid{grid-template-columns:1fr}
+  .facts .wrap{grid-template-columns:repeat(2,1fr)}
+  .fact+.fact::before{display:none}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  section{padding:78px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the guest house's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Shirley's <em>Place</em></div>
+    <div class="nav-links">
+      <a href="#about">The House</a>
+      <a href="#features">Comforts</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#book" class="nav-cta">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about">The House</a>
+    <a href="#features">Comforts</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Brackenfell · Cape Town</span>
+    <h1 class="rv rv-d1">More than just a bed for the night.</h1>
+    <p class="lede rv rv-d2">Six comfortable rooms high on a Brackenfell hillside, with an indoor pool, a braai under the stars, and a view clear across the Cape Flats to Table Mountain. Midway between the airport and the winelands — a proper home base.</p>
+    <div class="btn-row rv rv-d3">
+      <a class="btn btn-solid" href="https://wa.me/27836354274?text=Hi%20Shirley%2C%20I%27d%20like%20to%20book%20a%20room%20at%20Shirley%27s%20Place" target="_blank" rel="noopener">Book direct on WhatsApp</a>
+      <a class="btn btn-ghost" href="#features">See what's inside</a>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact rv"><b>6</b><span>Rooms · sleeps 12</span></div>
+    <div class="fact rv rv-d1"><b>4.6★</b><span>From 130+ guests</span></div>
+    <div class="fact rv rv-d2"><b>~30 km</b><span>From the airport</span></div>
+    <div class="fact rv rv-d3"><b>Indoor</b><span>Heated-comfort pool</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The House</span>
+      <h2>Shirley's <em>place,</em> and she'll make it yours</h2>
+      <p>Set high in Protea Heights, Shirley's Place has been a home-from-home for travellers for years — the kind of spot where the host knows your name, breakfast is worth waking for, and a woman travelling alone tells you she felt completely safe.</p>
+      <p>Six rooms, en-suite and traveller options, all with tea &amp; coffee, TV and heaters. An indoor pool for any weather, a braai for the evenings, secure parking behind the gate, and even an airport shuttle if you need one.</p>
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn-solid" href="#book">Check availability</a>
+      </div>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA603c37cc133aea0e84eb682a8ff89767df43d364881b5ac95571d28b39f7fe6a54c12caf21f05fb2e6b0c19b1746d5049535?w=1000&fit=max" alt="The covered balcony braai with panoramic views" loading="lazy">
+      <div class="badge">Protea Heights · <b>views to Table Mountain</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="wrap">
+    <span class="kicker rv">The Comforts</span>
+    <h2 class="rv">Everything a <em>good stay</em> needs</h2>
+    <div class="feat-grid">
+      <div class="feat rv"><div class="ic">✽</div><b>Indoor Pool</b><span>A covered pool you can swim whatever the Cape weather's doing — with a jacuzzi and sauna on request.</span></div>
+      <div class="feat rv rv-d1"><div class="ic">◈</div><b>The View</b><span>Elevated hillside position with sweeping views over the Cape Flats to Table Mountain and the winelands.</span></div>
+      <div class="feat rv rv-d2"><div class="ic">▤</div><b>Braai &amp; Deck</b><span>A covered balcony braai and terrace made for long Cape evenings under the stars.</span></div>
+      <div class="feat rv"><div class="ic">✦</div><b>Real Breakfast</b><span>A generous cooked breakfast, served fresh each morning and included in your stay.</span></div>
+      <div class="feat rv rv-d1"><div class="ic">⌂</div><b>Secure Parking</b><span>Free, safe off-street parking behind the gate — plus an airport &amp; winelands shuttle on request.</span></div>
+      <div class="feat rv rv-d2"><div class="ic">✿</div><b>Pet Friendly</b><span>Well-behaved pets welcome — so the whole family can come along for the trip.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="pool" class="pool">
+  <div class="wrap two-col">
+    <div class="frame rv">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA49cc970fdda00906e32d7d44ff2609a4a68cd81d800d9f5088c0c8f1d98b640da1ad8fb22c7508f40bc8b5131ea3f6f9339c?w=1000&fit=max" alt="The indoor pool with poolside seating and a view" loading="lazy">
+    </div>
+    <div class="rv rv-d1">
+      <span class="kicker">Swim Any Day</span>
+      <h2>An indoor pool with a <em>view</em> to match</h2>
+      <p>Most Brackenfell guesthouses can't offer this: a light-filled indoor pool you can use in any season, plants and poolside seating, and the winelands framed through the glass. Add the jacuzzi and sauna on request and it's a small resort of your own.</p>
+      <p>Come back from a day in the vineyards, swim, braai, and watch the city lights come on across the valley.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">Gallery</span>
+    <h2 class="rv">A look <em>around</em></h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA54e2e664419c43d6711213e9c94b974c2ac66a83ccd9c76867021dd2dd7f0253e252e5472791469c6dadfccb300187cb0492?w=1200&fit=max" alt="The rooftop terrace with a sweeping valley view" loading="lazy"><span class="cap">The terrace view</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAf199ffe822b2bbb8083e1a7a7df5bb894825ace17d0f48c03444e2232461b0757de5a3f76242a232bce9c777f5f00d0df1a8?w=800&fit=crop&h=600" alt="A guest bedroom" loading="lazy"><span class="cap">A guest room</span></a>
+      <a class="rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA66a9bab0c3cb19726bb40000d42352af206a717b8c6ff840ca7f96fbc5de4bac72715042a23d2202b13ba42a3d3cfdcc7c31?w=800&fit=crop&h=600" alt="The indoor pool" loading="lazy"><span class="cap">Indoor pool</span></a>
+      <a class="rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA24ecf9c3abd1ce904b945d78bfeb267491bdfd62b2245395ec3e7688bdffb4d8063fa551515146431551565d444e2097a065?w=800&fit=crop&h=600" alt="The self-catering kitchen" loading="lazy"><span class="cap">The kitchen</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA646cf1a6b79b7ce77c648b5d89b2553e67ff20c23ada1cf2982bed5ff3f6dd9e234c399a59f11fafb820ede5625d847adb3c?w=800&fit=crop&h=600" alt="The exterior of the guest house" loading="lazy"><span class="cap">The house</span></a>
+      <a class="g-wide rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA75515422af60f1f5da7aeb958424ec126c16fecc9b8b9d5b355822f76bb6ac12f9dce15d438f42e4d5ed343663ff035765d1?w=1200&fit=max" alt="Night city-lights panorama from the balcony" loading="lazy"><span class="cap">City lights, after dark</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap">
+    <span class="kicker rv">The Location</span>
+    <h2 class="rv">Perfectly placed, <em>whatever</em> brings you here</h2>
+    <p class="rv" style="max-width:58ch">Midway between Cape Town and the Stellenbosch winelands, with easy N1 and R300 access — ideal for a stopover, a work trip, or a base for exploring the Cape.</p>
+    <div class="loc-grid">
+      <div class="loc-cell rv"><b>~30 km</b><span>To Cape Town International Airport — with a shuttle on request.</span></div>
+      <div class="loc-cell rv rv-d1"><b>~3 km</b><span>To the start of the wine route; two golf courses within 7 km.</span></div>
+      <div class="loc-cell rv rv-d2"><b>~25 km</b><span>To Stellenbosch and to the V&amp;A Waterfront — the whole Cape within reach.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <span class="kicker rv">Guest Words</span>
+    <h2 class="rv">What guests <em>say</em></h2>
+    <div class="review-grid">
+      <div class="review rv">
+        <div class="stars">★★★★★</div>
+        <p>You feel right at home here. Lovely view and delicious breakfast.</p>
+        <cite>Louisa M · July 2026</cite>
+      </div>
+      <div class="review rv rv-d1">
+        <div class="stars">★★★★★</div>
+        <p>As a woman staying alone, I felt so cared for and safe. The owner was so friendly and kind.</p>
+        <cite>Althea K · June 2026</cite>
+      </div>
+      <div class="review rv rv-d2">
+        <div class="stars">★★★★★</div>
+        <p>Excellent accommodation. I enjoy being at home there — I recommend it to friends.</p>
+        <cite>Francis V · May 2026</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <span class="kicker rv" style="color:var(--sun-soft)">Book Direct</span>
+    <h2 class="rv">Book straight with <em>Shirley</em></h2>
+    <p class="rv rv-d1">Message us to check dates — booking direct means you deal with Shirley and Adriaan, not a call centre, and no platform takes a commission out of your stay. Breakfast included; airport shuttle on request.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://wa.me/27836354274?text=Hi%20Shirley%2C%20I%27d%20like%20to%20check%20availability%20at%20Shirley%27s%20Place" target="_blank" rel="noopener">Check availability on WhatsApp</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>WhatsApp / Call</b><a href="https://wa.me/27836354274" target="_blank" rel="noopener">083 635 4274</a><small>Shirley — or Adriaan 083 626 1109</small></div>
+      <div class="contact-cell rv rv-d1"><b>Email</b><a href="mailto:shirleyvanreenen@gmail.com">shirleyvanreenen@gmail.com</a><small>or call the landline 021 982 0802</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=86+Keurboom+Street,+Protea+Heights,+Brackenfell" target="_blank" rel="noopener">86 Keurboom St, Protea Heights</a><small>Brackenfell · easy N1 / R300 access</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Shirley's <em style="color:var(--sun-soft);font-style:italic">Place</em></div>
+  <p>Guest House · 86 Keurboom Street, Protea Heights, Brackenfell 7560</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
