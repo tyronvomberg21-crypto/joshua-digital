@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oude Wellington Estate — Wine &amp; Brandy Estate, Restaurant &amp; 4-Star Guest House · Wellington, Cape Winelands</title>
+<meta name="description" content="Sleep on a c.1790 Cape Dutch wine &amp; brandy estate on Bainskloof Road, Wellington. 4-star rooms, a restaurant inside the working 1795 distillery, estate brandy tastings, spa &amp; pool. Book direct, commission-free.">
+<meta property="og:title" content="Oude Wellington Estate — Wine &amp; Brandy Estate, Wellington">
+<meta property="og:description" content="A c.1790 Cape Dutch homestead, a restaurant inside a working 1795 brandy distillery, and 4-star rooms under thatch. Book direct.">
+<meta property="og:image" content="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA807cd147af810070a315ef875265772d9803cc78023e012795fcb83b4367a3f363db6082cf3dbdec8b6e68ca7054b38cdeff?w=1200&auto=format">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oak:#1c120c;
+  --oak-2:#26180f;
+  --oak-3:#332015;
+  --copper:#c47b45;
+  --copper-bright:#e09a5e;
+  --parchment:#f3e8d4;
+  --parchment-dim:#cfbea1;
+  --line:rgba(196,123,69,.28);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Work Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--oak);color:var(--parchment);line-height:1.7;font-weight:300;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* concept ribbon */
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--copper);color:var(--oak);text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:7px 12px}
+.ribbon a{text-decoration:underline}
+
+/* nav */
+nav{position:fixed;top:31px;left:0;right:0;z-index:50;background:rgba(28,18,12,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.25rem;letter-spacing:.02em}
+.logo span{color:var(--copper-bright);font-style:italic}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{opacity:.85;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--copper-bright)}
+.nav-cta{border:1px solid var(--copper);padding:9px 20px;color:var(--copper-bright)!important;transition:.25s}
+.nav-cta:hover{background:var(--copper);color:var(--oak)!important}
+.burger{display:none;background:none;border:none;color:var(--parchment);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 24px 22px;background:rgba(28,18,12,.97);border-bottom:1px solid var(--line)}
+.mobile-menu a{padding:10px 0;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(196,123,69,.12)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 90px}
+.hero-bg{position:absolute;inset:0;background:url('https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA807cd147af810070a315ef875265772d9803cc78023e012795fcb83b4367a3f363db6082cf3dbdec8b6e68ca7054b38cdeff?w=1800&auto=format&q=68') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,18,12,.55) 0%,rgba(28,18,12,.15) 40%,rgba(28,18,12,.92) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.est{display:inline-flex;align-items:center;gap:14px;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--copper-bright);margin-bottom:22px}
+.est::before,.est::after{content:"";width:44px;height:1px;background:var(--copper)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--copper-bright)}
+.hero p.lede{max-width:52ch;margin:26px 0 38px;font-size:1.08rem;color:var(--parchment-dim)}
+.btn-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;transition:.25s}
+.btn-solid{background:var(--copper);color:var(--oak)}
+.btn-solid:hover{background:var(--copper-bright);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(243,232,212,.5);color:var(--parchment)}
+.btn-ghost:hover{border-color:var(--copper-bright);color:var(--copper-bright)}
+
+/* stat strip */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--oak-2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.stat{padding:34px 18px;text-align:center;position:relative}
+.stat+.stat::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:1px;background:var(--line)}
+.stat b{display:block;font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--copper-bright)}
+.stat span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--parchment-dim)}
+
+/* sections */
+section{padding:110px 0}
+.kicker{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--copper-bright);display:block;margin-bottom:16px}
+h2{font-size:clamp(2rem,4.2vw,3.2rem);margin-bottom:24px}
+h2 em{font-style:italic;color:var(--copper-bright)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.two-col p{color:var(--parchment-dim);margin-bottom:18px}
+.frame{position:relative}
+.frame img{width:100%;height:560px;object-fit:cover}
+.frame::after{content:"";position:absolute;inset:18px;border:1px solid rgba(243,232,212,.35);pointer-events:none}
+.frame .tag{position:absolute;bottom:-16px;left:34px;background:var(--copper);color:var(--oak);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:9px 18px;z-index:2}
+
+/* distillery feature */
+.distillery{background:var(--oak-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.distillery::before{content:"1795";position:absolute;right:-40px;top:20px;font-family:var(--serif);font-size:clamp(10rem,24vw,20rem);color:rgba(196,123,69,.07);line-height:1;font-style:italic}
+.brandy-note{border-left:2px solid var(--copper);padding:6px 0 6px 24px;margin:26px 0;font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--parchment)}
+
+/* rooms */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.card{background:var(--oak-2);border:1px solid var(--line);transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--copper)}
+.card img{height:250px;width:100%;object-fit:cover}
+.card-body{padding:26px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{font-size:.92rem;color:var(--parchment-dim)}
+.card .amen{margin-top:16px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper-bright)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.06)}
+.g-wide{grid-column:span 2}
+.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:24px 16px 12px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(transparent,rgba(28,18,12,.9));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* reviews */
+.reviews{background:var(--oak-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:50px}
+.review{border:1px solid var(--line);padding:40px;position:relative}
+.review::before{content:"“";position:absolute;top:8px;left:26px;font-family:var(--serif);font-size:4.5rem;color:var(--copper);opacity:.55;line-height:1}
+.review p{font-family:var(--serif);font-size:1.18rem;font-style:italic;margin:18px 0 22px}
+.review cite{font-style:normal;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-bright)}
+
+/* booking */
+.book{text-align:center}
+.book h2{max-width:22ch;margin:0 auto 20px}
+.book p{max-width:56ch;margin:0 auto 40px;color:var(--parchment-dim)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;text-align:left}
+.contact-cell{border:1px solid var(--line);padding:30px}
+.contact-cell b{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-bright);margin-bottom:10px;font-weight:600}
+.contact-cell a{font-family:var(--serif);font-size:1.15rem}
+.contact-cell a:hover{color:var(--copper-bright)}
+.contact-cell small{display:block;margin-top:6px;color:var(--parchment-dim);font-size:.8rem}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:46px 0;text-align:center;font-size:.8rem;color:var(--parchment-dim)}
+footer .logo{margin-bottom:10px}
+footer a{color:var(--copper-bright)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .mobile-menu.open{display:flex}
+  .two-col{grid-template-columns:1fr;gap:44px}
+  .frame img{height:400px}
+  .cards{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat+.stat::before{display:none}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+  .review-grid,.contact-grid{grid-template-columns:1fr}
+  section{padding:80px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the estate's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Oude <span>Wellington</span></div>
+    <div class="nav-links">
+      <a href="#estate">The Estate</a>
+      <a href="#distillery">Brandy &amp; Wine</a>
+      <a href="#rooms">Stay</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#gallery">Gallery</a>
+      <a class="nav-cta" href="https://www.nightsbridge.co.za/bridge/book?bbid=10113" target="_blank" rel="noopener">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#estate">The Estate</a>
+    <a href="#distillery">Brandy &amp; Wine</a>
+    <a href="#rooms">Stay</a>
+    <a href="#restaurant">Restaurant</a>
+    <a href="#gallery">Gallery</a>
+    <a href="https://www.nightsbridge.co.za/bridge/book?bbid=10113" target="_blank" rel="noopener">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="est rv">Wine &amp; Brandy Estate · Est. c. 1790 · Wellington</span>
+    <h1 class="rv rv-d1">Sleep on the estate.<br>Dine in the <em>distillery.</em></h1>
+    <p class="lede rv rv-d2">A Cape Dutch homestead on 31 hectares beneath the Hawequa mountains — working vineyards, an Arabian stud, a copper pot still that's been at it since 1795, and 4-star rooms under thatch. Willkommen. Welkom. Welcome.</p>
+    <div class="btn-row rv rv-d3">
+      <a class="btn btn-solid" href="https://www.nightsbridge.co.za/bridge/book?bbid=10113" target="_blank" rel="noopener">Check availability</a>
+      <a class="btn btn-ghost" href="tel:+27218732262">Call the estate</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat rv"><b>c.1790</b><span>Cape Dutch homestead</span></div>
+    <div class="stat rv rv-d1"><b>31 ha</b><span>Working wine estate</span></div>
+    <div class="stat rv rv-d2"><b>4-star</b><span>TGCSA graded rooms</span></div>
+    <div class="stat rv rv-d3"><b>1795</b><span>Brandy distillery</span></div>
+  </div>
+</div>
+
+<section id="estate">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The Estate</span>
+      <h2>Two centuries of <em>Boland</em> farm life</h2>
+      <p>Oude Wellington sits on Bainskloof Road at the foot of the Hawequa mountains — a genuine working estate, not a themed one. Vines run down to the dam, Arabian horses graze the paddocks, alpacas and parrots keep the gardens company, and the old gabled homestead has been welcoming travellers since the 18th century.</p>
+      <p>Days here are simple: breakfast in the historic farm kitchen, a swim under the oaks, a massage at the in-house spa, pétanque or giant chess on the lawn — and in the evening, the walk down the brick lane to the restaurant, glass in hand.</p>
+      <p>Hosts speak English, Afrikaans, German and Chinese — a rare welcome in four languages.</p>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAd7603d5889869d87d9ccfb037eff9fa2efd220400fe33898659c7eae0e4ed5792efb85721a038cbc26f52f9024a2ed151908?w=1000&auto=format&q=70" alt="The Cape Dutch manor house at twilight" loading="lazy">
+      <span class="tag">Bainskloof Road · Wellington</span>
+    </div>
+  </div>
+</section>
+
+<section id="distillery" class="distillery">
+  <div class="wrap two-col">
+    <div class="frame rv">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAJDg4YTI5NTQwLWVjMmEtNDNjNS04YWMzLTNhMTA2NjRhM2JiMQ?w=1000&auto=format&q=70" alt="The copper pot still in the 1795 distillery" loading="lazy">
+      <span class="tag">The copper pot still · since 1795</span>
+    </div>
+    <div class="rv rv-d1">
+      <span class="kicker">Brandy &amp; Wine</span>
+      <h2>Dr. Schumacher <em>Potstill</em> Brandy</h2>
+      <p>The estate distils its own five-year potstill brandy the Cognac way — copper still, French oak barriques, patience — and it carries the owner's name. Oude Wellington is a member of the SA Brandy Foundation's Brandy Homes route, and tastings happen where the spirit is actually made.</p>
+      <div class="brandy-note">Estate wine and brandy tastings, cellar and distillery tours — book at the homestead.</div>
+      <p>Few places in the Winelands let you taste a brandy ten metres from the still it came off. This is one of them.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap">
+    <span class="kicker rv">Stay</span>
+    <h2 class="rv">Rooms under <em>thatch</em></h2>
+    <p class="rv" style="max-width:60ch;color:var(--parchment-dim)">Five luxury rooms and a family suite in the guest house — plus self-catering cottages for longer, lazier stays. From around R1,540 for two, direct.</p>
+    <div class="cards">
+      <div class="card rv">
+        <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA3f937c27e2a3f44ecd8c24bd2d0a6c637423fda97a36e42fd6bf58f5739a220ac855cd89c7bfc0383ad804b183e453ada643?w=800&auto=format&q=70" alt="Luxury double room with beamed thatch ceiling" loading="lazy">
+        <div class="card-body">
+          <h3>Luxury Rooms</h3>
+          <p>Five doubles/twins under thatch and bamboo ceilings — Victorian claw-foot baths, air-conditioning, smart TV, wine fridge and safe.</p>
+          <div class="amen">4-star · A/C · Claw-foot bath</div>
+        </div>
+      </div>
+      <div class="card rv rv-d1">
+        <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA314df2e20aac306d2ceaa59b73be3955bca30cbea215ed079ca0702d5b3fb8dfdbeb313269be7669a5d7199179b374e6e314?w=800&auto=format&q=70" alt="Victorian claw-foot bath bathroom" loading="lazy">
+        <div class="card-body">
+          <h3>Family Suite</h3>
+          <p>A generous suite in the guest house for travelling families — the same heritage character, room to spread out, and the whole estate as a playground.</p>
+          <div class="amen">Sleeps the family · Garden access</div>
+        </div>
+      </div>
+      <div class="card rv rv-d2">
+        <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8206e206d48144f7340db8294676044c654ad293e0b44a1dc017bb63ad0152b953638c2797ba1546093d489c9986fa343f2a?w=800&auto=format&q=70" alt="Vineyard Cottage at sunset with outdoor fireplace" loading="lazy">
+        <div class="card-body">
+          <h3>Self-Catering Cottages</h3>
+          <p>Four units in the Henhouse and Vineyard Cottage — some with braai and fireplace. The whole estate sleeps 28.</p>
+          <div class="amen">Braai · Fireplace · Longer stays</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="restaurant" class="distillery" style="border-top:1px solid var(--line)">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The Restaurant</span>
+      <h2>Wellington's table, <em>inside</em> the still house</h2>
+      <p>The estate restaurant serves a blackboard bistro menu — country cooking with a South African twist — inside the working 1795 distillery. It ranks among the very best tables in Wellington, and locals guard the Thursday steak special jealously.</p>
+      <p>Lunch and dinner Tuesday to Saturday, and the famous buffet lunch on Sundays. Residents stroll home along the brick lane afterwards; everyone else wishes they could.</p>
+      <div class="btn-row" style="margin-top:30px">
+        <a class="btn btn-ghost" href="tel:+27218732262">Reserve a table · 021 873 2262</a>
+      </div>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA9eba4e958ac8d74765e53ae86b222e6c4b8c412cd20f2aa4381b8d093211c1a1e4db0b3eac809687a61b76b1a33071ef155f?w=1000&auto=format&q=70" alt="The estate dining room with chandelier and antique buffet" loading="lazy">
+      <span class="tag">Tue–Sat lunch &amp; dinner · Sun buffet</span>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">The Gallery</span>
+    <h2 class="rv">Life on the <em>estate</em></h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAffb73ad10e4eb804f579daf538ad73684e7bacffea69a62707f816d11b03859b47229b140717b51ae0f13da05f96ae1f02ad?w=1200&auto=format&q=70" alt="Thatched guest house row along the brick lane" loading="lazy"><span class="cap">The guest house lane</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAbe29f07f38ee4166cf8f60afdee7ceba23bb4d9b030e093ba4f9ce90d00ba716ca43f39f0ed82e34379d554c528c6200a702?w=800&auto=format&q=70" alt="Pool at dusk under the oaks" loading="lazy"><span class="cap">The pool under the oaks</span></a>
+      <a class="rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA1EConxyB2vy1UoOxk7bYNahIhdKEF1CTaH2rv38zmfuW031H5x?w=800&auto=format&q=70" alt="Estate entrance with giant brandy barrel" loading="lazy"><span class="cap">The barrel at the gate</span></a>
+      <a class="rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8aocqjrpgxuGB8hiUv8nI7URcOT9BWeAFKXv0h1T664gUkJ3XR?w=800&auto=format&q=70" alt="Historic farm kitchen with open hearth and copper pots" loading="lazy"><span class="cap">The farm kitchen</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA486a365615ba10d1ba5b1856ac92c882d6f132ffb508632b6e04e1864bfe598f4656c65096ae5878d6324d8d80f829411c29?w=800&auto=format&q=70" alt="Lawn and horse paddock at sunset" loading="lazy"><span class="cap">Paddocks at sunset</span></a>
+      <a class="g-wide rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAe7a6a5f8b760a1a6d85b680e89381437b879308b8c1c4aeda00471ad410d66d0fcc778632ca8ef318faac01ca75d84f137e7?w=1200&auto=format&q=70" alt="Thatched lapa bar with wine-barrel counter at dusk" loading="lazy"><span class="cap">The lapa at dusk</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="kicker rv">Guest Words</span>
+    <h2 class="rv">What guests <em>remember</em></h2>
+    <div class="review-grid">
+      <div class="review rv">
+        <p>Country living… feels like I have stepped back in time. Loved it, the staff were all super friendly.</p>
+        <cite>Evan H · LekkeSlaap, March 2025</cite>
+      </div>
+      <div class="review rv rv-d1">
+        <p>Best food in the Boland.</p>
+        <cite>TripAdvisor diner · restaurant rated 4.3/5, top-3 in Wellington</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <span class="kicker rv">Book Direct</span>
+    <h2 class="rv">Skip the booking sites. <em>Book the farm.</em></h2>
+    <p class="rv rv-d1">Booking direct means the estate keeps what you pay — no platform commission — and you deal with the people who'll actually pour your brandy. Check-in 14:00–18:00.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://www.nightsbridge.co.za/bridge/book?bbid=10113" target="_blank" rel="noopener">Check live availability</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>Call</b><a href="tel:+27218732262">021 873 2262</a><small>Rooms, tastings &amp; restaurant tables</small></div>
+      <div class="contact-cell rv rv-d1"><b>Email</b><a href="mailto:info@kapwein.com">info@kapwein.com</a><small>Enquiries &amp; group bookings</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=Oude+Wellington+Estate,+Bainskloof+Road,+Wellington" target="_blank" rel="noopener">Bainskloof Rd, Wellington</a><small>R301, foot of the Hawequa mountains</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Oude <span>Wellington</span></div>
+  <p>Wine &amp; Brandy Estate · Bainskloof Road, Wellington, Cape Winelands</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
