@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cape Select — Luxury Self-Catering Guest House · Durbanville Wine Valley, Cape Town</title>
+<meta name="description" content="A five-bedroom luxury guest house sleeping ten, with a pool, thatched braai lapa and full country kitchen — in the Durbanville Wine Valley. Perfect for families, wine tours and groups. Book direct.">
+<meta property="og:title" content="Cape Select — Luxury Guest House, Durbanville">
+<meta property="og:description" content="Five bedrooms, sleeps ten, pool + braai lapa in the Durbanville Wine Valley. Book the whole house, direct and commission-free.">
+<meta property="og:image" content="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcfbd38c20f5f28b5d5b27398feb54653ff0d727e96c326decfda69e6638d724199fb43c01ae650cf1da04926eb531dd3d23a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#1a1917;
+  --char-2:#25231f;
+  --char-3:#322f29;
+  --gold:#b08d4f;
+  --gold-bright:#cba869;
+  --stone:#a89b86;
+  --linen:#f4efe6;
+  --linen-2:#e9e0d1;
+  --paper:#fbf8f2;
+  --text:#38352f;
+  --serif:'Marcellus',Georgia,serif;
+  --sans:'Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--text);line-height:1.75;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--char);color:var(--gold-bright);text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;border-bottom:1px solid var(--gold)}
+.ribbon a{color:var(--linen);text-decoration:underline}
+
+nav{position:fixed;top:33px;left:0;right:0;z-index:50;background:rgba(251,248,242,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(176,141,79,.24)}
+.nav-in{max-width:1160px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.35rem;color:var(--char);letter-spacing:.06em}
+.logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.nav-links a{color:var(--char);opacity:.76;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-cta{background:var(--char);color:var(--linen)!important;padding:10px 22px;opacity:1!important;transition:.25s}
+.nav-cta:hover{background:var(--gold);color:var(--char)!important}
+.burger{display:none;background:none;border:none;color:var(--char);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 24px 20px;background:var(--paper);border-bottom:1px solid rgba(176,141,79,.24)}
+.mobile-menu a{padding:11px 0;font-size:.9rem;color:var(--char);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(176,141,79,.14)}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:150px 0 84px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcfbd38c20f5f28b5d5b27398feb54653ff0d727e96c326decfda69e6638d724199fb43c01ae650cf1da04926eb531dd3d23a?w=1800&fit=max') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,25,23,.5) 0%,rgba(26,25,23,.2) 38%,rgba(26,25,23,.92) 100%)}
+.hero .wrap{position:relative;z-index:2;color:var(--linen)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:22px}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.4rem);max-width:15ch;color:#fff;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--gold-bright)}
+.hero p.lede{max-width:52ch;margin:24px 0 36px;font-size:1.1rem;color:rgba(244,239,230,.9)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;transition:.25s}
+.btn-solid{background:var(--gold);color:var(--char)}
+.btn-solid:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(244,239,230,.55);color:var(--linen)}
+.btn-ghost:hover{background:rgba(244,239,230,.1);border-color:var(--linen)}
+
+/* stat strip */
+.stats{background:var(--char);color:var(--linen)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.stat{padding:34px 18px;text-align:center;position:relative}
+.stat+.stat::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:1px;background:rgba(176,141,79,.3)}
+.stat b{display:block;font-family:var(--serif);font-size:2rem;color:var(--gold-bright)}
+.stat span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone)}
+
+section{padding:106px 0}
+.kicker{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--char);margin-bottom:22px}
+h2 em{font-style:normal;color:var(--gold)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.two-col p{margin-bottom:16px}
+.frame{position:relative}
+.frame img{width:100%;height:560px;object-fit:cover}
+.frame::after{content:"";position:absolute;inset:16px;border:1px solid rgba(244,239,230,.5);pointer-events:none}
+.frame .badge{position:absolute;bottom:-16px;left:30px;background:var(--char);color:var(--gold-bright);padding:12px 22px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* whole house */
+.whole{background:var(--char);color:var(--linen)}
+.whole h2{color:#fff}.whole h2 em{color:var(--gold-bright)}
+.whole .kicker{color:var(--gold-bright)}
+.whole .two-col p{color:rgba(244,239,230,.84)}
+.whole .frame::after{border-color:rgba(176,141,79,.5)}
+
+/* rooms */
+.rooms{background:var(--linen)}
+.room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:52px}
+.room{background:var(--paper);overflow:hidden;box-shadow:0 12px 40px rgba(26,25,23,.08);transition:.3s}
+.room:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(26,25,23,.14)}
+.room-img{height:280px;overflow:hidden}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.room:hover .room-img img{transform:scale(1.05)}
+.room-body{padding:28px 30px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.room-body h3{font-size:1.5rem;color:var(--char);margin-bottom:4px}
+.room-body p{font-size:.9rem;color:var(--text);opacity:.8}
+.room-body .tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:5px 11px;white-space:nowrap;margin-top:4px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.07)}
+.g-wide{grid-column:span 2}.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--linen);background:linear-gradient(transparent,rgba(26,25,23,.85));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* valley */
+.valley{background:var(--linen)}
+.tod{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.tod-cell{background:var(--paper);padding:34px 28px;border-top:2px solid var(--gold)}
+.tod-cell b{display:block;font-family:var(--serif);font-size:1.4rem;color:var(--char);margin-bottom:8px}
+.tod-cell span{font-size:.94rem;color:var(--text);opacity:.85}
+
+/* rating band */
+.band{background:var(--char-2);color:var(--linen);text-align:center;padding:70px 24px}
+.band .stars{color:var(--gold-bright);letter-spacing:6px;font-size:1.3rem}
+.band p{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.2rem);margin:14px 0 8px}
+.band span{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+
+/* book */
+.book{background:var(--char);color:var(--linen);text-align:center}
+.book h2{color:#fff}.book h2 em{color:var(--gold-bright)}
+.book>.wrap>p{max-width:54ch;margin:0 auto 36px;color:rgba(244,239,230,.84)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;text-align:left}
+.contact-cell{border:1px solid rgba(176,141,79,.35);padding:30px}
+.contact-cell b{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:10px}
+.contact-cell a{font-family:var(--serif);font-size:1.2rem;color:#fff}
+.contact-cell a:hover{color:var(--gold-bright)}
+.contact-cell small{display:block;margin-top:6px;color:var(--stone);font-size:.82rem}
+
+footer{background:var(--char-2);color:var(--stone);padding:44px 0;text-align:center;font-size:.82rem}
+footer .logo{color:var(--linen);margin-bottom:10px}
+footer a{color:var(--gold-bright)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .two-col{grid-template-columns:1fr;gap:42px}
+  .frame img{height:400px}
+  .room-grid,.tod,.contact-grid{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat+.stat::before{display:none}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  section{padding:78px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the guest house's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Cape <em>Select</em></div>
+    <div class="nav-links">
+      <a href="#about">The House</a>
+      <a href="#whole">Whole House</a>
+      <a href="#rooms">Bedrooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book" class="nav-cta">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about">The House</a>
+    <a href="#whole">Whole House</a>
+    <a href="#rooms">Bedrooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Durbanville Wine Valley · Cape Town</span>
+    <h1 class="rv rv-d1">The whole house is <em>yours.</em></h1>
+    <p class="lede rv rv-d2">A five-bedroom luxury guest house that sleeps ten, with a pool, a thatched braai lapa and a full country kitchen — in the heart of the Durbanville winelands. Made for families, wine tours and getting everyone under one roof.</p>
+    <div class="btn-row rv rv-d3">
+      <a class="btn btn-solid" href="https://wa.me/27842472730?text=Hi%20Christelle%2C%20I%27d%20like%20to%20book%20Cape%20Select" target="_blank" rel="noopener">Book direct on WhatsApp</a>
+      <a class="btn btn-ghost" href="#rooms">See the rooms</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat rv"><b>5</b><span>Bedrooms</span></div>
+    <div class="stat rv rv-d1"><b>10</b><span>Guests</span></div>
+    <div class="stat rv rv-d2"><b>4.9★</b><span>LekkeSlaap rating</span></div>
+    <div class="stat rv rv-d3"><b>Pool</b><span>Lapa &amp; braai</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The House</span>
+      <h2>Space to <em>gather,</em> room to breathe</h2>
+      <p>Cape Select sits on Aandblom Road in the Durbanville Wine Valley — a self-catering guest house built for people who'd rather stay together than scatter across hotel rooms. Five bedrooms, a lounge that opens to a view balcony, and a fully equipped country kitchen at the heart of it all.</p>
+      <p>Outside: a pool, sun loungers, and a thatched lapa with a braai made for long Cape evenings. Secure parking behind the gate, fast Wi-Fi throughout, and the wine route on your doorstep.</p>
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn-solid" href="#book" style="color:var(--char)">Enquire about dates</a>
+      </div>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA014d5e37c2bbda807a313d5374922042907b30ddc3269ccc71ad75bb68fcdf0b1a2e850081475fe0ce294a89c5a0cb5092f5?w=1000&fit=max" alt="The country kitchen with island and chandelier" loading="lazy">
+      <div class="badge">19 Aandblom Rd, Durbanville</div>
+    </div>
+  </div>
+</section>
+
+<section id="whole" class="whole">
+  <div class="wrap two-col">
+    <div class="frame rv">
+      <img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA9f5947ba6c29ea69350b7ebbde6f64b0c46d0595142b3ff3bf284e18ec9566539331350a95d72359c071205600bf2250528a?w=1000&fit=max" alt="The thatched braai lapa at dusk" loading="lazy">
+      <div class="badge" style="background:var(--gold);color:var(--char)">The lapa &amp; braai</div>
+    </div>
+    <div class="rv rv-d1">
+      <span class="kicker">Whole House</span>
+      <h2>Book it for the <em>whole group</em></h2>
+      <p>Wedding party, wine-tour crew, family reunion, corporate weekend — Cape Select takes the lot. Ten guests across five bedrooms, one kitchen big enough to cook for everyone, and a pool-and-lapa setup made for the evening after.</p>
+      <p>Everyone in one place, no hotel corridors, no splitting the bill five ways. Just the whole house, yours for the stay.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" class="rooms">
+  <div class="wrap">
+    <span class="kicker rv">The Bedrooms</span>
+    <h2 class="rv">Five rooms, all <em>en-suite</em></h2>
+    <p class="rv" style="max-width:56ch">From kings to twins — space for couples, friends and families alike. From R1,400 a night for two; the whole house for larger groups.</p>
+    <div class="room-grid">
+      <div class="room rv">
+        <div class="room-img"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA91d18a2c6d12d4b14a808a323e21782afa96126d4c5219bfe9ef58bdf9049efbfa69d13708c195892a3eea856f202c4dbd6c?w=800&fit=crop&h=560" alt="The King Room" loading="lazy"></div>
+        <div class="room-body"><div><h3>King Room</h3><p>En-suite walk-in shower, ceiling fan, soft olive tones.</p></div><span class="tag">En-suite</span></div>
+      </div>
+      <div class="room rv rv-d1">
+        <div class="room-img"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA23d8eee4dab69770a6d83566a35f368fd9b4c42db11c699619511c7d0c5bb63c37dae7d7753ccdbbd939e0f7ac14c9c73f15?w=800&fit=crop&h=560" alt="The Queen Room" loading="lazy"></div>
+        <div class="room-body"><div><h3>Queen Room</h3><p>Bright and restful, twin bedsides, en-suite bathroom.</p></div><span class="tag">En-suite</span></div>
+      </div>
+      <div class="room rv">
+        <div class="room-img"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA1b7f71e97aed4813e0fadbb2f4de3cbd445f54e23c29f8106e5aca000d6dccf7930ab0dc9ab193e132fdd18ea84631bb4d30?w=800&fit=crop&h=560" alt="Twin Room with patio" loading="lazy"></div>
+        <div class="room-body"><div><h3>Twin · Patio</h3><p>Two singles with their own patio access to the garden.</p></div><span class="tag">En-suite</span></div>
+      </div>
+      <div class="room rv rv-d1">
+        <div class="room-img"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAbf766c032bc5f4d72178e12ba34911c7df5497ca70483815c56e69fd3b53304f2f3b79b468fa370da57be30fa6079de524a1?w=800&fit=crop&h=560" alt="Twin Room" loading="lazy"></div>
+        <div class="room-body"><div><h3>Twin Room</h3><p>Two singles with warm terracotta accents, en-suite.</p></div><span class="tag">En-suite</span></div>
+      </div>
+    </div>
+    <p class="rv" style="text-align:center;margin-top:36px;font-size:.92rem;color:var(--gold)">Plus a fifth bedroom with its own private bathroom — sleeps ten in all.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">Gallery</span>
+    <h2 class="rv">Around the <em>house</em></h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA37a2d4f54b34fc51fca5a2ca88d39c4113e535f6f9ad672a2611ed68d16332a43b5b789e37733b342220a3005a78c03dee21?w=1200&fit=max" alt="The pool and lapa by day" loading="lazy"><span class="cap">The pool &amp; lapa</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA51f3a4af192aee4257b202b6fdc0e5c0ac54d7b296f4467c1f0badae4d3f2b70886a3ecd491f3ae8878b654af4987105844c?w=800&fit=crop&h=420" alt="The lounge" loading="lazy"><span class="cap">The lounge</span></a>
+      <a class="rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA998db64fa1903c71797b116e99d988bc04efe515974c8ccb3930b8500522754d823ca2d5b299826c8ae2466aa16bb0709140?w=800&fit=crop&h=420" alt="The house exterior and veranda" loading="lazy"><span class="cap">The veranda</span></a>
+      <a class="rv"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA5d337f5ead11789c118fd4dfbbf7c31df00131d0fc5dadedfaec4a3807c03f74359d93b8d8c1457dec65b214e5db62cf58cb?w=800&fit=crop&h=420" alt="Poolside loungers" loading="lazy"><span class="cap">Poolside</span></a>
+      <a class="rv rv-d1"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA014d5e37c2bbda807a313d5374922042907b30ddc3269ccc71ad75bb68fcdf0b1a2e850081475fe0ce294a89c5a0cb5092f5?w=800&fit=crop&h=420" alt="The kitchen" loading="lazy"><span class="cap">The kitchen</span></a>
+      <a class="g-wide rv rv-d2"><img src="https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAAcfbd38c20f5f28b5d5b27398feb54653ff0d727e96c326decfda69e6638d724199fb43c01ae650cf1da04926eb531dd3d23a?w=1200&fit=max" alt="The pool at night" loading="lazy"><span class="cap">The pool, after dark</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="valley" class="valley">
+  <div class="wrap">
+    <span class="kicker rv">The Valley</span>
+    <h2 class="rv">Cape Town's <em>wine country,</em> minutes away</h2>
+    <p class="rv" style="max-width:58ch">Durbanville is the city's closest wine route — a scatter of cellars in the hills, twenty minutes from town and the airport, an easy base for exploring the whole Cape.</p>
+    <div class="tod">
+      <div class="tod-cell rv"><b>The Wine Route</b><span>Durbanville Hills, Meerendal, Nitida and more — tastings and long lunches a short drive from the door.</span></div>
+      <div class="tod-cell rv rv-d1"><b>City &amp; Airport</b><span>About 20 minutes to Cape Town International and the northern suburbs' shops and restaurants.</span></div>
+      <div class="tod-cell rv rv-d2"><b>Made for Groups</b><span>Weddings, reunions and wine weekends — a whole house that keeps everyone together.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="stars">★★★★★</div>
+  <p>"An excellent location."</p>
+  <span>Rated 4.9 out of 5 by guests on LekkeSlaap</span>
+</div>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <span class="kicker rv" style="color:var(--gold-bright)">Book Direct</span>
+    <h2 class="rv">Book straight with <em>Christelle</em></h2>
+    <p class="rv rv-d1">Message us to check dates or enquire about the whole house — booking direct means you deal with your host, not a call centre, and no platform takes a commission out of your stay.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://wa.me/27842472730?text=Hi%20Christelle%2C%20I%27d%20like%20to%20check%20availability%20at%20Cape%20Select" target="_blank" rel="noopener" style="color:var(--char)">Check availability on WhatsApp</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>WhatsApp / Call</b><a href="https://wa.me/27842472730" target="_blank" rel="noopener">084 247 2730</a><small>Christelle — your host</small></div>
+      <div class="contact-cell rv rv-d1"><b>Email</b><a href="mailto:capeselectbnb@gmail.com">capeselectbnb@gmail.com</a><small>Group &amp; whole-house enquiries</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=19+Aandblom+Road,+Durbanville" target="_blank" rel="noopener">19 Aandblom Rd, Durbanville</a><small>Durbanville Wine Valley · 20 min from town</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Cape <em style="color:var(--gold-bright)">Select</em></div>
+  <p>Luxury Self-Catering Guest House · 19 Aandblom Road, Durbanville 7550</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
