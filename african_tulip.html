@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>African Tulip Guest House — Award-Winning Stay in Tulbagh · Cape Winelands</title>
+<meta name="description" content="Four individually styled en-suite rooms, a big garden pool and a breakfast guests rave about — a few minutes' walk from historic Church Street, Tulbagh. National Lilizela award winner. Book direct.">
+<meta property="og:title" content="African Tulip Guest House — Tulbagh">
+<meta property="og:description" content="Award-winning 4-room guest house in the Witzenberg Valley — big pool, celebrated breakfast, walk to Church Street. Book direct, commission-free.">
+<meta property="og:image" content="https://b-cdn.springnest.com/media/img/12c/pool_5.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#233024;
+  --forest-2:#2e3f2f;
+  --sage:#7c8c6b;
+  --sage-deep:#5f7050;
+  --tulip:#e07a2f;
+  --tulip-bright:#f0913f;
+  --blush:#e8b9a0;
+  --cream:#faf6ee;
+  --cream-2:#f1e9da;
+  --paper:#fdfbf6;
+  --text:#3a3d33;
+  --serif:'Gilda Display',Georgia,serif;
+  --sans:'Mulish',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--text);line-height:1.74;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.14}
+.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
+
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--sage-deep);color:var(--cream);text-align:center;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px}
+.ribbon a{text-decoration:underline}
+
+nav{position:fixed;top:31px;left:0;right:0;z-index:50;background:rgba(253,251,246,.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,140,107,.2)}
+.nav-in{max-width:1150px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.35rem;color:var(--forest)}
+.logo em{color:var(--tulip);font-style:normal}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.83rem;letter-spacing:.06em}
+.nav-links a{color:var(--forest);opacity:.78;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--tulip)}
+.nav-cta{background:var(--tulip);color:var(--cream)!important;padding:9px 20px;border-radius:40px;opacity:1!important;transition:.25s}
+.nav-cta:hover{background:var(--tulip-bright)}
+.burger{display:none;background:none;border:none;color:var(--forest);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 24px 20px;background:var(--paper);border-bottom:1px solid rgba(124,140,107,.2)}
+.mobile-menu a{padding:11px 0;font-size:.95rem;color:var(--forest);border-bottom:1px solid rgba(124,140,107,.14)}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:150px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://b-cdn.springnest.com/media/img/12c/pool_5.jpg') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,48,36,.45) 0%,rgba(35,48,36,.12) 36%,rgba(35,48,36,.9) 100%)}
+.hero .wrap{position:relative;z-index:2;color:var(--cream)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--blush);margin-bottom:20px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--tulip)}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.4rem);max-width:15ch;color:#fff}
+.hero h1 em{font-style:normal;color:var(--tulip-bright)}
+.hero p.lede{max-width:52ch;margin:22px 0 34px;font-size:1.12rem;color:rgba(250,246,238,.9)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 32px;font-size:.84rem;letter-spacing:.04em;font-weight:500;border-radius:44px;transition:.25s}
+.btn-solid{background:var(--tulip);color:var(--cream)}
+.btn-solid:hover{background:var(--tulip-bright);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(250,246,238,.6);color:var(--cream)}
+.btn-ghost:hover{background:rgba(250,246,238,.12);border-color:var(--cream)}
+
+/* award strip */
+.award{background:var(--forest);color:var(--cream);text-align:center;padding:28px 24px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+.award .medal{font-size:1.8rem;color:var(--tulip-bright)}
+.award p{font-family:var(--serif);font-size:clamp(1.05rem,2.4vw,1.5rem)}
+.award b{color:var(--tulip-bright)}
+
+section{padding:104px 0}
+.kicker{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-deep);display:block;margin-bottom:14px;font-weight:600}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--forest);margin-bottom:22px}
+h2 em{font-style:normal;color:var(--tulip)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two-col p{margin-bottom:16px}
+.frame{position:relative}
+.frame img{width:100%;height:540px;object-fit:cover;border-radius:6px}
+.frame::after{content:"";position:absolute;inset:14px;border:1px solid rgba(250,246,238,.55);pointer-events:none;border-radius:3px}
+.frame .badge{position:absolute;bottom:-16px;left:28px;background:var(--tulip);color:var(--cream);padding:11px 20px;border-radius:44px;font-size:.78rem;letter-spacing:.05em}
+
+/* rooms */
+.rooms{background:var(--cream)}
+.room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:52px}
+.room{background:var(--paper);border-radius:8px;overflow:hidden;box-shadow:0 12px 38px rgba(35,48,36,.08);transition:.3s}
+.room:hover{transform:translateY(-6px);box-shadow:0 20px 54px rgba(35,48,36,.14)}
+.room-img{height:260px;overflow:hidden}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.room:hover .room-img img{transform:scale(1.06)}
+.room-body{padding:26px 28px}
+.room-body h3{font-size:1.7rem;color:var(--forest);margin-bottom:4px}
+.room-body h3 span{color:var(--tulip);font-size:1.1rem}
+.room-body p{font-size:.94rem;margin-bottom:14px}
+.amen{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.amen li{font-size:.74rem;background:var(--cream-2);color:var(--forest);padding:6px 13px;border-radius:44px}
+
+/* pool feature */
+.pool{background:var(--forest);color:var(--cream)}
+.pool h2{color:#fff}.pool h2 em{color:var(--tulip-bright)}
+.pool .kicker{color:var(--blush)}
+.pool .two-col p{color:rgba(250,246,238,.86)}
+.pool .frame::after{border-color:rgba(224,122,47,.5)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;border-radius:6px;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.07)}
+.g-wide{grid-column:span 2}.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);background:linear-gradient(transparent,rgba(35,48,36,.85));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* valley */
+.valley{background:var(--cream)}
+.tod{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.tod-cell{padding:6px 0 6px 22px;border-left:2px solid var(--tulip)}
+.tod-cell b{display:block;font-family:var(--serif);font-size:1.45rem;color:var(--forest)}
+.tod-cell span{font-size:.94rem;color:var(--text);opacity:.85}
+
+/* reviews */
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review{background:var(--cream);border:1px solid var(--cream-2);padding:32px;border-radius:8px}
+.review .stars{color:var(--tulip);letter-spacing:3px;margin-bottom:12px}
+.review p{font-family:var(--serif);font-size:1.22rem;color:var(--forest);margin-bottom:16px;line-height:1.4}
+.review cite{font-style:normal;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep)}
+
+/* book */
+.book{background:var(--forest);color:var(--cream);text-align:center}
+.book h2{color:#fff}.book h2 em{color:var(--tulip-bright)}
+.book>.wrap>p{max-width:54ch;margin:0 auto 36px;color:rgba(250,246,238,.85)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;text-align:left}
+.contact-cell{border:1px solid rgba(250,246,238,.2);border-radius:8px;padding:30px}
+.contact-cell b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blush);margin-bottom:9px;font-weight:600}
+.contact-cell a{font-family:var(--serif);font-size:1.22rem;color:#fff}
+.contact-cell a:hover{color:var(--tulip-bright)}
+.contact-cell small{display:block;margin-top:6px;color:rgba(250,246,238,.72);font-size:.82rem}
+
+footer{background:var(--forest-2);color:rgba(250,246,238,.75);padding:44px 0;text-align:center;font-size:.82rem}
+footer .logo{color:#fff;margin-bottom:10px}
+footer a{color:var(--tulip-bright)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .two-col{grid-template-columns:1fr;gap:42px}
+  .frame img{height:400px}
+  .room-grid,.review-grid,.tod,.contact-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  section{padding:78px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the guest house's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">African <em>Tulip</em></div>
+    <div class="nav-links">
+      <a href="#about">The House</a>
+      <a href="#rooms">The Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#valley">Tulbagh</a>
+      <a href="#book" class="nav-cta">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about">The House</a>
+    <a href="#rooms">The Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#valley">Tulbagh</a>
+    <a href="#book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Tulbagh · Witzenberg Valley</span>
+    <h1 class="rv rv-d1">The best place to make <em>memories</em> in Tulbagh.</h1>
+    <p class="lede rv rv-d2">Four individually styled en-suite rooms, a big garden pool, and a breakfast guests come back for — a few minutes' walk from historic Church Street, ringed by mountains on three sides.</p>
+    <div class="btn-row rv rv-d2">
+      <a class="btn btn-solid" href="https://wa.me/27818492811?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%20African%20Tulip" target="_blank" rel="noopener">Book direct on WhatsApp</a>
+      <a class="btn btn-ghost" href="#rooms">See the rooms</a>
+    </div>
+  </div>
+</header>
+
+<div class="award">
+  <span class="medal">✦</span>
+  <p><b>National &amp; Western Cape winner</b> — Lilizela 3-Star B&amp;B Tourism Award</p>
+</div>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The House</span>
+      <h2>Owner-run warmth in the <em>Winelands</em></h2>
+      <p>The idea behind African Tulip is a simple one: make yourself at home, and let the Witzenberg Valley do the rest. Elise and Frank have hosted here since 2016 — a Dutch couple who fell for Tulbagh and now run one of its most-loved guest houses, hands-on, every day.</p>
+      <p>Four rooms, each with its own character. A garden and a generous pool to come home to. And a buffet breakfast that turns up again and again in the reviews as the best part of the stay.</p>
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn-solid" href="#rooms">Choose your room</a>
+      </div>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://b-cdn.springnest.com/media/img/12c/breakfast.jpg" alt="The buffet breakfast guests rave about" loading="lazy">
+      <div class="badge">8 Meiring Street, Tulbagh</div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" class="rooms">
+  <div class="wrap">
+    <span class="kicker rv">The Rooms</span>
+    <h2 class="rv">Four rooms, each named for a <em>bloom</em></h2>
+    <p class="rv" style="max-width:56ch">All en-suite and air-conditioned, with pillowtop beds, Egyptian-cotton linen, free Wi-Fi, a wall safe and tea &amp; coffee. From around R1,200 a night for two.</p>
+    <div class="room-grid">
+      <div class="room rv">
+        <div class="room-img"><img src="https://b-cdn.springnest.com/media/img/12c/aloe_3.jpg" alt="The Aloe Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Aloe</h3>
+          <p>A calm, characterful en-suite room to unwind in after a day in the valley.</p>
+          <ul class="amen"><li>En-suite</li><li>Air-con</li><li>Egyptian cotton</li><li>Free WiFi</li><li>Wall safe</li></ul>
+        </div>
+      </div>
+      <div class="room rv rv-d1">
+        <div class="room-img"><img src="https://b-cdn.springnest.com/media/img/12c/lily_5.jpg" alt="The Lily Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Lily</h3>
+          <p>Individually styled and softly lit, with everything you need for a restful stay.</p>
+          <ul class="amen"><li>En-suite</li><li>Air-con</li><li>Pillowtop bed</li><li>Free WiFi</li><li>Tea &amp; coffee</li></ul>
+        </div>
+      </div>
+      <div class="room rv">
+        <div class="room-img"><img src="https://b-cdn.springnest.com/media/img/12c/lavender_2.jpg" alt="The Lavender Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Lavender</h3>
+          <p>Its own quiet corner of the house, en-suite and comfortable throughout.</p>
+          <ul class="amen"><li>En-suite</li><li>Air-con</li><li>Egyptian cotton</li><li>Free WiFi</li><li>Wall safe</li></ul>
+        </div>
+      </div>
+      <div class="room rv rv-d1">
+        <div class="room-img"><img src="https://b-cdn.springnest.com/media/img/12c/plumeria_2.jpg" alt="The Plumeria Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Plumeria</h3>
+          <p>Named for the frangipani in the garden — a warm, welcoming en-suite retreat.</p>
+          <ul class="amen"><li>En-suite</li><li>Air-con</li><li>Pillowtop bed</li><li>Free WiFi</li><li>Tea &amp; coffee</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pool" class="pool">
+  <div class="wrap two-col">
+    <div class="frame rv">
+      <img src="https://b-cdn.springnest.com/media/img/12c/pool_5.jpg" alt="The big garden swimming pool" loading="lazy">
+      <div class="badge">The garden pool</div>
+    </div>
+    <div class="rv rv-d1">
+      <span class="kicker">The Garden</span>
+      <h2>A pool guests keep <em>writing about</em></h2>
+      <p>"Nice big swimming pool." "Massive pool." It comes up in review after review — a proper garden pool to cool off in after a day among the vineyards and mountains, with space to stretch out in the sun.</p>
+      <p>Add the celebrated breakfast and an easy walk to Church Street, and you've the makings of a weekend nobody wants to end.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">Gallery</span>
+    <h2 class="rv">A few <em>glimpses</em></h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="https://b-cdn.springnest.com/media/img/12c/pool_5.jpg" alt="The garden pool" loading="lazy"><span class="cap">The garden pool</span></a>
+      <a class="rv rv-d1"><img src="https://b-cdn.springnest.com/media/img/12c/lily_5.jpg" alt="The Lily Room" loading="lazy"><span class="cap">The Lily Room</span></a>
+      <a class="rv rv-d2"><img src="https://b-cdn.springnest.com/media/img/12c/breakfast.jpg" alt="Breakfast" loading="lazy"><span class="cap">Breakfast</span></a>
+      <a class="rv"><img src="https://b-cdn.springnest.com/media/img/12c/aloe_3.jpg" alt="The Aloe Room" loading="lazy"><span class="cap">The Aloe Room</span></a>
+      <a class="rv rv-d1"><img src="https://b-cdn.springnest.com/media/img/12c/room_2ce11bef.jpg" alt="Frangipani in the garden" loading="lazy"><span class="cap">Frangipani in bloom</span></a>
+      <a class="g-wide rv rv-d2"><img src="https://b-cdn.springnest.com/media/img/12c/lavender_2.jpg" alt="The Lavender Room" loading="lazy"><span class="cap">The Lavender Room</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="valley" class="valley">
+  <div class="wrap two-col" style="margin-bottom:20px">
+    <div class="rv">
+      <span class="kicker">Tulbagh</span>
+      <h2>Walk to <em>Church Street,</em> stay for the valley</h2>
+      <p>African Tulip sits at 8 Meiring Street — a few minutes on foot from Tulbagh's historic Church Street, the longest row of provincial heritage sites in the country, lined with restaurants, wine tasting and galleries.</p>
+      <p>Ninety minutes from Cape Town, wrapped by the Witzenberg mountains on three sides: wine farms, hiking, cycling and clear country nights.</p>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://b-cdn.springnest.com/media/img/12c/p8091154.jpg" alt="Tulbagh in the Witzenberg Valley" loading="lazy">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tod">
+      <div class="tod-cell rv"><b>Church Street</b><span>A short walk to the country's longest street of heritage buildings — restaurants, cafés and galleries.</span></div>
+      <div class="tod-cell rv rv-d1"><b>Wine &amp; Farms</b><span>The Tulbagh wine route on the doorstep — cellars, tastings and long valley lunches.</span></div>
+      <div class="tod-cell rv rv-d2"><b>Mountains</b><span>Hiking and cycling in the Witzenberg range, and some of the darkest, starriest skies in the Cape.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker rv">Guest Words</span>
+    <h2 class="rv">What guests <em>remember</em></h2>
+    <div class="review-grid">
+      <div class="review rv">
+        <div class="stars">★★★★★</div>
+        <p>Better room, great breakfast, great hostess and a massive swimming pool — just a few minutes' walk from Church Street.</p>
+        <cite>TripAdvisor guest</cite>
+      </div>
+      <div class="review rv rv-d1">
+        <div class="stars">★★★★★</div>
+        <p>Very relaxing. The breakfast is the best. Friendly people, very helpful and caring — I will go back.</p>
+        <cite>TripAdvisor guest</cite>
+      </div>
+      <div class="review rv rv-d2">
+        <div class="stars">★★★★★</div>
+        <p>The host is very friendly, the pool is nice and big, and breakfast was very nice. Awesome place — 10/10.</p>
+        <cite>TripAdvisor guest</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <span class="kicker rv" style="color:var(--blush)">Book Direct</span>
+    <h2 class="rv">Book straight with <em>Elise &amp; Frank</em></h2>
+    <p class="rv rv-d1">Message us to check dates — booking direct means you deal with your hosts, not a call centre, and no platform takes a commission out of your stay.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://wa.me/27818492811?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20at%20African%20Tulip" target="_blank" rel="noopener">Check availability on WhatsApp</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>WhatsApp / Call</b><a href="https://wa.me/27818492811" target="_blank" rel="noopener">081 849 2811</a><small>Elise &amp; Frank — your hosts</small></div>
+      <div class="contact-cell rv rv-d1"><b>Facebook</b><a href="https://facebook.com/africantulipgh" target="_blank" rel="noopener">/africantulipgh</a><small>Message us anytime</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=8+Meiring+Street,+Tulbagh" target="_blank" rel="noopener">8 Meiring St, Tulbagh</a><small>Walk to Church Street · 90 min from Cape Town</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">African <em style="color:var(--tulip-bright)">Tulip</em></div>
+  <p>Guest House · 8 Meiring Street, Tulbagh, Witzenberg Valley 6820</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
