@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalk Bay Guest House — Sea-View Suites Above the Harbour · Kalk Bay, Cape Town</title>
+<meta name="description" content="Owner-run sea-view suites with private balconies over the pool onto False Bay, in Kalk Bay — the working fishing village Forbes called one of the coolest neighbourhoods on earth. Book direct.">
+<meta property="og:title" content="Kalk Bay Guest House — Sea-View Suites, Kalk Bay">
+<meta property="og:description" content="Private balconies over the pool onto False Bay, a short walk from the harbour and the fish market. Owner-run. Book direct.">
+<meta property="og:image" content="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-View-Highlight.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e2a35;
+  --deep:#12363f;
+  --sea:#2f7d8c;
+  --sea-bright:#4ba3b3;
+  --coral:#e9694a;
+  --coral-soft:#f2896f;
+  --sand:#f6efe4;
+  --sand-2:#efe4d2;
+  --cream:#fdfaf4;
+  --text:#233c43;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'Outfit',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.72;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--coral);color:#fff;text-align:center;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500;padding:7px 12px}
+.ribbon a{text-decoration:underline}
+
+nav{position:fixed;top:31px;left:0;right:0;z-index:50;background:rgba(253,250,244,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(47,125,140,.15)}
+.nav-in{max-width:1160px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.28rem;color:var(--ink);letter-spacing:.01em}
+.logo em{color:var(--coral);font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:.85rem;letter-spacing:.04em}
+.nav-links a{color:var(--ink);opacity:.8;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--sea)}
+.nav-cta{background:var(--coral);color:#fff!important;padding:9px 20px;border-radius:40px;opacity:1!important;transition:.25s}
+.nav-cta:hover{background:var(--coral-soft);transform:translateY(-1px)}
+.burger{display:none;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 24px 20px;background:var(--cream);border-bottom:1px solid rgba(47,125,140,.15)}
+.mobile-menu a{padding:11px 0;font-size:.95rem;color:var(--ink);border-bottom:1px solid rgba(47,125,140,.1)}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:150px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-View-Highlight.jpg') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,53,.35) 0%,rgba(14,42,53,.08) 35%,rgba(14,42,53,.85) 100%)}
+.hero .wrap{position:relative;z-index:2;color:var(--cream)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);margin-bottom:20px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--coral)}
+.hero h1{font-size:clamp(2.7rem,6.5vw,5.4rem);max-width:15ch;color:#fff}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero p.lede{max-width:50ch;margin:24px 0 36px;font-size:1.1rem;color:rgba(253,250,244,.9);font-weight:300}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 32px;font-size:.86rem;letter-spacing:.04em;font-weight:500;border-radius:44px;transition:.25s}
+.btn-solid{background:var(--coral);color:#fff}
+.btn-solid:hover{background:var(--coral-soft);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(253,250,244,.6);color:#fff}
+.btn-ghost:hover{background:rgba(253,250,244,.12);border-color:#fff}
+
+/* forbes strip */
+.accolade{background:var(--ink);color:var(--sand);text-align:center;padding:26px 24px;font-family:var(--serif);font-size:clamp(1.05rem,2.4vw,1.5rem);font-style:italic}
+.accolade b{color:var(--coral-soft);font-style:normal}
+
+section{padding:104px 0}
+.kicker{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--sea);display:block;margin-bottom:15px;font-weight:500}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);color:var(--ink);margin-bottom:22px}
+h2 em{font-style:italic;color:var(--coral)}
+.two-col{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.two-col p{margin-bottom:16px}
+.frame{position:relative}
+.frame img{width:100%;height:540px;object-fit:cover;border-radius:6px}
+.frame .badge{position:absolute;bottom:22px;left:22px;background:var(--cream);color:var(--ink);padding:12px 20px;border-radius:44px;font-size:.8rem;font-weight:500;box-shadow:0 10px 30px rgba(14,42,53,.18)}
+.frame .badge b{color:var(--coral)}
+
+/* suites */
+.suites{background:var(--sand)}
+.suite-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:52px}
+.suite{background:var(--cream);border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(14,42,53,.08);transition:.3s}
+.suite:hover{transform:translateY(-6px);box-shadow:0 20px 54px rgba(14,42,53,.14)}
+.suite-img{position:relative;height:320px}
+.suite-img img{width:100%;height:100%;object-fit:cover}
+.suite-price{position:absolute;top:16px;right:16px;background:var(--coral);color:#fff;padding:8px 16px;border-radius:44px;font-size:.82rem;font-weight:600}
+.suite-body{padding:32px}
+.suite-body h3{font-size:1.6rem;color:var(--ink);margin-bottom:8px}
+.suite-body .sleeps{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin-bottom:14px}
+.suite-body p{font-size:.95rem;margin-bottom:18px}
+.amen{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.amen li{font-size:.76rem;background:var(--sand-2);color:var(--deep);padding:6px 13px;border-radius:44px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;border-radius:6px;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.07)}
+.g-wide{grid-column:span 2}
+.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(14,42,53,.85));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* village / things to do */
+.village{background:var(--deep);color:var(--sand)}
+.village h2{color:#fff}
+.village h2 em{color:var(--coral-soft)}
+.village .kicker{color:var(--sea-bright)}
+.village .two-col p{color:rgba(246,239,228,.85)}
+.tod{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;background:rgba(246,239,228,.14)}
+.tod-cell{background:var(--deep);padding:34px 26px}
+.tod-cell b{display:block;font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:8px}
+.tod-cell span{font-size:.92rem;color:rgba(246,239,228,.8)}
+
+/* reviews */
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.review{background:var(--cream);border:1px solid var(--sand-2);border-radius:8px;padding:38px}
+.stars{color:var(--coral);letter-spacing:3px;font-size:.95rem;margin-bottom:14px}
+.review p{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--ink);margin-bottom:18px;line-height:1.4}
+.review cite{font-style:normal;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+
+/* booking */
+.book{background:var(--ink);color:var(--sand);text-align:center}
+.book h2{color:#fff}
+.book h2 em{color:var(--coral-soft)}
+.book>.wrap>p{max-width:54ch;margin:0 auto 38px;color:rgba(246,239,228,.85)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;text-align:left}
+.contact-cell{border:1px solid rgba(246,239,228,.18);border-radius:8px;padding:30px}
+.contact-cell b{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sea-bright);margin-bottom:9px;font-weight:600}
+.contact-cell a{font-family:var(--serif);font-size:1.18rem;color:#fff}
+.contact-cell a:hover{color:var(--coral-soft)}
+.contact-cell small{display:block;margin-top:6px;color:rgba(246,239,228,.7);font-size:.82rem}
+
+footer{background:var(--deep);color:rgba(246,239,228,.75);padding:44px 0;text-align:center;font-size:.82rem}
+footer .logo{color:#fff;margin-bottom:10px}
+footer a{color:var(--coral-soft)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .two-col{grid-template-columns:1fr;gap:40px}
+  .frame img{height:400px}
+  .suite-grid,.review-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .tod{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  section{padding:76px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the guest house's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Kalk Bay <em>Guest House</em></div>
+    <div class="nav-links">
+      <a href="#about">The House</a>
+      <a href="#suites">Suites</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#village">The Village</a>
+      <a href="#book" class="nav-cta">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about">The House</a>
+    <a href="#suites">Suites</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#village">The Village</a>
+    <a href="#book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Kalk Bay · Cape Town</span>
+    <h1 class="rv rv-d1">Wake up to the <em>harbour,</em> the sea, and the sunrise.</h1>
+    <p class="lede rv rv-d2">Owner-run sea-view suites with private balconies over the pool and out across False Bay — a short walk down the hill to the fishing harbour, the fish market and Kalk Bay's famous seafood tables.</p>
+    <div class="btn-row rv rv-d3">
+      <a class="btn btn-solid" href="https://wa.me/27832661453?text=Hi%20Costa%2C%20I%27d%20like%20to%20book%20a%20suite%20at%20Kalk%20Bay%20Guest%20House" target="_blank" rel="noopener">Book direct on WhatsApp</a>
+      <a class="btn btn-ghost" href="#suites">See the suites</a>
+    </div>
+  </div>
+</header>
+
+<div class="accolade">Kalk Bay — <b>"one of the coolest neighbourhoods in the world"</b>, said Forbes. You'll be staying right above it.</div>
+
+<section id="about">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The House</span>
+      <h2>A home with a <em>view,</em> run by the people who live it</h2>
+      <p>Kalk Bay Guest House sits up the hill off Boyes Drive, looking down over its own pool and garden to the working harbour and the whole sweep of False Bay. Costa and Ashleigh host it themselves — the kind of place where the hosts organise your transfers, point you at the right restaurant, and know which mornings the sunrise is worth setting an alarm for.</p>
+      <p>Two private sea-view suites, a pool to come home to, birdsong in the garden, and everything Kalk Bay is famous for a few minutes' walk away. Thirty-five minutes from the city, a world away in feel.</p>
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn-solid" href="#suites">Choose your suite</a>
+      </div>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Pool.jpg" alt="The pool and deck looking out over False Bay" loading="lazy">
+      <div class="badge">Pool &amp; sea views · <b>32 Gatesville Rd, Kalk Bay</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="suites" class="suites">
+  <div class="wrap">
+    <span class="kicker rv">The Suites</span>
+    <h2 class="rv">Two suites, both facing the <em>sea</em></h2>
+    <p class="rv" style="max-width:56ch">Each with a queen bed, en-suite bathroom and a private balcony over the pool onto the bay. Continental breakfast on request.</p>
+    <div class="suite-grid">
+      <div class="suite rv">
+        <div class="suite-img">
+          <img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2021/03/Accommodation-Sea-View-room-Kalkbay-guesthouse.jpg" alt="Sea and Garden Facing Suite" loading="lazy">
+          <span class="suite-price">from R850 / night</span>
+        </div>
+        <div class="suite-body">
+          <h3>Sea &amp; Garden Suite</h3>
+          <div class="sleeps">Sleeps 2 · Queen · En-suite</div>
+          <p>A private balcony overlooking the pool and garden, out onto the sea. Warm, restful, and yours for the stay.</p>
+          <ul class="amen">
+            <li>Private balcony</li><li>Sea view</li><li>Tea &amp; coffee</li><li>Mini fridge</li><li>Smart TV</li><li>Free WiFi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="suite rv rv-d1">
+        <div class="suite-img">
+          <img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Flat.jpg" alt="Sea Facing Self-Catering Suite" loading="lazy">
+          <span class="suite-price">R1,000 / night</span>
+        </div>
+        <div class="suite-body">
+          <h3>Sea-Facing Self-Catering Suite</h3>
+          <div class="sleeps">Sleeps 2 · Queen · Kitchenette · Private entrance</div>
+          <p>The same balcony-and-bay view, plus your own kitchenette and private entrance — settle in and stay a while.</p>
+          <ul class="amen">
+            <li>Kitchenette</li><li>Private entrance</li><li>Private balcony</li><li>Sea view</li><li>Smart TV</li><li>Free WiFi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="rv" style="text-align:center;margin-top:40px;font-size:.92rem;color:var(--sea)">Special rates for longer stays — just ask.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">Gallery</span>
+    <h2 class="rv">The house, the pool, the <em>bay</em></h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2021/03/Accommodation-Sea-View-room-2-Kalkbay-guesthouse.jpg" alt="Sea-view suite interior" loading="lazy"><span class="cap">Sea-view suite</span></a>
+      <a class="rv rv-d1"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Harbour-Boats.jpg" alt="Kalk Bay harbour with fishing boats" loading="lazy"><span class="cap">The working harbour</span></a>
+      <a class="rv rv-d2"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Garden.jpg" alt="The garden" loading="lazy"><span class="cap">The garden</span></a>
+      <a class="rv"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2021/03/Accommodation-Pool-View-room-Kalkbay-guesthouse.jpg" alt="Pool-view room" loading="lazy"><span class="cap">Pool-view room</span></a>
+      <a class="rv rv-d1"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Flat-kitchen.jpg" alt="Self-catering kitchenette" loading="lazy"><span class="cap">The kitchenette</span></a>
+      <a class="g-wide rv rv-d2"><img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-View.jpg" alt="False Bay view from the property" loading="lazy"><span class="cap">False Bay, from your balcony</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="village" class="village">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="kicker">The Village</span>
+      <h2>Everything Kalk Bay is <em>famous</em> for, downhill from your door</h2>
+      <p>A working fishing harbour where the boats still come in with the catch. A fish market on the quay. Antique shops, galleries and coffee spots along Main Road. Tidal pools, the Brass Bell on the rocks, and Boulders' penguins a short drive down the coast.</p>
+      <p>You're not near Kalk Bay. You're in it — above it, with the best seat in the village.</p>
+    </div>
+    <div class="frame rv rv-d1">
+      <img src="https://kalkbayguesthouse.co.za/wp-content/uploads/2019/08/KalkBay-Guesthouse-Kalkys.jpg" alt="Kalky's harbour eatery" loading="lazy">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tod">
+      <div class="tod-cell rv"><b>The Harbour</b><span>Fresh fish off the boats, Kalky's fish &amp; chips on the quay, and the morning bustle of a real working harbour.</span></div>
+      <div class="tod-cell rv rv-d1"><b>Eat &amp; Browse</b><span>Harbour House and the Brass Bell for seafood, antique shops and galleries along Main Road, coffee with a view.</span></div>
+      <div class="tod-cell rv rv-d2"><b>Sea &amp; Coast</b><span>Tidal pools, swims off the rocks, whale-watching in season, and the Boulders penguins just down the coast.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker rv">Guest Words</span>
+    <h2 class="rv">What guests <em>remember</em></h2>
+    <div class="review-grid">
+      <div class="review rv">
+        <div class="stars">★★★★★</div>
+        <p>A beautiful home in an amazing setting, with amazing welcoming hosts. Sounds of the waves and beautiful sunrises — a perfect getaway.</p>
+        <cite>loz20Feb · TripAdvisor</cite>
+      </div>
+      <div class="review rv rv-d1">
+        <div class="stars">★★★★★</div>
+        <p>Great location. I watched the sunrise from my room. Big clean room, nicely furnished, beautiful garden — very friendly and helpful hosts.</p>
+        <cite>siri07717 · TripAdvisor</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <span class="kicker rv" style="color:var(--sea-bright)">Book Direct</span>
+    <h2 class="rv">Book straight with <em>Costa &amp; Ashleigh</em></h2>
+    <p class="rv rv-d1">Booking direct means you deal with the hosts, not a call centre — and no platform takes a commission out of your stay. Message us and we'll hold your dates.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://wa.me/27832661453?text=Hi%20Costa%2C%20I%27d%20like%20to%20check%20availability%20at%20Kalk%20Bay%20Guest%20House" target="_blank" rel="noopener">Check availability on WhatsApp</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>WhatsApp / Call</b><a href="https://wa.me/27832661453" target="_blank" rel="noopener">083 266 1453</a><small>Costa — bookings &amp; questions</small></div>
+      <div class="contact-cell rv rv-d1"><b>Email</b><a href="mailto:costa@kalkbayguesthouse.co.za">costa@kalkbayguesthouse.co.za</a><small>We reply within the day</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=32+Gatesville+Road,+Kalk+Bay,+Cape+Town" target="_blank" rel="noopener">32 Gatesville Rd, Kalk Bay</a><small>35 min from the city · off Boyes Drive</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Kalk Bay <em style="color:var(--coral-soft);font-style:italic">Guest House</em></div>
+  <p>Sea-view suites · 32 Gatesville Road, Kalk Bay, Cape Town 7975</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
