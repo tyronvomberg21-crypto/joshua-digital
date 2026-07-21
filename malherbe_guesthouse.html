@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malherbe Guesthouse — Cape Dutch Heritage Rooms in Montagu · Route 62</title>
+<meta name="description" content="Four en-suite garden rooms behind a National Monument Cape Dutch house (1859) in Montagu, on Route 62. A secret garden, a pool, breakfast under the vines, and true Cape hospitality. Book direct.">
+<meta property="og:title" content="Malherbe Guesthouse — Montagu, Route 62">
+<meta property="og:description" content="Garden rooms behind an 1859 Cape Dutch monument in Montagu — secret garden, pool, breakfast under the vines. Book direct, commission-free.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/malherbe/pool1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2b2822;
+  --ink-2:#38342c;
+  --muscadel:#a8641e;
+  --muscadel-bright:#c47e33;
+  --mountain:#5c6b70;
+  --mountain-deep:#465257;
+  --lime:#f5efe3;
+  --lime-2:#eae0cd;
+  --cream:#fcf9f2;
+  --text:#403b32;
+  --serif:'Prata',Georgia,serif;
+  --sans:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.75;font-weight:300;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.16}
+.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
+
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:var(--muscadel-bright);text-align:center;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:8px 12px}
+.ribbon a{color:var(--lime);text-decoration:underline}
+
+nav{position:fixed;top:33px;left:0;right:0;z-index:50;background:rgba(252,249,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(168,100,30,.2)}
+.nav-in{max-width:1150px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.4rem;color:var(--ink)}
+.logo em{color:var(--muscadel);font-style:italic}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.nav-links a{color:var(--ink);opacity:.76;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--muscadel)}
+.nav-cta{background:var(--muscadel);color:var(--cream)!important;padding:10px 22px;opacity:1!important;transition:.25s}
+.nav-cta:hover{background:var(--muscadel-bright)}
+.burger{display:none;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer}
+.mobile-menu{display:none;flex-direction:column;padding:8px 24px 20px;background:var(--cream);border-bottom:1px solid rgba(168,100,30,.2)}
+.mobile-menu a{padding:11px 0;font-size:.9rem;color:var(--ink);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(168,100,30,.12)}
+.mobile-menu.open{display:flex}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:150px 0 84px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/malherbe/pool1.jpg') center/cover no-repeat}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,40,34,.42) 0%,rgba(43,40,34,.15) 36%,rgba(43,40,34,.9) 100%)}
+.hero .wrap{position:relative;z-index:2;color:var(--lime)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muscadel-bright);margin-bottom:22px}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--muscadel)}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5.2rem);max-width:16ch;color:#fff}
+.hero h1 em{font-style:italic;color:var(--muscadel-bright)}
+.hero p.lede{max-width:52ch;margin:24px 0 36px;font-size:1.1rem;color:rgba(245,239,227,.9)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:.25s}
+.btn-solid{background:var(--muscadel);color:var(--cream)}
+.btn-solid:hover{background:var(--muscadel-bright);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(245,239,227,.55);color:var(--lime)}
+.btn-ghost:hover{background:rgba(245,239,227,.1);border-color:var(--lime)}
+
+/* heritage strip */
+.heritage{background:var(--ink);color:var(--lime);text-align:center;padding:30px 24px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.heritage .yr{font-family:var(--serif);font-size:2.2rem;color:var(--muscadel-bright)}
+.heritage p{font-family:var(--serif);font-size:clamp(1.05rem,2.3vw,1.5rem)}
+
+section{padding:106px 0}
+.kicker{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muscadel);display:block;margin-bottom:16px}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--ink);margin-bottom:22px}
+h2 em{font-style:italic;color:var(--muscadel)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.two-col.portrait{grid-template-columns:0.85fr 1fr}
+.two-col p{margin-bottom:16px}
+.frame{position:relative}
+.frame img{width:100%;height:560px;object-fit:cover}
+.frame.tall img{height:620px}
+.frame::after{content:"";position:absolute;inset:15px;border:1px solid rgba(245,239,227,.5);pointer-events:none}
+.frame .badge{position:absolute;bottom:-16px;left:28px;background:var(--muscadel);color:var(--cream);padding:12px 22px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* garden feature */
+.garden{background:var(--mountain-deep);color:var(--lime)}
+.garden h2{color:#fff}.garden h2 em{color:var(--muscadel-bright)}
+.garden .kicker{color:var(--muscadel-bright)}
+.garden .two-col p{color:rgba(245,239,227,.86)}
+.garden .frame::after{border-color:rgba(168,100,30,.5)}
+
+/* rooms */
+.rooms{background:var(--lime)}
+.room-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:52px}
+.room{background:var(--cream);overflow:hidden;box-shadow:0 14px 42px rgba(43,40,34,.09);transition:.3s}
+.room:hover{transform:translateY(-6px);box-shadow:0 22px 58px rgba(43,40,34,.15)}
+.room-img{height:320px;overflow:hidden}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.room:hover .room-img img{transform:scale(1.05)}
+.room-body{padding:30px 32px}
+.room-body h3{font-size:1.7rem;color:var(--ink);margin-bottom:8px}
+.room-body p{font-size:.94rem;margin-bottom:16px}
+.amen{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.amen li{font-size:.74rem;background:var(--lime-2);color:var(--ink);padding:6px 13px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px;margin-top:50px}
+.gallery a{position:relative;overflow:hidden;display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery a:hover img{transform:scale(1.07)}
+.g-wide{grid-column:span 2}.g-tall{grid-row:span 2}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);background:linear-gradient(transparent,rgba(43,40,34,.85));opacity:0;transition:.35s}
+.gallery a:hover .cap{opacity:1}
+
+/* town */
+.town{background:var(--lime)}
+.tod{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.tod-cell{padding:6px 0 6px 22px;border-left:2px solid var(--muscadel)}
+.tod-cell b{display:block;font-family:var(--serif);font-size:1.4rem;color:var(--ink)}
+.tod-cell span{font-size:.94rem;color:var(--text);opacity:.85}
+
+/* reviews */
+.reviews{background:var(--mountain-deep);color:var(--lime)}
+.reviews h2{color:#fff}.reviews h2 em{color:var(--muscadel-bright)}
+.reviews .kicker{color:var(--muscadel-bright)}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.review{border:1px solid rgba(245,239,227,.22);padding:38px}
+.review .stars{color:var(--muscadel-bright);letter-spacing:3px;margin-bottom:14px}
+.review p{font-family:var(--serif);font-size:1.24rem;font-style:italic;color:#fff;margin-bottom:16px;line-height:1.4}
+.review cite{font-style:normal;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muscadel-bright)}
+
+/* book */
+.book{background:var(--ink);color:var(--lime);text-align:center}
+.book h2{color:#fff}.book h2 em{color:var(--muscadel-bright)}
+.book>.wrap>p{max-width:54ch;margin:0 auto 36px;color:rgba(245,239,227,.84)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px;text-align:left}
+.contact-cell{border:1px solid rgba(168,100,30,.35);padding:30px}
+.contact-cell b{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muscadel-bright);margin-bottom:10px}
+.contact-cell a{font-family:var(--serif);font-size:1.2rem;color:#fff}
+.contact-cell a:hover{color:var(--muscadel-bright)}
+.contact-cell small{display:block;margin-top:6px;color:rgba(245,239,227,.7);font-size:.82rem}
+
+footer{background:var(--ink-2);color:rgba(245,239,227,.7);padding:44px 0;text-align:center;font-size:.82rem}
+footer .logo{color:var(--lime);margin-bottom:10px}
+footer a{color:var(--muscadel-bright)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .two-col,.two-col.portrait{grid-template-columns:1fr;gap:44px}
+  .frame img,.frame.tall img{height:400px}
+  .room-grid,.tod,.review-grid,.contact-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  section{padding:78px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Concept mockup — built free by <a href="https://joshuavomberg.co.za">Joshua.digital</a> · not the guest house's official site</div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Malherbe <em>Guesthouse</em></div>
+    <div class="nav-links">
+      <a href="#about">The House</a>
+      <a href="#garden">The Garden</a>
+      <a href="#rooms">The Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book" class="nav-cta">Book Direct</a>
+    </div>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about">The House</a>
+    <a href="#garden">The Garden</a>
+    <a href="#rooms">The Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#book">Book Direct</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Montagu · Route 62 · Breede River Valley</span>
+    <h1 class="rv rv-d1">A secret garden behind a <em>Cape Dutch</em> monument.</h1>
+    <p class="lede rv rv-d2">Four stylish garden rooms hidden behind an 1859 national-monument house in the heart of Montagu — each with its own entrance and patio, a pool in the secret garden, and breakfast served under the vines.</p>
+    <div class="btn-row rv rv-d2">
+      <a class="btn btn-solid" href="https://wa.me/27725545680?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%20Malherbe%20Guesthouse" target="_blank" rel="noopener">Book direct on WhatsApp</a>
+      <a class="btn btn-ghost" href="#rooms">See the rooms</a>
+    </div>
+  </div>
+</header>
+
+<div class="heritage">
+  <span class="yr">1859</span>
+  <p>A restored Cape Dutch national monument · 4-star graded · on the legendary Route 62</p>
+</div>
+
+<section id="about">
+  <div class="wrap two-col portrait">
+    <div class="rv">
+      <span class="kicker">The House</span>
+      <h2>True Cape hospitality, <em>behind the gable</em></h2>
+      <p>Step through the front doors of Malherbe and the whole valley opens up in front of you. Behind this monumental 1859 Cape Dutch house, Joop and Micky Meijer have made a home for travellers — a secret garden of contemporary rooms, restored with an eye for every detail.</p>
+      <p>A glass of local Montagu Muscadel to welcome you in, a pool tucked among the greenery, and breakfast the next morning under the vines — homemade bread, fruit, and eggs cooked exactly to order (Joop, guests will tell you, is a scrambled-egg expert).</p>
+      <div class="btn-row" style="margin-top:26px">
+        <a class="btn btn-solid" href="#rooms">See the garden rooms</a>
+      </div>
+    </div>
+    <div class="frame tall rv rv-d1">
+      <img src="images/malherbe/entrance.jpg" alt="The Cape Dutch entrance hall looking through to the mountains" loading="lazy">
+      <div class="badge">17 Long Street, Montagu</div>
+    </div>
+  </div>
+</section>
+
+<section id="garden" class="garden">
+  <div class="wrap two-col">
+    <div class="frame rv">
+      <img src="images/malherbe/pool1.jpg" alt="The pool in the secret garden" loading="lazy">
+      <div class="badge" style="background:var(--muscadel)">The secret garden</div>
+    </div>
+    <div class="rv rv-d1">
+      <span class="kicker">The Garden</span>
+      <h2>The garden guests call a <em>small paradise</em></h2>
+      <p>Hidden behind the house is a secluded garden with a pool, shaded seating and the Langeberg mountains rising beyond — the quiet heart of Malherbe. It's where the day winds down and where breakfast is laid out beneath the vines each morning.</p>
+      <p>Peaceful, green, and entirely private — the kind of place people book to come back to.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" class="rooms">
+  <div class="wrap">
+    <span class="kicker rv">The Rooms</span>
+    <h2 class="rv">Four garden rooms, each with a <em>private patio</em></h2>
+    <p class="rv" style="max-width:56ch">All en-suite and air-conditioned, with a private entrance and patio, bar fridge, safe, satellite TV and free Wi-Fi. Garden, pool or mountain views.</p>
+    <div class="room-grid">
+      <div class="room rv">
+        <div class="room-img"><img src="images/malherbe/comfort.jpg" alt="The Comfort Garden Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Comfort Garden Room</h3>
+          <p>A restful, beautifully finished en-suite room opening onto its own patio in the garden.</p>
+          <ul class="amen"><li>En-suite</li><li>Private patio</li><li>Air-con</li><li>Bar fridge</li><li>Safe</li><li>DStv</li></ul>
+        </div>
+      </div>
+      <div class="room rv rv-d1">
+        <div class="room-img"><img src="images/malherbe/deluxe.jpg" alt="The Deluxe Garden Room" loading="lazy"></div>
+        <div class="room-body">
+          <h3>Deluxe Garden Room</h3>
+          <p>More space and a touch more luxury, with doors straight out to the garden and the pool beyond.</p>
+          <ul class="amen"><li>En-suite</li><li>Private patio</li><li>Air-con</li><li>Extra space</li><li>Safe</li><li>DStv</li></ul>
+        </div>
+      </div>
+    </div>
+    <p class="rv" style="text-align:center;margin-top:36px;font-size:.92rem;color:var(--muscadel)">Four garden rooms in all — ask us which suits your stay.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="kicker rv">Gallery</span>
+    <h2 class="rv">A few <em>corners</em> of Malherbe</h2>
+    <div class="gallery">
+      <a class="g-wide g-tall rv"><img src="images/malherbe/deluxe.jpg" alt="The Deluxe Garden Room" loading="lazy"><span class="cap">Deluxe Garden Room</span></a>
+      <a class="rv rv-d1"><img src="images/malherbe/garden1.jpg" alt="Breakfast terrace under the vines" loading="lazy"><span class="cap">Under the vines</span></a>
+      <a class="rv rv-d2"><img src="images/malherbe/gable.jpg" alt="The 1859 gable" loading="lazy"><span class="cap">The 1859 gable</span></a>
+      <a class="rv"><img src="images/malherbe/deluxe_patio.jpg" alt="A private room patio" loading="lazy"><span class="cap">Your own patio</span></a>
+      <a class="rv rv-d1"><img src="images/malherbe/comfort.jpg" alt="The Comfort Garden Room" loading="lazy"><span class="cap">Comfort Garden Room</span></a>
+      <a class="g-wide rv rv-d2"><img src="images/malherbe/pool1.jpg" alt="The pool in the garden" loading="lazy"><span class="cap">The pool</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="town" class="town">
+  <div class="wrap">
+    <span class="kicker rv">Montagu</span>
+    <h2 class="rv">A village of <em>heritage, springs</em> and wine</h2>
+    <p class="rv" style="max-width:58ch">Montagu sits where the Breede River Valley meets Route 62 — a walkable village of 25 heritage houses, ringed by mountains and wineries, with its famous hot springs a few minutes away.</p>
+    <div class="tod">
+      <div class="tod-cell rv"><b>Hot Springs</b><span>The celebrated Montagu mineral hot springs, a short drive from the door — a soak with a mountain view.</span></div>
+      <div class="tod-cell rv rv-d1"><b>Route 62 Wine</b><span>Over 30 wineries within 25 km, plus muscadel and port houses along the world's longest wine route.</span></div>
+      <div class="tod-cell rv rv-d2"><b>Mountains &amp; History</b><span>Hiking trails into the Langeberg, and 25 historical houses to wander in the village itself.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <span class="kicker rv">Guest Words</span>
+    <h2 class="rv">What guests <em>remember</em></h2>
+    <div class="review-grid">
+      <div class="review rv">
+        <div class="stars">★★★★★</div>
+        <p>The garden setting is so peaceful, and our hosts Joop and Micky were so welcoming — a superb breakfast, and nothing was too much trouble.</p>
+        <cite>TripAdvisor guest</cite>
+      </div>
+      <div class="review rv rv-d1">
+        <div class="stars">★★★★★</div>
+        <p>Rooms spotlessly clean and well appointed, a super bathroom, and a garden that's a small paradise. We'll be back.</p>
+        <cite>TripAdvisor guest</cite>
+      </div>
+    </div>
+    <p class="rv" style="text-align:center;margin-top:34px;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muscadel-bright)">Rated 9.6 "Exceptional" on Booking.com · 5/5 on TripAdvisor</p>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <span class="kicker rv" style="color:var(--muscadel-bright)">Book Direct</span>
+    <h2 class="rv">Book straight with <em>Joop &amp; Micky</em></h2>
+    <p class="rv rv-d1">Message or call us to check dates — booking direct means you deal with your hosts, not a call centre, and no platform takes a commission out of your stay.</p>
+    <div class="btn-row rv rv-d2" style="justify-content:center">
+      <a class="btn btn-solid" href="https://wa.me/27725545680?text=Hi%2C%20I%27d%20like%20to%20check%20availability%20at%20Malherbe%20Guesthouse" target="_blank" rel="noopener">Check availability on WhatsApp</a>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cell rv"><b>WhatsApp / Call</b><a href="https://wa.me/27725545680" target="_blank" rel="noopener">072 554 5680</a><small>Joop &amp; Micky — your hosts</small></div>
+      <div class="contact-cell rv rv-d1"><b>Landline</b><a href="tel:+27236143617">023 614 3617</a><small>Reception &amp; enquiries</small></div>
+      <div class="contact-cell rv rv-d2"><b>Find us</b><a href="https://maps.google.com/?q=17+Long+Street,+Montagu" target="_blank" rel="noopener">17 Long St, Montagu</a><small>On Route 62 · Breede River Valley</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Malherbe <em style="color:var(--muscadel-bright);font-style:italic">Guesthouse</em></div>
+  <p>17 Long Street, Montagu, Western Cape · Route 62</p>
+  <p style="margin-top:14px">Concept website by <a href="https://joshuavomberg.co.za">Joshua.digital</a> — direct-booking websites for Cape guesthouses</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.mobile-menu').classList.remove('open')));
+</script>
+</body>
+</html>
