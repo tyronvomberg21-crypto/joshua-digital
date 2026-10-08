@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Checkout — Mac's Spice</title>
+<link rel="stylesheet" href="fonts/macspice-fonts.css">
+<link rel="stylesheet" href="macspice.css">
+</head>
+<body>
+<div class="draft">Mock-up by Joshua Vomberg. Card payment connects to Yoco when the site goes live. Nothing is charged here.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="macs_spice.html"><img src="images/macspice/logo.webp" alt="Mac's Spice"></a>
+    <ul><li><a href="macs_spice.html#range">Back to the range</a></li></ul>
+    <span></span>
+  </div>
+</nav>
+
+<main class="co" id="co">
+  <div class="wrap">
+    <div>
+      <h1>Checkout</h1>
+      <form class="cof" id="f" novalidate>
+        <h2>Your details</h2>
+        <div class="two">
+          <label>First name<input name="first" autocomplete="given-name" required></label>
+          <label>Last name<input name="last" autocomplete="family-name" required></label>
+        </div>
+        <div class="two">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>WhatsApp number<input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+        <h2>Delivery</h2>
+        <div class="radio" id="del">
+          <label><input type="radio" name="del" value="courier" checked> Courier, 2–4 working days <span class="fee" id="fee-courier">R99,00</span></label>
+          <label><input type="radio" name="del" value="collect"> Collect in Philadelphia, Cape Town <span class="fee">Free</span></label>
+        </div>
+        <div id="addr">
+          <label>Street address<input name="street" autocomplete="street-address" required></label>
+          <div class="two">
+            <label>Suburb<input name="suburb" required></label>
+            <label>City<input name="city" autocomplete="address-level2" required></label>
+          </div>
+          <div class="two">
+            <label>Province<select name="province" required>
+              <option value="">Choose</option><option>Western Cape</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Eastern Cape</option><option>Free State</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option></select></label>
+            <label>Postal code<input name="postal" autocomplete="postal-code" inputmode="numeric" required></label>
+          </div>
+        </div>
+        <label>Note for us<textarea name="note" placeholder="Gate code, leave with security, gift message…"></textarea></label>
+      </form>
+    </div>
+
+    <aside class="summary">
+      <h2>Your order</h2>
+      <div id="lines"></div>
+      <div class="tots">
+        <div><span>Subtotal</span><span id="sub"></span></div>
+        <div><span>Delivery</span><span id="delv"></span></div>
+        <div class="grand"><span>Total</span><span id="grand"></span></div>
+      </div>
+      <div class="pay">
+        <button class="btn yoco" id="pay" type="button">Pay <span id="pay-amt"></span> by card</button>
+        <div class="note">Secure card payment by Yoco. Visa, Mastercard, Apple Pay. (Connected at launch.)</div>
+        <button class="btn ghost" id="eft" type="button" style="margin:0">Order by WhatsApp and pay by EFT</button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<section class="done" id="done" hidden>
+  <div class="wrap">
+    <h1>Order <span class="flame">received</span></h1>
+    <p id="done-msg"></p>
+    <a class="btn" href="macs_spice.html">Back to the range</a>
+  </div>
+</section>
+
+<script src="macspice.js"></script>
+<script>
+const f=document.getElementById('f');
+function del(){return f.del.value}
+function fee(){const d=DELIVERY[del()];const s=cart.subtotal();return d.fee&&!(d.freeOver&&s>=d.freeOver)?d.fee:0}
+function draw(){const L=cart.lines();
+  if(!L.length){document.getElementById('lines').innerHTML='<div class="empty">Your cart is empty.</div>'}
+  else document.getElementById('lines').innerHTML=L.map(({p,n})=>`<div class="line"><img src="images/macspice/${p.img}.webp" alt=""><div><b>${p.name}</b><small>${n} × ${R(p.price)}</small></div><span class="lp">${R(p.price*n)}</span></div>`).join('');
+  const s=cart.subtotal(),d=fee();
+  document.getElementById('sub').textContent=R(s);
+  document.getElementById('delv').textContent=d?R(d):(del()==='collect'?'Free':'Free (over R500)');
+  document.getElementById('grand').textContent=R(s+d);document.getElementById('pay-amt').textContent=R(s+d);
+  document.getElementById('addr').style.display=del()==='collect'?'none':'';
+  [...document.querySelectorAll('#addr [required]')].forEach(i=>i.required=del()!=='collect');
+  document.getElementById('pay').disabled=document.getElementById('eft').disabled=!L.length}
+document.getElementById('del').addEventListener('change',draw);document.addEventListener('cart',draw);draw();
+
+function valid(){if(f.checkValidity())return true;f.reportValidity();return false}
+function orderText(){const d=new FormData(f);const L=cart.lines();
+  return `Mac's Spice order\n`+L.map(({p,n})=>`${n} × ${p.name} (${p.sub}) ${R(p.price*n)}`).join('\n')+
+  `\nDelivery: ${DELIVERY[del()].label} ${fee()?R(fee()):'free'}\nTotal: ${R(cart.subtotal()+fee())}\n\n`+
+  `${d.get('first')} ${d.get('last')}\n${d.get('phone')} · ${d.get('email')}`+
+  (del()==='courier'?`\n${d.get('street')}, ${d.get('suburb')}, ${d.get('city')}, ${d.get('province')} ${d.get('postal')}`:'')+
+  (d.get('note')?`\nNote: ${d.get('note')}`:'')}
+function finish(msg){document.getElementById('co').hidden=true;document.getElementById('done').hidden=false;document.getElementById('done-msg').textContent=msg;cart.clear();window.scrollTo(0,0)}
+// ponytail: Yoco goes here at launch — one redirect to a Yoco checkout link with the amount
+document.getElementById('pay').onclick=()=>{if(!valid())return;const n='MS-'+Date.now().toString().slice(-6);
+  finish(`Order ${n} is in. In the live site this is where Yoco takes the card payment, and you'd get a confirmation email and WhatsApp straight away.`)};
+document.getElementById('eft').onclick=()=>{if(!valid())return;window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(orderText()),'_blank');
+  finish("Your order has opened in WhatsApp. Send it and we'll reply with EFT details and a delivery date.")};
+</script>
+</body>
+</html>
