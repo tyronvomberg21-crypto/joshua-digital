@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Siobhan Samuel — social media, content and photography, Durbanville</title>
+<meta name="description" content="Siobhan Samuel is a digital marketer, content creator and photographer in Durbanville, Cape Town. Social media management, brand photography and strategy for small businesses.">
+<link rel="preload" as="font" type="font/woff2" href="fonts/BodoniModa-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/Figtree-400.woff2" crossorigin>
+<link rel="stylesheet" href="fonts/siobhan-fonts.css">
+<style>
+:root{
+  --ink:#141210; --ink-2:#3A3633; --mute:#7A736C; --paper:#F5F1EB; --paper-2:#ECE6DD; --white:#fff;
+  --tan:#B8865B; --line:rgba(20,18,16,.14);
+  --display:'BodoniModa',"Bodoni 72",Didot,Georgia,serif; --text:'Figtree',system-ui,sans-serif;
+  --wrap:1140px; --g:clamp(18px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+body{font-family:var(--text);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1;letter-spacing:-.015em}
+h2{font-size:clamp(36px,5.4vw,64px);margin-bottom:.4em}
+h3{font-size:clamp(24px,2.6vw,30px);line-height:1.15}
+p{max-width:60ch}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
+section{padding:clamp(64px,9vw,120px) 0}
+:focus-visible{outline:2px solid var(--tan);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.draft{background:var(--ink);color:var(--paper);font-size:13px;text-align:center;padding:8px var(--g);line-height:1.4}
+.draft b{color:#E8D2B4;font-weight:600}
+
+/* nav */
+nav{padding:22px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:50%}
+.brand span{font-family:var(--display);font-size:22px;letter-spacing:.02em}
+nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--ink-2)}
+nav ul a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+@media (max-width:720px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:clamp(24px,5vw,64px) 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:end}
+.hero h1{font-size:clamp(54px,9.5vw,124px);line-height:.95;margin:0 0 26px}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p{font-size:clamp(18px,1.6vw,21px);color:var(--ink-2);max-width:40ch;margin-bottom:30px}
+.hero figure{position:relative}
+.hero figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hero figcaption{position:absolute;left:-12px;bottom:28px;background:var(--paper);padding:10px 14px;font-size:13px;color:var(--mute)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:500;font-size:16px;padding:16px 26px;border-radius:999px;border:0;cursor:pointer;font-family:var(--text)}
+.cta:hover{background:var(--ink-2)}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:10px}
+.cta.ghost:hover{background:var(--paper-2)}
+.hero .strip{margin-top:clamp(40px,6vw,80px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;font-size:15px;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px 40px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero figure{order:-1;max-width:420px}.cta.ghost{margin:10px 0 0}}
+
+/* services */
+.services{background:var(--white)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:44px}
+.svc article{border-top:1px solid var(--ink);padding-top:22px}
+.svc h3{margin-bottom:12px}
+.svc p{font-size:16px;color:var(--ink-2)}
+.svc ul{list-style:none;margin-top:16px;font-size:15px;color:var(--mute);display:grid;gap:6px}
+.svc li::before{content:"—";margin-right:8px;color:var(--tan)}
+@media (max-width:820px){.svc{grid-template-columns:1fr}}
+
+/* work */
+.work .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.work figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.work figure:nth-child(2),.work figure:nth-child(4){margin-top:40px}
+.work figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+@media (max-width:820px){.work .grid{grid-template-columns:1fr 1fr}.work figure:nth-child(2),.work figure:nth-child(4){margin-top:0}.work figure:nth-child(even){margin-top:40px}}
+
+/* how */
+.how{background:var(--ink);color:var(--paper)}
+.how h2{color:var(--paper)}
+.how ol{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:36px}
+.how li{counter-increment:s;border-top:1px solid rgba(245,241,235,.3);padding-top:18px}
+.how li::before{content:counter(s);font-family:var(--display);font-size:48px;line-height:1;display:block;margin-bottom:14px;color:#E8D2B4}
+.how li h3{margin-bottom:8px;color:var(--paper)}
+.how li p{font-size:16px;opacity:.85}
+@media (max-width:820px){.how ol{grid-template-columns:1fr}}
+
+/* words */
+.words .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:36px}
+.words blockquote{font-family:var(--display);font-size:clamp(20px,1.9vw,24px);line-height:1.35;font-style:italic}
+.words cite{display:block;font-family:var(--text);font-style:normal;font-size:14px;color:var(--mute);margin-top:14px}
+@media (max-width:820px){.words .grid{grid-template-columns:1fr}}
+
+/* about */
+.about{background:var(--white)}
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,80px);align-items:center}
+.about img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%}
+.about p+p{margin-top:1em}
+.about .mark{width:88px;height:88px;border-radius:50%;margin-bottom:22px}
+@media (max-width:820px){.about .wrap{grid-template-columns:1fr}.about img{max-width:380px}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.contact p+p{margin-top:1em}
+form{display:grid;gap:16px;background:var(--white);padding:clamp(22px,3vw,36px)}
+label{display:grid;gap:7px;font-size:14px;font-weight:500}
+input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #CFC7BC;background:var(--paper);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);border-color:var(--ink)}
+textarea{min-height:100px;resize:vertical}
+form .cta{justify-content:center;width:100%;border-radius:0}
+.fine{font-size:13px;color:var(--mute);text-align:center}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.wa{position:fixed;right:18px;bottom:18px;z-index:9;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="draft"><b>Draft for Siobhan.</b> Built from your Instagram and reviews in an afternoon, so you can see how I work. Nothing here is live.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="images/siobhan/logo.webp" alt=""><span>Siobhan</span></a>
+    <ul>
+      <li><a href="#services">What I do</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Let's talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Brands people <em>remember.</em></h1>
+      <p>Social media, content and photography for small businesses in the northern suburbs. One person, start to finish, so your brand looks like one brand.</p>
+      <a class="cta" href="#contact">Book a discovery call</a>
+      <a class="cta ghost" href="https://www.instagram.com/_digitalmarketingstrategist_/" target="_blank" rel="noopener">See the Instagram</a>
+    </div>
+    <figure>
+      <img src="images/siobhan/facial.webp" alt="A client shoot at a Durbanville spa" fetchpriority="high">
+      <figcaption>Shot for a client, Durbanville</figcaption>
+    </figure>
+  </div>
+  <div class="wrap"><div class="strip"><span>Durbanville, Cape Town</span><span>5.0 on Google</span><span>Social media, content, photography, strategy</span></div></div>
+</header>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>What I do</h2>
+    <p>Good content gets attention. Good strategy gives it somewhere to go. Good photos make people remember you. I do all three, so nothing gets lost between people.</p>
+    <div class="svc">
+      <article>
+        <h3>Social media management</h3>
+        <p>Your pages planned, posted and answered, every week, in your voice. You run the business. I run the feed.</p>
+        <ul><li>Monthly content calendar</li><li>Posting and captions</li><li>Replies and community</li><li>A plain monthly report</li></ul>
+      </article>
+      <article>
+        <h3>Content and photography</h3>
+        <p>Shoot days at your premises, edited and ready to post. Products, treatments, team, the space, the detail shots nobody else thinks of.</p>
+        <ul><li>Half-day and full-day shoots</li><li>Photo and short video</li><li>Edited for feed, stories and web</li></ul>
+      </article>
+      <article>
+        <h3>Strategy and digital setup</h3>
+        <p>For businesses starting from nothing, or starting again. Where to be, what to say, how often, and what to stop doing.</p>
+        <ul><li>Profile setup and clean-up</li><li>Brand voice and visual direction</li><li>Three-month plan you can follow</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>Recent work</h2>
+    <p>Beauty, wellness, fitwear and small retail. The pictures are from client shoots and my own feed.</p>
+    <div class="grid">
+      <figure><img src="images/siobhan/brushes.webp" alt="Make-up brushes, black and white" loading="lazy"><figcaption>Beauty studio</figcaption></figure>
+      <figure><img src="images/siobhan/makeup.webp" alt="Make-up flat lay with fairy lights" loading="lazy"><figcaption>Product shoot</figcaption></figure>
+      <figure><img src="images/siobhan/desk.webp" alt="Laptop and notebook on a café table" loading="lazy"><figcaption>Planning day</figcaption></figure>
+      <figure><img src="images/siobhan/mug.webp" alt="A hand holding a teal mug against a curtain" loading="lazy"><figcaption>Lifestyle content</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol>
+      <li><h3>A coffee</h3><p>Half an hour, in person or on a call. What you sell, who buys it, what's working and what isn't.</p></li>
+      <li><h3>A plan</h3><p>A short, written plan: platforms, posting rhythm, shoot dates and what it costs. No surprises later.</p></li>
+      <li><h3>Then we go</h3><p>Shoot days booked, content flowing, a report each month. You'll know what's happening without having to ask.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="words">
+  <div class="wrap">
+    <h2>What clients say</h2>
+    <div class="grid">
+      <figure><blockquote>Siobhan is very dynamic and professional. Her knowledge regarding the industry is remarkable and I love working with her.</blockquote><cite>Google review, February 2026</cite></figure>
+      <figure><blockquote>She helped me with a digital footprint and gave me wonderful insights into social media. Her patience, guidance and effort made a difference for me and my Annique Rooibos team.</blockquote><cite>Google review, October 2025</cite></figure>
+      <figure><blockquote>She is an amazing photographer and digital marketer. Very professional, friendly, and so much talent. I would highly recommend her for any business wanting to be marketed properly.</blockquote><cite>Candice, Samavay Fitwear</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <img src="images/siobhan/siobhan.webp" alt="Siobhan Samuel" loading="lazy">
+    <div>
+      <img class="mark" src="images/siobhan/logo.webp" alt="">
+      <h2>Siobhan</h2>
+      <p>I'm a digital marketer, content creator and photographer based in Durbanville. I started because I kept watching good small businesses post into silence: lovely work, no plan, no photos worth stopping for.</p>
+      <p>I work with a handful of clients at a time so each one gets me, not a template. If you're in the northern suburbs and you'd rather meet over coffee than on a form, that suits me too.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Let's talk</h2>
+      <p>Tell me a little about your business and I'll come back to you within a day to set up a coffee or a call.</p>
+      <p>Or just WhatsApp me on <a href="https://wa.me/27732310637" target="_blank" rel="noopener">073 231 0637</a>.</p>
+    </div>
+    <form id="f">
+      <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+      <label>Your business<input type="text" name="biz" placeholder="What it is and where" required></label>
+      <label>What you're after
+        <select name="need" required>
+          <option value="">Choose one</option>
+          <option>Social media management</option>
+          <option>A photo or content shoot</option>
+          <option>Strategy and setup</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label>Your WhatsApp number<input type="tel" name="phone" autocomplete="tel" required></label>
+      <label>Anything else<textarea name="notes"></textarea></label>
+      <button class="cta" type="submit">Send</button>
+      <div class="fine">Opens WhatsApp with your message ready to send.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Siobhan Samuel · Durbanville, Cape Town</span>
+    <span><a href="https://www.instagram.com/_digitalmarketingstrategist_/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/27732310637">WhatsApp</a></span>
+    <span>Site by <a href="https://joshuavomberg.co.za">Joshua Vomberg</a></span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/27732310637" aria-label="WhatsApp Siobhan" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<script>
+// ponytail: no backend — the form opens WhatsApp with the message prefilled
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();var f=new FormData(this);
+  var m='Hi Siobhan, from your website:\nName: '+f.get('name')+'\nBusiness: '+f.get('biz')+'\nAfter: '+f.get('need')+'\nWhatsApp: '+f.get('phone')+(f.get('notes')?'\nNotes: '+f.get('notes'):'');
+  window.open('https://wa.me/27732310637?text='+encodeURIComponent(m),'_blank');
+});
+</script>
+</body>
+</html>
