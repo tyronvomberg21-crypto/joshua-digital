@@ -37,6 +37,8 @@ section{padding:clamp(64px,9vw,120px) 0}
 /* nav */
 nav{position:absolute;top:36px;left:0;right:0;z-index:5;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.35)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+nav .brand{display:flex;align-items:center;gap:12px}
+nav .brand img.enso{width:48px;height:48px;max-width:48px;flex:none;object-fit:contain}
 .brand{font-family:var(--display);font-size:22px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:400}
 .brand small{display:block;font-family:var(--text);font-size:9px;letter-spacing:.34em;opacity:.85;margin-top:2px}
 nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
@@ -45,20 +47,23 @@ nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
 @media (max-width:720px){nav ul{display:none}}
 
 /* hero */
-.hero{position:relative;min-height:clamp(680px,100vh,900px);display:flex;align-items:flex-end;color:#fff;background:var(--sea-deep);overflow:hidden}
+.hero{position:relative;min-height:clamp(720px,100vh,960px);display:flex;align-items:center;color:#fff;background:var(--sea-deep);overflow:hidden}
 .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,35,48,.35) 0%,rgba(8,35,48,.15) 35%,rgba(8,35,48,.88) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,72px);padding-top:130px;width:100%}
-nav .brand img.enso{width:48px;height:48px;max-width:48px;flex:none;object-fit:contain}
-nav .brand{display:flex;align-items:center;gap:12px}
-.hero h1{font-size:clamp(44px,6.5vw,80px);max-width:12ch}
-.hero h1 em{font-style:italic;font-weight:300}
-.hero p{font-size:clamp(17px,1.8vw,20px);max-width:52ch;margin:22px 0 32px;opacity:.95}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,35,48,.42) 0%,rgba(8,35,48,.28) 40%,rgba(8,35,48,.85) 100%)}
+.hero>.wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:clamp(40px,6vw,64px);width:100%;text-align:center;display:flex;flex-direction:column;align-items:center}
+.lockup{display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 2px 18px rgba(0,0,0,.35))}
+.lockup .ring{width:clamp(120px,16vw,190px);height:auto;margin-bottom:10px}
+.lockup h1{font-size:clamp(36px,5.6vw,64px);letter-spacing:.3em;text-transform:uppercase;font-weight:400;line-height:1;padding-left:.3em}
+.lockup h1 small{display:block;font-family:var(--text);font-size:clamp(10px,1.1vw,14px);letter-spacing:.42em;font-weight:400;margin-top:12px;opacity:.95;padding-left:.42em}
+.lockup .rule{display:block;width:120px;height:2px;background:var(--gold);margin:22px 0 6px}
+.lockup .script{font-family:'GreatVibes',cursive;font-size:clamp(64px,9vw,112px);line-height:1.1;color:#fff}
+.hero>.wrap>p{font-size:clamp(16px,1.6vw,19px);max-width:62ch;margin:18px auto 30px;opacity:.95}
+.hero>.wrap>p strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(24px,2.6vw,32px);letter-spacing:.02em;margin-bottom:10px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--sea-deep);text-decoration:none;font-weight:600;font-size:16px;padding:16px 26px;border-radius:999px;border:0;cursor:pointer;font-family:var(--text)}
 .cta:hover{background:var(--gold-soft)}
-.cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);margin-left:10px}
+.cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
 .cta.ghost:hover{background:rgba(255,255,255,.12)}
-@media (max-width:520px){.cta.ghost{margin:10px 0 0}}
 
 /* intro */
 .intro{padding-top:clamp(56px,8vw,96px)}
@@ -172,10 +177,17 @@ footer h4{font-family:var(--display);font-weight:400;font-size:22px;margin-botto
     </div>
   </nav>
   <div class="wrap" id="top">
-    <h1>More than a day <em>at sea.</em></h1>
-    <p>Private ocean experiences around Cape Town, made for good people, great moments and memories that stay with you. Swim in the Atlantic, cruise beneath Table Mountain, share a long lunch, chase the sunset or simply slow down. Your people. Your boat. Your experience.</p>
-    <a class="cta" href="#book">Book a day</a>
-    <a class="cta ghost" href="https://wa.me/27832798400?text=Hi%20Bernado%2C%20I%27d%20like%20to%20ask%20about%20a%20charter" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    <div class="lockup">
+      <img class="ring" src="images/wuwei/enso.png" alt="">
+      <h1>Wu Wei<small>Ocean Experiences</small></h1>
+      <span class="rule"></span>
+      <div class="script">Welcome</div>
+    </div>
+    <p><strong>More than a day at sea.</strong> Private ocean experiences around Cape Town, made for good people, great moments and memories that stay with you. Swim in the Atlantic, cruise beneath Table Mountain, share a long lunch, chase the sunset or simply slow down. Your people. Your boat. Your experience.</p>
+    <div class="actions">
+      <a class="cta" href="#book">Book a day</a>
+      <a class="cta ghost" href="https://wa.me/27832798400?text=Hi%20Bernado%2C%20I%27d%20like%20to%20ask%20about%20a%20charter" target="_blank" rel="noopener">Ask on WhatsApp</a>
+    </div>
   </div>
 </header>
 
