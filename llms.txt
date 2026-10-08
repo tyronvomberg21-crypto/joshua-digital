@@ -1,0 +1,21 @@
+# Joshua Vomberg — web designer, Cape Town
+
+> Hand-coded websites for small businesses in Cape Town that take orders, bookings and payments. Built with Claude Code, live within about 7 days, from R6,500. Monthly care plan R450.
+
+Joshua Vomberg is a 19-year-old web designer based in Sunningdale, Cape Town, South Africa. He builds fast, hand-coded websites (no WordPress) for cafés, salons, guesthouses, charter operators and other small businesses. Clients own their site and domain outright and can edit their own text and photos from a phone.
+
+## Services and prices (ZAR)
+- Starter website: from R6,500 — a clean site with contact and WhatsApp buttons, Google Business Profile setup, SEO-ready.
+- Shop & booking website: from R12,000 — online ordering or bookings with card payment (Yoco, PayFast or Shopify).
+- Care plan: R450 per month — hosting, updates, about an hour of changes a month.
+- Changes without a care plan: R350 per hour.
+
+## Pages
+- Home and pricing: https://joshuavomberg.co.za/
+- About: https://joshuavomberg.co.za/about.html
+- Pricing: https://joshuavomberg.co.za/pricing.html
+
+## Contact
+- WhatsApp: +27 66 316 1937
+- Email: joshuavomberg21@gmail.com
+- Google Business Profile: Joshua Vomberg, Cape Town
