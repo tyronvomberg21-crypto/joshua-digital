@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="fonts/carcapital-fonts.css">
 <style>
 :root{
-  --ink:#18191B; --ink-2:#252628; --ink-3:#303134; --mist:#9A9CA3; --white:#FFFFFF; --off:#F4F4F6;
-  --pink:#FB3976; --green:#25D366; --mint:#2EE08E; --line:rgba(255,255,255,.1);
-  --font:'Outfit',system-ui,sans-serif; --wrap:1160px; --g:clamp(18px,4vw,48px);
+  --ink:#18191B; --ink-2:#222326; --mist:#9A9CA3; --soft:#C9CACF; --white:#FFFFFF; --off:#F4F4F6;
+  --pink:#FB3976; --green:#25D366; --line:rgba(255,255,255,.12);
+  --font:'Outfit',system-ui,sans-serif; --wrap:1160px; --g:clamp(18px,4vw,48px); --r:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0;min-width:0}
 html{scroll-behavior:smooth}
@@ -22,158 +22,177 @@ body{font-family:var(--font);background:var(--ink);color:var(--white);line-heigh
 img{display:block;max-width:100%}
 a{color:inherit}
 h1,h2,h3{font-weight:800;line-height:1.02;letter-spacing:-.02em}
-h2{font-size:clamp(34px,5vw,56px);margin-bottom:.4em}
-h3{font-size:clamp(22px,2.4vw,28px);font-weight:600}
+h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:.5em}
+h2.major{font-size:clamp(36px,5vw,58px);margin-bottom:.4em}
+h3{font-size:clamp(20px,2.2vw,24px);font-weight:600}
 p{max-width:60ch}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
-section{padding:clamp(56px,8vw,104px) 0}
+section{padding:clamp(48px,6vw,80px) 0;border-top:1px solid var(--line)}
+section.major{padding:clamp(64px,8vw,112px) 0}
 :focus-visible{outline:2px solid var(--pink);outline-offset:3px}
 .pink{color:var(--pink)}
+.lead{color:var(--soft)}
 
 .draft{background:var(--pink);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:8px var(--g);line-height:1.4}
 
-nav{position:sticky;top:0;z-index:20;background:rgba(24,25,27,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+nav{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 nav .logo img{height:44px;width:auto}
-nav ul{display:flex;gap:26px;list-style:none;font-size:15px;font-weight:500}
-nav ul a{text-decoration:none;color:#d6d7db}
+nav ul{display:flex;gap:24px;list-style:none;font-size:15px;font-weight:500}
+nav ul a{text-decoration:none;color:var(--soft)}
 nav ul a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--pink);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:12px;border:0;cursor:pointer;font-family:var(--font)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--pink);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 24px;border-radius:var(--r);border:0;cursor:pointer;font-family:var(--font);white-space:nowrap}
 .btn:hover{background:#ff5a8e}
 .btn.wa{background:var(--green);color:#063}
 .btn.wa:hover{background:#3ee07a}
-.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
-.btn.ghost:hover{border-color:#fff}
-.btn.sm{padding:10px 16px;font-size:15px;border-radius:10px}
-@media (max-width:820px){nav ul{display:none}}
+.btn.white{background:#fff;color:var(--ink)}
+.btn.white:hover{background:#ffe3ec}
+.btn.sm{padding:10px 16px;font-size:15px}
+@media (max-width:820px){nav ul li:not(.keep){display:none}nav ul{gap:14px;font-size:14px}}
 
 /* hero */
-.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,25,27,.96) 0%,rgba(24,25,27,.8) 45%,rgba(24,25,27,.35) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-top:64px;padding-bottom:64px;width:100%}
-.hero h1{font-size:clamp(46px,8vw,96px);max-width:12ch}
+.hero{border-top:0;padding:clamp(40px,6vw,88px) 0 clamp(40px,6vw,72px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(44px,6.4vw,80px);max-width:12ch}
 .hero h1 em{font-style:normal;color:var(--pink)}
-.hero p{font-size:clamp(17px,1.8vw,21px);color:#d6d7db;margin:20px 0 28px;max-width:44ch}
-.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
-.trust{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:36px;font-size:14px;color:var(--mist);align-items:center}
-.trust img{height:26px;width:auto;opacity:.9}
-.trust span{display:inline-flex;align-items:center;gap:8px}
+.hero .lead{font-size:clamp(17px,1.7vw,20px);margin:20px 0 26px;max-width:42ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero .alt{font-size:15px;color:var(--mist);margin-top:14px}
+.hero .alt a{color:#fff;text-decoration:none;border-bottom:1px solid var(--mist)}
+.hero figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:10px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero figure img{aspect-ratio:4/3;object-position:center 35%}.hero .actions .btn{flex:1 1 100%}}
 
-/* range calculator */
-.calc{background:var(--white);color:var(--ink)}
-.calc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.trustbar{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0}
+.trustbar .wrap{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:center;font-size:15px;color:var(--soft)}
+.trustbar span{display:inline-flex;align-items:center;gap:10px}
+.trustbar img{height:28px;width:auto}
+@media (max-width:620px){.trustbar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
+
+/* calculator */
+.calc{background:var(--white);color:var(--ink);border-top:0}
+.calc .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,72px);align-items:start}
 .calc h2{color:var(--ink)}
-.calc p{color:#4a4b50}
-.calc p+p{margin-top:1em}
-.panel{background:var(--off);border-radius:18px;padding:clamp(22px,3vw,34px)}
-.panel label{display:grid;gap:8px;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:18px}
-.panel input[type=range]{width:100%;accent-color:var(--pink)}
-.panel .val{font-size:30px;font-weight:800;letter-spacing:-.02em}
-.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-.terms label{margin:0;cursor:pointer}
+.calc .lead{color:#4a4b50}
+.calc .lead+.lead{margin-top:1em}
+.panel{background:var(--off);border-radius:12px;padding:clamp(22px,3vw,34px)}
+.panel .lab{font-size:13px;font-weight:600;color:#4a4b50;margin-bottom:6px}
+.valin{display:flex;align-items:baseline;gap:4px;font-size:34px;font-weight:800;letter-spacing:-.03em}
+.valin input{font:inherit;width:100%;border:0;background:transparent;color:var(--ink);padding:0;outline:none;border-bottom:2px solid transparent}
+.valin input:focus{border-bottom-color:var(--pink)}
+.panel input[type=range]{width:100%;accent-color:var(--pink);margin:8px 0 22px}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.terms label{cursor:pointer}
 .terms input{display:none}
-.terms span{display:block;text-align:center;border:2px solid #d9dadf;border-radius:12px;padding:12px 6px;font-weight:600;background:#fff}
+.terms span{display:block;text-align:center;border:2px solid #d9dadf;border-radius:var(--r);padding:12px 6px;font-weight:600;background:#fff}
 .terms input:checked+span{border-color:var(--pink);background:#fff0f5}
-.out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 18px}
-.out div{background:#fff;border-radius:12px;padding:14px 16px}
-.out small{display:block;font-size:12px;color:#6b6c72;font-weight:600;text-transform:none}
-.out b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;margin-top:4px}
-.out .good b{color:#0a8f4a}
-.fine{font-size:12px;color:#6b6c72;margin-top:10px}
+.payout{background:#fff;border-radius:10px;padding:20px 22px 18px;margin-bottom:12px}
+.payout small{display:block;font-size:13px;font-weight:600;color:#4a4b50}
+.payout b{display:block;font-size:clamp(46px,6vw,78px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--pink);margin-top:6px}
+.sub2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.sub2 div{background:#fff;border-radius:10px;padding:14px 16px}
+.sub2 small{display:block;font-size:12px;color:#6b6c72;font-weight:600}
+.sub2 b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;margin-top:4px}
+.fine{font-size:12px;color:#6b6c72;margin-top:12px;line-height:1.5}
 .panel .btn{width:100%}
 @media (max-width:820px){.calc .wrap{grid-template-columns:1fr}}
 
 /* how */
-.how ol{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px);margin-top:36px}
-.how li{counter-increment:s;border-top:2px solid var(--pink);padding-top:18px}
-.how li::before{content:"0" counter(s);font-weight:800;font-size:38px;color:var(--pink);display:block;line-height:1;margin-bottom:12px;letter-spacing:-.02em}
-.how li h3{font-size:22px;margin-bottom:8px}
-.how li p{font-size:15px;color:#c8c9ce}
+.how ol{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px);margin-top:32px}
+.how li{counter-increment:s;border-top:2px solid var(--pink);padding-top:16px}
+.how li::before{content:"0" counter(s);font-weight:800;font-size:30px;color:var(--pink);display:block;line-height:1;margin-bottom:10px;letter-spacing:-.02em}
+.how li h3{margin-bottom:6px}
+.how li p{font-size:15px;color:var(--soft)}
 @media (max-width:820px){.how ol{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.how ol{grid-template-columns:1fr}}
+@media (max-width:520px){.how ol{grid-template-columns:1fr;gap:16px}.how li{display:grid;grid-template-columns:40px 1fr;gap:4px 12px;border-top:0;padding-top:0}.how li::before{font-size:20px;margin:3px 0 0;grid-row:span 2}.how li h3{font-size:19px;margin:0}}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(24px,5vw,72px);align-items:start}
+.faq .side{position:sticky;top:96px}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--pink);font-size:24px;line-height:1;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:10px;color:var(--soft);font-size:16px}
+.faq table{border-collapse:collapse;margin-top:12px;font-size:15px;color:var(--soft);width:100%}
+.faq td{padding:7px 14px 7px 0;vertical-align:top;border-top:1px solid var(--line)}
+.faq td:last-child{color:#fff;font-weight:600;white-space:nowrap}
+.confirm{display:inline-block;font-size:12px;font-weight:600;color:var(--pink);border:1px solid var(--pink);border-radius:4px;padding:1px 7px;margin-left:8px;vertical-align:middle}
+@media (max-width:820px){.faq .wrap{grid-template-columns:1fr}.faq .side{position:static}}
 
 /* showroom */
-.room{background:var(--ink-2)}
 .room .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:center}
-.room .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.room .pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
-.room .pics img:first-child{grid-row:span 2;aspect-ratio:3/5}
-.room p{color:#c8c9ce}
+.room .pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px}
+.room .pics img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.room .pics img:first-child{grid-row:span 2}
+.room .pics img:not(:first-child){aspect-ratio:3/4}
+.room p{color:var(--soft)}
 .room p+p{margin-top:1em}
-.room .btn{margin-top:22px}
 @media (max-width:820px){.room .wrap{grid-template-columns:1fr}}
 
 /* stock */
-.stock .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
-.car{background:var(--ink-2);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
-.car img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.car div{padding:16px 18px 18px}
-.car h3{font-size:20px}
-.car small{display:block;color:var(--mist);font-size:14px;margin:4px 0 10px}
-.car .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.car .price{font-weight:800;font-size:22px;letter-spacing:-.02em}
-.car.ph img{background:linear-gradient(160deg,#2b2c30,#1e1f22)}
-.car.ph{display:grid;place-items:center;min-height:300px;color:var(--mist);text-align:center;padding:24px;font-size:15px}
-@media (max-width:820px){.stock .grid{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.stock .grid{grid-template-columns:1fr}}
-
-/* dealers */
-.dealers{background:var(--pink);color:#fff}
-.dealers .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:center}
-.dealers .big{font-size:clamp(64px,10vw,140px);font-weight:800;line-height:.9;letter-spacing:-.04em;text-align:right;opacity:.35}
-.dealers p{color:#ffe3ec}
-.dealers ul{list-style:none;display:grid;gap:12px;font-weight:600}
-.dealers li::before{content:"—";margin-right:10px}
-.dealers .btn{background:#fff;color:var(--pink);margin-top:22px}
-.dealers .btn:hover{background:#ffe3ec}
-@media (max-width:820px){.dealers .wrap{grid-template-columns:1fr}}
-
-/* faq */
-.faq details{border-top:1px solid var(--line);padding:18px 0}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;font-weight:600;font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::after{content:"+";color:var(--pink);font-size:26px;line-height:1;font-weight:400}
-.faq details[open] summary::after{content:"–"}
-.faq details p{margin-top:10px;color:#c8c9ce;font-size:16px}
-.faq table{border-collapse:collapse;margin-top:12px;font-size:15px;color:#c8c9ce}
-.faq td{padding:6px 18px 6px 0}
-.faq td:last-child{color:#fff;font-weight:600}
+.stock .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:28px}
+.car{background:var(--ink-2);border-radius:10px;overflow:hidden;border:1px solid var(--line);display:grid;grid-template-columns:1.2fr 1fr}
+.car img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.car .d{padding:22px;display:flex;flex-direction:column}
+.car h3{font-size:24px}
+.car small{display:block;color:var(--mist);font-size:14px;margin:4px 0 14px}
+.car .price{font-weight:800;font-size:30px;letter-spacing:-.03em;margin-bottom:14px}
+.car .btn{margin-top:auto;align-self:flex-start}
+.more{position:relative;border-radius:10px;overflow:hidden;min-height:260px;display:flex;align-items:flex-end;padding:22px;background:linear-gradient(rgba(24,25,27,.3),rgba(24,25,27,.9)),url(images/carcapital/audi-r8.webp) center 40%/cover}
+.more h3{font-size:22px;margin-bottom:6px}
+.more p{font-size:15px;color:var(--soft);margin-bottom:14px}
+@media (max-width:820px){.stock .grid{grid-template-columns:1fr}.car{grid-template-columns:1fr}}
 
 /* reviews */
-.reviews .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.reviews figure{background:var(--ink-2);border:1px dashed #44454a;border-radius:14px;padding:22px;color:var(--mist);font-size:15px}
-.reviews figure b{display:block;color:#fff;font-size:18px;margin-bottom:8px}
-@media (max-width:820px){.reviews .grid{grid-template-columns:1fr}}
+.reviews figure{border-left:3px solid var(--pink);padding:4px 0 4px 22px;max-width:60ch;margin-top:24px}
+.reviews blockquote{font-size:22px;line-height:1.35;font-weight:500}
+.reviews figcaption{font-size:14px;color:var(--mist);margin-top:10px}
+.note{font-size:14px;color:var(--mist);margin-top:18px}
 
 /* visit */
-.visit{background:var(--ink-2)}
-.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
-.visit dl{display:grid;gap:16px;margin-top:24px}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.visit dl{display:grid;gap:14px;margin:22px 0 24px}
 .visit dt{font-size:13px;color:var(--mist);font-weight:600}
 .visit dd{font-size:18px;font-weight:600}
-.visit iframe{width:100%;aspect-ratio:4/3;border:0;border-radius:14px;filter:grayscale(1) invert(.92) contrast(.9)}
+.visit dd a{text-decoration:none;border-bottom:1px solid var(--mist)}
+.visit img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
 @media (max-width:820px){.visit .wrap{grid-template-columns:1fr}}
 
-footer{border-top:1px solid var(--line);padding:48px 0 32px;font-size:14px;color:var(--mist)}
+/* dealers */
+.dealers .wrap>div{max-width:62ch}
+.dealers p{color:var(--soft)}
+.dealers .pts{font-size:16px;color:var(--soft);margin:12px 0 20px}
+
+/* cta band */
+.band{background:var(--pink);color:#fff;border-top:0;padding:clamp(44px,6vw,72px) 0}
+.band .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+.band h2{margin:0;font-size:clamp(28px,4vw,44px)}
+.band p{color:#ffe3ec;margin-top:6px}
+
+footer{border-top:1px solid var(--line);padding:44px 0 28px;font-size:14px;color:var(--mist)}
 footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;align-items:start}
-footer img.l{height:48px;width:auto;margin-bottom:14px}
-footer h4{color:#fff;font-size:16px;margin-bottom:10px}
+footer img.l{height:44px;width:auto;margin-bottom:14px}
+footer h4{color:#fff;font-size:15px;margin-bottom:10px}
 footer ul{list-style:none;display:grid;gap:8px}
 footer a{text-decoration:none}
 footer a:hover{color:#fff}
 .accr{display:flex;gap:16px;align-items:center;margin-top:12px}
 .accr img{height:24px;width:auto}
-.legal{max-width:var(--wrap);margin:36px auto 0;padding:18px var(--g) 0;border-top:1px solid var(--line);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+.legal{max-width:var(--wrap);margin:32px auto 0;padding:16px var(--g) 0;border-top:1px solid var(--line);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.legal a{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}footer{padding-bottom:96px}}
 
-.wafab{position:fixed;right:18px;bottom:18px;z-index:9;display:inline-flex;align-items:center;gap:10px;background:var(--green);color:#063;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
-.wafab svg{width:24px;height:24px;fill:#063}
+/* mobile-only WhatsApp button, shown once the hero has scrolled away */
+.wafab{position:fixed;right:16px;bottom:16px;z-index:9;display:none;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:var(--green);box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .2s}
+.wafab svg{width:28px;height:28px;fill:#063}
+body.past .wafab{opacity:1;pointer-events:auto}
+@media (max-width:820px){.wafab{display:flex}}
 </style>
 </head>
 <body>
 
-<div class="draft">Mock-up by Joshua Vomberg. Content, fees and accreditations are from carcapital.co.za. Stock and reviews are placeholders. Nothing here is live.</div>
+<div class="draft">Mock-up by Joshua Vomberg. Fees, FAQ and accreditations are from carcapital.co.za. Stock and reviews are placeholders. WhatsApp number to be confirmed with Car Capital.</div>
 
 <nav>
   <div class="wrap">
@@ -182,68 +201,96 @@ footer a:hover{color:#fff}
       <li><a href="#how">How it works</a></li>
       <li><a href="#showroom">Showroom</a></li>
       <li><a href="#dealers">Dealers</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#visit">Visit</a></li>
+      <li class="keep"><a href="#faq">FAQ</a></li>
+      <li class="keep"><a href="#visit">Visit</a></li>
     </ul>
-    <a class="btn wa sm" href="https://wa.me/27212058152?text=Hi%20Car%20Capital%2C%20I%27d%20like%20a%20cash%20range%20on%20my%20car." target="_blank" rel="noopener">WhatsApp a valuation</a>
+    <a class="btn wa sm" data-wa="range" href="#">WhatsApp your car for a range</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <img src="images/carcapital/showroom.webp" alt="The Car Capital showroom in De Waterkant" fetchpriority="high">
   <div class="wrap">
-    <h1>Cash against your car, <em>today.</em></h1>
-    <p>Send us a photo of your car and its registration on WhatsApp. We reply with a cash range the same day. Drive in, sign, and the money is in your account. Buy it back within 30, 60 or 90 days.</p>
-    <div class="actions">
-      <a class="btn wa" href="https://wa.me/27212058152?text=Hi%20Car%20Capital%2C%20I%27d%20like%20a%20cash%20range%20on%20my%20car." target="_blank" rel="noopener">WhatsApp your car for a range</a>
-      <a class="btn ghost" href="#calc">See what you'd get</a>
+    <div>
+      <h1>Cash against your car, <em>today.</em></h1>
+      <p class="lead">WhatsApp us a photo of your car and its registration. We send you a cash range the same day. Drive in, sign, and the money is in your account. Buy it back within 30, 60 or 90 days.</p>
+      <div class="actions">
+        <a class="btn wa" data-wa="range" href="#">WhatsApp your car for a range</a>
+        <a class="btn white" href="#calc">See what you'd get</a>
+      </div>
+      <p class="alt">Takes a minute: one photo, your registration, your mileage. Or call <a href="tel:+27212058152">021 205 8152</a>, Mon–Fri 9–5.</p>
     </div>
-    <div class="trust">
-      <span><img src="images/carcapital/fsca.webp" alt="">FSCA accredited</span>
-      <span><img src="images/carcapital/ncr.webp" alt="">NCR registered</span>
-      <span>120 Strand Street, De Waterkant</span>
-      <span>Same-day payout</span>
-    </div>
+    <figure><img src="images/carcapital/showroom.webp" alt="The Car Capital showroom in De Waterkant" fetchpriority="high"></figure>
   </div>
 </header>
 
-<section class="calc" id="calc">
+<div class="trustbar">
+  <div class="wrap">
+    <span><img src="images/carcapital/fsca.webp" alt="">FSCA accredited</span>
+    <span><img src="images/carcapital/ncr.webp" alt="">NCR registered</span>
+    <span>120 Strand Street, De Waterkant</span>
+    <span>No early-repurchase penalty</span>
+  </div>
+</div>
+
+<section class="calc major" id="calc">
   <div class="wrap">
     <div>
-      <h2>What would you get?</h2>
-      <p>No hidden terms. Our fees are published, so you can work out your payout before you call us. Slide to your car's value and pick a buy-back term.</p>
-      <p>The final figure comes from a free valuation at our Assessment Centre. This is a guide, using the fee table from our FAQ.</p>
+      <h2 class="major">What would you get?</h2>
+      <p class="lead">No hidden terms. The fees are published, so you can see your payout before you call. Type your car's value, pick a term.</p>
+      <p class="lead">The final figure comes from a free valuation at the Assessment Centre. This is a guide, built from the fee table in the FAQ.</p>
     </div>
     <form class="panel" id="f" onsubmit="return false">
-      <label>Your car's value
-        <span class="val" id="v">R300 000</span>
-        <input type="range" id="r" min="50000" max="2000000" step="10000" value="300000">
-      </label>
+      <div class="lab">Your car's value</div>
+      <div class="valin"><span>R</span><input type="text" inputmode="numeric" id="rv" value="300 000" aria-label="Car value in rand"></div>
+      <input type="range" id="r" min="50000" max="1000000" step="5000" value="300000" aria-label="Car value slider">
       <div class="terms" id="t">
         <label><input type="radio" name="t" value="30" checked><span>30 days</span></label>
         <label><input type="radio" name="t" value="60"><span>60 days</span></label>
         <label><input type="radio" name="t" value="90"><span>90 days</span></label>
       </div>
-      <div class="out">
-        <div class="good"><small>Paid to you now</small><b id="pay"></b></div>
+      <div class="payout"><small>Paid to you now</small><b id="pay"></b></div>
+      <div class="sub2">
         <div><small>Buy it back for</small><b id="back"></b></div>
+        <div><small>Cost of the <span id="td">30</span> days, all fees</small><b id="cost"></b></div>
       </div>
-      <a class="btn wa" id="go" href="#" target="_blank" rel="noopener">WhatsApp this to us</a>
-      <div class="fine">Holding fee 5% / 10% / 15% · insurance and storage 2% per month · admin R5 999 · re-registration R1 999. From carcapital.co.za FAQ.</div>
+      <a class="btn wa" id="go" href="#" target="_blank" rel="noopener">WhatsApp these numbers to us</a>
+      <div class="fine">Holding fee 5% / 10% / 15% for 30 / 60 / 90 days · insurance and storage 2% per month · admin R5 999 · re-registration R1 999. From the Car Capital FAQ. Values above R1 000 000 can be typed in.</div>
     </form>
   </div>
 </section>
 
-<section class="how" id="how">
+<section class="how major" id="how">
   <div class="wrap">
-    <h2>How it works</h2>
-    <p>Four steps. Most clients are paid the same day they drive in.</p>
+    <h2 class="major">How it works</h2>
+    <p class="lead">Four steps.</p>
     <ol>
-      <li><h3>WhatsApp your car</h3><p>A photo, the registration and the mileage. We reply with a cash range, usually within the hour.</p></li>
+      <li><h3>WhatsApp your car</h3><p>A photo, the registration and the mileage. We reply with a cash range.</p></li>
       <li><h3>Pick a term</h3><p>30, 60 or 90 days to buy it back. The term is set up front and can't be changed later.</p></li>
-      <li><h3>Drive in</h3><p>Bring the car and your documents to Strand Street. We inspect and make a final offer.</p></li>
+      <li><h3>Drive in</h3><p>Bring the car and your documents to Strand Street. We inspect and make a final offer. Your car stays with us, insured and stored, until you buy it back.</p></li>
       <li><h3>Get paid</h3><p>Sign and the money is sent. Buy the car back any time in your term, no early penalty.</p></li>
     </ol>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="side">
+      <h2>Questions</h2>
+      <p class="lead">The things people ask before they drive in.</p>
+    </div>
+    <div>
+      <details open><summary>Do I keep driving my car during the term?</summary><p>No. The car stays with Car Capital, insured and stored, until you buy it back. That's what the insurance and storage fee covers. <span class="confirm">Car Capital to confirm wording</span></p></details>
+      <details><summary>What does it cost?</summary><p>On a car valued at R1 000 000:</p>
+        <table><tr><td>30 days</td><td>Holding 5% · insurance and storage 2% · admin R5 999 · re-reg R1 999</td><td>R922 002 to you</td></tr>
+        <tr><td>60 days</td><td>Holding 10% · insurance and storage 4% · admin and re-reg as above</td><td>R852 002 to you</td></tr>
+        <tr><td>90 days</td><td>Holding 15% · insurance and storage 6% · admin and re-reg as above</td><td>R782 002 to you</td></tr></table>
+        <p>You buy the car back at the valued amount, any time in your term, with no early-repurchase penalty.</p></details>
+      <details><summary>Do you do a credit check?</summary><p><span class="confirm">Car Capital to answer</span> This is the first thing people compare against a bank, so it belongs here.</p></details>
+      <details><summary>What if I don't buy it back in time?</summary><p>If the vehicle isn't repurchased within the term you chose up front, it is sold to a third party. You get an email reminder before the date.</p></details>
+      <details><summary>Do you buy new and used?</summary><p>Yes, as long as the vehicle meets the minimum valuation criteria. Bring the car, the registration papers and your ID.</p></details>
+      <details><summary>How do I get a valuation?</summary><p>WhatsApp a photo and your registration, or call 021 205 8152. You get a range, then book a time at 120 Strand Street for the final quote.</p></details>
+      <details><summary>Where are you and when are you open?</summary><p>120 Strand Street, corner of Rose Street, De Waterkant, Cape Town. Monday to Friday, 9 am to 5 pm. Delivery and shipping can be arranged.</p></details>
+    </div>
   </div>
 </section>
 
@@ -256,9 +303,8 @@ footer a:hover{color:#fff}
     </div>
     <div>
       <h2>The showroom</h2>
-      <p>Not a pawn shop. A proper showroom on Strand Street with a lounge, coffee and someone who'll talk you through the numbers without rushing you.</p>
+      <p>A regulated lender, FSCA and NCR accredited, with a proper showroom on Strand Street: a lounge, coffee, and someone who will talk you through the numbers without rushing you.</p>
       <p>Cars that aren't bought back are sold here, so the showroom is also where you'll find well-kept vehicles at straight prices.</p>
-      <a class="btn ghost" href="#stock">See what's for sale</a>
     </div>
   </div>
 </section>
@@ -266,59 +312,29 @@ footer a:hover{color:#fff}
 <section class="stock" id="stock">
   <div class="wrap">
     <h2>For sale</h2>
-    <p>Vehicles from our buy-back programme, inspected and ready. Prices are what's on the windscreen. (Placeholder listings; the live site pulls from your stock sheet.)</p>
+    <p class="lead">Vehicles from the buy-back programme, inspected and ready. The price is the price.</p>
     <div class="grid">
       <article class="car">
         <img src="images/carcapital/audi-a1.webp" alt="Red Audi A1" loading="lazy">
-        <div><h3>Audi A1 Sportback</h3><small>2020 · 64 000 km · automatic</small>
-          <div class="row"><span class="price">R92 000</span><a class="btn sm" href="https://wa.me/27212058152?text=Hi%2C%20I%27m%20interested%20in%20the%20Audi%20A1%20on%20your%20site." target="_blank" rel="noopener">Ask about it</a></div></div>
+        <div class="d"><h3>Audi A1 Sportback</h3><small>2020 · 64 000 km · automatic · placeholder listing</small>
+          <div class="price">R92 000</div>
+          <a class="btn wa sm" data-wa="a1" href="#">Ask about it</a></div>
       </article>
-      <article class="car ph">Your next vehicle goes here, with photo, year, mileage and price.</article>
-      <article class="car ph">And here. Add or remove cars from your phone in a minute.</article>
+      <div class="more">
+        <div><h3>More on the floor</h3><p>Stock changes weekly. Ask what's in, or come and look.</p><a class="btn wa sm" data-wa="stock" href="#">What's for sale this week?</a></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="dealers" id="dealers">
-  <div class="wrap">
-    <div>
-      <h2>Dealer Capital</h2>
-      <p>Floorplan finance for dealerships. Turn stock into working capital without waiting for the sale.</p>
-      <ul>
-        <li>Capital against vehicles on your floor</li>
-        <li>30, 60 and 90-day terms, same published fees</li>
-        <li>One contact, decisions in a day</li>
-      </ul>
-      <a class="btn" href="https://wa.me/27212058152?text=Hi%2C%20I%27m%20a%20dealer%20and%20I%27d%20like%20to%20talk%20about%20Dealer%20Capital." target="_blank" rel="noopener">Talk to us about your floor</a>
-    </div>
-    <div class="big" aria-hidden="true">30<br>60<br>90</div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="wrap">
-    <h2>Questions</h2>
-    <details><summary>How do I book a valuation?</summary><p>WhatsApp us a photo and your registration, or fill in the form. We'll give you a range, then book a time at our Assessment Centre at 120 Strand Street for the final quote.</p></details>
-    <details><summary>What does it cost?</summary><p>On a car valued at R1 000 000:</p>
-      <table><tr><td>30 days</td><td>Holding 5% · insurance and storage 2% · admin R5 999 · re-reg R1 999</td><td>R922 002 paid to you</td></tr>
-      <tr><td>60 days</td><td>Holding 10% · insurance and storage 4% · admin and re-reg as above</td><td>R852 002 paid to you</td></tr>
-      <tr><td>90 days</td><td>Holding 15% · insurance and storage 6% · admin and re-reg as above</td><td>R782 002 paid to you</td></tr></table>
-      <p>You buy the car back at the valued amount. No early-repurchase penalty.</p></details>
-    <details><summary>What if I don't buy it back in time?</summary><p>If the vehicle isn't repurchased within the term you chose up front, it is sold to a third party. We send an email reminder before the date.</p></details>
-    <details><summary>Do you buy new and used?</summary><p>Yes, as long as the vehicle meets our minimum valuation criteria. Bring the car, the registration papers and your ID.</p></details>
-    <details><summary>Where are you and when are you open?</summary><p>120 Strand Street, corner of Rose Street, De Waterkant, Cape Town. Monday to Friday, 9 am to 5 pm. Delivery and shipping can be arranged.</p></details>
   </div>
 </section>
 
 <section class="reviews">
   <div class="wrap">
     <h2>What clients say</h2>
-    <p>Your Google reviews go here. Right now you have none, and for a business that asks people to hand over a car, that's the first thing to fix.</p>
-    <div class="grid">
-      <figure><b>Review one</b>Two lines from a client, first name and month.</figure>
-      <figure><b>Review two</b>Two lines from a client, first name and month.</figure>
-      <figure><b>Review three</b>Two lines from a client, first name and month.</figure>
-    </div>
+    <figure>
+      <blockquote>[A client's words, two or three lines, in their own voice.]</blockquote>
+      <figcaption>[First name], [month] · Google review</figcaption>
+    </figure>
+    <p class="note">Google reviews appear here once you have them. The site links straight to the review form, so you can ask every client at the handover.</p>
   </div>
 </section>
 
@@ -326,15 +342,34 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div>
       <h2>Come in</h2>
-      <p>Bring the car, its papers and your ID. Parking is right outside.</p>
+      <p class="lead">Bring the car, its papers and your ID.</p>
       <dl>
         <div><dt>Address</dt><dd>120 Strand Street, cnr Rose Street, De Waterkant, Cape Town, 8005</dd></div>
         <div><dt>Hours</dt><dd>Monday to Friday, 9 am to 5 pm</dd></div>
         <div><dt>Call</dt><dd><a href="tel:+27212058152">021 205 8152</a></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:info@carcapital.co.za">info@carcapital.co.za</a></dd></div>
       </dl>
+      <a class="btn white" href="https://www.google.com/maps/dir/?api=1&destination=120+Strand+Street,+De+Waterkant,+Cape+Town" target="_blank" rel="noopener">Directions in Google Maps</a>
     </div>
-    <iframe loading="lazy" title="Map to Car Capital" src="https://www.google.com/maps?q=120+Strand+Street,+De+Waterkant,+Cape+Town&output=embed"></iframe>
+    <img src="images/carcapital/exterior.webp" alt="The Car Capital building on Strand Street" loading="lazy">
+  </div>
+</section>
+
+<section class="dealers" id="dealers">
+  <div class="wrap">
+    <div>
+      <h2>Dealer Capital</h2>
+      <p>Capital against the vehicles on your floor, on the same 30, 60 and 90-day terms.</p>
+      <p class="pts">For dealerships that need working capital without waiting for the sale.</p>
+      <a class="btn wa" data-wa="dealer" href="#">Talk to us about your floor</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div><h2>Ready for a range?</h2><p>One photo, your registration, your mileage. Same day.</p></div>
+    <a class="btn white" data-wa="range" href="#">WhatsApp your car for a range</a>
   </div>
 </section>
 
@@ -347,7 +382,7 @@ footer a:hover{color:#fff}
     </div>
     <div>
       <h4>Contact</h4>
-      <ul><li><a href="https://wa.me/27212058152">WhatsApp</a></li><li><a href="tel:+27212058152">021 205 8152</a></li><li><a href="mailto:info@carcapital.co.za">info@carcapital.co.za</a></li></ul>
+      <ul><li><a data-wa="range" href="#">WhatsApp</a></li><li><a href="tel:+27212058152">021 205 8152</a></li><li><a href="mailto:info@carcapital.co.za">info@carcapital.co.za</a></li></ul>
     </div>
     <div>
       <h4>Follow</h4>
@@ -355,25 +390,43 @@ footer a:hover{color:#fff}
     </div>
   </div>
   <div class="legal">
-    <span>© 2026 Car Capital · T's and C's · Privacy Policy (carried over unchanged)</span>
+    <span>© 2026 Car Capital · <a href="https://www.carcapital.co.za/terms-and-conditions/" target="_blank" rel="noopener">T's and C's</a> · <a href="https://www.carcapital.co.za/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></span>
     <span>Mock-up by <a href="https://joshuavomberg.co.za">Joshua Vomberg</a></span>
   </div>
 </footer>
 
-<a class="wafab" href="https://wa.me/27212058152?text=Hi%20Car%20Capital%2C%20I%27d%20like%20a%20cash%20range%20on%20my%20car." target="_blank" rel="noopener" aria-label="WhatsApp Car Capital">
+<a class="wafab" data-wa="range" href="#" aria-label="WhatsApp Car Capital">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-  Get a range
 </a>
 
 <script>
-// ponytail: fee maths straight from their FAQ table; final figure always comes from the valuation
+// ponytail: one WhatsApp number, set once; every link is built from it so the swap is a single edit
+const WA='27212058152'; // their 021 landline, to be confirmed as a WhatsApp Business number
+const MSG={
+  range:"Hi Car Capital, I'd like a cash range on my car.\nReg: \nMileage: \n(photo attached)",
+  a1:"Hi, I'm interested in the Audi A1 on your site.",
+  stock:"Hi, what cars do you have for sale this week?",
+  dealer:"Hi, I'm a dealer and I'd like to talk about Dealer Capital."
+};
+const wa=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(MSG[a.dataset.wa]);a.target='_blank';a.rel='noopener'});
+
+// payout maths from their FAQ table; the real figure always comes from the valuation
 const R=n=>'R'+Math.round(n).toLocaleString('en-ZA').replace(/,/g,' ');
-const r=document.getElementById('r'),v=document.getElementById('v');
-function calc(){const val=+r.value,t=+document.querySelector('input[name=t]:checked').value,m=t/30;
-  const pay=val-val*0.05*m-val*0.02*m-5999-1999;
-  v.textContent=R(val);document.getElementById('pay').textContent=R(Math.max(pay,0));document.getElementById('back').textContent=R(val);
-  document.getElementById('go').href='https://wa.me/27212058152?text='+encodeURIComponent(`Hi Car Capital, my car is worth about ${R(val)}. On a ${t}-day term your site says I'd get ${R(pay)}. Can I book a valuation?`)}
-r.addEventListener('input',calc);document.getElementById('t').addEventListener('change',calc);calc();
+const r=document.getElementById('r'),rv=document.getElementById('rv');
+let val=300000;
+function calc(){const t=+document.querySelector('input[name=t]:checked').value,m=t/30;
+  const pay=Math.max(val-val*0.05*m-val*0.02*m-5999-1999,0),cost=val-pay;
+  document.getElementById('pay').textContent=R(pay);document.getElementById('back').textContent=R(val);
+  document.getElementById('td').textContent=t;document.getElementById('cost').textContent=R(cost)+' ('+(cost/val*100).toFixed(1)+'%)';
+  document.getElementById('go').href=wa(`Hi Car Capital, my car is worth about ${R(val)}. On a ${t}-day term your site shows ${R(pay)} paid to me, buy-back ${R(val)}. Can I book a valuation?\nReg: \nMileage: \n(photo attached)`)}
+r.addEventListener('input',()=>{val=+r.value;rv.value=val.toLocaleString('en-ZA').replace(/,/g,' ');calc()});
+rv.addEventListener('input',()=>{const n=Math.min(Math.max(+rv.value.replace(/\D/g,'')||0,0),5000000);val=n<50000?50000:n;r.value=Math.min(val,1000000);calc()});
+rv.addEventListener('blur',()=>{rv.value=val.toLocaleString('en-ZA').replace(/,/g,' ')});
+document.getElementById('t').addEventListener('change',calc);calc();
+
+// mobile WhatsApp button appears once the hero has scrolled off
+new IntersectionObserver(e=>document.body.classList.toggle('past',!e[0].isIntersecting)).observe(document.getElementById('top'));
 </script>
 </body>
 </html>
