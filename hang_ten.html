@@ -116,7 +116,9 @@ section{padding:clamp(70px,10vw,130px) 0}
 .mgroup{padding:10px 0 34px}
 .mgroup h3{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--coral);font-weight:600;padding-bottom:14px;border-bottom:1px solid rgba(244,234,218,.18);margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
 .mgroup h3 small{font-family:var(--b);letter-spacing:0;text-transform:none;font-weight:500;font-size:13px;color:rgba(244,234,218,.55)}
-.item{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:15px 0;border-bottom:1px dashed rgba(244,234,218,.14)}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px dashed rgba(244,234,218,.14);align-items:baseline}
+.item .price{font-family:var(--d);font-weight:600;font-size:13.5px;color:var(--sun);white-space:nowrap}
+.item b .tag{margin-left:8px;vertical-align:middle}
 .item:last-child{border-bottom:0}
 .item b{font-family:var(--d);font-weight:600;font-size:14.5px;letter-spacing:0}
 .item p{grid-column:1/-1;font-size:15px;color:rgba(244,234,218,.68);line-height:1.45}
@@ -146,7 +148,10 @@ section{padding:clamp(70px,10vw,130px) 0}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:760px){.gal{grid-template-columns:1fr 1fr}}
 .ph{aspect-ratio:4/5;border-radius:18px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;color:var(--foam);isolation:isolate}
-.ph span{font-size:12px;font-weight:600;letter-spacing:.04em;background:rgba(18,48,46,.55);padding:6px 10px;border-radius:8px;backdrop-filter:blur(6px)}
+.ph span{font-size:12px;font-weight:600;letter-spacing:.04em;background:rgba(18,48,46,.55);padding:6px 10px;border-radius:8px;backdrop-filter:blur(6px);position:relative}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.ph:hover img{transform:scale(1.04)}
+.ph::after{display:none}
 .ph::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg)}
 .ph::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(255,255,255,.35) 46px 60px)}
 .ph:nth-child(1){--bg:linear-gradient(160deg,var(--sea),var(--deep))}
@@ -203,7 +208,7 @@ footer.site .by a{color:var(--sun);font-weight:600}
 </style>
 </head>
 <body>
-<div class="draft">Concept mock-up by <b>Joshua Vomberg</b> · details from the café's Google, Facebook &amp; Instagram · photos, prices and the full menu to come from the café</div>
+<div class="draft">Concept mock-up by <b>Joshua Vomberg</b> · details from the café's Google, Facebook &amp; Instagram · photos and menu from the café's Google listing, to confirm with the café</div>
 <span id="top"></span>
 <nav><div class="wrap">
   <a class="logo" href="#"><i></i>HANG TEN</a>
@@ -291,41 +296,60 @@ footer.site .by a{color:var(--sun);font-weight:600}
 <section class="menu" id="menu"><div class="wrap">
   <div class="head rv">
     <div><p class="eyebrow">The menu</p><h2>Sweet, salty,<br>and vegan-friendly.</h2></div>
-    <p>A taste of what's on the board. Vegetarian and vegan-friendly, with some sugar-free and gluten-free bakes.</p>
+    <p>Vegetarian all the way through, with vegan versions of the favourites. (V) is vegan, (GF) has a gluten-free option.</p>
   </div>
   <div class="mgrid">
     <div class="mgroup rv">
-      <h3>Crêpes <small>sweet &amp; salty</small></h3>
-      <div class="item"><b>What the Fudge</b><span class="tag">Signature</span><p>Homemade fudge, banana and toasted almonds.</p></div>
-      <div class="item"><b>Sweet Vegan</b><span class="tag v">Vegan</span><p>Salted date caramel, banana and toasted coconut.</p></div>
-      <div class="item"><b>Veganissimo</b><span class="tag v">Vegan</span><p>The all-vegan crêpe.</p></div>
-      <div class="item"><b>Fat Freddy</b><span class="tag">Regulars' pick</span><p>The one the regulars tell you to order.</p></div>
+      <h3>Crêpes <small>sweet &amp; salty, on the board</small></h3>
+      <div class="item"><b>What the Fudge<span class="tag">Signature</span></b><p>Homemade fudge, banana and toasted almonds.</p></div>
+      <div class="item"><b>Sweet Vegan<span class="tag v">V</span></b><p>Salted date caramel, banana and toasted coconut.</p></div>
+      <div class="item"><b>Veganissimo<span class="tag v">V</span></b><p>The all-vegan crêpe.</p></div>
     </div>
     <div class="mgroup rv d1">
-      <h3>Breakfast &amp; brunch <small>from 6:40 am</small></h3>
-      <div class="item"><b>Eggs Benedict</b><p>One of the Google menu highlights.</p></div>
-      <div class="item"><b>Alice in Wonderland</b><p>The other Google highlight. Ask at the counter.</p></div>
-      <div class="item"><b>Breakfast bagel</b><p>The quick one before the surf, or after.</p></div>
-      <div class="item"><b>Avo on ciabatta</b><p>Good bread, plenty of avo.</p></div>
-      <div class="item"><b>Burgers</b><p>For the after-surf hunger.</p></div>
+      <h3>All-day breakfast &amp; mains <small>from 6:40 am</small></h3>
+      <div class="item"><b>Lady Slider</b><span class="price">R120</span><p>Fried potatoes, onion, green pepper, kidney beans, garlic and cayenne, two poached eggs, avo and fresh thyme.</p></div>
+      <div class="item"><b>Hang Ten Eggs Benedict</b><span class="price">R115</span><p>Potato rösti, blanched spinach and mushrooms, homemade hollandaise.</p></div>
+      <div class="item"><b>Smashed Avo on Ciabatta<span class="tag v">V</span></b><span class="price">R90</span><p>Smashed avo and dukkah spice on two slices of toasted ciabatta.</p></div>
+      <div class="item"><b>Amped Brekkie<span class="tag">GF R88</span></b><span class="price">R78</span><p>Creamy scrambled eggs on homemade bread with butter and jam.</p></div>
+      <div class="item"><b>Omelette</b><span class="price">R105</span><p>Two eggs, mushrooms, caramelised onion, mozzarella, rocket.</p></div>
+      <div class="item"><b>Breakfast Bagel<span class="tag">GF</span></b><span class="price">R98</span><p>Scrambled eggs, roast aubergine and tomato, rocket.</p></div>
+      <div class="item"><b>Benedict Bagel</b><span class="price">R98</span><p>Smoky king oyster mushroom, poached egg, mozzarella, red onion, hollandaise.</p></div>
+      <div class="item"><b>Indo Tempeh Wrap<span class="tag">GF R115</span></b><span class="price">R105</span><p>Edamame, sprouts, lettuce, carrot, fried tempeh with homemade BBQ sauce, vegan mayo, peanut butter sambal.</p></div>
+      <div class="item"><b>Loxy Lady Open Sandwich<span class="tag v">V</span></b><span class="price">R105</span><p>Carrot lox, almond-cashew cream cheese, spinach, glazed tomatoes, capers and sesame on toasted sourdough.</p></div>
+      <div class="item"><b>Cape Kelp Lasagna<span class="tag">GF</span></b><span class="price">R150</span><p>Fresh kelp sheet, aubergine, soya mince, tomato relish, mozzarella or vegan mozzarella, salad or chips.</p></div>
     </div>
     <div class="mgroup rv">
-      <h3>Counter &amp; bakes <small>fresh every morning</small></h3>
-      <div class="item"><b>Croissants</b><p>Out every morning.</p></div>
-      <div class="item"><b>Cakes &amp; pastries</b><p>Some sugar-free, some gluten-free.</p></div>
-      <div class="item"><b>Gelato</b><p>For the walk along the beachfront.</p></div>
-      <div class="item"><b>Hang Ten mugs</b><p>On the shelf while they last. Take the café home.</p></div>
+      <h3>Bowls <small>smoothie and granola</small></h3>
+      <div class="item"><b>Barrel Bowl</b><span class="price">R105</span><p>Toasted granola, almonds, seasonal fruit, honey and Greek yoghurt.</p></div>
+      <div class="item"><b>Healthy Smoothie Bowl</b><span class="price">R98</span><p>Mixed berries, banana, apple juice and chia, with fresh berries and homemade granola.</p></div>
+      <div class="item"><b>Green Smoothie Bowl</b><span class="price">R98</span><p>Mango, banana, avo, spinach and orange juice, with pineapple, berries and toasted coconut.</p></div>
+      <div class="item"><b>Dragon Fruit Bowl</b><span class="price">R98</span><p>Dragon fruit, banana and apple juice, with berries, coconut flakes, pumpkin and chia seeds.</p></div>
+      <div class="item"><b>Charcoal Detox Smoothie Bowl</b><span class="price">R105</span><p>Activated charcoal, yoghurt, mixed berry, banana and almond milk, with seasonal fruit and granola.</p></div>
     </div>
     <div class="mgroup rv d1">
-      <h3>Drinks <small>hot and cold</small></h3>
-      <div class="item"><b>Flat white, cappuccino, espresso</b><p>"Best espresso in South Africa", according to one very happy reviewer.</p></div>
-      <div class="item"><b>Hot chocolate</b><p>"Amazing", says a Google review.</p></div>
-      <div class="item"><b>Smoothies &amp; smoothie bowls</b><span class="tag v">Vegan options</span><p>Plus the health shakes.</p></div>
-      <div class="item"><b>Cold-pressed juice</b><p>Pressed fresh.</p></div>
+      <h3>Burgers <small>with rustic chips or salad</small></h3>
+      <div class="item"><b>Thai Style Jackfruit Burger<span class="tag v">V</span></b><span class="price">R148</span><p>Asian-spiced pulled jackfruit, coleslaw and avo on a bed of greens.</p></div>
+      <div class="item"><b>El Zapata Burger<span class="tag v">V</span></b><span class="price">R148</span><p>Three-bean patty, grilled aubergine, guacamole and salsa on greens.</p></div>
+      <div class="item"><b>Fat Betty Burger<span class="tag v">V</span></b><span class="price">R148</span><p>Mushroom, lentil and beetroot patty, roasted mushroom, caramelised onions, melted cheese.</p></div>
+    </div>
+    <div class="mgroup rv">
+      <h3>Jaffle toasties <small>quick and hot</small></h3>
+      <div class="item"><b>Al Capone</b><span class="price">R78</span><p>Mozzarella, tomato and pesto.</p></div>
+      <div class="item"><b>The Yodelling Goat</b><span class="price">R78</span><p>Goat's cheese, spinach, caramelised onion.</p></div>
+      <div class="item"><b>Popeye the Sailor<span class="tag v">V</span></b><span class="price">R78</span><p>Vegan mozzarella, spinach and mushrooms.</p></div>
+      <div class="item"><b>Side salad or rustic chips</b><span class="price">R48</span></div>
+    </div>
+    <div class="mgroup rv d1">
+      <h3>Salads <small>big enough for lunch</small></h3>
+      <div class="item"><b>Hang Ten Health Salad</b><span class="price">R105</span><p>Quinoa, kale, broccoli, feta, toasted almonds and vinaigrette.</p></div>
+      <div class="item"><b>Greek Salad</b><span class="price">R98</span><p>Tomato, green pepper, cucumber, red onion, olives and feta.</p></div>
+      <div class="item"><b>Medly Greens<span class="tag v">V</span></b><span class="price">R105</span><p>Edamame, zucchini, peas and mushroom in pesto, white-bean tartare, avo and toasted seeds.</p></div>
+      <div class="item"><b>Asian Tofu Salad<span class="tag v">V</span></b><span class="price">R105</span><p>Hard tofu, carrot, cucumber, spinach, Sichuan pepper, sesame oil and seeds, homemade spicy sauce.</p></div>
+      <div class="item"><b>Tempeh Salad<span class="tag v">V</span></b><span class="price">R115</span><p>BBQ tempeh, toasted almonds, broccoli, sweet corn, tomatoes, creamy spring-onion and poppyseed dressing.</p></div>
     </div>
   </div>
   <div class="note rv">
-    <p>Prices and the full menu are on the board at the counter. Dine in, kerbside pickup or delivery.</p>
+    <p>Coffee, hot chocolate, smoothies, cold-pressed juice, fresh bakes and gelato at the counter. Prices as on the menu board photographed on Google; the current board at the café wins. Dine in, kerbside pickup or delivery.</p>
     <a class="btn" href="tel:+27217882001">Call the café · 021 788 2001</a>
   </div>
 </div></section>
@@ -347,16 +371,16 @@ footer.site .by a{color:var(--sun);font-weight:600}
 <section id="photos"><div class="wrap">
   <div class="head rv">
     <div><p class="eyebrow">Photos</p><h2>The corner,<br>in colour.</h2></div>
-    <p>The crêpes, the counter, the huts up the beach, the regulars. Five photos, straight from the corner.</p>
+    <p>The counter, the coffee, the bakes under the cloche. From the café's own photos on Google.</p>
   </div>
   <div class="gal">
-    <div class="ph rv"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The huts up the beach</span></div>
-    <div class="ph rv d1"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>What the Fudge, fresh off the pan</span></div>
-    <div class="ph rv d2"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>Flat white at 6:40</span></div>
-    <div class="ph rv"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The counter, pastries out</span></div>
-    <div class="ph rv d1"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The regulars</span></div>
+    <div class="ph rv"><img src="images/hangten/counter.webp" alt="The turquoise counter at Hang Ten Café" loading="lazy"><span>The counter</span></div>
+    <div class="ph rv d1"><img src="images/hangten/cappuccino.webp" alt="A cappuccino on the counter" loading="lazy"><span>Cappuccino, early</span></div>
+    <div class="ph rv d2"><img src="images/hangten/cakes.webp" alt="Cakes and bakes under a glass cloche" loading="lazy"><span>The bakes, under the cloche</span></div>
+    <div class="ph rv"><img src="images/hangten/juice.webp" alt="Bottles of cold-pressed juice in the fridge" loading="lazy"><span>Juices, chilled</span></div>
+    <div class="ph rv d1"><img src="images/hangten/bowl.webp" alt="A fruit and granola bowl" loading="lazy"><span>Fruit and granola</span></div>
   </div>
-  <p class="rv" style="margin-top:18px;font-size:14px;color:rgba(18,48,46,.65)">Placeholder tiles. Real photos go in the day the café sends them.</p>
+  <p class="rv" style="margin-top:18px;font-size:14px;color:rgba(18,48,46,.65)">Photos from the café's Google listing. Newer ones from the café swap straight in.</p>
 </div></section>
 
 <section class="rev"><div class="wrap">
