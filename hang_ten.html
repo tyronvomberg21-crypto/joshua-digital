@@ -22,13 +22,13 @@ img,svg{display:block;max-width:100%}
 h1,h2,h3,.d{font-family:var(--d);font-weight:800;letter-spacing:-.02em;line-height:1}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 var(--g)}
 .wrap>*{min-width:0}
-.eyebrow{font-family:var(--d);font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sea)}
+.eyebrow{font-family:var(--d);font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--deep)}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--d);font-weight:600;font-size:13px;letter-spacing:.02em;padding:16px 24px;border-radius:999px;background:var(--ink);color:var(--foam);border:2px solid var(--ink);transition:transform .25s,background .25s,color .25s;white-space:nowrap}
 .btn:hover{transform:translateY(-2px);background:var(--coral);border-color:var(--coral)}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--foam);border-color:var(--ink)}
-.btn.coral{background:var(--coral);border-color:var(--coral)}
-.btn.coral:hover{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn.coral{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn.coral:hover{background:var(--ink);border-color:var(--ink);color:var(--foam)}
 
 /* draft ribbon */
 .draft{background:var(--ink);color:var(--sand);font-size:12.5px;font-weight:500;text-align:center;padding:8px var(--g);line-height:1.4;position:relative;z-index:5}
@@ -45,25 +45,25 @@ nav ul a{position:relative}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--coral);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 nav ul a:hover::after{transform:scaleX(1)}
 nav .btn{padding:11px 18px;font-size:12px}
-@media(max-width:760px){nav ul{display:none}}
+@media(max-width:760px){nav .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:8px;row-gap:4px}nav ul{order:3;width:100%;gap:18px;font-size:14px;overflow-x:auto;scrollbar-width:none}nav ul::-webkit-scrollbar{display:none}nav ul a{display:inline-block;padding:4px 0;white-space:nowrap}}
+@media(max-width:600px){.hero .sun{top:2%;right:4%;width:96px}.hero .eyebrow{max-width:70%}.draft{font-size:11.5px;padding:7px 14px}}
 
 /* hero */
 .hero{position:relative;overflow:hidden;padding-top:clamp(40px,8vh,90px);min-height:min(calc(100svh - 100px),780px);display:flex;flex-direction:column;justify-content:space-between}
 .hero .sun{position:absolute;z-index:0;top:8%;right:8%;width:clamp(120px,22vw,300px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 35%,#FFD57A,var(--sun) 55%,var(--coral) 100%);box-shadow:0 0 0 18px rgba(243,182,58,.14),0 0 0 44px rgba(243,182,58,.07);animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both}
 @keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-.hero .wrap{position:relative;z-index:2}
+.hero .wrap{position:relative;z-index:2;width:100%}
 .hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
 .hero .eyebrow::before{content:"";width:34px;height:2px;background:var(--coral)}
 .hero h1{font-size:clamp(66px,15.5vw,210px);line-height:.86;letter-spacing:-.045em;font-weight:900;color:var(--ink)}
 .hero h1 span{display:block}
-.hero h1 .t{color:transparent;-webkit-text-stroke:2px var(--ink);padding-left:.18em}
-@media(max-width:600px){.hero h1 .t{-webkit-text-stroke:1.4px var(--ink)}}
+.hero h1 .t{color:var(--coral);padding-left:.5em}
 .hero .lede{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-top:34px}
 .hero .lede p{font-size:clamp(18px,2.2vw,23px);line-height:1.4;max-width:520px;font-weight:500}
 .hero .lede p b{font-weight:700;color:var(--sea)}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
 @media(max-width:760px){.hero .lede{grid-template-columns:1fr;gap:22px}.hero .cta{justify-content:flex-start}}
-.open{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-top:16px;color:var(--deep)}
+.open{cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-top:16px;color:var(--deep)}
 .open i{width:9px;height:9px;border-radius:50%;background:#2EBE6A;box-shadow:0 0 0 4px rgba(46,190,106,.2);animation:pulse 2s infinite}
 .open.closed i{background:var(--coral);box-shadow:0 0 0 4px rgba(240,88,61,.2);animation:none}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(46,190,106,.2)}50%{box-shadow:0 0 0 8px rgba(46,190,106,.05)}}
@@ -86,8 +86,8 @@ nav .btn{padding:11px 18px;font-size:12px}
 
 /* sections */
 section{padding:clamp(70px,10vw,130px) 0}
-.head{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
-.head h2{font-size:clamp(34px,5.2vw,66px);margin-top:14px}
+.head{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.head h2{font-size:clamp(34px,4.6vw,60px);margin-top:14px}
 .head p{font-size:18px;max-width:440px;color:rgba(18,48,46,.78)}
 @media(max-width:760px){.head{grid-template-columns:1fr}}
 
@@ -128,13 +128,13 @@ section{padding:clamp(70px,10vw,130px) 0}
 .menu .btn:hover{background:var(--coral);border-color:var(--coral);color:var(--foam)}
 
 /* open mic */
-.mic{background:var(--coral);color:var(--foam);overflow:hidden;position:relative}
+.mic{background:var(--coral);color:var(--ink);overflow:hidden;position:relative}
 .mic .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
 @media(max-width:860px){.mic .wrap{grid-template-columns:1fr}}
-.mic .eyebrow{color:var(--foam);opacity:.8}
+.mic .eyebrow{color:var(--ink)}
 .mic h2{font-size:clamp(40px,7vw,96px);line-height:.95;margin:14px 0 20px;letter-spacing:-.035em}
-.mic h2 em{font-style:normal;color:var(--ink)}
-.mic p{font-size:19px;max-width:520px;opacity:.95}
+.mic h2 em{font-style:normal;color:var(--foam)}
+.mic p{font-size:19px;max-width:520px}
 .mic .card{background:var(--ink);color:var(--sand);border-radius:24px;padding:30px;transform:rotate(1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.18)}
 .mic .card .d{font-size:clamp(40px,4.6vw,60px);color:var(--sun);line-height:1;white-space:nowrap}
 .mic .card small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.7;margin-bottom:10px}
@@ -155,8 +155,7 @@ section{padding:clamp(70px,10vw,130px) 0}
 .ph:nth-child(4){--bg:linear-gradient(160deg,#5BA7B8,var(--sea))}
 .ph:nth-child(5){--bg:linear-gradient(160deg,var(--ink),var(--deep))}
 .ph:nth-child(6){--bg:linear-gradient(160deg,#F5A58F,var(--coral))}
-.ph .ico{position:absolute;top:16px;left:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
-@media(max-width:760px){.ph:nth-child(2){grid-row:auto;aspect-ratio:4/5}}
+.ph .ico{position:absolute;top:16px;left:16px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;color:var(--foam)}
 
 /* reviews */
 .rev{background:var(--foam)}
@@ -170,14 +169,14 @@ section{padding:clamp(70px,10vw,130px) 0}
 .r footer i{font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
 
 /* find us */
-.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.find .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,6vw,80px);align-items:start}
 @media(max-width:860px){.find .wrap{grid-template-columns:1fr}}
-.find h2{font-size:clamp(36px,5.5vw,70px);margin:14px 0 22px}
+.find h2{font-size:clamp(34px,4.2vw,56px);margin:14px 0 22px}
 .find address{font-style:normal;font-size:20px;line-height:1.45;font-weight:500}
 .find address small{display:block;font-size:15px;color:rgba(18,48,46,.7);font-weight:400;margin-top:6px}
 .find .cta{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 30px}
 .find .links{display:grid;gap:12px;font-size:16px}
-.find .links a{display:flex;align-items:center;gap:12px;font-weight:600}
+.find .links a{display:flex;align-items:center;gap:12px;font-weight:600;padding:6px 0}
 .find .links a i{width:34px;height:34px;border-radius:10px;background:var(--foam);border:1px solid var(--rule);display:grid;place-items:center;font-style:normal;color:var(--sea)}
 .hours{background:var(--ink);color:var(--sand);border-radius:24px;padding:30px;position:relative;overflow:hidden}
 .hours h3{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sun);font-weight:600;margin-bottom:18px}
@@ -187,13 +186,13 @@ section{padding:clamp(70px,10vw,130px) 0}
 .hours tr.today td{color:var(--sun);font-weight:700}
 .hours tr.wed td:last-child{color:#7FE3A6}
 .hours .ps{margin-top:18px;font-size:14px;color:rgba(244,234,218,.65)}
-.hours::after{content:"🌊";position:absolute;right:-10px;bottom:-16px;font-size:110px;opacity:.1}
 
 /* footer */
 footer.site{background:var(--ink);color:var(--sand);padding:46px 0 30px;border-top:3px solid var(--coral)}
 footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;font-size:14px}
 footer.site .logo{color:var(--sand)}
-footer.site .so{display:flex;gap:18px;font-weight:600}
+footer.site .so{display:flex;gap:14px;font-weight:600}
+footer.site .so a{padding:10px 4px}
 footer.site .by{width:100%;margin-top:26px;padding-top:18px;border-top:1px solid rgba(244,234,218,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:rgba(244,234,218,.6)}
 footer.site .by a{color:var(--sun);font-weight:600}
 
@@ -204,11 +203,11 @@ footer.site .by a{color:var(--sun);font-weight:600}
 </style>
 </head>
 <body>
-<div class="draft">Concept mock-up by <b>Joshua Vomberg</b> · details from the café's Google, Facebook and Instagram pages · photos, prices and the full menu come from the café</div>
+<div class="draft">Concept mock-up by <b>Joshua Vomberg</b> · details from the café's Google, Facebook &amp; Instagram · photos, prices and the full menu to come from the café</div>
 <span id="top"></span>
 <nav><div class="wrap">
   <a class="logo" href="#"><i></i>HANG TEN</a>
-  <ul><li><a href="#menu">Menu</a></li><li><a href="#mic">Open mic</a></li><li><a href="#photos">Photos</a></li><li><a href="#find">Find us</a></li></ul>
+  <ul><li><a href="#menu">Menu</a></li><li><a href="#find">Hours &amp; find us</a></li><li><a href="#mic">Open mic</a></li><li><a href="#photos">Photos</a></li></ul>
   <a class="btn coral" href="tel:+27217882001">Call the café</a>
 </div></nav>
 
@@ -216,12 +215,12 @@ footer.site .by a{color:var(--sun);font-weight:600}
   <div class="sun"></div>
   <div class="ten" aria-hidden="true">10</div>
   <div class="wrap">
-    <p class="eyebrow h1a">Surfers Corner · Muizenberg · open from 6:40</p>
+    <p class="eyebrow h1a">Surfers Corner · Muizenberg</p>
     <h1><span class="h1b">HANG</span><span class="t h1c">TEN</span></h1>
     <div class="lede">
       <div class="h1d">
-        <p>Muizenberg's local surf café. <b>Famous sweet &amp; salty crêpes</b>, fantastic coffee and vegan-friendly food, right on the beachfront with the huts and the waves out the window.</p>
-        <span class="open" id="open"><i></i><span>Open · closes 6 pm</span></span>
+        <p>Muizenberg's local surf café. <b>Famous sweet &amp; salty crêpes</b>, fantastic coffee and vegan-friendly food, right on the beachfront at Surfers Corner with the waves out the window.</p>
+        <a class="open" id="open" href="#find"><i></i><span>Open · closes 6 pm</span></a>
       </div>
       <div class="cta h1d">
         <a class="btn" href="#menu">See the menu</a>
@@ -268,106 +267,107 @@ footer.site .by a{color:var(--sun);font-weight:600}
 </header>
 
 <div class="ticker" aria-hidden="true"><div>
-  <span>Sweet &amp; salty crêpes</span><span>Fantastic coffee</span><span>Cold-pressed juice</span><span>Vegan-friendly</span><span>Smoothie bowls</span><span>Fresh pastries</span><span>Dogs welcome</span><span>Open mic Wednesdays</span>
-  <span>Sweet &amp; salty crêpes</span><span>Fantastic coffee</span><span>Cold-pressed juice</span><span>Vegan-friendly</span><span>Smoothie bowls</span><span>Fresh pastries</span><span>Dogs welcome</span><span>Open mic Wednesdays</span>
+  <span>Sweet &amp; salty crêpes</span><span>Fantastic coffee</span><span>Cold-pressed juice</span><span>Vegan-friendly</span><span>Smoothie bowls</span><span>Fresh pastries</span><span>Dog-friendly</span><span>Open mic Wednesdays</span>
+  <span>Sweet &amp; salty crêpes</span><span>Fantastic coffee</span><span>Cold-pressed juice</span><span>Vegan-friendly</span><span>Smoothie bowls</span><span>Fresh pastries</span><span>Dog-friendly</span><span>Open mic Wednesdays</span>
 </div></div>
 
 <section id="about"><div class="wrap">
   <div class="head rv">
     <div><p class="eyebrow">The corner café</p><h2>Coffee at dawn.<br>Crêpes all day.</h2></div>
-    <p>The doors open at 6:40 for the dawn-patrol surfers. By mid-morning it's crêpes, smoothies and the best seat in Muizenberg: the beach huts across the road and the whole bay behind them.</p>
+    <p>The doors open at 6:40 for the dawn-patrol surfers. By mid-morning it's crêpes, smoothies and the best seat in Muizenberg: the surf across the road and the whole bay behind it.</p>
   </div>
   <div class="pillars">
-    <div class="pillar rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M7 3v2M11 3v2"/></svg></div><span class="n">01</span><h3>Proper coffee, first thing</h3><p>Flat whites that regulars rave about, a hot chocolate people drive out for, plus cold-pressed juices and health shakes when the sun's up.</p></div>
+    <div class="pillar rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2M7 3v2M11 3v2"/></svg></div><span class="n">01</span><h3>Proper coffee, first thing</h3><p>Flat whites and cappuccinos that regulars rave about, a hot chocolate reviewers call amazing, plus cold-pressed juice and health shakes once the sun's up.</p></div>
     <div class="pillar rv d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M5 9h14"/></svg></div><span class="n">02</span><h3>The famous crêpes</h3><p>Sweet or salty, thin and golden. The "What the Fudge" with homemade fudge, banana and toasted almonds is the one everyone orders first.</p></div>
-    <div class="pillar rv d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><circle cx="17" cy="7" r="3"/></svg></div><span class="n">03</span><h3>The view, and the vibe</h3><p>Colourful, relaxed, a little bit funky. Surfers, dogs, laptops and families all fit. Sit outside and watch the line-up while you eat.</p></div>
+    <div class="pillar rv d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><circle cx="17" cy="7" r="3"/></svg></div><span class="n">03</span><h3>The view, and the vibe</h3><p>Colourful, relaxed, a little bit funky. Surfers, dogs, kids and locals all fit, and the ocean is right there out the window.</p></div>
   </div>
   <div class="rating rv">
     <div class="big">4.5</div>
-    <div><div class="stars">★★★★★</div><div style="font-size:13px;opacity:.75">500+ Google reviews</div></div>
-    <p>"A Muizenberg gem." Rated for its vegan options, crêpes, smoothies and the ocean view. Reviews and numbers from the café's Google listing.</p>
+    <div><div class="stars" aria-label="4.5 out of 5">★★★★<span style="opacity:.35">★</span></div><div style="font-size:13px;opacity:.75">500+ Google reviews</div></div>
+    <p>"A Muizenberg gem." Rated for its vegan options, crêpes, smoothies and the ocean view.</p>
   </div>
 </div></section>
 
 <section class="menu" id="menu"><div class="wrap">
   <div class="head rv">
-    <div><p class="eyebrow">The menu</p><h2>Sweet, salty,<br>and mostly plant-happy.</h2></div>
-    <p>A taste of what's on the board. Vegetarian throughout, with vegan versions of the favourites. Gluten-free and sugar-free bakes most days.</p>
+    <div><p class="eyebrow">The menu</p><h2>Sweet, salty,<br>and vegan-friendly.</h2></div>
+    <p>A taste of what's on the board. Vegetarian and vegan-friendly, with some sugar-free and gluten-free bakes.</p>
   </div>
   <div class="mgrid">
     <div class="mgroup rv">
-      <h3>Sweet crêpes <small>the signature</small></h3>
-      <div class="item"><b>What the Fudge</b><span class="tag">Signature</span><p>Homemade fudge, banana and toasted almonds. The reason people come back.</p></div>
-      <div class="item"><b>Sweet Vegan</b><span class="tag v">Vegan</span><p>Salted date caramel, banana and toasted coconut flakes.</p></div>
-      <div class="item"><b>Alice in Wonderland</b><p>A house favourite from the Google menu highlights. Ask what's inside today.</p></div>
-      <div class="item"><b>Lemon &amp; sugar</b><p>The classic, done thin and crisp at the edges.</p></div>
+      <h3>Crêpes <small>sweet &amp; salty</small></h3>
+      <div class="item"><b>What the Fudge</b><span class="tag">Signature</span><p>Homemade fudge, banana and toasted almonds.</p></div>
+      <div class="item"><b>Sweet Vegan</b><span class="tag v">Vegan</span><p>Salted date caramel, banana and toasted coconut.</p></div>
+      <div class="item"><b>Veganissimo</b><span class="tag v">Vegan</span><p>The all-vegan crêpe.</p></div>
+      <div class="item"><b>Fat Freddy</b><span class="tag">Regulars' pick</span><p>The one the regulars tell you to order.</p></div>
     </div>
     <div class="mgroup rv d1">
-      <h3>Salty crêpes <small>lunch, any time</small></h3>
-      <div class="item"><b>Fat Freddy</b><span class="tag">Regulars' pick</span><p>The loaded savoury crêpe the locals point you to.</p></div>
-      <div class="item"><b>Veganissimo</b><span class="tag v">Vegan</span><p>The vegan savoury crêpe, packed with the good stuff.</p></div>
-      <div class="item"><b>Cheese &amp; tomato</b><p>Simple, melty, kid-approved.</p></div>
+      <h3>Breakfast &amp; brunch <small>from 6:40 am</small></h3>
+      <div class="item"><b>Eggs Benedict</b><p>One of the Google menu highlights.</p></div>
+      <div class="item"><b>Alice in Wonderland</b><p>The other Google highlight. Ask at the counter.</p></div>
+      <div class="item"><b>Breakfast bagel</b><p>The quick one before the surf, or after.</p></div>
+      <div class="item"><b>Avo on ciabatta</b><p>Good bread, plenty of avo.</p></div>
+      <div class="item"><b>Burgers</b><p>For the after-surf hunger.</p></div>
     </div>
     <div class="mgroup rv">
-      <h3>Breakfast &amp; brunch <small>from 6:40</small></h3>
-      <div class="item"><b>Eggs Benedict</b><p>Poached eggs, hollandaise, toasted base. A Google menu highlight.</p></div>
-      <div class="item"><b>Breakfast bagel</b><p>The quick one before the surf, or after.</p></div>
-      <div class="item"><b>Avo on ciabatta</b><p>Smashed avo, good bread, a squeeze of lemon.</p></div>
-      <div class="item"><b>Croissants &amp; fresh bakes</b><p>Straight from the counter every morning. Some sugar-free and gluten-free.</p></div>
+      <h3>Counter &amp; bakes <small>fresh every morning</small></h3>
+      <div class="item"><b>Croissants</b><p>Out every morning.</p></div>
+      <div class="item"><b>Cakes &amp; pastries</b><p>Some sugar-free, some gluten-free.</p></div>
+      <div class="item"><b>Gelato</b><p>For the walk along the beachfront.</p></div>
+      <div class="item"><b>Hang Ten mugs</b><p>On the shelf while they last. Take the café home.</p></div>
     </div>
     <div class="mgroup rv d1">
       <h3>Drinks <small>hot and cold</small></h3>
-      <div class="item"><b>Flat white, cappuccino, espresso</b><p>Reviewers call it some of the best coffee on the Peninsula.</p></div>
-      <div class="item"><b>Hot chocolate</b><p>"Amazing", according to more than one review.</p></div>
-      <div class="item"><b>Smoothies &amp; smoothie bowls</b><span class="tag v">Vegan options</span><p>Berry, banana, peanut butter and chocolate, and the health shakes.</p></div>
-      <div class="item"><b>Cold-pressed juice</b><p>Made fresh, nothing added.</p></div>
+      <div class="item"><b>Flat white, cappuccino, espresso</b><p>"Best espresso in South Africa", according to one very happy reviewer.</p></div>
+      <div class="item"><b>Hot chocolate</b><p>"Amazing", says a Google review.</p></div>
+      <div class="item"><b>Smoothies &amp; smoothie bowls</b><span class="tag v">Vegan options</span><p>Plus the health shakes.</p></div>
+      <div class="item"><b>Cold-pressed juice</b><p>Pressed fresh.</p></div>
     </div>
   </div>
   <div class="note rv">
     <p>Prices and the full menu are on the board at the counter. Dine in, kerbside pickup or delivery.</p>
-    <a class="btn" href="tel:+27217882001">Call to order · 021 788 2001</a>
+    <a class="btn" href="tel:+27217882001">Call the café · 021 788 2001</a>
   </div>
 </div></section>
 
 <section class="mic" id="mic"><div class="wrap">
   <div class="rv">
-    <p class="eyebrow">Every Wednesday</p>
+    <p class="eyebrow">Wednesday nights</p>
     <h2>Open mic<br>at the <em>beach.</em></h2>
-    <p>On Wednesdays the café stays open late for Muze Open Mic. Songs, poems, whatever you've got. Grab a crêpe and a seat, or put your name down and play.</p>
+    <p>On Wednesday nights the café hosts Muze Open Mic. Songs, poems, whatever you've got. Grab a crêpe and a seat, or put your name down and play.</p>
   </div>
   <div class="card rv d1">
     <small>Wednesdays</small>
-    <div class="d">6:30 – 9 pm</div>
-    <p>Hosted with @muze_open_mic. Performers welcome, every level. Kitchen open till 8:30.</p>
-    <a class="btn" href="https://www.instagram.com/muze_open_mic/" target="_blank" rel="noopener">Want to play? DM @muze_open_mic</a>
+    <div class="d">From 6:30 pm</div>
+    <p>With @muze_open_mic. Performers welcome, every level.</p>
+    <a class="btn" href="https://www.instagram.com/hang10cafe_muizenberg/" target="_blank" rel="noopener">Want to perform? Message the café on Instagram</a>
   </div>
 </div></section>
 
 <section id="photos"><div class="wrap">
   <div class="head rv">
     <div><p class="eyebrow">Photos</p><h2>The corner,<br>in colour.</h2></div>
-    <p>Six slots ready for the café's own photos: the crêpes, the counter, the huts across the road, the resident dog.</p>
+    <p>The crêpes, the counter, the huts up the beach, the regulars. Five photos, straight from the corner.</p>
   </div>
   <div class="gal">
-    <div class="ph rv"><div class="ico">📷</div><span>The huts across the road</span></div>
-    <div class="ph rv d1"><div class="ico">📷</div><span>What the Fudge, fresh off the pan</span></div>
-    <div class="ph rv d2"><div class="ico">📷</div><span>Flat white at 6:40</span></div>
-    <div class="ph rv"><div class="ico">📷</div><span>The counter, pastries out</span></div>
-    <div class="ph rv d1"><div class="ico">📷</div><span>Open mic Wednesday</span></div>
-    <div class="ph rv d2"><div class="ico">📷</div><span>Dogs welcome</span></div>
+    <div class="ph rv"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The huts up the beach</span></div>
+    <div class="ph rv d1"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>What the Fudge, fresh off the pan</span></div>
+    <div class="ph rv d2"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>Flat white at 6:40</span></div>
+    <div class="ph rv"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The counter, pastries out</span></div>
+    <div class="ph rv d1"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div><span>The regulars</span></div>
   </div>
-  <p class="rv" style="margin-top:18px;font-size:14px;color:rgba(18,48,46,.65)">Photos to come from @hang10cafe_muizenberg. Tiles swap for real pictures the day they arrive.</p>
+  <p class="rv" style="margin-top:18px;font-size:14px;color:rgba(18,48,46,.65)">Placeholder tiles. Real photos go in the day the café sends them.</p>
 </div></section>
 
 <section class="rev"><div class="wrap">
   <div class="head rv">
     <div><p class="eyebrow">What people say</p><h2>Straight from<br>Google reviews.</h2></div>
-    <p>Three of the 500-plus. The café's own words come in version two.</p>
+    <p>Three of the 500-plus on Google.</p>
   </div>
   <div class="rgrid">
-    <div class="r rv"><div class="stars">★★★★★</div><p>Hang Ten Cafe is a Muizenberg gem. Incredible drinks selection from hot drinks (amazing hot chocolate!), smoothies and cold pressed juices. Their freshly baked goods are all scrumptious.</p><footer><span>Jessica T.</span><i>Google</i></footer></div>
-    <div class="r rv d1"><div class="stars">★★★★★</div><p>Such a lovely experience. The atmosphere was peaceful and relaxed despite being quite busy. Plenty of freshly baked treats on display.</p><footer><span>Megan de F.</span><i>Google</i></footer></div>
-    <div class="r rv d2"><div class="stars">★★★★★</div><p>Cute little, colorful café. Had the breakfast bagel and a cappuccino, both were really good. Nice variety, including smoothies, with a menu that's mostly vegetarian.</p><footer><span>Donevea</span><i>Google</i></footer></div>
+    <div class="r rv"><p style="margin-top:26px">Hang Ten Cafe is a Muizenberg gem. Incredible drinks selection from hot drinks (amazing hot chocolate!), smoothies and cold pressed juices. Their freshly baked goods are all scrumptious.</p><footer><span>Jessica T.</span><i>Google</i></footer></div>
+    <div class="r rv d1"><p style="margin-top:26px">Such a lovely experience. The atmosphere was peaceful and relaxed despite being quite busy. Plenty of freshly baked treats on display.</p><footer><span>Megan de F.</span><i>Google</i></footer></div>
+    <div class="r rv d2"><p style="margin-top:26px">Cute little, colorful café. Had the breakfast bagel and a cappuccino, both were really good. Nice variety, including smoothies, with a menu that's mostly vegetarian.</p><footer><span>Donevea</span><i>Google</i></footer></div>
   </div>
 </div></section>
 
@@ -375,7 +375,7 @@ footer.site .by a{color:var(--sun);font-weight:600}
   <div class="rv">
     <p class="eyebrow">Find us</p>
     <h2>Surfers Corner,<br>Muizenberg.</h2>
-    <address>Balmoral Building, 62 Beach Road<br>Muizenberg, Cape Town, 7945<small>Across the road from the beach huts. Street parking along Beach Road.</small></address>
+    <address>Balmoral Building, 62 Beach Road<br>Muizenberg, Cape Town, 7945<small>Surfers Corner, on the beachfront.</small></address>
     <div class="cta">
       <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Hang+Ten+Cafe,+Balmoral+Building,+62+Beach+Rd,+Muizenberg" target="_blank" rel="noopener">Get directions</a>
       <a class="btn ghost" href="tel:+27217882001">021 788 2001</a>
@@ -389,20 +389,20 @@ footer.site .by a{color:var(--sun);font-weight:600}
   <div class="hours rv d1">
     <h3>Opening hours</h3>
     <table id="hours">
-      <tr data-d="1"><td>Monday</td><td>6:40 – 18:00</td></tr>
-      <tr data-d="2"><td>Tuesday</td><td>6:40 – 18:00</td></tr>
-      <tr data-d="3" class="wed"><td>Wednesday</td><td>6:40 – 20:30</td></tr>
-      <tr data-d="4"><td>Thursday</td><td>6:40 – 18:00</td></tr>
-      <tr data-d="5"><td>Friday</td><td>6:40 – 18:00</td></tr>
-      <tr data-d="6"><td>Saturday</td><td>6:40 – 18:00</td></tr>
-      <tr data-d="0"><td>Sunday</td><td>6:40 – 18:00</td></tr>
+      <tr data-d="1"><td>Monday</td><td>6:40 am – 6 pm</td></tr>
+      <tr data-d="2"><td>Tuesday</td><td>6:40 am – 6 pm</td></tr>
+      <tr data-d="3" class="wed"><td>Wednesday</td><td>6:40 am – 8:30 pm</td></tr>
+      <tr data-d="4"><td>Thursday</td><td>6:40 am – 6 pm</td></tr>
+      <tr data-d="5"><td>Friday</td><td>6:40 am – 6 pm</td></tr>
+      <tr data-d="6"><td>Saturday</td><td>6:40 am – 6 pm</td></tr>
+      <tr data-d="0"><td>Sunday</td><td>6:40 am – 6 pm</td></tr>
     </table>
-    <p class="ps">Wednesday late for open mic. Dine in, kerbside pickup and delivery.</p>
+    <p class="ps">Wednesday is open mic night, so the doors stay open late. Dine in, kerbside pickup and delivery.</p>
   </div>
 </div></section>
 
 <footer class="site"><div class="wrap">
-  <a class="logo" href="#"><i></i>HANG TEN CAFÉ</a>
+  <a class="logo" href="#"><i></i>HANG TEN</a>
   <div class="so"><a href="https://www.instagram.com/hang10cafe_muizenberg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/hangtencafe/" target="_blank" rel="noopener">Facebook</a><a href="tel:+27217882001">Call</a></div>
   <div class="by"><span>© Hang Ten Café · Balmoral Building, 62 Beach Rd, Muizenberg</span><span>Concept mock-up by <a href="https://joshuavomberg.co.za">Joshua Vomberg</a> · Cape Town web design</span></div>
 </div></footer>
