@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bean Bae Coffee · Sunningdale · 6am to 6pm daily</title>
+<meta name="description" content="Concept website for Bean Bae Coffee, Wood Drive Lifestyle Centre, Sunningdale: speciality coffee, fresh bakes, toasties, boba and smoothies, 6am to 6pm every day.">
+<link rel="stylesheet" href="fonts/beanbae-fonts.css">
+<style>
+:root{--cream:#F4EDE1;--paper:#FBF7F0;--ink:#121212;--mute:#5E5852;--sky:#3DB5E8;--caramel:#C8893F;--rule:rgba(18,18,18,.12);--g:clamp(18px,4vw,44px);--w:1180px;--d:'Outfit',sans-serif;--b:'Hanken Grotesk',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--b);color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--w),100% - 2*var(--g));margin-inline:auto}
+.wrap>*{min-width:0}
+h1,h2,h3,.d{font-family:var(--d);font-weight:800;line-height:.98;letter-spacing:-.025em}
+h2{font-size:clamp(36px,5.4vw,66px)}
+h2 em,h1 em{font-style:normal;color:var(--sky)}
+.eyebrow{font:700 12px/1 var(--b);letter-spacing:.22em;text-transform:uppercase;color:var(--caramel)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:700 15px var(--b);text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--cream);transition:transform .18s,box-shadow .18s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(0,0,0,.5)}
+.btn.sky{background:var(--sky);border-color:var(--sky);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.tag{display:inline-block;font:700 10.5px/1 var(--b);letter-spacing:.1em;text-transform:uppercase;background:#fff;border:1px solid var(--rule);color:var(--ink);padding:6px 9px;border-radius:4px;vertical-align:middle}
+.draft{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--cream);font:500 12.5px/1.4 var(--b);text-align:center;padding:8px 16px}
+.draft b{color:var(--sky)}
+nav{position:sticky;top:34px;z-index:40;background:rgba(244,237,225,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px}
+.logo{font-family:var(--d);font-weight:800;font-size:28px;letter-spacing:-.04em;text-decoration:none;line-height:1}
+.logo span{color:var(--sky)}
+nav ul{display:flex;gap:26px;list-style:none;font:600 14.5px var(--b)}
+nav ul a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+nav ul a:hover{border-color:var(--sky)}
+nav .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(30px,5vw,64px)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(54px,8.4vw,116px);margin:14px 0 18px}
+.hero .lede{font-size:clamp(17px,2vw,20px);max-width:500px;color:var(--mute)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .hours{margin-top:24px;display:inline-flex;align-items:center;gap:10px;font:700 14px var(--b);background:#fff;border:1px solid var(--rule);padding:10px 14px;border-radius:999px}
+.hero .hours i{width:10px;height:10px;border-radius:50%;background:#2BB673;display:inline-block}
+.hart{position:relative}
+.hart .main{aspect-ratio:3/4;border-radius:24px;overflow:hidden;background:#ddd}
+.hart .main img{width:100%;height:100%;object-fit:cover}
+.hart .small{position:absolute;left:-8%;bottom:-6%;width:44%;aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:6px solid var(--cream);box-shadow:0 20px 40px -20px rgba(0,0,0,.5);transform:rotate(-4deg)}
+.hart .small img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:-10px;top:-14px;width:124px;height:124px;border-radius:50%;background:var(--sky);color:var(--ink);display:grid;place-content:center;text-align:center;font:800 13px/1.1 var(--d);letter-spacing:-.01em;transform:rotate(8deg);box-shadow:0 14px 30px -14px rgba(0,0,0,.5);padding:10px}
+.badge b{display:block;font-size:30px;line-height:1}
+/* strip */
+.strip{background:var(--ink);color:var(--cream);padding:14px 0;overflow:hidden}
+.strip .track{display:flex;gap:44px;white-space:nowrap;font:700 14px var(--b);letter-spacing:.06em;text-transform:uppercase;width:max-content;animation:mq 36s linear infinite}
+.strip span::before{content:"●";color:var(--sky);font-size:9px;margin-right:16px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:clamp(56px,8vw,104px) 0}
+.head{max-width:680px;margin-bottom:clamp(26px,4vw,44px)}
+.head p{margin-top:14px;color:var(--mute);font-size:17px}
+/* menu */
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.m{position:relative;aspect-ratio:3/4;border-radius:20px;overflow:hidden;color:#fff;text-decoration:none;background:#333}
+.m img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.m:hover img{transform:scale(1.05)}
+.m .cap{position:absolute;inset:auto 0 0 0;padding:20px;background:linear-gradient(to top,rgba(0,0,0,.72),transparent)}
+.m h3{font-size:30px}
+.m p{font:500 13.5px var(--b);opacity:.92;margin-top:4px}
+.mnote{margin-top:20px;font-size:13.5px;color:var(--mute)}
+/* go */
+.go{background:var(--ink);color:var(--cream)}
+.go .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.go .eyebrow{color:var(--sky)}
+.go h2 em{color:var(--sky)}
+.go p{color:rgba(244,237,225,.82);font-size:17px;margin-top:16px;max-width:520px}
+.go ul{list-style:none;margin-top:22px;display:grid;gap:12px;max-width:520px}
+.go li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.go li b{font-family:var(--d);font-weight:800;color:var(--sky);min-width:62px}
+.go .btn{margin-top:26px;background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.go .photo{border-radius:24px;overflow:hidden;aspect-ratio:4/5;max-width:480px;margin-inline:auto;width:100%}
+.go .photo img{width:100%;height:100%;object-fit:cover}
+/* community */
+.comm .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}
+.comm .c{background:var(--paper);border:1px solid var(--rule);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.comm .c img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.comm .c div{padding:18px 20px 20px}
+.comm .c h3{font-size:22px}
+.comm .c p{font-size:14.5px;color:var(--mute);margin-top:6px}
+.comm .c.txt{background:var(--sky);border:0;justify-content:center;padding:28px}
+.comm .c.txt h3{font-size:30px}
+.comm .c.txt p{color:rgba(18,18,18,.75);margin-top:10px}
+/* find */
+.find{background:var(--paper)}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.find address{font-style:normal;font-size:19px;line-height:1.5;margin-top:14px}
+.find .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.find table{border-collapse:collapse;width:100%;margin-top:18px;font-size:16px;max-width:420px}
+.find td{padding:11px 0;border-bottom:1px solid var(--rule)}
+.find td:last-child{text-align:right;font-weight:700}
+.find .photo{border-radius:24px;overflow:hidden;aspect-ratio:3/4;max-width:460px;margin-inline:auto;width:100%}
+.find .photo img{width:100%;height:100%;object-fit:cover}
+footer{background:var(--ink);color:var(--cream);padding:40px 0 28px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
+footer .logo{color:var(--cream);font-size:30px}
+footer p{font-size:13px;color:rgba(244,237,225,.7)}
+footer a{color:var(--sky)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hero .wrap,.go .wrap,.find .wrap{grid-template-columns:1fr}.hart{max-width:480px;margin-inline:auto;width:100%}.menu{grid-template-columns:repeat(2,1fr)}.comm .grid{grid-template-columns:1fr 1fr}.comm .c:first-child{grid-column:span 2}}
+@media(max-width:760px){nav .wrap{height:auto;flex-wrap:wrap;padding:10px 0 8px;row-gap:4px}nav ul{order:3;width:100%;gap:18px;font-size:14px;overflow-x:auto;scrollbar-width:none}nav ul::-webkit-scrollbar{display:none}nav ul a{display:inline-block;white-space:nowrap}nav .btn{padding:9px 14px;font-size:13.5px}}
+@media(max-width:600px){.draft{font-size:11.5px}.hero h1{font-size:clamp(50px,14vw,70px)}.badge{width:100px;height:100px;font-size:11px;right:0;top:-8px}.badge b{font-size:24px}.hart .small{left:0}.menu{grid-template-columns:1fr 1fr;gap:10px}.m h3{font-size:22px}.comm .grid{grid-template-columns:1fr}.comm .c:first-child{grid-column:span 1}}
+@media(prefers-reduced-motion:reduce){.strip .track{animation:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z"/><circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol><symbol id="ph" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol></svg>
+
+<div class="draft"><b>Concept mock-up by Joshua Vomberg</b> · photos and details from Bean Bae's own Instagram and Uber Eats listing · menu and prices to confirm with the café</div>
+
+<nav><div class="wrap">
+<a class="logo" href="#top">bean<span>bae</span></a>
+<ul><li><a href="#menu">Menu</a></li><li><a href="#go">Grab &amp; go</a></li><li><a href="#community">Around town</a></li><li><a href="#find">Find us</a></li></ul>
+<a class="btn sky" href="tel:+27832312160"><svg><use href="#ph"/></svg>Call to order</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<div class="eyebrow">Wood Drive Lifestyle Centre · Sunningdale</div>
+<h1>Good coffee,<br><em>fresh bakes,</em><br>every day.</h1>
+<p class="lede">Speciality coffee, croissants and cookies from the oven, toasties and bagels, smoothies and boba. Open from 6am, seven days a week, with WiFi if you're working.</p>
+<div class="cta">
+<a class="btn" href="#menu">See the menu</a>
+<a class="btn ghost" href="https://www.ubereats.com/za/search?q=Bean%20Bae" target="_blank" rel="noopener">Order on Uber Eats</a>
+</div>
+<div class="hours"><i></i>Open 6am – 6pm, every day</div>
+</div>
+<div class="hart">
+<div class="main"><img src="images/beanbae/hero.webp" alt="Two Bean Bae coffees in a carrier inside the café" fetchpriority="high"></div>
+<div class="small"><img src="images/beanbae/boba.webp" alt="A blue boba frappé on the counter"></div>
+<div class="badge">From<b>6am</b>7 days</div>
+</div>
+</div></header>
+
+<div class="strip" aria-hidden="true"><div class="track"><span>Speciality coffee</span><span>Fresh bakes</span><span>Toasties + bagels</span><span>Smoothies</span><span>Boba</span><span>Local retail</span><span>WiFi working hub</span><span>Uber Eats delivery</span><span>Speciality coffee</span><span>Fresh bakes</span><span>Toasties + bagels</span><span>Smoothies</span><span>Boba</span><span>Local retail</span><span>WiFi working hub</span><span>Uber Eats delivery</span></div></div>
+
+<section id="menu"><div class="wrap">
+<div class="head rv"><div class="eyebrow">The menu</div><h2>What's on <em>the board.</em></h2><p>Today's prices are on the board at the counter and on Uber Eats. <span class="tag">Menu to confirm with the café</span></p></div>
+<div class="menu">
+<a class="m rv" href="#find"><img src="images/beanbae/hotchoc.webp" alt="A barista handing over a hot chocolate" loading="lazy"><div class="cap"><h3>Brew bar</h3><p>Flat whites, lattes, filter, hot chocolate</p></div></a>
+<a class="m rv" href="#find"><img src="images/beanbae/toastie.webp" alt="A chicken mayo toastie on sourdough with a latte" loading="lazy"><div class="cap"><h3>Toasties &amp; bagels</h3><p>Sourdough toasties, bagels, breakfast</p></div></a>
+<a class="m rv" href="#find"><img src="images/beanbae/croissant.webp" alt="A glazed croissant on a black plate" loading="lazy"><div class="cap"><h3>Fresh bakes</h3><p>Croissants, cookies, the day's bake</p></div></a>
+<a class="m rv" href="#find"><img src="images/beanbae/boba.webp" alt="A blue boba frappé on the counter" loading="lazy"><div class="cap"><h3>Boba &amp; smoothies</h3><p>Cold, sweet, and very blue</p></div></a>
+</div>
+<p class="mnote rv">Photos from Bean Bae's Instagram. Swap in today's menu board and it's done.</p>
+</div></section>
+
+<section class="go" id="go"><div class="wrap">
+<div class="rv">
+<div class="eyebrow">Grab &amp; go</div>
+<h2>Early starts, <em>sorted.</em></h2>
+<p>Doors open at 6am. Grab a cup on the way to work, settle in with the WiFi, or have it brought to you.</p>
+<ul>
+<li><b>6am</b><span>Open every day of the week, until 6pm.</span></li>
+<li><b>Call</b><span>Phone ahead on 083 231 2160 and it's ready when you arrive.</span></li>
+<li><b>Deliver</b><span>Bean Bae is on Uber Eats, rated 4.5 by customers.</span></li>
+<li><b>Work</b><span>WiFi working hub: a table, a plug, a good coffee.</span></li>
+</ul>
+<a class="btn" href="tel:+27832312160"><svg><use href="#ph"/></svg>Call 083 231 2160</a>
+</div>
+<div class="photo rv"><img src="images/beanbae/cup-car.webp" alt="A Bean Bae takeaway cup in a car cup holder" loading="lazy"></div>
+</div></section>
+
+<section class="comm" id="community"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Around town</div><h2>Not just <em>a counter.</em></h2></div>
+<div class="grid">
+<div class="c rv"><img src="images/beanbae/inside.webp" alt="French toast and coffee on a wooden table inside the café" loading="lazy"><div><h3>Inside the café</h3><p>Wooden tables, morning light, breakfast until the bakes run out.</p></div></div>
+<div class="c rv"><img src="images/beanbae/runclub.webp" alt="West Coast Athletic Club x Bean Bae complimentary coffee voucher" loading="lazy"><div><h3>Run club coffee</h3><p>Complimentary coffee vouchers for West Coast Athletic Club runners.</p></div></div>
+<div class="c txt rv"><h3>Bean Bae × Fitbae Expo</h3><p>31 October 2026, Parkview Event Space, Woodstock. Come find the stand.</p></div>
+</div>
+</div></section>
+
+<section class="find" id="find"><div class="wrap">
+<div class="rv">
+<div class="eyebrow">Find us</div>
+<h2>Wood Drive <em>Lifestyle Centre.</em></h2>
+<address>Corner Wood Drive &amp; Berkshire Boulevard<br>Sunningdale, Cape Town, 7441</address>
+<div class="links">
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bean+Bae+Coffee+Wood+Drive+Lifestyle+Centre+Sunningdale" target="_blank" rel="noopener"><svg><use href="#pin"/></svg>Get directions</a>
+<a class="btn ghost" href="tel:+27832312160">083 231 2160</a>
+<a class="btn ghost" href="https://www.instagram.com/beanbae_coffee/" target="_blank" rel="noopener">@beanbae_coffee</a>
+</div>
+<table><tr><td>Monday – Friday</td><td>06:00 – 18:00</td></tr><tr><td>Saturday</td><td>06:00 – 18:00</td></tr><tr><td>Sunday</td><td>06:00 – 18:00</td></tr></table>
+</div>
+<div class="photo rv"><img src="images/beanbae/door.webp" alt="The café door with a Come in, we're open sign" loading="lazy"></div>
+</div></section>
+
+<footer><div class="wrap">
+<a class="logo" href="#top">bean<span>bae</span></a>
+<p>Concept mock-up by <a href="https://joshuavomberg.co.za">Joshua Vomberg</a> · websites that take orders, bookings &amp; payments.</p>
+</div></footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>location.search.includes('static')?el.classList.add('in'):io.observe(el));
+</script>
+</body>
+</html>
