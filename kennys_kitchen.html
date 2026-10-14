@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kenny's Kitchen · African tasty food · Parklands, Cape Town</title>
+<meta name="description" content="Kenny's Kitchen, Nigerian and West African food at The Emporium Centre, Sandown Road, Parklands. Jollof, egusi, pepper soup, party pots. Collect, Uber Eats or Mr D.">
+<link rel="icon" href="images/kennys/logo.png">
+<link rel="stylesheet" href="fonts/kennys-fonts.css">
+<style>
+:root{--green:#1C3A2B;--greend:#10261B;--gold:#D9A520;--goldl:#F3D27A;--cream:#FBF4E6;--paper:#FFFBF3;--ink:#15120F;--mute:#5E564B;--chilli:#C8381F;--line:rgba(21,18,15,.12);--w:1180px;--g:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Instrument Sans',sans-serif;font-variation-settings:"opsz" 96;letter-spacing:-.02em;line-height:1}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--g)}
+.eyebrow{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent;transition:transform .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.wa{background:#25D366;color:#0B2A18}
+.btn.gold{background:var(--gold);color:var(--greend)}
+.btn.line{border-color:currentColor;background:transparent}
+.btn.dark{background:var(--greend);color:#fff}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:4px;background:rgba(217,165,32,.18);color:#7A5A0E}
+/* ribbon */
+.ribbon{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:8px 14px;line-height:1.4}
+.ribbon b{color:var(--goldl)}
+/* nav */
+nav{position:sticky;top:34px;z-index:50;background:rgba(251,244,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:74px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.02em;color:var(--green)}
+.logo img{width:46px;height:46px;border-radius:50%}
+.logo small{display:block;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:15px}
+nav ul a{text-decoration:none;color:var(--ink)}
+nav ul a:hover{color:var(--chilli)}
+nav .btn{padding:11px 18px;font-size:14px}
+/* hero */
+.hero{position:relative;min-height:clamp(560px,calc(100vh - 108px),860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--greend)}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,38,27,.25) 0%,rgba(16,38,27,.55) 45%,rgba(16,38,27,.92) 100%)}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:60px;width:100%}
+.hero .eyebrow{text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.hero h1{text-shadow:0 2px 24px rgba(0,0,0,.25);font-size:clamp(46px,8vw,104px);font-weight:800;max-width:11ch;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--goldl)}
+.hero p.lead{font-size:clamp(17px,2vw,21px);max-width:54ch;color:rgba(255,255,255,.88);margin-bottom:30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.hero .btn.line{color:#fff}
+.sticker{position:absolute;right:0;top:0;background:var(--gold);color:var(--greend);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(15px,1.6vw,20px);line-height:1.05;padding:18px 20px;border-radius:14px;transform:rotate(5deg);box-shadow:0 14px 34px rgba(0,0,0,.35);max-width:200px;text-align:center}
+.sticker small{display:block;font-family:'Instrument Sans',sans-serif;font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:8px;opacity:.8}
+.ratings{display:flex;flex-wrap:wrap;gap:10px}
+.ratings div{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;font-size:14px;backdrop-filter:blur(6px)}
+.ratings b{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--goldl);letter-spacing:-.02em}
+.ratings span{opacity:.85}
+/* marquee */
+.marq{background:var(--gold);color:var(--greend);overflow:hidden;padding:13px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.01em;white-space:nowrap}
+.marq .track{display:inline-flex;gap:40px;animation:slide 50s linear infinite;padding-left:40px}
+.marq i{font-style:normal;opacity:.5}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:104px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+h2{font-size:clamp(36px,5vw,62px);font-weight:800;max-width:16ch}
+.sec-head p{max-width:44ch;color:var(--mute);font-size:17px}
+/* plates grid */
+.plates{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(160px,auto);gap:14px}
+.plates figure{position:relative;overflow:hidden;border-radius:18px;background:#e8dcc4;min-height:220px}
+.plates img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.plates figure:hover img{transform:scale(1.04)}
+.plates figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 14px;background:linear-gradient(180deg,transparent,rgba(16,38,27,.85));color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.plates figcaption b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;letter-spacing:-.01em}
+.plates figcaption span{color:var(--goldl);font-weight:700;white-space:nowrap}
+.plates .big{grid-column:span 6;grid-row:span 2}
+.plates .md{grid-column:span 3;grid-row:span 1}
+.plates .wide{grid-column:span 6}
+/* menu board */
+.board{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.board:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 100% 0%,rgba(217,165,32,.18),transparent 60%),radial-gradient(40% 40% at 0% 100%,rgba(200,56,31,.15),transparent 60%)}
+.board .wrap{position:relative}
+.board .eyebrow{color:var(--goldl)}
+.board .sec-head p{color:rgba(255,255,255,.75)}
+.menu{columns:2;column-gap:56px}
+.mgroup{break-inside:avoid;margin-bottom:40px}
+.mgroup h3{font-size:24px;font-weight:800;color:var(--goldl);padding-bottom:10px;border-bottom:2px solid rgba(217,165,32,.5);margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.mgroup h3 small{font-family:'Instrument Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.65);text-align:right}
+.mrow{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.18);align-items:baseline}
+.mrow b{font-weight:600;font-size:16.5px}
+.mrow small{display:block;font-size:13.5px;color:rgba(255,255,255,.65);font-weight:400;margin-top:2px}
+.mrow .p{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:var(--goldl);white-space:nowrap;font-size:17px}
+.note{margin-top:28px;font-size:13.5px;color:rgba(255,255,255,.65);max-width:70ch}
+.board .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+/* order ways */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.way{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px 28px;display:flex;flex-direction:column;gap:12px;min-height:280px}
+.way .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;color:var(--gold);line-height:1;letter-spacing:-.03em}
+.way h3{font-size:26px;font-weight:800}
+.way p{color:var(--mute);flex:1}
+.way .btn{align-self:flex-start}
+.party{margin-top:16px;background:var(--greend);color:#fff;border-radius:20px;padding:34px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;overflow:hidden}
+.party h3{font-size:clamp(28px,3.4vw,42px);font-weight:800;margin-bottom:10px}
+.party h3 em{font-style:normal;color:var(--goldl)}
+.party p{color:rgba(255,255,255,.8);max-width:52ch}
+.party img{border-radius:14px;width:100%;height:260px;object-fit:cover}
+.party .btn{margin-top:18px}
+/* inside */
+.inside{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.inside .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.inside .pics img{border-radius:18px;width:100%;height:100%;object-fit:cover}
+.inside .pics img:first-child{grid-column:span 2;height:320px}
+.inside .pics img:nth-child(2){height:260px}
+.inside .pics img:nth-child(3){height:260px;object-position:center 30%}
+.inside p{font-size:18px;color:var(--mute);margin-bottom:16px}
+.inside .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.inside .facts div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.inside .facts b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.02em;color:var(--green)}
+.inside .facts span{font-size:13px;color:var(--mute)}
+/* find */
+.find{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.find .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px}
+.find h3{font-size:24px;font-weight:800;margin-bottom:14px}
+.find .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.find .row b{font-weight:700}
+.find .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.find .map{background:var(--green);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between;min-height:320px}
+.find .map .addr{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em}
+.find .map p{color:rgba(255,255,255,.75);margin-top:10px}
+/* footer */
+footer{background:var(--greend);color:rgba(255,255,255,.7);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--goldl)}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in,.static .rv{opacity:1;transform:none}
+@media(max-width:960px){
+  .plates .big{grid-column:span 12}.plates .md{grid-column:span 6}.plates .wide{grid-column:span 12}
+  .menu{columns:1}.ways{grid-template-columns:1fr}.party{grid-template-columns:1fr}
+  .inside{grid-template-columns:1fr}.find{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  :root{--g:16px}
+  section{padding:72px 0}
+  nav{top:46px}
+  nav .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:10px 14px}
+  nav ul{order:3;width:100%;overflow-x:auto;gap:18px;padding-bottom:4px;font-size:14px;-webkit-overflow-scrolling:touch}
+  nav .btn{margin-left:auto}
+  .hero{min-height:auto}.hero .wrap{padding-top:110px;padding-bottom:40px}
+  .sticker{position:static;display:inline-block;transform:rotate(-2deg);margin:0 0 18px;max-width:none;padding:12px 16px;font-size:15px}
+  .hero .btn{width:100%;justify-content:center}
+  .plates .md{grid-column:span 12}.plates figure{min-height:200px}
+  .inside .pics img:first-child{height:220px}.inside .pics img:nth-child(2),.inside .pics img:nth-child(3){height:180px}
+  .inside .facts{grid-template-columns:1fr 1fr}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="ribbon"><b>Concept mock-up by Joshua Vomberg</b> · photos and logo from Kenny's Kitchen's own Google, Uber Eats and Mr D listings · menu and prices as listed on Uber Eats and Mr D, Oct 2026 · hours and shop number to confirm with the kitchen</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="images/kennys/logo.png" alt="Kenny's Kitchen"><span>Kenny's Kitchen<small>African tasty food</small></span></a>
+    <ul>
+      <li><a href="#plates">Dishes</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#inside">Inside</a></li>
+      <li><a href="#find">Find us</a></li>
+    </ul>
+    <a class="btn wa" href="https://wa.me/27643617247?text=Hi%20Kenny%27s%20Kitchen%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.8.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.2-.2-.2-.5-.3z"/></svg>WhatsApp to order</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="bg" src="images/kennys/hero.webp" alt="A spread of Kenny's Kitchen dishes: stews, pounded yam, plantain and puff puff">
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="sticker">Come experience it<small>Their words, from the flyer</small></div>
+    <div class="eyebrow">Nigerian &amp; West African · The Emporium Centre, Parklands</div>
+    <h1>A taste of <em>home,</em> cooked fresh in Parklands.</h1>
+    <p class="lead">Jollof, egusi, pepper soup and proper swallow, made the way it's made back home. Walk in and collect, or get it delivered on Uber Eats and Mr D.</p>
+    <div class="ctas">
+      <a class="btn wa" href="https://wa.me/27643617247?text=Hi%20Kenny%27s%20Kitchen%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.1.6 2.8.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.2-.2-.2-.5-.3z"/></svg>Order on WhatsApp</a>
+      <a class="btn gold" href="https://www.ubereats.com/za/store/kennys-kitchen-sandown/uGjnu-52UtqHyF58JE441w" target="_blank" rel="noopener">Uber Eats</a>
+      <a class="btn line" href="https://www.mrd.com/delivery/restaurant/kennys-kitchen-parklands/31200" target="_blank" rel="noopener">Mr D</a>
+    </div>
+    <div class="ratings">
+      <div><b>4.7</b><span>Mr D · 532 ratings</span></div>
+      <div><b>4.3</b><span>Uber Eats · 500+ ratings</span></div>
+      <div><b>5.0</b><span>Google · 2 reviews</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="track">
+  <span>Jollof rice</span><i>✦</i><span>Egusi</span><i>✦</i><span>Catfish pepper soup</span><i>✦</i><span>Pounded yam</span><i>✦</i><span>Ofada &amp; ayamase</span><i>✦</i><span>Suya</span><i>✦</i><span>Moi moi</span><i>✦</i><span>Puff puff</span><i>✦</i><span>Party pots</span><i>✦</i>
+  <span>Jollof rice</span><i>✦</i><span>Egusi</span><i>✦</i><span>Catfish pepper soup</span><i>✦</i><span>Pounded yam</span><i>✦</i><span>Ofada &amp; ayamase</span><i>✦</i><span>Suya</span><i>✦</i><span>Moi moi</span><i>✦</i><span>Puff puff</span><i>✦</i><span>Party pots</span><i>✦</i>
+</div></div>
+
+<section id="plates">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow">On the plate</div><h2>What people keep coming back for.</h2></div>
+      <p>Every photo here is Kenny's own, from the delivery apps and the Google listing. Prices as listed on Uber Eats and Mr D.</p>
+    </div>
+    <div class="plates">
+      <figure class="big rv"><img src="images/kennys/egusi-pando.webp" alt="Egusi soup with pounded yam and assorted meat"><figcaption><b>Egusi with pounded yam</b><span>R220</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/jollof-plate.webp" alt="Jollof rice with chicken"><figcaption><b>Jollof rice with protein</b><span>R170</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/catfish.webp" alt="Catfish pepper soup"><figcaption><b>Catfish pepper soup</b><span>R300</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/ofada-rice.webp" alt="Ofada rice with sauce, egg and protein"><figcaption><b>Ofada rice with protein</b><span>R300</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/beans-plantain.webp" alt="Beans and fried plantain with protein"><figcaption><b>Beans &amp; plantain</b><span>R250</span></figcaption></figure>
+      <figure class="wide rv"><img src="images/kennys/spread-wide.webp" alt="Jollof rice, puff puff and stews laid out on the counter"><figcaption><b>Platters &amp; party pots</b><span>from R500</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/coconut-rice.webp" alt="Coconut rice with protein"><figcaption><b>Coconut rice</b><span>from R250</span></figcaption></figure>
+      <figure class="md rv"><img src="images/kennys/egusi-semo.webp" alt="Egusi soup with semo"><figcaption><b>Egusi with semo</b><span>R170</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="board" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow">The menu</div><h2>Rice, soups, swallow and the good stuff.</h2></div>
+      <p>Protein means assorted meat unless you ask. Goat meat on any rice dish is R250.</p>
+    </div>
+    <div class="menu rv">
+      <div class="mgroup">
+        <h3>Rice <small>with protein</small></h3>
+        <div class="mrow"><b>Jollof rice</b><span class="p">R170</span></div>
+        <div class="mrow"><b>Fried rice</b><span class="p">R170</span></div>
+        <div class="mrow"><b>White rice &amp; stew</b><span class="p">R170</span></div>
+        <div class="mrow"><b>Ofada rice &amp; sauce<small>Ayamase sauce, the proper way</small></b><span class="p">R300</span></div>
+        <div class="mrow"><b>Coconut rice<small>Mr D serves it with a turkey wing</small></b><span class="p">from R250</span></div>
+        <div class="mrow"><b>Spaghetti with protein</b><span class="p">R200</span></div>
+      </div>
+      <div class="mgroup">
+        <h3>Soups &amp; swallow <small>with semo R170 · with pando, eba or amala R220</small></h3>
+        <div class="mrow"><b>Egusi<small>Ground melon seed, spinach, meat</small></b><span class="p">R170 / R220</span></div>
+        <div class="mrow"><b>Okro</b><span class="p">R170 / R220</span></div>
+        <div class="mrow"><b>Ogbono</b><span class="p">R170 / R220</span></div>
+        <div class="mrow"><b>Efo riro<small>Vegetable soup</small></b><span class="p">R170 / R220</span></div>
+        <div class="mrow"><b>Banga soup</b><span class="p">R250</span></div>
+        <div class="mrow"><b>Oha soup<small>With stock fish and goat meat</small></b><span class="p">R250</span></div>
+        <div class="mrow"><b>Bitterleaf soup</b><span class="p">R250</span></div>
+        <div class="mrow"><b>Amala, gbegiri &amp; ewedu<small>With protein</small></b><span class="p">R200</span></div>
+      </div>
+      <div class="mgroup">
+        <h3>Pepper soup &amp; specials</h3>
+        <div class="mrow"><b>Catfish pepper soup<small>With yam R350 · whole fish R800</small></b><span class="p">R300</span></div>
+        <div class="mrow"><b>Goat meat pepper soup<small>With yam R350</small></b><span class="p">R300</span></div>
+        <div class="mrow"><b>Yam porridge with protein</b><span class="p">R250</span></div>
+        <div class="mrow"><b>Beans &amp; plantain with protein</b><span class="p">R250</span></div>
+        <div class="mrow"><b>Yam &amp; egg with protein</b><span class="p">R250</span></div>
+        <div class="mrow"><b>Suya<small>Grilled skewers, peanut spice rub</small></b><span class="p">R250</span></div>
+        <div class="mrow"><b>Akara &amp; ogi · Moi moi &amp; ogi</b><span class="p">R200</span></div>
+      </div>
+      <div class="mgroup">
+        <h3>Small plates &amp; extras</h3>
+        <div class="mrow"><b>Moi moi</b><span class="p">R70</span></div>
+        <div class="mrow"><b>Meat pie · Egg roll</b><span class="p">R50</span></div>
+        <div class="mrow"><b>Plantain</b><span class="p">R50</span></div>
+        <div class="mrow"><b>Chin chin</b><span class="p">R100</span></div>
+        <div class="mrow"><b>Agege bread</b><span class="p">R110</span></div>
+        <div class="mrow"><b>Extra swallow<small>Pando, amala or eba R70 · semo R50</small></b><span class="p">from R50</span></div>
+      </div>
+      <div class="mgroup">
+        <h3>Party &amp; platters</h3>
+        <div class="mrow"><b>2.5 litre party pot<small>Jollof, fried rice, stew, egusi, okro, efo riro, ofada sauce, oha, banga or black soup</small></b><span class="p">R1,000</span></div>
+        <div class="mrow"><b>Half platter<small>Assorted dishes to share</small></b><span class="p">R800</span></div>
+        <div class="mrow"><b>Puff puff platter<small>Two packs</small></b><span class="p">R500</span></div>
+      </div>
+      <div class="mgroup">
+        <h3>Drinks</h3>
+        <div class="mrow"><b>Soft drinks<small>Coke, Fanta, Sprite, Stoney, Maltina, Appletiser, Grapetiser, Cappy</small></b><span class="p">R50</span></div>
+        <div class="mrow"><b>Still water</b><span class="p">R30</span></div>
+      </div>
+    </div>
+    <p class="note">Prices as listed on Uber Eats and Mr D in October 2026. Collection prices at the counter may differ. Some goat-meat dishes sell out, so ask first.</p>
+    <div class="ctas rv">
+      <a class="btn wa" href="https://wa.me/27643617247?text=Hi%20Kenny%27s%20Kitchen%2C%20I%27d%20like%20to%20order" target="_blank" rel="noopener">Order for collection</a>
+      <a class="btn gold" href="https://www.ubereats.com/za/store/kennys-kitchen-sandown/uGjnu-52UtqHyF58JE441w" target="_blank" rel="noopener">Order on Uber Eats</a>
+      <a class="btn line" href="https://www.mrd.com/delivery/restaurant/kennys-kitchen-parklands/31200" target="_blank" rel="noopener" style="color:#fff">Order on Mr D</a>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow">Order your way</div><h2>Collect, or let it come to you.</h2></div>
+    </div>
+    <div class="ways">
+      <div class="way rv"><div class="n">01</div><h3>Collect at the counter</h3><p>WhatsApp or call ahead and it's ready when you arrive. Shop 13, The Emporium Centre, Sandown Road. Parking at the door.</p><a class="btn wa" href="https://wa.me/27643617247?text=Hi%20Kenny%27s%20Kitchen%2C%20I%27d%20like%20to%20order%20for%20collection" target="_blank" rel="noopener">WhatsApp 064 361 7247</a></div>
+      <div class="way rv"><div class="n">02</div><h3>Uber Eats</h3><p>Delivery and pickup across Parklands, Table View and Blouberg. Rated 4.3 from over 500 orders.</p><a class="btn dark" href="https://www.ubereats.com/za/store/kennys-kitchen-sandown/uGjnu-52UtqHyF58JE441w" target="_blank" rel="noopener">Open Uber Eats</a></div>
+      <div class="way rv"><div class="n">03</div><h3>Mr D</h3><p>Rated 4.7 from 532 ratings. R20 delivery, 20 to 30 minutes prep.</p><a class="btn dark" href="https://www.mrd.com/delivery/restaurant/kennys-kitchen-parklands/31200" target="_blank" rel="noopener">Open Mr D</a></div>
+    </div>
+    <div class="party rv">
+      <div>
+        <div class="eyebrow">Parties, naming ceremonies, office lunches</div>
+        <h3>Feeding a crowd? <em>Order a pot.</em></h3>
+        <p>2.5 litre party pots of jollof, fried rice, egusi, okro, efo riro, ofada sauce, oha, banga or black soup, R1,000 each with protein. Add a puff puff platter and a half platter of assorted dishes. WhatsApp a day ahead.</p>
+        <a class="btn gold" href="https://wa.me/27643617247?text=Hi%20Kenny%27s%20Kitchen%2C%20I%27d%20like%20to%20order%20party%20pots%20for" target="_blank" rel="noopener">Plan a party order</a>
+      </div>
+      <img src="images/kennys/tray.webp" alt="A catering tray of stewed meat at Kenny's Kitchen">
+    </div>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <div class="inside">
+      <div class="pics rv">
+        <img src="images/kennys/inside.webp" alt="Inside Kenny's Kitchen: the counter and seating">
+        <img src="images/kennys/inside-small.webp" alt="Tables and rattan lamps at Kenny's Kitchen">
+        <img src="images/kennys/fried-rice-chicken.webp" alt="Fried rice with chicken">
+      </div>
+      <div class="rv">
+        <div class="eyebrow">Inside</div>
+        <h2 style="margin:12px 0 18px">Authentic Nigerian cooking at The Emporium Centre.</h2>
+        <p>Kenny's Kitchen is a sit-down and takeaway spot at The Emporium Centre in Parklands. A taste of home for Nigerians in Cape Town, and a first plate of jollof for everyone else.</p>
+        <p>Eat in, collect, or order on the apps. Cards accepted.</p>
+        <div class="facts">
+          <div><b>532</b><span>ratings on Mr D, 4.7 average</span></div>
+          <div><b>500+</b><span>ratings on Uber Eats, 4.3 average</span></div>
+          <div><b>7 days</b><span>open every day of the week</span></div>
+          <div><b>R170</b><span>jollof, fried rice or rice &amp; stew with protein</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow">Find us</div><h2>Shop 13, The Emporium Centre.</h2></div>
+    </div>
+    <div class="find">
+      <div class="card map rv">
+        <div>
+          <div class="addr">The Emporium Centre, Sandown Road, Parklands, Cape Town 7441</div>
+          <p>Shop 13 <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">to confirm</span> · near Food Lover's Market · parking at the centre</p>
+        </div>
+        <div class="ctas">
+          <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=Kenny%27s+Kitchen+Emporium+Centre+Sandown+Road+Parklands" target="_blank" rel="noopener">Directions</a>
+          <a class="btn line" href="tel:+27643617247" style="color:#fff">Call 064 361 7247</a>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>Hours <span class="tag">to confirm</span></h3>
+        <div class="row"><b>Monday to Sunday</b><span>Open daily</span></div>
+        <div class="row"><b>Delivery on the apps</b><span>08:00 – 23:00</span></div>
+        <div class="row"><b>At the counter</b><span>confirm with the kitchen</span></div>
+        <p style="margin-top:14px;font-size:13.5px;color:var(--mute)">Google lists 9am to 10pm and the delivery apps list 8am to 11pm. The kitchen's word wins; this page gets updated the same day.</p>
+        <div class="ctas">
+          <a class="btn wa" href="https://wa.me/27643617247" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn line" href="https://www.snapchat.com/@kennyskitchen01" target="_blank" rel="noopener">Snapchat @kennyskitchen01</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#fff">Kenny's Kitchen</b> · African tasty food · The Emporium Centre, Sandown Road, Parklands · 064 361 7247</div>
+    <div>Concept website by <a href="https://joshuavomberg.co.za">Joshua Vomberg</a></div>
+  </div>
+</footer>
+
+<script>
+if(location.search.includes('static=1')){document.documentElement.classList.add('static')}
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el))}
+</script>
+</body>
+</html>
