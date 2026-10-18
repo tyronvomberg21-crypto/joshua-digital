@@ -183,6 +183,13 @@ h1 em{font-style:italic;color:var(--ember);font-weight:500}
 .plan-btn{display:block;text-align:center;background:transparent;color:var(--text);border:1px solid var(--line2);padding:15px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s}
 .plan-btn:hover{border-color:var(--ember);color:var(--ember2)}
 .plan.featured .plan-btn{background:var(--ember);color:#fff;border-color:var(--ember)}.plan.featured .plan-btn:hover{background:var(--ember2);transform:translateY(-1px)}
+.care-strip{max-width:1160px;margin:26px auto 0;background:linear-gradient(180deg,var(--bg),var(--card));border:1px solid var(--line);border-radius:20px;padding:28px 32px;display:grid;grid-template-columns:1.1fr 1.6fr auto;gap:22px 32px;align-items:center}
+.care-strip-kicker{display:block;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ember2);margin-bottom:8px}
+.care-strip h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;line-height:1.3;margin:0}.care-strip h3 b{color:var(--ember2);font-weight:600}
+.care-strip-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 18px;font-size:13px;color:var(--muted)}
+.care-strip-list li{padding-left:18px;position:relative;line-height:1.45}.care-strip-list li::before{content:'✓';position:absolute;left:0;color:var(--ember2);font-weight:700}
+.care-strip-btn{display:inline-block;white-space:nowrap;text-align:center;color:var(--text);border:1px solid var(--line2);padding:13px 22px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;transition:all .2s}.care-strip-btn:hover{border-color:var(--ember);color:var(--ember2)}
+@media (max-width:900px){.care-strip{grid-template-columns:1fr;max-width:440px;padding:26px 24px}.care-strip-list{grid-template-columns:1fr}.care-strip-btn{display:block}}
 .included{max-width:1160px;margin:22px auto 0;text-align:center;color:var(--muted);font-size:14px}.included b{color:var(--cream)}
 
 section{padding:104px 7vw}
@@ -470,21 +477,34 @@ section:has(.how){padding-top:120px}
     </div>
 
     <div class="plan">
-      <div class="plan-name">Care Plan</div>
-      <div class="plan-for">Included with every site from launch. I keep it healthy and up to date — you never touch a thing.</div>
-      <div class="plan-price"><span class="amt">R450</span><span class="per">/ month</span></div>
-      <div class="plan-setup">Included from launch · first month free · cancel any time with a month's notice</div>
+      <div class="plan-name">Custom Systems</div>
+      <div class="plan-note">For businesses that run on forms, bookings and spreadsheets</div>
+      <div class="plan-for">The admin behind your business, built to fit it: intake forms, bookings, a customer list, automations and a dashboard, all talking to each other.</div>
+      <div class="plan-price"><span class="per">from</span><span class="amt">R30,000</span><span class="per">once-off</span></div>
+      <div class="plan-setup">By conversation: scoped together before you pay anything · 50% to start · 50% at handover · care plan sized to the system</div>
       <ul class="feat">
-        <li>Domain renewal paid &amp; hosting managed</li>
-        <li>Products, prices, photos &amp; specials updated</li>
-        <li>Changes done within the week — about an hour a month included</li>
-        <li>Seasonal updates done before you ask</li>
-        <li>Monthly check that everything works</li>
-        <li>WhatsApp support, direct to me</li>
+        <li>Built around how you actually work, not the other way round</li>
+        <li>Intake &amp; booking forms that land where you need them: WhatsApp, email, your customer list</li>
+        <li>A customer list you own, with every job's history</li>
+        <li>Automations: confirmations, reminders, follow-ups, invoices</li>
+        <li>A simple dashboard for the numbers you check every week</li>
+        <li>Works with your website, or on its own</li>
       </ul>
-      <a href="https://wa.me/27663161937?text=Hi%20Joshua!%20Tell%20me%20about%20the%20care%20plan." class="plan-btn" target="_blank" rel="noopener">Chat About Care</a>
+      <a href="https://wa.me/27663161937?text=Hi%20Joshua!%20I%27d%20like%20to%20talk%20about%20a%20custom%20system%20for%20my%20business." class="plan-btn" target="_blank" rel="noopener">Talk About a System</a>
     </div>
 
+  </div>
+  <div class="care-strip reveal">
+    <div class="care-strip-head"><span class="care-strip-kicker">Included with every site</span><h3>The care plan · <b>R450</b> a month from launch, first month free</h3></div>
+    <ul class="care-strip-list">
+      <li>Domain renewal paid &amp; hosting managed</li>
+      <li>Products, prices, photos &amp; specials updated within the week</li>
+      <li>Seasonal updates done before you ask</li>
+      <li>Monthly check that everything works</li>
+      <li>WhatsApp support, direct to me</li>
+      <li>Cancel any time with a month's notice. The site stays yours.</li>
+    </ul>
+    <a href="https://wa.me/27663161937?text=Hi%20Joshua!%20Tell%20me%20about%20the%20care%20plan." class="care-strip-btn" target="_blank" rel="noopener">Chat About Care</a>
   </div>
   <div class="included" style="margin-bottom:10px">💬 <b>Starting points, not price tags.</b> Every quote is custom to what you sell and how much of it — these are the floors, and I never go below them. You get the number in writing before anything starts.</div>
   <div class="included">🔒 <b>No lock-in.</b> Your domain is registered in your name and the site is yours — with or without the care plan. Whatever you sell — if your customers order, book or enquire, <a href="https://wa.me/27663161937?text=Hi%20Joshua!%20I%27d%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener" style="color:var(--ember2)">I can build for it</a>.</div>
