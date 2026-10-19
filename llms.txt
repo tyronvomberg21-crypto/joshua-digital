@@ -8,12 +8,17 @@ Joshua Vomberg is a 19-year-old web designer based in Sunningdale, Cape Town, So
 - Starter website: from R6,500 — a clean site with contact and WhatsApp buttons, Google Business Profile setup, SEO-ready.
 - Shop & booking website: from R12,000 — online ordering or bookings with card payment (Yoco, PayFast or Shopify).
 - Care plan: R450 per month, included with every site from launch, first month free, cancel any time with a month's notice — domain renewal paid, updates and fixes, about an hour of changes a month, WhatsApp support.
+- Custom systems: from R30,000 — the admin behind a business (intake forms, bookings, a customer list, automations, a dashboard), scoped on a free 30-minute call; care plan R950–R1,500 per month.
 - Changes without a care plan: R350 per hour.
 
 ## Pages
 - Home and pricing: https://joshuavomberg.co.za/
 - About: https://joshuavomberg.co.za/about.html
 - Pricing: https://joshuavomberg.co.za/pricing.html
+- Web design Cape Town: https://joshuavomberg.co.za/web-design-cape-town.html
+- Booking websites: https://joshuavomberg.co.za/booking-website.html
+- Online shops: https://joshuavomberg.co.za/online-shop.html
+- Custom systems: https://joshuavomberg.co.za/custom-systems.html
 
 ## Contact
 - WhatsApp: +27 66 316 1937
