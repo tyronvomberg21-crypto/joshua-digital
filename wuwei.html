@@ -100,6 +100,8 @@ figure.ph{display:grid;place-items:center;color:var(--ink-soft);font-size:14px;t
 .cabin{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .cabin figure{aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:var(--mist)}
 .cabin figure.ph{background:linear-gradient(160deg,#1F4F63,#15404F);color:#C9D9DE}
+.cabin figure img,.portrait img{display:block;width:100%;height:100%;object-fit:cover}
+.portrait.has-photo{padding:0;overflow:hidden}
 @media (max-width:760px){.boat .wrap{grid-template-columns:1fr}.cabin{grid-template-columns:1fr 1fr}}
 
 /* how */
@@ -163,7 +165,7 @@ footer h4{font-family:var(--display);font-weight:400;font-size:22px;margin-botto
 </head>
 <body>
 
-<div class="draft">Work in progress for Bernado. Logo, words, trips and boat details are in. Still to come: cabin photos and a photo of Bernado. The sunset photo is a stand-in until yours arrives.</div>
+<div class="draft">Work in progress for Bernado. Logo, words, trips, boat details, cabin photos and Bernado's photo are in. The sunset photo is a stand-in until yours arrives.</div>
 
 <header class="hero">
   <img src="images/wuwei/table-bay-hero.webp" alt="Wu Wei in Table Bay with Table Mountain behind" fetchpriority="high">
@@ -253,9 +255,9 @@ footer h4{font-family:var(--display);font-weight:400;font-size:22px;margin-botto
   </div>
   <div class="wrap">
     <ul class="cabin">
-      <li><figure class="ph"><span>Cabin photo goes here</span></figure></li>
-      <li><figure class="ph"><span>Cabin photo goes here</span></figure></li>
-      <li><figure class="ph"><span>Cabin photo goes here</span></figure></li>
+      <li><figure><img src="images/wuwei/cabin-saloon.webp" alt="The saloon: a curved cream sofa around a round table" width="1200" height="900" loading="lazy"></figure></li>
+      <li><figure><img src="images/wuwei/cabin-bed.webp" alt="The cabin: a double bed under the hatch, with portholes either side" width="1200" height="900" loading="lazy"></figure></li>
+      <li><figure><img src="images/wuwei/cabin-bathroom.webp" alt="The bathroom: basin, mirror and fresh towels" width="1200" height="900" loading="lazy"></figure></li>
     </ul>
   </div>
 </section>
@@ -345,7 +347,7 @@ footer h4{font-family:var(--display);font-weight:400;font-size:22px;margin-botto
 
 <section class="skipper">
   <div class="wrap">
-    <div class="portrait"><span>Bernado's photo goes here</span></div>
+    <div class="portrait has-photo"><img src="images/wuwei/bernado.webp" alt="Bernado, skipper of Wu Wei, smiling at the marina" width="575" height="719" loading="lazy"></div>
     <div>
       <h2>Your skipper</h2>
       <blockquote>“The best days are the ones where nobody looks at the time.”</blockquote>
