@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dr Young · Dentist &amp; Facial Aesthetics · Brackenfell</title>
+<meta name="description" content="Dr Alayne Young has been a dentist for 28 years. Healthy, natural smiles and subtle facial aesthetics in Brackenfell, Cape Town. Every treatment starts with a conversation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout idea: her own logo world (black, lilac, silver, bubbles) for the dark chapters, soft lilac paper for the reading parts. */
+  --ink:#141016; --ink-2:#2A2130; --plum:#3B2348; --violet:#6B2FA3; --lilac:#CFA9E2; --lilac-2:#E9DAF1;
+  --silver:#C8C7CE; --paper:#F7F3F9; --white:#fff; --mute:#6E6576; --line:rgba(20,16,22,.12);
+  --display:'Marcellus',"Trajan Pro",Georgia,serif; --text:'Karla',system-ui,sans-serif;
+  --wrap:1160px; --g:clamp(18px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.08;letter-spacing:.005em;text-wrap:balance}
+.eyebrow{font:600 12px/1 var(--text);letter-spacing:.22em;text-transform:uppercase;color:var(--violet)}
+.dark .eyebrow{color:var(--lilac)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font:600 15px/1 var(--text);text-decoration:none;border:1px solid transparent;transition:transform .15s ease,background .2s,color .2s}
+.btn:active{transform:scale(.97)}
+.btn-lilac{background:var(--lilac);color:var(--ink)}
+.btn-lilac:hover{background:#dcbcec}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn svg{width:18px;height:18px}
+
+.draft{background:var(--lilac);color:var(--ink);font-size:13px;text-align:center;padding:9px var(--g);line-height:1.4}
+.draft b{font-weight:600}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(20,16,22,.86);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);color:var(--white)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:42px;width:auto}
+.brand span{font:400 15px/1.15 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--silver)}
+.brand span small{display:block;font:500 10px/1.3 var(--text);letter-spacing:.26em;color:var(--lilac)}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{font-size:14px;text-decoration:none;color:rgba(255,255,255,.78)}
+.nav ul a:hover{color:var(--white)}
+.nav .btn{padding:11px 18px;font-size:14px}
+@media (max-width:880px){.nav ul{display:none}.nav .btn{margin-left:auto}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#3a2149 0%,var(--ink) 58%);color:var(--white)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(40px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.hero h1{font-size:clamp(42px,6.4vw,84px);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lilac)}
+.hero p.lede{font-size:clamp(17px,1.6vw,20px);color:rgba(255,255,255,.78);max-width:34ch;margin:0 0 30px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.creds{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:14px;color:rgba(255,255,255,.66)}
+.creds b{display:block;font:400 26px/1.1 var(--display);color:var(--white)}
+.hero-photo{position:relative;justify-self:center;width:min(100%,430px)}
+.hero-photo .frame{border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:3/4.3;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(207,169,226,.35)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.hero-photo .tag{position:absolute;left:-18px;bottom:34px;background:var(--white);color:var(--ink);border-radius:16px;padding:12px 16px;font-size:13px;line-height:1.35;box-shadow:0 14px 40px rgba(0,0,0,.25);max-width:220px}
+.hero-photo .tag b{display:block;font:400 17px/1.2 var(--display)}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-photo{order:-1;width:min(78%,360px)}.hero-photo .tag{left:auto;right:-10px}}
+
+/* bubbles, from her logo */
+.bubbles{position:absolute;inset:0;pointer-events:none}
+.bubbles i{position:absolute;bottom:-60px;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.75),rgba(207,169,226,.45) 34%,rgba(107,47,163,.35) 70%);opacity:.55;animation:rise linear infinite}
+.bubbles i:nth-child(1){left:6%;width:22px;height:22px;animation-duration:17s}
+.bubbles i:nth-child(2){left:18%;width:12px;height:12px;animation-duration:13s;animation-delay:-6s}
+.bubbles i:nth-child(3){left:47%;width:30px;height:30px;animation-duration:21s;animation-delay:-3s}
+.bubbles i:nth-child(4){left:63%;width:14px;height:14px;animation-duration:15s;animation-delay:-9s}
+.bubbles i:nth-child(5){left:88%;width:20px;height:20px;animation-duration:19s;animation-delay:-12s}
+.bubbles i:nth-child(6){left:33%;width:9px;height:9px;animation-duration:11s;animation-delay:-2s}
+@keyframes rise{0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-55vh) translateX(14px)}100%{transform:translateY(-110vh) translateX(-8px);opacity:0}}
+
+/* ---------- sections ---------- */
+section{padding:clamp(64px,9vw,120px) 0}
+.sec-head{max-width:640px;margin-bottom:clamp(30px,4vw,48px)}
+.sec-head h2{font-size:clamp(32px,4.2vw,54px);margin-top:14px}
+.sec-head p{color:var(--mute);margin:16px 0 0;font-size:18px}
+
+/* conversation */
+.talk .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,6vw,84px);align-items:center}
+.talk figure{margin:0;position:relative}
+.talk figure img{border-radius:24px;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;width:100%}
+.talk figure::after{content:"";position:absolute;right:-16px;top:-16px;width:74px;height:74px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff,var(--lilac) 40%,var(--violet) 100%);opacity:.8}
+.talk blockquote{margin:0;font:400 clamp(26px,3vw,38px)/1.2 var(--display);color:var(--ink)}
+.talk blockquote span{color:var(--violet)}
+.steps{display:grid;gap:14px;margin-top:30px;counter-reset:s}
+.steps li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px 18px;background:var(--white);border-radius:16px}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--lilac-2);color:var(--violet);font:400 20px/1 var(--display)}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--mute);font-size:15px}
+.steps{padding:0}
+@media (max-width:880px){.talk .wrap{grid-template-columns:1fr}.talk figure{max-width:420px}}
+
+/* treatments */
+.treat{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
+.treat .sec-head p{color:rgba(255,255,255,.66)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;padding:28px 26px 26px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(207,169,226,.18);transition:transform .25s ease,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(207,169,226,.5)}
+.card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(207,169,226,.14);color:var(--lilac);margin-bottom:18px}
+.card .ic svg{width:24px;height:24px}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{margin:0;color:rgba(255,255,255,.7);font-size:15.5px}
+.card .for{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac)}
+.card.wide{grid-column:span 2;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+@media (max-width:940px){.grid{grid-template-columns:1fr 1fr}.card.wide{grid-column:span 2}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}.card.wide{grid-column:auto;grid-template-columns:1fr}}
+.note{margin-top:22px;font-size:13.5px;color:rgba(255,255,255,.5);max-width:70ch}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,80px)}
+details{background:var(--white);border-radius:16px;padding:0 22px;margin-bottom:10px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 26px/1 var(--display);color:var(--violet);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 20px;color:var(--mute)}
+@media (max-width:880px){.faq .wrap{grid-template-columns:1fr}}
+
+/* botox & bubbles */
+.bub{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--plum),#24152d);color:var(--white)}
+.bub .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,6vw,80px);align-items:center;position:relative;z-index:1}
+.bub h2{font-size:clamp(40px,5.6vw,72px);margin:14px 0 18px}
+.bub h2 em{font-style:normal;color:var(--lilac)}
+.bub p{color:rgba(255,255,255,.8);font-size:18px;max-width:46ch}
+.bub ul{list-style:none;padding:0;margin:22px 0 30px;display:grid;gap:10px}
+.bub li{display:flex;gap:12px;align-items:center}
+.bub li::before{content:"";width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff,var(--lilac))}
+.polaroids{position:relative;height:440px}
+.polaroids figure{position:absolute;margin:0;background:var(--white);padding:10px 10px 38px;border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,.35);width:62%}
+.polaroids figure img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:2px}
+.polaroids figcaption{position:absolute;left:12px;right:12px;bottom:10px;font:400 14px/1 var(--display);color:var(--ink);text-align:center}
+.polaroids figure:nth-child(1){left:0;top:20px;transform:rotate(-6deg)}
+.polaroids figure:nth-child(2){right:0;top:60px;transform:rotate(5deg)}
+@media (max-width:880px){.bub .wrap{grid-template-columns:1fr}.polaroids{height:380px;max-width:420px}}
+
+/* find her */
+.where .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.place{background:var(--white);border-radius:22px;padding:26px;border:1px solid var(--line);display:flex;flex-direction:column}
+.place .when{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);font-weight:600}
+.place h3{font-size:24px;margin:10px 0 8px}
+.place p{margin:0 0 18px;color:var(--mute);font-size:15.5px}
+.place a.link{margin-top:auto;font-weight:600;color:var(--violet);text-decoration:none}
+.place.feature{background:var(--ink);color:var(--white);border:0;overflow:hidden;padding:0}
+.place.feature img{aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;width:100%}
+.place.feature .in{padding:22px 26px 26px;display:flex;flex-direction:column;flex:1}
+.place.feature p{color:rgba(255,255,255,.7)}
+.place.feature .when{color:var(--lilac)}
+.place.feature a.link{color:var(--lilac)}
+.tbc{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:99px;background:#FFF1C2;color:#6b5300;font-size:11px;font-weight:600;letter-spacing:.04em;vertical-align:middle}
+@media (max-width:940px){.where .grid3{grid-template-columns:1fr}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,84px);align-items:center}
+.about figure{margin:0;display:grid;grid-template-columns:1fr .8fr;gap:14px;align-items:end}
+.about figure img{border-radius:20px;object-fit:cover;width:100%}
+.about figure img:first-child{aspect-ratio:3/4;object-position:50% 20%}
+.about figure img:last-child{aspect-ratio:3/4.4;object-position:50% 30%;margin-bottom:40px}
+.about h2{font-size:clamp(32px,4vw,52px);margin:14px 0 18px}
+.about p{color:var(--ink-2)}
+.sig{font:400 22px/1.2 var(--display);color:var(--violet);margin-top:18px}
+@media (max-width:880px){.about .wrap{grid-template-columns:1fr}}
+
+/* book */
+.book{background:var(--ink);color:var(--white)}
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px)}
+.book h2{font-size:clamp(34px,4.6vw,58px);margin:14px 0 18px}
+.book p{color:rgba(255,255,255,.72)}
+.contact{display:grid;gap:12px;margin-top:26px}
+.contact a{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--white);font-weight:600}
+.contact span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(207,169,226,.14);color:var(--lilac)}
+.contact svg{width:20px;height:20px}
+form{background:rgba(255,255,255,.05);border:1px solid rgba(207,169,226,.2);border-radius:24px;padding:clamp(20px,3vw,32px);display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:13px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.75)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--white);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:13px 14px;outline:none}
+select option{color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--lilac);box-shadow:0 0 0 3px rgba(207,169,226,.25)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:880px){.book .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+.fine{font-size:12.5px;color:rgba(255,255,255,.5);margin:0}
+
+footer{background:#0d0a0f;color:rgba(255,255,255,.6);font-size:14px;padding:34px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer img{height:34px;width:auto}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.bubbles{display:none}.js .reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card,.btn{transition:none}}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<div class="draft"><b>Draft for Dr Young, shared through Siobhan.</b> A first look, built from her Instagram. Nothing here is live and every detail is hers to change.</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="images/dryoung/logo.webp" alt="Young Aesthetics logo" width="33" height="42"><span>Dr Young<small>Dentist · Aesthetics</small></span></a>
+    <ul>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#bubbles">Botox &amp; Bubbles</a></li>
+      <li><a href="#where">Where</a></li>
+    </ul>
+    <a class="btn btn-lilac" href="#book">Book a consultation</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Dr Alayne Young · Brackenfell, Cape Town</p>
+      <h1>Healthy, natural smiles. <em>Subtle,</em> natural aesthetics.</h1>
+      <p class="lede">A dentist for 28 years, now with a love for facial aesthetics. Every treatment starts with a conversation about your features, your goals and your options.</p>
+      <div class="actions">
+        <a class="btn btn-lilac" href="#book">Book a consultation</a>
+        <a class="btn btn-ghost" href="https://wa.me/27647501441?text=Hi%20Dr%20Young%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Ask on WhatsApp</a>
+      </div>
+      <div class="creds">
+        <div><b>28 years</b>a dentist</div>
+        <div><b>Smiles + faces</b>dentistry and aesthetics</div>
+        <div><b>Tue &amp; Thu</b>at It's A Hair Circus</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="images/dryoung/purple.webp" alt="Dr Alayne Young in purple scrubs outside It's A Hair Circus in Brackenfell" width="820" height="1456"></div>
+      <div class="tag"><b>“Let's start with a conversation.”</b>Enquiries and bookings: 064 750 1441</div>
+    </div>
+  </div>
+</header>
+
+<section class="talk" id="approach">
+  <div class="wrap">
+    <figure class="reveal"><img src="images/dryoung/chart.webp" alt="Dr Young studying a facial anatomy chart" width="820" height="780" loading="lazy"></figure>
+    <div class="reveal">
+      <p class="eyebrow">The approach</p>
+      <blockquote style="margin-top:16px">“Botox isn't about changing your face. It's about <span>choosing how you want to look and feel.</span>”</blockquote>
+      <ol class="steps">
+        <li><div><b>A conversation first</b><span>Your features, your goals and what's realistic. No pressure to book anything.</span></div></li>
+        <li><div><b>A plan that fits you</b><span>Plain language, no complicated terminology and no unnecessary hype. You know exactly what's involved.</span></div></li>
+        <li><div><b>Treatment and aftercare</b><span>Done by a dentist who knows facial anatomy, with clear aftercare so you're never left guessing.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="treat" id="treatments">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Treatments</p>
+      <h2>From healthy smiles to a fresher face.</h2>
+      <p>Everything starts with a consultation, so Dr Young can tell you what will and won't work for you.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 5 2 8 .4 2.6 1 5.5 2.5 5.5s1.5-3 2.5-5.5c.5-1.3 1.2-1.5 2-1.5s1.5.2 2 1.5c1 2.5 1 5.5 2.5 5.5S18.6 18 19 15.5c.5-3 2-5 2-8C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></div>
+        <h3>Dentistry &amp; smiles</h3>
+        <p>The everyday dental care that keeps a smile healthy and natural, from a dentist with 28 years behind her.</p>
+        <span class="for">Healthy, natural smiles</span>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8c3-2 13-2 16 0M5 12c3-1.5 11-1.5 14 0M7 16c2.5-1 7.5-1 10 0"/></svg></div>
+        <h3>Lines &amp; wrinkles</h3>
+        <p>Botox (a neuromodulator) to soften expression lines on the forehead, between the brows and around the eyes. Subtle, so you still look like you.</p>
+        <span class="for">Fresh, not frozen</span>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9c0 6 3 11 7 11s7-5 7-11"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/><path d="M3 12h3M18 12h3"/></svg></div>
+        <h3>Jaw tension &amp; TMJ</h3>
+        <p>For clenching, grinding and a tight jaw. A dentist understands the jaw joint and the muscles around it, which is exactly where this treatment works.</p>
+        <span class="for">A dentist's speciality</span>
+      </article>
+      <article class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-3 5-5 9-3 4-2 7 0 9 3-2 3-5 5-9 5s-7-2-9-5z"/><path d="M3 12h18"/></svg></div>
+        <h3>Lip filler</h3>
+        <p>Hyaluronic acid for a little definition or a little volume. Natural first: you decide how much, and Dr Young tells you honestly what suits your face.</p>
+        <span class="for">A little definition, a little volume</span>
+      </article>
+      <article class="card wide reveal">
+        <div>
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></div>
+          <h3>Excessive sweating</h3>
+          <p>Underarm treatment that can reduce heavy sweating, so you can wear what you want without wondering about it.</p>
+        </div>
+        <a class="btn btn-lilac" href="#book">Ask about it</a>
+      </article>
+    </div>
+    <p class="note">Treatments are only done after a consultation, and results differ from person to person. Prices are discussed at your consultation.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Straight answers</p>
+      <h2>Okay, but what actually is lip filler?</h2>
+      <p>Dr Young breaks it down. No complicated terminology, no unnecessary hype. Just what the treatment involves, so you can decide.</p>
+    </div>
+    <div class="reveal">
+      <details open><summary>What is lip filler made of?</summary><p>Most lip fillers are hyaluronic acid, a substance your body already makes. It holds moisture and adds a little shape and volume where it's placed.</p></details>
+      <details><summary>Will it look natural?</summary><p>That's the whole idea. You talk through how much you want first, and Dr Young will tell you honestly what suits your face. Less is often more.</p></details>
+      <details><summary>Is Botox only for wrinkles?</summary><p>No. It's also used for jaw clenching and TMJ, and to reduce heavy underarm sweating. Your consultation is where you find out if it's right for you.</p></details>
+      <details><summary>Why see a dentist for facial aesthetics?</summary><p>Dentists work with the muscles, nerves and structure of the face every day. That knowledge of facial anatomy is the foundation for safe, subtle results.</p></details>
+      <details><summary>Can the treatment come to me?</summary><p>Yes. Ask about home visits: comfort, convenience and the same professional care, without leaving your home.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="bub" id="bubbles">
+  <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Events</p>
+      <h2>Botox <em>&amp;</em> Bubbles</h2>
+      <p>Good people, good food, bubbles, laughter, and a little Botox chat on the side. A relaxed evening to ask everything you've wondered about, with friends, before you decide anything.</p>
+      <ul>
+        <li>Hosted regularly</li>
+        <li>Learn what treatments involve, in plain language</li>
+        <li>Bring friends, or host one for your group</li>
+      </ul>
+      <a class="btn btn-lilac" href="https://wa.me/27647501441?text=Hi%20Dr%20Young%2C%20please%20let%20me%20know%20about%20the%20next%20Botox%20%26%20Bubbles%20evening" target="_blank" rel="noopener">Get the next date</a>
+    </div>
+    <div class="polaroids reveal" aria-hidden="true">
+      <figure><img src="images/dryoung/swing.webp" alt="" loading="lazy"><figcaption>Making time for you</figcaption></figure>
+      <figure><img src="images/dryoung/cafe.webp" alt="" loading="lazy"><figcaption>Good people, good vibes</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="where" id="where">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Where to find her</p>
+      <h2>Brackenfell, or at home.</h2>
+    </div>
+    <div class="grid3">
+      <article class="place feature reveal">
+        <img src="images/dryoung/purple.webp" alt="" loading="lazy">
+        <div class="in">
+          <span class="when">Tuesdays &amp; Thursdays</span>
+          <h3>It's A Hair Circus</h3>
+          <p>Facial aesthetics consultations and treatments at the salon in Brackenfell. <span class="tbc">address to confirm</span></p>
+          <a class="link" href="#book">Book a Tuesday or Thursday →</a>
+        </div>
+      </article>
+      <article class="place reveal">
+        <span class="when">The practice <span class="tbc">hours to confirm</span></span>
+        <h3>Protea Hoogte</h3>
+        <p>79 Buitekant Street, Protea Hoogte, Brackenfell. Dentistry and aesthetics.</p>
+        <a class="link" href="https://share.google/4f2kr7723yIVWAYr0" target="_blank" rel="noopener">Directions on Google Maps →</a>
+      </article>
+      <article class="place reveal">
+        <span class="when">By arrangement</span>
+        <h3>Home visits</h3>
+        <p>Why leave the comfort of your home when the treatment can come to you? Comfort, convenience and professional care.</p>
+        <a class="link" href="#book">Ask about a home visit →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <figure class="reveal">
+      <img src="images/dryoung/portrait.webp" alt="Dr Alayne Young in her treatment room" width="952" height="1268" loading="lazy">
+      <img src="images/dryoung/cafe.webp" alt="Dr Alayne Young smiling" width="952" height="1270" loading="lazy">
+    </figure>
+    <div class="reveal">
+      <p class="eyebrow">Meet Dr Young</p>
+      <h2>Came for your smile? You might discover aesthetics.</h2>
+      <p>Dr Alayne Young has been a dentist for 28 years. Early in her career she found a passion for aesthetic dentistry, and later a love for facial aesthetics: helping people feel good about the face they see in the mirror, without looking “done”.</p>
+      <p>She believes in understanding your features, your goals and your options before anything else. A little appointment, a little self-care, and a lot of confidence.</p>
+      <p class="sig">Dr Alayne Young</p>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Book a consultation</p>
+      <h2>Curious about what's possible?</h2>
+      <p>Let's start with a conversation. Send a message and Dr Young will get back to you to find a time.</p>
+      <div class="contact">
+        <a href="tel:+27647501441"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.6 9.8a16 16 0 0 0 6.6 6.6l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2z"/></svg></span>064 750 1441</a>
+        <a href="https://www.instagram.com/_dr_young_dentist_aesthetics_/" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>@_dr_young_dentist_aesthetics_</a>
+      </div>
+    </div>
+    <form id="bookForm" class="reveal" novalidate>
+      <div class="two">
+        <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-phone">Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <div class="two">
+        <label for="f-what">I'm interested in<select id="f-what" name="what">
+          <option>A consultation (not sure yet)</option>
+          <option>Dentistry</option>
+          <option>Lines &amp; wrinkles</option>
+          <option>Jaw tension / TMJ</option>
+          <option>Lip filler</option>
+          <option>Excessive sweating</option>
+          <option>Botox &amp; Bubbles evening</option>
+        </select></label>
+        <label for="f-where">Where suits you<select id="f-where" name="where">
+          <option>It's A Hair Circus (Tue/Thu)</option>
+          <option>The practice, Protea Hoogte</option>
+          <option>A home visit</option>
+        </select></label>
+      </div>
+      <label for="f-note">Anything you'd like her to know<textarea id="f-note" name="note" rows="3" placeholder="A question, or a day and time that works for you"></textarea></label>
+      <button class="btn btn-lilac" type="submit">Send on WhatsApp</button>
+      <p class="fine">This opens WhatsApp with your message ready to send. Nothing is stored on this website.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="images/dryoung/logo.webp" alt="Young Aesthetics" width="26" height="34">
+    <span>Dr Alayne Young · Dentist &amp; Facial Aesthetics · Brackenfell, Cape Town</span>
+    <span>064 750 1441</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/27647501441?text=Hi%20Dr%20Young%2C%20I%27d%20like%20to%20ask%20about%20a%20consultation" target="_blank" rel="noopener" aria-label="Message Dr Young on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' }) : null;
+  document.querySelectorAll('.reveal').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+  document.getElementById('bookForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target.elements, name = f.name.value.trim();   // .elements: form.name is the form's own name attribute
+    if(!name){ f.name.focus(); return; }
+    var msg = 'Hi Dr Young, my name is ' + name + '.\n' +
+      'I\'m interested in: ' + f.what.value + '\n' +
+      'Where suits me: ' + f.where.value +
+      (f.phone.value.trim() ? '\nMy number: ' + f.phone.value.trim() : '') +
+      (f.note.value.trim() ? '\n' + f.note.value.trim() : '');
+    window.open('https://wa.me/27647501441?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
