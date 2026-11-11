@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Andrew Ogterop · Wedding, Event &amp; Portrait Photographer, Cape Town</title>
+<meta name="description" content="Andrew Ogterop is a Cape Town photographer and videographer for weddings, proposals, events and portraits. Natural, unposed moments, with photos back within days.">
+<meta name="theme-color" content="#14120f">
+<link rel="preload" as="image" href="images/andrew/hero-water.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/CormorantGaramond-300i.woff2" crossorigin>
+<style>
+@font-face{font-family:"Cormorant";src:url(fonts/CormorantGaramond-300.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant";src:url(fonts/CormorantGaramond-300i.woff2) format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Cormorant";src:url(fonts/CormorantGaramond-400i.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Cormorant";src:url(fonts/CormorantGaramond-500.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument";src:url(fonts/InstrumentSans-var.woff2) format("woff2");font-weight:400 700;font-display:swap}
+
+:root{
+  --ink:#14120f; --ink-2:#1d1a16; --line:#2e2a24;
+  --paper:#efe8dc; --mute:#a59c8e; --amber:#d39a62;
+  --serif:"Cormorant",Georgia,serif; --sans:"Instrument",system-ui,sans-serif;
+  --pad:clamp(1.25rem,4vw,3.5rem);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--paper);font:400 1rem/1.65 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font:600 .72rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+h2{font:300 clamp(2.3rem,6vw,4.6rem)/1 var(--serif);letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--amber)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:1rem var(--pad);transition:background .3s,backdrop-filter .3s}
+.top.solid{background:rgba(20,18,15,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.mark{font:500 1.35rem/1 var(--serif);letter-spacing:.04em;text-decoration:none}
+.mark span{font-style:italic;font-weight:300;color:var(--amber)}
+.top nav{display:flex;gap:1.6rem;align-items:center}
+.top nav a{font-size:.85rem;text-decoration:none;color:var(--mute);transition:color .2s}
+.top nav a:hover{color:var(--paper)}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.4rem;border-radius:999px;font:600 .88rem/1 var(--sans);text-decoration:none;border:1px solid var(--paper);transition:transform .15s,background .2s,color .2s;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn.fill{background:var(--paper);color:var(--ink)}
+.btn.fill:hover{background:var(--amber);border-color:var(--amber)}
+.btn.ghost{background:transparent;color:var(--paper)}
+.btn.ghost:hover{background:rgba(239,232,220,.08)}
+.top .btn{padding:.6rem 1.05rem;font-size:.8rem}
+@media(max-width:760px){.top nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes settle{from{transform:scale(1.08);opacity:.4}to{transform:none;opacity:1}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,15,.35) 0%,rgba(20,18,15,0) 30%,rgba(20,18,15,.25) 55%,rgba(20,18,15,.92) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font:300 clamp(3.2rem,10.5vw,9rem)/.9 var(--serif);letter-spacing:-.025em}
+.hero h1 em{display:block;font-style:italic;color:var(--amber);padding-left:.6em}
+.hero p{max-width:34rem;margin:1.4rem 0 2rem;color:#d9d1c4;font-size:clamp(1rem,1.6vw,1.12rem)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+@media(min-width:900px){.hero .eyebrow{white-space:nowrap}.hero .wrap{display:flex;flex-direction:column;align-items:flex-end;text-align:right}.hero h1 em{padding-left:0;padding-right:.15em}.hero .ctas{justify-content:flex-end}}
+@media(max-width:899px){.hero img{object-position:15% 50%}}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.25s}.d2{animation-delay:.45s}.d3{animation-delay:.65s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* facts strip */
+.facts{border-block:1px solid var(--line)}
+.facts ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.facts li{padding:1.4rem 1rem;border-left:1px solid var(--line);font-size:.85rem;color:var(--mute)}
+.facts li:first-child{border-left:0}
+.facts b{display:block;font:300 1.6rem/1.1 var(--serif);color:var(--paper);margin-bottom:.2rem}
+@media(max-width:760px){.facts ul{grid-template-columns:1fr 1fr}.facts li:nth-child(3){border-left:0}.facts li:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section{padding:clamp(4.5rem,11vw,8.5rem) 0}
+
+/* work */
+.work-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:2.2rem}
+.chips{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 calc(var(--pad) * -1);padding:0 var(--pad) .25rem}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:.55rem 1rem;border-radius:999px;border:1px solid var(--line);background:none;color:var(--mute);font:500 .82rem/1 var(--sans);cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--paper);border-color:var(--mute)}
+.chip[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.grid{columns:3 320px;column-gap:1rem}
+.grid figure{break-inside:avoid;margin:0 0 1rem;position:relative;overflow:hidden;border-radius:4px;cursor:zoom-in;background:var(--ink-2)}
+.grid figure img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .4s}
+.grid figure:hover img{transform:scale(1.035)}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem .9rem .8rem;font-size:.78rem;color:#e9e2d6;background:linear-gradient(transparent,rgba(10,9,8,.75));opacity:0;transform:translateY(6px);transition:all .3s}
+.grid figure:hover figcaption,.grid figure:focus-visible figcaption{opacity:1;transform:none}
+@media(hover:none){.grid figcaption{opacity:1;transform:none}}
+.grid figure.hide{display:none}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:3rem}
+.svc article{padding:2rem 1.4rem 2rem 0;border-right:1px solid var(--line)}
+.svc article+article{padding-left:1.4rem}
+.svc article:last-child{border-right:0}
+.svc .n{font:300 italic 1rem var(--serif);color:var(--amber)}
+.svc h3{font:400 1.7rem/1.1 var(--serif);margin:.6rem 0 .8rem}
+.svc p{font-size:.92rem;color:var(--mute)}
+@media(max-width:900px){.svc{grid-template-columns:1fr 1fr}.svc article:nth-child(2){border-right:0}.svc article:nth-child(3){padding-left:0}.svc article:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:520px){.svc{grid-template-columns:1fr}.svc article,.svc article+article{padding:1.6rem 0;border-right:0;border-top:1px solid var(--line)}.svc article:first-child{border-top:0}}
+.also{margin-top:1.6rem;font-size:.9rem;color:var(--mute)}
+
+/* about */
+.about{background:var(--paper);color:var(--ink)}
+.about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.about .pic{position:relative}
+.about .pic img{border-radius:4px}
+.about .pic small{position:absolute;left:-.2rem;bottom:-1.8rem;font:300 italic 1rem var(--serif);color:#6d6457}
+.about h2 em{color:#9a5b2c}
+.about p{margin-top:1.2rem;color:#3f3a33;max-width:34rem}
+.about .eyebrow{color:#9a5b2c}
+.about .sig{margin-top:2rem;font:300 italic 2rem var(--serif)}
+@media(max-width:820px){.about .wrap{grid-template-columns:1fr}.about .pic small{position:static;display:block;margin-top:.6rem}}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:1.3fr 1fr;gap:1rem;margin-top:3rem}
+.q{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem}
+.q blockquote{font:300 clamp(1.3rem,2.2vw,1.75rem)/1.35 var(--serif)}
+.q.big{grid-row:span 2}
+.q.big blockquote{font-size:clamp(1.6rem,3vw,2.4rem)}
+.q cite{font:normal 600 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.q cite span{display:block;margin-top:.3rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--mute)}
+@media(max-width:820px){.quotes{grid-template-columns:1fr}.q.big{grid-row:auto}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem;counter-reset:s}
+.steps li{list-style:none;padding-top:1.2rem;border-top:1px solid var(--amber)}
+.steps li::before{counter-increment:s;content:"0" counter(s);font:300 italic 1.1rem var(--serif);color:var(--amber)}
+.steps h3{font:400 1.45rem/1.15 var(--serif);margin:.5rem 0 .5rem}
+.steps p{font-size:.92rem;color:var(--mute)}
+.steps{padding:0}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr;row-gap:2rem}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* enquiry */
+.enq{position:relative;overflow:hidden;background:var(--ink-2)}
+.enq .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.enq aside p{color:var(--mute);margin-top:1.2rem;max-width:26rem}
+.enq aside ul{list-style:none;padding:0;margin-top:2rem;display:grid;gap:.6rem}
+.enq aside a{text-decoration:none;font-size:.95rem}
+.enq aside a:hover{color:var(--amber)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.4rem;font-size:.78rem;letter-spacing:.06em;color:var(--mute)}
+label.full{grid-column:1/-1}
+input,select,textarea{font:400 1rem var(--sans);color:var(--paper);background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.85rem .9rem;width:100%;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber)}
+input[type=date]{color-scheme:dark}
+textarea{min-height:7rem;resize:vertical}
+form .btn{grid-column:1/-1;justify-content:center;padding:1.1rem}
+form small{grid-column:1/-1;color:var(--mute);font-size:.8rem}
+@media(max-width:820px){.enq .wrap{grid-template-columns:1fr}}
+@media(max-width:480px){form{grid-template-columns:1fr}}
+
+footer{padding:2.5rem 0 6rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+/* WhatsApp float */
+.wa{position:fixed;right:1rem;bottom:1rem;z-index:15;display:flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:999px;background:#25d366;color:#08250f;font:600 .85rem var(--sans);text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .15s}
+.wa:active{transform:scale(.96)}
+.wa svg{width:20px;height:20px}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100dvh;color:var(--paper)}
+dialog::backdrop{background:rgba(8,7,6,.94)}
+dialog[open]{display:grid;place-items:center}
+.lb-img{max-width:94vw;max-height:84dvh;width:auto;object-fit:contain;border-radius:3px;touch-action:pinch-zoom}
+.lb-cap{position:fixed;left:0;right:0;bottom:1.2rem;text-align:center;font-size:.85rem;color:var(--mute)}
+.lb-btn{position:fixed;background:rgba(239,232,220,.1);border:0;color:var(--paper);width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(239,232,220,.2)}
+.lb-close{top:1rem;right:1rem}.lb-prev{left:1rem;top:50%;translate:0 -50%}.lb-next{right:1rem;top:50%;translate:0 -50%}
+@media(max-width:600px){.lb-prev,.lb-next{top:auto;bottom:3.2rem;translate:none}}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="mark" href="#">Andrew <span>Ogterop</span></a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#kind-words">Kind words</a>
+    <a class="btn ghost" href="#enquire">Check my date</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <img src="images/andrew/hero-water.webp" width="2200" height="1036" alt="Portrait of a woman lying among water lilies, reflected in still water" fetchpriority="high">
+  <div class="wrap">
+    <p class="eyebrow rise">Photographer &amp; videographer · Cape Town</p>
+    <h1 class="rise d1">Moments,<em>unposed.</em></h1>
+    <p class="rise d2">Weddings, proposals, events and portraits, photographed the way they actually felt. Born and raised in Cape Town, and your photos are back within days, not weeks.</p>
+    <div class="ctas rise d3">
+      <a class="btn fill" href="#enquire">Check my date</a>
+      <a class="btn ghost" href="#work">See the work</a>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li><b>Photo + video</b>one person, both done properly</li>
+      <li><b>Days, not weeks</b>to get your photos back</li>
+      <li><b>UCT Michaelis</b>trained in painting &amp; photography</li>
+      <li><b>All of Cape Town</b>Winelands &amp; beyond</li>
+    </ul>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="work-head reveal">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2>Real days, <em>real people.</em></h2>
+      </div>
+    </div>
+    <div class="chips reveal" role="toolbar" aria-label="Filter work">
+      <button class="chip" aria-pressed="true" data-f="all">All</button>
+      <button class="chip" aria-pressed="false" data-f="wedding">Weddings</button>
+      <button class="chip" aria-pressed="false" data-f="couple">Couples &amp; proposals</button>
+      <button class="chip" aria-pressed="false" data-f="portrait">Portraits</button>
+      <button class="chip" aria-pressed="false" data-f="event">Events</button>
+      <button class="chip" aria-pressed="false" data-f="space">Spaces</button>
+      <button class="chip" aria-pressed="false" data-f="land">Landscapes</button>
+    </div>
+    <div class="grid" id="grid" style="margin-top:1.6rem">
+      <figure data-c="wedding" tabindex="0"><img src="images/andrew/wedding-exit.webp" width="1400" height="910" loading="lazy" decoding="async" alt="Bride and groom walking out of the chapel to cheers"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
+      <figure data-c="couple" tabindex="0"><img src="images/andrew/proposal-kiss.webp" width="1109" height="1400" loading="lazy" decoding="async" alt="Couple kissing by the water after a proposal"><figcaption>Proposal · Paarl</figcaption></figure>
+      <figure data-c="portrait" tabindex="0"><img src="images/andrew/portrait-jump.webp" width="1400" height="1037" loading="lazy" decoding="async" alt="Fitness portrait of a woman mid-leap in a dark studio"><figcaption>Fitness portraits · Liney</figcaption></figure>
+      <figure data-c="event" tabindex="0"><img src="images/andrew/event-cocktail.webp" width="1400" height="915" loading="lazy" decoding="async" alt="Guests talking at an evening cocktail event in a showroom"><figcaption>FSACCI 45th anniversary · Roche Bobois CT</figcaption></figure>
+      <figure data-c="wedding" tabindex="0"><img src="images/andrew/wedding-hexagon.webp" width="866" height="1400" loading="lazy" decoding="async" alt="Bride and groom framed by a golden hexagon arch at night"><figcaption>Rebecca &amp; Andrew · Cape Town</figcaption></figure>
+      <figure data-c="space" tabindex="0"><img src="images/andrew/space-library.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Bright library and lounge inside a modern house"><figcaption>Calatrava House · interiors</figcaption></figure>
+      <figure data-c="couple" tabindex="0"><img src="images/andrew/couple-hug.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Woman hugging her partner from behind on a hillside path"><figcaption>Couple shoot</figcaption></figure>
+      <figure data-c="land" tabindex="0"><img src="images/andrew/land-tablemountain.webp" width="1600" height="766" loading="lazy" decoding="async" alt="Table Mountain and Lion's Head above the city bowl"><figcaption>Landscapes &amp; elements</figcaption></figure>
+      <figure data-c="portrait" tabindex="0"><img src="images/andrew/portrait-suit.webp" width="934" height="1400" loading="lazy" decoding="async" alt="Man in a dark suit standing in a leafy garden"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
+      <figure data-c="wedding" tabindex="0"><img src="images/andrew/wedding-car.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Groom opening a vintage car door for the bride"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
+      <figure data-c="event" tabindex="0"><img src="images/andrew/event-dinner.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Conference guests chatting at a long dinner table"><figcaption>SYSPRO conference · Franschhoek</figcaption></figure>
+      <figure data-c="couple" tabindex="0"><img src="images/andrew/couple-hands.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Close-up of a couple's hands with an engagement ring against a tree"><figcaption>Engagement details</figcaption></figure>
+      <figure data-c="space" tabindex="0"><img src="images/andrew/space-cellar.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Arched wine cellar alcove with a statue"><figcaption>Calatrava House · interiors</figcaption></figure>
+      <figure data-c="wedding" tabindex="0"><img src="images/andrew/wedding-bridesmaids.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Bridesmaids laughing together under the trees"><figcaption>Rebecca &amp; Andrew · Cape Town</figcaption></figure>
+      <figure data-c="couple" tabindex="0"><img src="images/andrew/proposal-field.webp" width="1400" height="941" loading="lazy" decoding="async" alt="Proposal set-up with a pampas arch on a vineyard lawn"><figcaption>Proposal · Paarl</figcaption></figure>
+      <figure data-c="event" tabindex="0"><img src="images/andrew/event-expo.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Exhibitors talking at a health expo stand"><figcaption>Alpha Pharm · GrandWest</figcaption></figure>
+      <figure data-c="land" tabindex="0"><img src="images/andrew/land-coast.webp" width="1600" height="910" loading="lazy" decoding="async" alt="Cape coastline and mountains under a blue sky"><figcaption>Landscapes &amp; elements</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">What I shoot</p>
+    <h2 class="reveal">One photographer, <em>whole story.</em></h2>
+    <div class="svc">
+      <article class="reveal"><span class="n">i.</span><h3>Weddings</h3><p>From getting ready to the last dance. We plan it together beforehand, so on the day you can just be there.</p></article>
+      <article class="reveal"><span class="n">ii.</span><h3>Couples &amp; proposals</h3><p>Secret proposals, engagements and anniversaries. I'll help with the spot, the timing and what to wear.</p></article>
+      <article class="reveal"><span class="n">iii.</span><h3>Events &amp; corporate</h3><p>Conferences, launches, cocktail evenings and birthdays, covered quietly so people stay themselves.</p></article>
+      <article class="reveal"><span class="n">iv.</span><h3>Portraits &amp; brands</h3><p>People, products and makers. Fitness, jewellery, furniture: images you can actually use on social media.</p></article>
+    </div>
+    <p class="also reveal">Also: video, interiors, food and performance. Not sure if it fits? <a href="#enquire">Just ask.</a></p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="pic reveal">
+      <img src="images/andrew/water-portrait.webp" width="1400" height="1309" loading="lazy" decoding="async" alt="Portrait of a woman floating among water lilies">
+      <small>"On the water", portraits, 2024</small>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">About</p>
+      <h2>Hi, I'm <em>Andrew.</em></h2>
+      <p>I've been making pictures since I got my first camera at ten. I studied painting and photography at UCT's Michaelis School of Fine Art, and photography won.</p>
+      <p>I love the in-between moments: the laugh before the pose, the hug nobody planned. Smiles look better when they aren't posed. I shoot both photo and video, I'm easy to talk to, and I send your photos back within a few days.</p>
+      <p class="sig">Andrew</p>
+    </div>
+  </div>
+</section>
+
+<section id="kind-words">
+  <div class="wrap">
+    <p class="eyebrow reveal">Kind words</p>
+    <h2 class="reveal">From people <em>I've shot.</em></h2>
+    <div class="quotes">
+      <figure class="q big reveal"><blockquote>"He spends time with you before the wedding, planning and working with you to understand exactly what you want on the day. Above all, he is kind and wants to make sure that the people he is shooting feel beautiful and seen."</blockquote><cite>Rebecca Cameron<span>Wedding · photo &amp; video</span></cite></figure>
+      <figure class="q reveal"><blockquote>"I get nervous around new people and I felt so much at ease… he had them sent within a few hours after the shoot."</blockquote><cite>Nyasha<span>Portrait session</span></cite></figure>
+      <figure class="q reveal"><blockquote>"Jewellery is particularly challenging to capture. He completely exceeded my expectations. He is brilliant!"</blockquote><cite>Scarab Jewellery Studio<span>Brand photo &amp; video</span></cite></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow reveal">How it works</p>
+    <h2 class="reveal">Simple, <em>start to finish.</em></h2>
+    <ol class="steps">
+      <li class="reveal"><h3>Tell me your date</h3><p>Send the date, the place and what you have in mind.</p></li>
+      <li class="reveal"><h3>We plan it</h3><p>A quick chat about the spot, timing and the shots that matter to you.</p></li>
+      <li class="reveal"><h3>The day</h3><p>I stay out of the way and catch it as it happens.</p></li>
+      <li class="reveal"><h3>Your photos</h3><p>Edited and delivered within days, ready to share.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="enq" id="enquire">
+  <div class="wrap">
+    <aside class="reveal">
+      <p class="eyebrow">Enquire</p>
+      <h2>Is your date <em>free?</em></h2>
+      <p>Fill this in and it opens WhatsApp with everything I need. I'll get back to you as soon as I can.</p>
+      <ul>
+        <li><a href="tel:+27713335678">071 333 5678</a></li>
+        <li><a href="https://wa.me/27713335678">WhatsApp me</a></li>
+        <li><a href="https://instagram.com/within_worlds_" rel="noopener">Instagram</a></li>
+      </ul>
+    </aside>
+    <form id="f" class="reveal" novalidate>
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Type of shoot
+        <select name="type" required>
+          <option value="">Choose one</option>
+          <option>Wedding</option><option>Proposal / engagement</option><option>Couple shoot</option>
+          <option>Event / corporate</option><option>Portraits / brand</option><option>Video</option><option>Something else</option>
+        </select>
+      </label>
+      <label>Date<input type="date" name="date"></label>
+      <label>Venue or area<input name="where" placeholder="e.g. Stellenbosch"></label>
+      <label class="full">Tell me a bit more<textarea name="more" placeholder="Guests, hours, the vibe you're going for…"></textarea></label>
+      <button class="btn fill" type="submit">Send on WhatsApp</button>
+      <small>Not on WhatsApp? Call 071 333 5678.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Andrew Ogterop · Photographer &amp; videographer, Cape Town</span><a href="#top">Back to top ↑</a></div>
+</footer>
+
+<a class="wa" href="https://wa.me/27713335678?text=Hi%20Andrew%2C%20I%27d%20like%20to%20ask%20about%20a%20shoot" aria-label="WhatsApp Andrew"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .3-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4.1.1.1.7-.2 1.3Z"/></svg>WhatsApp</a>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <img class="lb-img" id="lbImg" alt="">
+  <p class="lb-cap" id="lbCap"></p>
+  <button class="lb-btn lb-close" data-a="x" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" data-a="-1" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" data-a="1" aria-label="Next photo">›</button>
+</dialog>
+
+<script>
+// header
+const hdr=document.getElementById('top');
+addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>40),{passive:true});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// filters
+const figs=[...document.querySelectorAll('#grid figure')];
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+  figs.forEach(f=>f.classList.toggle('hide',b.dataset.f!=='all'&&f.dataset.c!==b.dataset.f));
+}));
+
+// lightbox (native dialog; pinch-zoom allowed)
+const lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');
+let cur=0;
+const vis=()=>figs.filter(f=>!f.classList.contains('hide'));
+function show(i){const v=vis();cur=(i+v.length)%v.length;const im=v[cur].querySelector('img');li.src=im.src;li.alt=im.alt;lc.textContent=v[cur].querySelector('figcaption').textContent}
+figs.forEach(f=>{const open=()=>{show(vis().indexOf(f));lb.showModal()};f.addEventListener('click',open);f.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});
+lb.addEventListener('click',e=>{const a=e.target.dataset.a;if(a==='x'||e.target===lb)lb.close();else if(a)show(cur+ +a)});
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});
+let sx=null;
+lb.addEventListener('touchstart',e=>{sx=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));sx=null},{passive:true});
+
+// enquiry → WhatsApp
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  if(!d.get('name')||!d.get('type')){e.target.reportValidity();return}
+  const date=d.get('date')?new Date(d.get('date')).toLocaleDateString('en-ZA',{day:'numeric',month:'long',year:'numeric'}):'not set yet';
+  const msg=`Hi Andrew, I'm ${d.get('name')}.\nShoot: ${d.get('type')}\nDate: ${date}\nWhere: ${d.get('where')||'not sure yet'}\n${d.get('more')?'\n'+d.get('more'):''}`;
+  window.open('https://wa.me/27713335678?text='+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
