@@ -4,9 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Andrew Ogterop · Photographer &amp; Videographer, Cape Town · Weddings, Events, Portraits</title>
-<meta name="description" content="Andrew Ogterop is a Cape Town photographer and videographer for weddings, proposals, events and portraits. One person for photo and 4K/8K video, natural unposed moments, and your first photos usually back within a day or two.">
+<title>Andrew Ogterop · Cape Town Photographer &amp; Videographer</title>
+<meta name="description" content="Andrew Ogterop is a Cape Town photographer and videographer for weddings, proposals, events and portraits. One person for photo and video, with first photos usually back within a day or two.">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="images/andrew/ao-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Andrew Ogterop · Cape Town Photographer &amp; Videographer">
+<meta property="og:description" content="Weddings, proposals, events and portraits. Photo and video from one person.">
+<meta property="og:image" content="https://joshuavomberg.co.za/images/andrew/share-andrew.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="preload" as="image" href="images/andrew/hero-dip-1200.webp" imagesrcset="images/andrew/hero-dip-800.webp 800w, images/andrew/hero-dip-1200.webp 1200w, images/andrew/hero-dip-1800.webp 1800w" imagesizes="(min-width:900px) 50vw, 100vw" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/Outfit-400.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/InstrumentSans-var.woff2" crossorigin>
@@ -38,9 +45,9 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
 .bean{display:inline-block;width:1.5em;height:.62em;border-radius:1em;background:var(--c,var(--pink))}
 
 /* header: his white card, always */
-.top{position:fixed;inset:0 0 auto;z-index:20;height:var(--bar);display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:#fff;color:var(--paper);border-bottom:1px solid transparent;transition:border-color .3s}
+.top{position:fixed;inset:0 0 auto;z-index:20;height:var(--bar);display:flex;align-items:center;justify-content:space-between;padding:0 max(var(--pad),calc((100% - 1280px)/2 + var(--pad)));background:#fff;color:var(--paper);border-bottom:1px solid transparent;transition:border-color .3s}
 .top.solid{border-bottom-color:var(--line)}
-.mark{display:flex;align-items:center;gap:.7rem;font:500 1.15rem/1 var(--display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.mark{display:flex;align-items:center;min-height:44px;gap:.7rem;font:500 1.15rem/1 var(--display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .mark img{height:3rem;width:auto}
 .top nav{display:flex;gap:1.5rem;align-items:center}
 .top nav a{font-size:.9rem;font-weight:500;text-decoration:none}
@@ -49,12 +56,11 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;padding:.9rem 1.5rem;border-radius:999px;font:600 .9rem/1 var(--sans);text-decoration:none;white-space:nowrap;border:1.5px solid var(--paper);transition:transform .15s,background .2s,color .2s,border-color .2s;cursor:pointer}
 .btn:active{transform:scale(.97)}
 .btn.fill{background:var(--paper);color:var(--ink)}
-.btn.fill:hover{background:var(--band);border-color:var(--band);color:#fff}
 .btn.ghost{background:transparent;color:var(--paper)}
-.btn.ghost:hover{background:rgba(127,127,127,.12)}
+@media(hover:hover){.btn.fill:hover{background:var(--band);border-color:var(--band);color:#fff}.btn.ghost:hover{background:rgba(127,127,127,.12)}}
 .top .btn{padding:.65rem 1.15rem;font-size:.85rem}
 .burger{display:none}
-@media(max-width:760px){
+@media(max-width:47.5em){
   .mark{font-size:1.05rem;gap:.55rem}.mark img{height:2.5rem}
   .burger{display:grid;place-content:center;gap:6px;width:44px;height:44px;margin-right:-.6rem;padding:0;background:none;border:0;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
   .burger i{display:block;width:22px;height:2px;border-radius:2px;background:currentColor;transition:transform .25s}
@@ -68,6 +74,8 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
   .top nav .btn{margin-top:1.5rem;padding:1.05rem 1.7rem;font-size:.95rem}
 }
 
+@media(max-width:47.5em) and (max-height:480px){.top nav{justify-content:flex-start;gap:0;padding-top:4.75rem;padding-bottom:1rem;overflow-y:auto}.top nav a:not(.btn){font-size:1.5rem;min-height:44px}.top nav .btn{margin-top:.75rem}}
+
 /* hero: his white card on the left, the photograph on the right; on phones the photo leads */
 .hero{margin-top:var(--bar);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100vh - var(--bar));min-height:calc(100svh - var(--bar));background:#fff}
 .hero .txt{align-self:center;justify-self:end;width:min(100%,640px);padding:2.5rem clamp(1.5rem,3.5vw,3.5rem) 2.5rem var(--pad)}
@@ -79,20 +87,20 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
 .hero h1 em{display:block;width:fit-content;font-style:normal;background:var(--beans-ink);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding:0 .06em .14em 0;margin-bottom:-.14em}
 .hero .lede{max-width:31rem;margin:1.5rem 0 2rem;color:#3f3a33;font-size:clamp(1rem,1.4vw,1.12rem);text-wrap:pretty}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:.75rem}
-.hero .shot{position:relative;margin:0;overflow:hidden;background:#0e6f5c}
-.hero .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+.hero .shot{position:relative;margin:0;overflow:hidden;background:#0e6f5c;container-type:size}
+.hero .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;object-position:50% min(0px,max(-19.5cqw,calc((100cqh - 150cqw) * .52)));animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
 @keyframes settle{from{transform:scale(1.06);opacity:.4}to{transform:none;opacity:1}}
 .hero .shot figcaption{position:absolute;left:1rem;bottom:1rem;display:flex;align-items:center;gap:.5rem;padding:.45rem .8rem;border-radius:999px;background:rgba(10,9,8,.62);color:#fff;font-size:.8rem;font-weight:500}
 .hero .shot figcaption::before{content:"";width:.95em;height:.5em;border-radius:1em;background:var(--pink)}
-@media(max-width:899px){
+@media(max-width:56.1875em){
   .hero{display:flex;flex-direction:column;min-height:0}
   .hero .shot{order:-1;height:min(56vh,34rem);height:min(56svh,34rem)}
   .hero .shot img{object-position:50% 30%}
-  .hero .txt{width:auto;padding:1.75rem var(--pad) 2.25rem}
+  .hero .txt{align-self:stretch;width:auto;padding:1.75rem var(--pad) 2.25rem}
   .hero .lede{max-width:36rem}
 }
-@media(max-width:600px){
-  .hero .shot{height:max(46vh,15rem);height:max(46svh,15rem)}
+@media(max-width:37.5em){
+  .hero .shot{height:clamp(15rem,calc(100vh - var(--bar) - 20rem),46vh);height:clamp(15rem,calc(100svh - var(--bar) - 20rem),46svh)}
   .hero .shot figcaption{left:.75rem;bottom:.75rem;font-size:.75rem}
   .hero .txt{padding:1.25rem var(--pad) 1.75rem}
   .beans{display:none}
@@ -101,8 +109,8 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
   .hero .lede{margin:.9rem 0 1.25rem}
   .hero .lede .more{display:none}
 }
-@media(max-width:600px) and (max-height:620px){.hero .lede{display:none}.hero h1{margin-bottom:1.1rem}}
-@media(max-width:340px){.hero .kicker{font-size:.82rem}.hero .btn{padding-inline:1.1rem}}
+@media(max-width:37.5em) and (max-height:620px){.hero .shot{height:max(46vh,15rem);height:max(46svh,15rem)}.hero .lede{display:none}.hero h1{margin-bottom:1.1rem}}
+@media(max-width:21.25em){.hero .kicker{font-size:.82rem}.hero .btn{padding-inline:1.1rem}}
 .rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
 .d1{animation-delay:.25s}.d2{animation-delay:.45s}.d3{animation-delay:.65s}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -112,10 +120,11 @@ h3{font-size:1.3rem;line-height:1.15;letter-spacing:-.015em}
 .facts ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
 .facts li{padding:1.5rem 1.25rem 1.6rem;border-left:1px solid var(--line);font-size:.9rem;color:var(--mute)}
 .facts li:first-child{border-left:0;padding-left:0}
+.facts li,.facts b{text-wrap:balance}
 .facts li:nth-child(1){--c:var(--purple)}.facts li:nth-child(2){--c:var(--blue)}.facts li:nth-child(3){--c:var(--lime)}.facts li:nth-child(4){--c:var(--pink)}
 .facts b::before{content:"";display:block;width:1.75rem;height:.7rem;border-radius:1rem;background:var(--c);margin-bottom:.8rem}
 .facts b{display:block;font:500 1.35rem/1.15 var(--display);letter-spacing:-.015em;color:var(--paper);margin-bottom:.25rem}
-@media(max-width:760px){.facts ul{grid-template-columns:1fr 1fr}.facts li:nth-child(3){border-left:0;padding-left:0}.facts li:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:47.5em){.facts ul{grid-template-columns:1fr 1fr}.facts li:nth-child(3){border-left:0;padding-left:0}.facts li:nth-child(n+3){border-top:1px solid var(--line)}}
 
 section{padding:clamp(2.5rem,5vw,4rem) 0}
 
@@ -128,7 +137,9 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .names li:nth-child(6n+1){--c:var(--purple)}.names li:nth-child(6n+2){--c:var(--blue)}.names li:nth-child(6n+3){--c:var(--lime)}.names li:nth-child(6n+4){--c:var(--orange)}.names li:nth-child(6n+5){--c:var(--pink)}.names li:nth-child(6n){--c:var(--red)}
 .creds{list-style:none;padding:1.5rem 0 0;margin-top:2rem;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:1rem 2.5rem;font-size:.95rem;color:var(--mute)}
 .creds b{display:block;color:var(--paper);font-weight:600}
-@media(max-width:760px){.names{grid-template-columns:1fr 1fr;gap:1.25rem 1rem}.names b{white-space:normal;font-size:1.25rem}.creds{grid-template-columns:1fr}}
+.creds li{text-wrap:balance}
+@media(max-width:47.5em){.names{grid-template-columns:1fr 1fr;gap:1.25rem 1rem}.names b{white-space:normal;font-size:1.25rem;align-items:flex-start}.names b::before{margin-top:.4em}.names li:last-child:nth-child(odd){grid-column:1/-1}.creds{grid-template-columns:1fr}}
+@media(max-width:25em){.names b{font-size:1.1rem}}
 
 /* work */
 .chips{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:1.1rem calc(var(--pad) * -1) 0;padding:.4rem var(--pad)}
@@ -142,25 +153,27 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .chip[aria-pressed="true"]::before{background:currentColor}
 .chip[data-f=space][aria-pressed="true"],.chip[data-f=land][aria-pressed="true"]{background:var(--c);color:var(--paper)}
 @media(pointer:coarse){.chip{min-height:44px}}
+@media(min-width:43.8125em){.chips{flex-wrap:wrap;overflow:visible}}
 
 /* justified rows: every photo uncropped, one height per row, edges flush; the first two photos showing make a big opening row */
 .grid{--gw:calc(min(100vw,1280px) - 2 * var(--pad));--h:calc(var(--gw) * .21);display:flex;flex-wrap:wrap;column-gap:10px;margin-top:.9rem}
 .grid::before{content:"";order:1;flex:0 0 100%;height:0}
 .grid figure{--r:1.5;order:2;flex:calc(var(--r) * 10) 1 calc(var(--r) * var(--h));max-width:calc(var(--r) * var(--gw) * .34);aspect-ratio:var(--r);margin:0 0 10px;position:relative;overflow:hidden;border-radius:4px;cursor:zoom-in;background:var(--ink-2)}
 .grid figure:nth-child(-n+2 of :not(.hide)){order:0;flex-basis:0;max-width:calc(var(--r) * var(--gw) * .5)}
+.grid figure.lead{order:0;flex-basis:0;max-width:calc(var(--r) * var(--gw) * .5)}
 .grid figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.grid figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:.5rem;padding:2rem .9rem .8rem;font-size:.8rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(10,9,8,.75));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
-.grid figcaption::before{content:"";flex:none;width:.95em;height:.5em;border-radius:1em;background:var(--c)}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2rem .9rem .8rem;font-size:.8rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(10,9,8,.62) 2rem,rgba(10,9,8,.8));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.grid figcaption::before{content:"";display:inline-block;width:.95em;height:.5em;border-radius:1em;background:var(--c);margin-right:.5rem;vertical-align:.08em}
 .grid figure[data-c=wedding]{--c:var(--pink)}.grid figure[data-c=couple]{--c:var(--red)}.grid figure[data-c=portrait]{--c:var(--purple)}.grid figure[data-c=event]{--c:var(--blue)}.grid figure[data-c=space]{--c:var(--orange)}.grid figure[data-c=land]{--c:var(--lime)}
 .grid figure:focus-visible figcaption{opacity:1;transform:none}
 @media(hover:hover){.grid figure:hover img{transform:scale(1.035)}.grid figure:hover figcaption{opacity:1;transform:none}}
-@media(hover:none){.grid figcaption{opacity:1;transform:none}}
+@media(hover:none){.grid figcaption{display:none}}
 .grid figure.hide{display:none}
-@media(max-width:700px){
-  .grid{--h:calc(var(--gw) * .32);column-gap:6px}
+@media(max-width:43.75em){
+  .grid{--h:calc(var(--gw) * .32);column-gap:6px;justify-content:center}
   .grid::before{display:none}
-  .grid figure{margin-bottom:6px;border-radius:3px;max-width:calc(var(--r) * var(--gw) * .8)}
-  .grid figure:nth-child(-n+2 of :not(.hide)){order:2;flex-basis:calc(var(--r) * var(--h));max-width:calc(var(--r) * var(--gw) * .8)}
+  .grid figure{margin-bottom:6px;border-radius:3px;max-width:calc(var(--r) * var(--gw))}
+  .grid figure:nth-child(-n+2 of :not(.hide)){order:2;flex-basis:calc(var(--r) * var(--h));max-width:calc(var(--r) * var(--gw))}
   .grid figure:nth-child(1 of :not(.hide)){flex-basis:100%;max-width:none}
   .grid figcaption{display:none}
 }
@@ -175,10 +188,11 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .yt img,.yt iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
 .yt .play{position:absolute;left:50%;top:50%;translate:-50% -50%;width:clamp(40px,20%,76px);aspect-ratio:1;border-radius:50%;background:#fff;transition:transform .2s}
 .yt .play::before{content:"";position:absolute;left:37%;top:29%;width:36%;height:42%;background:var(--paper);clip-path:polygon(0 0,100% 50%,0 100%)}
+.more-films .yt .play{left:.55rem;top:auto;bottom:.5rem;translate:none;width:30px}
 .yt a:hover .play{transform:scale(1.08)}
 .yt .len{position:absolute;right:.6rem;bottom:.55rem;font:600 .75rem/1 var(--sans);color:#fff;background:rgba(10,9,8,.7);padding:.3rem .5rem;border-radius:999px}
 .film figcaption{margin-top:.75rem;font-size:.85rem;color:#b9b0a2}
-.film figcaption b{display:block;font:500 1.05rem/1.25 var(--display);letter-spacing:-.01em;color:#f4efe6}
+.film figcaption b{display:block;font:500 1.05rem/1.25 var(--display);letter-spacing:-.01em;color:#f4efe6;text-wrap:balance}
 .film.lead figcaption b{font-size:1.5rem}
 .pull{margin:0}
 .pull blockquote{font:400 clamp(1.3rem,2.1vw,1.75rem)/1.3 var(--display);letter-spacing:-.015em;text-wrap:pretty}
@@ -187,8 +201,11 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .pull cite{font-style:normal;font-weight:600;color:#f4efe6}
 .more-films{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.25rem}
 .film-note{margin-top:2rem;font-size:.95rem;color:#b9b0a2}
+.film-note a{white-space:nowrap}
+@media(min-width:56.3125em){.more-films .film:has(iframe){grid-column:1/-1;order:-1;width:min(100%,60rem);justify-self:center}.more-films .film:has(iframe) .play{display:none}}
 .films :focus-visible{outline-color:#fff}
-@media(max-width:900px){
+.yt:has(a:focus-visible)::after{content:"";position:absolute;inset:0;border:3px solid #fff;border-radius:inherit;box-shadow:inset 0 0 0 2px var(--night);pointer-events:none}
+@media(max-width:56.25em){
   .reel{grid-template-columns:1fr}
   .more-films{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scroll-padding-inline:var(--pad)}
   .more-films::-webkit-scrollbar{display:none}
@@ -202,8 +219,8 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .svc h3{margin:.9rem 0 .55rem;font-size:1.45rem}
 .svc p{font-size:.95rem;color:var(--mute)}
 .svc a{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;padding-top:.5rem;font-size:.92rem;font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.35em;text-decoration-color:var(--c)}
-@media(max-width:900px){.svc{grid-template-columns:1fr 1fr;gap:2rem}}
-@media(max-width:520px){.svc{grid-template-columns:1fr;gap:1.5rem}}
+@media(max-width:56.25em){.svc{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:32.5em){.svc{grid-template-columns:1fr;gap:1.5rem}}
 .also{margin-top:1.75rem;font-size:.95rem;color:var(--mute)}
 .also a{font-weight:600;color:var(--paper)}
 
@@ -214,7 +231,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .bag{list-style:none;padding:0;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;max-width:34rem}
 .bag li{border-top:1px solid var(--line);padding-top:.9rem;font-size:.9rem;color:var(--mute)}
 .bag b{display:block;font:500 1.12rem/1.2 var(--display);letter-spacing:-.01em;color:var(--paper);margin-bottom:.25rem}
-@media(max-width:640px){.about .wrap{grid-template-columns:1fr}.about .pic img{max-height:26rem;object-fit:cover;object-position:50% 20%}}
+@media(max-width:40em){.about .wrap{grid-template-columns:1fr}.about .pic img{max-height:26rem;object-fit:cover;object-position:50% 20%}}
 
 /* quotes */
 .quotes{display:grid;grid-template-columns:1.35fr 1fr;gap:2.5rem clamp(2rem,5vw,4.5rem);margin-top:2.25rem;align-items:start}
@@ -227,7 +244,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .q figcaption::before{content:"";flex:none;width:1.1rem;height:.5rem;border-radius:1rem;background:var(--c)}
 .q cite{font-style:normal;font-weight:600;color:var(--paper)}
 .q:nth-child(1){--c:var(--pink)}.q:nth-child(2){--c:var(--purple)}.q:nth-child(3){--c:var(--orange)}
-@media(max-width:820px){.quotes{grid-template-columns:1fr}.q.big{grid-row:auto}.q.big blockquote{text-indent:0}}
+@media(max-width:51.25em){.quotes{grid-template-columns:1fr}.q.big{grid-row:auto}.q.big blockquote{text-indent:0}}
 
 /* rate card */
 .card{display:grid;grid-template-columns:1.55fr 1fr;gap:0 clamp(2rem,5vw,4.5rem);margin-top:2.5rem}
@@ -243,16 +260,18 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .card .film-rates li span{font-size:1rem;color:var(--paper)}
 .fine{margin-top:1.25rem;max-width:46rem;font-size:.9rem;color:var(--mute)}
 .fine a{font-weight:600;color:var(--paper)}
-@media(max-width:900px){.card{grid-template-columns:1fr;gap:2.5rem}}
-@media(max-width:520px){.card .hourly li{grid-template-columns:1fr auto}.card .hourly li span{grid-column:1/-1;grid-row:2;margin-top:-.6rem}}
+@media(max-width:56.25em){.card{grid-template-columns:1fr;gap:2.5rem}}
+@media(max-width:32.5em){.card .hourly li{grid-template-columns:1fr auto}.card .hourly li span{grid-column:1/-1;grid-row:2;margin-top:-.6rem}}
 
 /* good to know */
 .faq{max-width:46rem;margin-top:2.75rem}
+@media(min-width:56.3125em){.fine,.faq{max-width:calc((100% - clamp(2rem,5vw,4.5rem)) * 1.55 / 2.55)}}
+@media(max-width:56.25em){.faq,.fine{max-width:none}}
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-of-type{border-top:1.5px solid var(--paper);margin-top:.9rem}
 .faq summary{cursor:pointer;list-style:none;position:relative;padding:1rem 2.5rem 1rem 0;font:500 1.12rem/1.3 var(--display);letter-spacing:-.01em}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:.2rem;top:50%;translate:0 -50%;font:400 1.5rem/1 var(--display);color:var(--mute);transition:rotate .2s}
+.faq summary::after{content:"+";content:"+" / "";position:absolute;right:.2rem;top:50%;translate:0 -50%;font:400 1.5rem/1 var(--display);color:var(--mute);transition:rotate .2s}
 .faq details[open] summary::after{rotate:45deg}
 .faq details p{padding:0 2.5rem 1.1rem 0;font-size:.95rem;color:var(--mute)}
 
@@ -270,7 +289,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0}
 .enq aside p a{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.3em;text-decoration-color:rgba(255,255,255,.55)}
 .enq aside p a:hover{text-decoration-color:#fff}
 .enq aside .note{margin-top:.4rem;font-size:.95rem}
-.enq aside .note a{font-weight:600}
+.enq aside .note a{font-weight:600;white-space:nowrap}
 .enq aside :focus-visible{outline-color:#fff}
 form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:#fff;color:var(--paper);border-radius:1rem;padding:clamp(1.25rem,3vw,2.25rem)}
 label{display:grid;gap:.4rem;font-size:.85rem;font-weight:500;color:var(--paper)}
@@ -283,8 +302,8 @@ textarea{min-height:7rem;resize:vertical}
 .send{grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;gap:.6rem}
 .send .btn{padding:1.1rem}
 form small{grid-column:1/-1;color:var(--mute);font-size:.85rem}
-@media(max-width:820px){.enq .wrap{grid-template-columns:1fr}}
-@media(max-width:480px){form{grid-template-columns:1fr}.send{grid-template-columns:1fr}}
+@media(max-width:51.25em){.enq .wrap{grid-template-columns:1fr;gap:0}.enq aside{display:contents}.enq form{order:1;margin-top:1.5rem}.enq .how,.enq .reach,.enq aside .note{order:2}.enq .how{margin-top:2.25rem}}
+@media(max-width:30em){form{grid-template-columns:1fr}.send{grid-template-columns:1fr}}
 
 /* footer: sign off with the logo */
 footer{padding:clamp(3rem,6vw,4.5rem) 0 6.5rem;font-size:.92rem;color:var(--mute)}
@@ -292,17 +311,17 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem clamp(1
 footer .ao{width:clamp(7rem,13vw,10.5rem)}
 footer .who b{display:block;font:500 clamp(1.5rem,2.6vw,2.1rem)/1.05 var(--display);letter-spacing:-.025em;color:var(--paper);margin-bottom:.4rem}
 footer nav{display:grid;justify-items:end;font-weight:500;color:var(--paper)}
-footer nav a{display:inline-flex;align-items:center;min-height:36px;text-decoration:none}
+footer nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
 footer nav a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em;text-decoration-color:var(--pink)}
 footer .legal{grid-column:1/-1;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.85rem}
-@media(max-width:700px){footer .wrap{grid-template-columns:1fr}footer nav{justify-items:start}footer nav a{min-height:44px}}
+@media(max-width:43.75em){footer .wrap{grid-template-columns:1fr}footer nav{justify-items:start}footer nav a{min-height:44px}}
 
 /* WhatsApp float: hidden on the first screen and beside the form */
 .wa{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));z-index:15;display:flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:999px;background:#25d366;color:#08250f;font:600 .85rem var(--sans);text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s,opacity .25s,visibility .25s}
 .wa:active{transform:scale(.96)}
 .wa.off{opacity:0;visibility:hidden;transform:translateY(12px)}
 .wa svg{width:20px;height:20px}
-@media(max-width:600px){
+@media(max-width:37.5em){
   .wa{width:54px;height:54px;padding:0;justify-content:center}
   .wa span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
   .wa svg{width:28px;height:28px}
@@ -313,35 +332,38 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 dialog::backdrop{background:#0b0a09}
 dialog[open]{display:grid;place-items:center}
 .lb-img{max-width:94vw;max-height:84vh;max-height:84dvh;width:auto;object-fit:contain;border-radius:3px;touch-action:manipulation}
+@media(min-width:37.5625em){.lb-img{max-width:calc(100vw - 9.5rem)}}
 .lb-cap{position:fixed;left:0;right:0;bottom:1.2rem;text-align:center;font-size:.85rem;color:#a59c8e}
 .lb-n{position:fixed;top:1.6rem;left:1.2rem;font-size:.8rem;letter-spacing:.08em;color:#a59c8e}
 .lb-btn{position:fixed;background:rgba(239,232,220,.12);border:0;color:#efe8dc;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
 .lb-btn:hover{background:rgba(239,232,220,.2)}
 .lb-close{top:1rem;right:1rem}.lb-prev{left:1rem;top:50%;translate:0 -50%}.lb-next{right:1rem;top:50%;translate:0 -50%}
-@media(max-width:600px){
+@media(max-width:37.5em),(max-width:68.75em) and (min-height:600px){
   .lb-img{max-width:100vw;max-height:calc(100vh - 9.5rem);max-height:calc(100dvh - 9.5rem);border-radius:0}
   .lb-close{top:.6rem;right:.6rem}
   .lb-prev,.lb-next{top:auto;bottom:.75rem;translate:none}
   .lb-prev{left:.75rem}.lb-next{right:.75rem}
   .lb-cap{bottom:.75rem;height:48px;display:grid;place-items:center;padding:0 4.4rem;line-height:1.25}
 }
+@media(min-width:37.5625em) and (max-height:599px){.lb-img{max-width:calc(100vw - 9rem);max-height:calc(100vh - 6rem);max-height:calc(100dvh - 6rem)}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{.top,.wa{display:none}.hero{margin-top:0;min-height:0}}
 </style>
+<noscript><style>.burger,.chips,.send,form small{display:none}form::after{content:"This form needs JavaScript. Please WhatsApp or call 071 333 5678, or email rainbowliquid.ao@gmail.com.";grid-column:1/-1;font-size:.9rem}</style></noscript>
 </head>
 <body>
 
 <header class="top" id="top">
   <a class="mark" href="#"><img src="images/andrew/ao-logo.webp" width="360" height="263" alt="AO logo">Andrew Ogterop</a>
-  <nav id="nav">
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+  <nav id="nav" aria-label="Main">
     <a href="#work">Work</a>
     <a href="#films">Films</a>
     <a href="#about">About</a>
     <a href="#pricing">Rates</a>
     <a class="btn fill" href="#enquire">Check my date</a>
   </nav>
-  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
 </header>
 
 <main>
@@ -349,8 +371,8 @@ dialog[open]{display:grid;place-items:center}
   <div class="txt">
     <p class="beans rise" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></p>
     <p class="kicker rise">Photographer &amp; videographer, Cape Town</p>
-    <h1 class="rise d1">Real moments,<em>an artist’s eye.</em></h1>
-    <p class="lede rise d2">I photograph and film weddings, proposals, events and portraits across Cape Town and the Winelands.<span class="more"> One person for photo and video, your first photos usually back within a day or two, and everything I capture is yours to keep.</span></p>
+    <h1 class="rise d1">Real moments, <em>an artist’s eye.</em></h1>
+    <p class="lede rise d2">I photograph and film weddings, proposals, events and portraits across Cape Town and the Winelands.<span class="more"> One person for photo and video, your first photos usually back within a day or two, and every good frame I capture is yours to keep.</span></p>
     <div class="ctas rise d3">
       <a class="btn fill" href="#enquire">Check my date</a>
       <a class="btn ghost" href="#work">See the work</a>
@@ -358,17 +380,17 @@ dialog[open]{display:grid;place-items:center}
   </div>
   <figure class="shot">
     <img src="images/andrew/hero-dip-1200.webp" srcset="images/andrew/hero-dip-800.webp 800w, images/andrew/hero-dip-1200.webp 1200w, images/andrew/hero-dip-1800.webp 1800w" sizes="(min-width:900px) 50vw, 100vw" width="1200" height="1800" alt="Groom dipping his bride in front of a bold teal, green and blue street mural" fetchpriority="high">
-    <figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption>
+    <figcaption>A Cape Town wedding · 2024</figcaption>
   </figure>
 </section>
 
 <div class="facts">
   <div class="wrap">
     <ul>
-      <li><b>Photo + film</b>one person shoots both, video in 4K or 8K</li>
+      <li><b>Photo + video</b>one person shoots both, with video up to 8K</li>
       <li><b>A day or two</b>is usually all your first photos take</li>
       <li><b>UCT Fine Art</b>degree, 2015 · Michaelis</li>
-      <li><b>Yours to keep</b>everything I capture on the day</li>
+      <li><b>Yours to keep</b>every good frame I capture on the day</li>
     </ul>
   </div>
 </div>
@@ -386,38 +408,38 @@ dialog[open]{display:grid;place-items:center}
       <button class="chip" aria-pressed="false" data-f="land">Landscapes</button>
     </div>
     <div class="grid" id="grid">
-      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-rose-embrace.webp" srcset="images/andrew/wedding-rose-embrace-700.webp 700w, images/andrew/wedding-rose-embrace.webp 1400w" sizes="(max-width:700px) 92vw, (max-width:1280px) 60vw, 770px" width="1400" height="933" loading="lazy" decoding="async" alt="Bride’s hands, wedding ring showing, holding her groom’s back in front of pink climbing roses"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
-      <figure style="--r:0.666" data-c="couple" tabindex="0"><img src="images/andrew/couple-laugh-print.webp" srcset="images/andrew/couple-laugh-print-700.webp 467w, images/andrew/couple-laugh-print.webp 933w" sizes="(max-width:700px) 46vw, (max-width:1280px) 40vw, 520px" width="933" height="1400" loading="lazy" decoding="async" alt="Couple in matching yellow-and-white print outfits laughing together under a reed pergola"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
-      <figure style="--r:2.124" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-water-lilies.webp" srcset="images/andrew/portrait-water-lilies-700.webp 700w, images/andrew/portrait-water-lilies.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="659" loading="lazy" decoding="async" alt="Woman in black lying among water lilies, mirrored in still dark water"><figcaption>On the water · portraits</figcaption></figure>
-      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-toast.webp" srcset="images/andrew/event-toast-700.webp 700w, images/andrew/event-toast.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Two conference guests clinking champagne glasses across a set dinner table"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
-      <figure style="--r:0.666" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-rainbow-wall.webp" srcset="images/andrew/wedding-rainbow-wall-700.webp 467w, images/andrew/wedding-rainbow-wall.webp 933w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="933" height="1400" loading="lazy" decoding="async" alt="Bride in a white slip dress standing against a rainbow-painted brick wall"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
-      <figure style="--r:1.499" data-c="space" tabindex="0"><img src="images/andrew/space-indoor-pool.webp" srcset="images/andrew/space-indoor-pool-700.webp 700w, images/andrew/space-indoor-pool.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="934" loading="lazy" decoding="async" alt="Indoor swimming pool lined with white arches and potted plants under a coffered ceiling"><figcaption>Calatrava House</figcaption></figure>
-      <figure style="--r:2.393" data-c="land" tabindex="0"><img src="images/andrew/land-rainbow-mountain.webp" srcset="images/andrew/land-rainbow-mountain-700.webp 700w, images/andrew/land-rainbow-mountain.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="585" loading="lazy" decoding="async" alt="Rainbow arcing over Cape Town’s city bowl, a lone pine in front of sunlit mountain slopes under cloud"><figcaption>Landscapes &amp; elements</figcaption></figure>
-      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-lake-dip.webp" srcset="images/andrew/couple-lake-dip-700.webp 700w, images/andrew/couple-lake-dip.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="934" loading="lazy" decoding="async" alt="Man dipping his partner, in a red dress, beside a lake with vineyards and mountains behind"><figcaption>Proposal shoot · Paarl</figcaption></figure>
-      <figure style="--r:0.782" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-liney-closeup.webp" srcset="images/andrew/portrait-liney-closeup-700.webp 547w, images/andrew/portrait-liney-closeup.webp 1095w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="1095" height="1400" loading="lazy" decoding="async" alt="Close-up portrait of a young woman with blonde plaits and freckles, looking into the camera"><figcaption>Liney fitness shoot</figcaption></figure>
-      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-courtyard-above.webp" srcset="images/andrew/event-courtyard-above-700.webp 700w, images/andrew/event-courtyard-above.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Conference guests mingling with drinks in a courtyard, photographed from directly above"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
-      <figure style="--r:1.538" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-chapel-exit.webp" srcset="images/andrew/wedding-chapel-exit-700.webp 700w, images/andrew/wedding-chapel-exit.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="910" loading="lazy" decoding="async" alt="Bride and groom leaving the chapel hand in hand while guests blow bubbles and throw petals"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
-      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-sunset-kiss.webp" srcset="images/andrew/couple-sunset-kiss-700.webp 700w, images/andrew/couple-sunset-kiss.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="934" loading="lazy" decoding="async" alt="Couple kissing on a hillside above the sea in golden sunset light"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
-      <figure style="--r:1.51" data-c="space" tabindex="0"><img src="images/andrew/space-bar-dome.webp" srcset="images/andrew/space-bar-dome-700.webp 700w, images/andrew/space-bar-dome.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="927" loading="lazy" decoding="async" alt="Home bar with a yellow-lit bottle display and red stools under a stained-glass dome"><figcaption>Calatrava House</figcaption></figure>
-      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-cocktail-trio.webp" srcset="images/andrew/event-cocktail-trio-700.webp 700w, images/andrew/event-cocktail-trio.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Three guests in conversation over champagne at an evening cocktail event"><figcaption>FSACCI 45th anniversary cocktail · Roche Bobois CT</figcaption></figure>
-      <figure style="--r:1.051" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-lace-bride.webp" srcset="images/andrew/wedding-lace-bride-700.webp 700w, images/andrew/wedding-lace-bride.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="1332" loading="lazy" decoding="async" alt="Bride in a lace dress seated on the edge of a bathtub, looking over her shoulder"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
-      <figure style="--r:1.501" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-barbell-neon.webp" srcset="images/andrew/portrait-barbell-neon-700.webp 700w, images/andrew/portrait-barbell-neon.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Athlete kneeling at a barbell beneath a neon sign reading hustle baby hustle"><figcaption>Liney fitness shoot</figcaption></figure>
-      <figure style="--r:1.515" data-c="land" tabindex="0"><img src="images/andrew/land-lighthouse-night.webp" srcset="images/andrew/land-lighthouse-night-700.webp 700w, images/andrew/land-lighthouse-night.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="924" loading="lazy" decoding="async" alt="Lighthouse beams sweeping across a starry night sky above the shoreline"><figcaption>Landscapes &amp; elements</figcaption></figure>
-      <figure style="--r:1.637" data-c="couple" tabindex="0"><img src="images/andrew/proposal-marry-me.webp" srcset="images/andrew/proposal-marry-me-700.webp 700w, images/andrew/proposal-marry-me.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="855" loading="lazy" decoding="async" alt="Couple posing among giant light-up MARRY ME letters, she with her hands to her face in delight"><figcaption>Proposal shoot · Paarl</figcaption></figure>
-      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-bridesmaids-above.webp" srcset="images/andrew/wedding-bridesmaids-above-700.webp 700w, images/andrew/wedding-bridesmaids-above.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Bride and six bridesmaids looking up from a paint-splashed floor, photographed from above"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
-      <figure style="--r:0.803" data-c="event" tabindex="0"><img src="images/andrew/event-showroom-chat.webp" srcset="images/andrew/event-showroom-chat-700.webp 562w, images/andrew/event-showroom-chat.webp 1124w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="1124" height="1400" loading="lazy" decoding="async" alt="Two guests chatting beside a table of wine glasses in a furniture showroom"><figcaption>FSACCI 45th anniversary cocktail · Roche Bobois CT</figcaption></figure>
-      <figure style="--r:1.501" data-c="space" tabindex="0"><img src="images/andrew/space-staircase-hall.webp" srcset="images/andrew/space-staircase-hall-700.webp 700w, images/andrew/space-staircase-hall.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="White hall with a sweeping spiral staircase, a red pool table and a bright patchwork sofa"><figcaption>Calatrava House</figcaption></figure>
-      <figure style="--r:0.666" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-street-kiss-bw.webp" srcset="images/andrew/wedding-street-kiss-bw-700.webp 467w, images/andrew/wedding-street-kiss-bw.webp 933w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="933" height="1400" loading="lazy" decoding="async" alt="Black-and-white photo of a bride and groom kissing in a quiet street, seen from behind"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
-      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-piggyback-kiss.webp" srcset="images/andrew/couple-piggyback-kiss-700.webp 700w, images/andrew/couple-piggyback-kiss.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="934" loading="lazy" decoding="async" alt="Woman hugging her partner from behind and kissing his cheek on a hillside path"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
-      <figure style="--r:1.501" data-c="land" tabindex="0"><img src="images/andrew/land-city-lights.webp" srcset="images/andrew/land-city-lights-700.webp 700w, images/andrew/land-city-lights.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Cape Town at night: city lights wrapped around a dark hill, car light trails and the bay beyond"><figcaption>Landscapes &amp; elements</figcaption></figure>
-      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-kilt-fireside.webp" srcset="images/andrew/event-kilt-fireside-700.webp 700w, images/andrew/event-kilt-fireside.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Older man in a kilt and bow tie sharing a laugh with a guest beside the fireplace"><figcaption>Scottish themed family triple birthday</figcaption></figure>
-      <figure style="--r:0.667" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-garden-suit.webp" srcset="images/andrew/portrait-garden-suit-700.webp 467w, images/andrew/portrait-garden-suit.webp 934w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="934" height="1400" loading="lazy" decoding="async" alt="Man in a dark patterned suit and sunglasses standing in a leafy garden"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
-      <figure style="--r:1.445" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-flower-girl.webp" srcset="images/andrew/wedding-flower-girl-700.webp 700w, images/andrew/wedding-flower-girl.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="969" loading="lazy" decoding="async" alt="Bride in a beaded dress holding hands with a young flower girl on a garden lawn"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
-      <figure style="--r:1.499" data-c="space" tabindex="0"><img src="images/andrew/space-library-lounge.webp" srcset="images/andrew/space-library-lounge-700.webp 700w, images/andrew/space-library-lounge.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="934" loading="lazy" decoding="async" alt="Library lounge with floor-to-ceiling bookshelves, a writing desk and a geometric ceiling"><figcaption>Calatrava House</figcaption></figure>
-      <figure style="--r:0.792" data-c="couple" tabindex="0"><img src="images/andrew/proposal-lake-kiss.webp" srcset="images/andrew/proposal-lake-kiss-700.webp 554w, images/andrew/proposal-lake-kiss.webp 1109w" sizes="(max-width:700px) 30vw, (max-width:1280px) 16vw, 210px" width="1109" height="1400" loading="lazy" decoding="async" alt="Couple kissing beside a lake with mountains behind, she in a red dress"><figcaption>Proposal shoot · Paarl</figcaption></figure>
-      <figure style="--r:1.02" data-c="event" tabindex="0"><img src="images/andrew/event-sweets-bowl.webp" srcset="images/andrew/event-sweets-bowl-700.webp 700w, images/andrew/event-sweets-bowl.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="1372" loading="lazy" decoding="async" alt="White bowl of brightly coloured wrapped sweets on a black tablecloth, seen from above"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
-      <figure style="--r:1.35" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-liney-leap.webp" srcset="images/andrew/portrait-liney-leap-700.webp 700w, images/andrew/portrait-liney-leap.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="1037" loading="lazy" decoding="async" alt="Athlete in mid-leap against a dark studio wall cut by a shaft of light"><figcaption>Liney fitness shoot</figcaption></figure>
-      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-vintage-car.webp" srcset="images/andrew/wedding-vintage-car-700.webp 700w, images/andrew/wedding-vintage-car.webp 1400w" sizes="(max-width:700px) 46vw, (max-width:1280px) 30vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="Groom holding open the door of a vintage car as the bride, in a white fur wrap, smiles up at him"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
+      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-rose-embrace.webp" srcset="images/andrew/wedding-rose-embrace-700.webp 700w, images/andrew/wedding-rose-embrace.webp 1400w" sizes="(max-width:700px) calc(100vw - 2.5rem), (max-width:1280px) 63vw, 810px" data-full="images/andrew/wedding-rose-embrace-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Bride’s hands, wedding ring showing, holding her partner’s back in front of pink climbing roses"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
+      <figure style="--r:0.666" data-c="couple" tabindex="0"><img src="images/andrew/couple-laugh-print.webp" srcset="images/andrew/couple-laugh-print-700.webp 467w, images/andrew/couple-laugh-print.webp 933w" sizes="(max-width:700px) 46vw, (max-width:1280px) 28vw, 360px" data-full="images/andrew/couple-laugh-print-2200.webp" width="933" height="1400" loading="lazy" decoding="async" alt="Couple in matching yellow-and-white print outfits laughing together under a reed pergola"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
+      <figure style="--r:0.782" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-liney-closeup.webp" srcset="images/andrew/portrait-liney-closeup-700.webp 547w, images/andrew/portrait-liney-closeup.webp 1095w" sizes="(max-width:700px) 48vw, 360px" width="1095" height="1400" loading="lazy" decoding="async" alt="Close-up portrait of a young woman with blonde plaits and freckles, looking into the camera"><figcaption>Liney fitness shoot</figcaption></figure>
+      <figure style="--r:2.124" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-water-lilies.webp" srcset="images/andrew/portrait-water-lilies-700.webp 700w, images/andrew/portrait-water-lilies.webp 1400w" sizes="(max-width:700px) 75vw, 800px" data-full="images/andrew/portrait-water-lilies-2200.webp" width="1400" height="659" loading="lazy" decoding="async" alt="Woman in black lying among water lilies, mirrored in still dark water"><figcaption>On the water · portraits</figcaption></figure>
+      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-toast.webp" srcset="images/andrew/event-toast-700.webp 700w, images/andrew/event-toast.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/event-toast-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Two conference guests clinking champagne glasses across a set dinner table"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
+      <figure style="--r:0.666" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-rainbow-wall.webp" srcset="images/andrew/wedding-rainbow-wall-700.webp 467w, images/andrew/wedding-rainbow-wall.webp 933w" sizes="(max-width:700px) 30vw, 360px" data-full="images/andrew/wedding-rainbow-wall-2200.webp" width="933" height="1400" loading="lazy" decoding="async" alt="Bride in a white slip dress standing against a rainbow-painted brick wall"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
+      <figure style="--r:1.499" data-c="space" tabindex="0"><img src="images/andrew/space-indoor-pool.webp" srcset="images/andrew/space-indoor-pool-700.webp 700w, images/andrew/space-indoor-pool.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/space-indoor-pool-2200.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Indoor swimming pool lined with white arches and potted plants under a coffered ceiling"><figcaption>Calatrava House</figcaption></figure>
+      <figure style="--r:2.393" data-c="land" tabindex="0"><img src="images/andrew/land-rainbow-mountain.webp" srcset="images/andrew/land-rainbow-mountain-700.webp 700w, images/andrew/land-rainbow-mountain.webp 1400w" sizes="(max-width:700px) 75vw, 800px" data-full="images/andrew/land-rainbow-mountain-2200.webp" width="1400" height="585" loading="lazy" decoding="async" alt="Rainbow arcing over Cape Town’s city bowl, a lone pine in front of sunlit mountain slopes under cloud"><figcaption>Landscapes &amp; elements</figcaption></figure>
+      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-lake-dip.webp" srcset="images/andrew/couple-lake-dip-700.webp 700w, images/andrew/couple-lake-dip.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/couple-lake-dip-2200.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Man dipping his partner, in a red dress, beside a lake with vineyards and mountains behind"><figcaption>Proposal shoot · Paarl</figcaption></figure>
+      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-courtyard-above.webp" srcset="images/andrew/event-courtyard-above-700.webp 700w, images/andrew/event-courtyard-above.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/event-courtyard-above-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Conference guests mingling with drinks in a courtyard, photographed from directly above"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
+      <figure style="--r:1.538" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-chapel-exit.webp" srcset="images/andrew/wedding-chapel-exit-700.webp 700w, images/andrew/wedding-chapel-exit.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/wedding-chapel-exit-2200.webp" width="1400" height="910" loading="lazy" decoding="async" alt="Bride and groom leaving the chapel hand in hand while guests blow bubbles and throw petals"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
+      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-sunset-kiss.webp" srcset="images/andrew/couple-sunset-kiss-700.webp 700w, images/andrew/couple-sunset-kiss.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/couple-sunset-kiss-2200.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Couple kissing on a hillside above the sea in golden sunset light"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
+      <figure style="--r:1.51" data-c="space" tabindex="0"><img src="images/andrew/space-bar-dome.webp" srcset="images/andrew/space-bar-dome-700.webp 700w, images/andrew/space-bar-dome.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/space-bar-dome-2200.webp" width="1400" height="927" loading="lazy" decoding="async" alt="Home bar with a yellow-lit bottle display and red stools under a stained-glass dome"><figcaption>Calatrava House</figcaption></figure>
+      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-cocktail-trio.webp" srcset="images/andrew/event-cocktail-trio-700.webp 700w, images/andrew/event-cocktail-trio.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/event-cocktail-trio-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Three guests in conversation over champagne at an evening cocktail event"><figcaption>FSACCI 45th anniversary cocktail · Roche Bobois, Cape Town</figcaption></figure>
+      <figure style="--r:1.051" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-lace-bride.webp" srcset="images/andrew/wedding-lace-bride-700.webp 700w, images/andrew/wedding-lace-bride.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/wedding-lace-bride-2200.webp" width="1400" height="1332" loading="lazy" decoding="async" alt="Bride in a lace dress seated on the edge of a bathtub, looking over her shoulder"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
+      <figure style="--r:1.501" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-barbell-neon.webp" srcset="images/andrew/portrait-barbell-neon-700.webp 700w, images/andrew/portrait-barbell-neon.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/portrait-barbell-neon-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Athlete kneeling at a barbell beneath a neon sign reading hustle baby hustle"><figcaption>Liney fitness shoot</figcaption></figure>
+      <figure style="--r:1.515" data-c="land" tabindex="0"><img src="images/andrew/land-lighthouse-night.webp" srcset="images/andrew/land-lighthouse-night-700.webp 700w, images/andrew/land-lighthouse-night.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/land-lighthouse-night-2200.webp" width="1400" height="924" loading="lazy" decoding="async" alt="Lighthouse beams sweeping across a starry night sky above the shoreline"><figcaption>Landscapes &amp; elements</figcaption></figure>
+      <figure style="--r:1.637" data-c="couple" tabindex="0"><img src="images/andrew/proposal-marry-me.webp" srcset="images/andrew/proposal-marry-me-700.webp 700w, images/andrew/proposal-marry-me.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/proposal-marry-me-2200.webp" width="1400" height="855" loading="lazy" decoding="async" alt="Couple posing among giant light-up MARRY ME letters, she with her hands to her face in delight"><figcaption>Proposal shoot · Paarl</figcaption></figure>
+      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-bridesmaids-above.webp" srcset="images/andrew/wedding-bridesmaids-above-700.webp 700w, images/andrew/wedding-bridesmaids-above.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/wedding-bridesmaids-above-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Bride and six bridesmaids looking up from a paint-splashed floor, photographed from above"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
+      <figure style="--r:0.803" data-c="event" tabindex="0"><img src="images/andrew/event-showroom-chat.webp" srcset="images/andrew/event-showroom-chat-700.webp 562w, images/andrew/event-showroom-chat.webp 1124w" sizes="(max-width:700px) 30vw, 360px" data-full="images/andrew/event-showroom-chat-2200.webp" width="1124" height="1400" loading="lazy" decoding="async" alt="Two guests chatting beside a table of wine glasses in a furniture showroom"><figcaption>FSACCI 45th anniversary cocktail · Roche Bobois, Cape Town</figcaption></figure>
+      <figure style="--r:1.501" data-c="space" tabindex="0"><img src="images/andrew/space-staircase-hall.webp" srcset="images/andrew/space-staircase-hall-700.webp 700w, images/andrew/space-staircase-hall.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/space-staircase-hall-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="White hall with a sweeping spiral staircase, a red pool table and a bright patchwork sofa"><figcaption>Calatrava House</figcaption></figure>
+      <figure style="--r:0.666" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-street-kiss-bw.webp" srcset="images/andrew/wedding-street-kiss-bw-700.webp 467w, images/andrew/wedding-street-kiss-bw.webp 933w" sizes="(max-width:700px) 30vw, 360px" data-full="images/andrew/wedding-street-kiss-bw-2200.webp" width="933" height="1400" loading="lazy" decoding="async" alt="Black-and-white photo of a bride and groom kissing in a quiet street, seen from behind"><figcaption>Rebecca &amp; Andrew’s wedding · Cape Town</figcaption></figure>
+      <figure style="--r:1.499" data-c="couple" tabindex="0"><img src="images/andrew/couple-piggyback-kiss.webp" srcset="images/andrew/couple-piggyback-kiss-700.webp 700w, images/andrew/couple-piggyback-kiss.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/couple-piggyback-kiss-2200.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Woman hugging her partner from behind and kissing his cheek on a hillside path"><figcaption>Couples, proposals &amp; engagements</figcaption></figure>
+      <figure style="--r:1.501" data-c="land" tabindex="0"><img src="images/andrew/land-city-lights.webp" srcset="images/andrew/land-city-lights-700.webp 700w, images/andrew/land-city-lights.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/land-city-lights-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Cape Town at night: city lights wrapped around a dark hill, car light trails and the bay beyond"><figcaption>Landscapes &amp; elements</figcaption></figure>
+      <figure style="--r:1.501" data-c="event" tabindex="0"><img src="images/andrew/event-kilt-fireside.webp" srcset="images/andrew/event-kilt-fireside-700.webp 700w, images/andrew/event-kilt-fireside.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/event-kilt-fireside-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Older man in a kilt and bow tie sharing a laugh with a guest beside the fireplace"><figcaption>Scottish-themed family triple birthday</figcaption></figure>
+      <figure style="--r:0.667" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-garden-suit.webp" srcset="images/andrew/portrait-garden-suit-700.webp 467w, images/andrew/portrait-garden-suit.webp 934w" sizes="(max-width:700px) 30vw, 360px" data-full="images/andrew/portrait-garden-suit-2200.webp" width="934" height="1400" loading="lazy" decoding="async" alt="Man in a dark patterned suit and sunglasses standing in a leafy garden"><figcaption>At Pamela &amp; Danani’s wedding · Belair</figcaption></figure>
+      <figure style="--r:1.445" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-flower-girl.webp" srcset="images/andrew/wedding-flower-girl-700.webp 700w, images/andrew/wedding-flower-girl.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/wedding-flower-girl-2200.webp" width="1400" height="969" loading="lazy" decoding="async" alt="Bride in a beaded dress holding hands with a young flower girl on a garden lawn"><figcaption>Pamela &amp; Danani · Belair</figcaption></figure>
+      <figure style="--r:1.499" data-c="space" tabindex="0"><img src="images/andrew/space-library-lounge.webp" srcset="images/andrew/space-library-lounge-700.webp 700w, images/andrew/space-library-lounge.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/space-library-lounge-2200.webp" width="1400" height="934" loading="lazy" decoding="async" alt="Library lounge with floor-to-ceiling bookshelves, a writing desk and a geometric ceiling"><figcaption>Calatrava House</figcaption></figure>
+      <figure style="--r:0.792" data-c="couple" tabindex="0"><img src="images/andrew/proposal-lake-kiss.webp" srcset="images/andrew/proposal-lake-kiss-700.webp 554w, images/andrew/proposal-lake-kiss.webp 1109w" sizes="(max-width:700px) 30vw, 360px" data-full="images/andrew/proposal-lake-kiss-2200.webp" width="1109" height="1400" loading="lazy" decoding="async" alt="Couple kissing beside a lake with mountains behind, she in a red dress"><figcaption>Proposal shoot · Paarl</figcaption></figure>
+      <figure style="--r:1.02" data-c="event" tabindex="0"><img src="images/andrew/event-sweets-bowl.webp" srcset="images/andrew/event-sweets-bowl-700.webp 700w, images/andrew/event-sweets-bowl.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/event-sweets-bowl-2200.webp" width="1400" height="1372" loading="lazy" decoding="async" alt="White bowl of brightly coloured wrapped sweets on a black tablecloth, seen from above"><figcaption>SYSPRO conference · Franschhoek + Stellenbosch</figcaption></figure>
+      <figure style="--r:1.35" data-c="portrait" tabindex="0"><img src="images/andrew/portrait-liney-leap.webp" srcset="images/andrew/portrait-liney-leap-700.webp 700w, images/andrew/portrait-liney-leap.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/portrait-liney-leap-2200.webp" width="1400" height="1037" loading="lazy" decoding="async" alt="Athlete in mid-leap against a dark studio wall cut by a shaft of light"><figcaption>Liney fitness shoot</figcaption></figure>
+      <figure style="--r:1.501" data-c="wedding" tabindex="0"><img src="images/andrew/wedding-vintage-car.webp" srcset="images/andrew/wedding-vintage-car-700.webp 700w, images/andrew/wedding-vintage-car.webp 1400w" sizes="(max-width:700px) 46vw, 600px" data-full="images/andrew/wedding-vintage-car-2200.webp" width="1400" height="933" loading="lazy" decoding="async" alt="Groom holding open the door of a vintage car as the bride, in a white fur wrap, smiles up at him"><figcaption>Jana &amp; Nichol · Vondeling</figcaption></figure>
     </div>
   </div>
 </section>
@@ -425,10 +447,10 @@ dialog[open]{display:grid;place-items:center}
 <section class="films" id="films">
   <div class="wrap">
     <h2>Now watch it move.</h2>
-    <p class="lede">I shoot the film as well as the photos. Six of mine, from a 75-second landscape piece to a four-minute wedding day. Press play and it runs right here.</p>
+    <p class="lede">Six of my films, from a 75-second landscape piece to a four-minute wedding day. Press play and it runs right here.</p>
     <div class="reel">
       <figure class="film lead">
-        <div class="yt"><a href="https://www.youtube.com/watch?v=EpgTK1yVM9c" data-yt="EpgTK1yVM9c" data-t="Andrew &amp; Rebecca's wedding day" target="_blank" rel="noopener" aria-label="Play film: Andrew and Rebecca's wedding day, 1 minute 40 seconds"><img src="images/andrew/film-wedding-rebecca.webp" width="800" height="450" loading="lazy" decoding="async" alt="Bride reading her vows to the groom under a hexagon arch"><span class="play" aria-hidden="true"></span><span class="len">1:40</span></a></div>
+        <div class="yt"><a href="https://www.youtube.com/watch?v=EpgTK1yVM9c" data-yt="EpgTK1yVM9c" data-t="Andrew &amp; Rebecca's wedding day" target="_blank" rel="noopener" aria-label="Play film: Andrew and Rebecca's wedding day, 1 minute 40 seconds"><img src="images/andrew/film-wedding-rebecca.webp" srcset="images/andrew/film-wedding-rebecca.webp 800w, images/andrew/film-wedding-rebecca-1280.webp 1280w" sizes="(max-width:900px) 92vw, 730px" width="800" height="450" loading="lazy" decoding="async" alt="Bride reading her vows to the groom under a hexagon arch"><span class="play" aria-hidden="true"></span><span class="len">1:40</span></a></div>
         <figcaption><b>Andrew &amp; Rebecca’s wedding day</b>Wedding film · Cape Town</figcaption>
       </figure>
       <figure class="pull"><blockquote>“I was impressed with the quality of both the photos and the videography. It is not often that you get someone that is able to do both.”</blockquote><figcaption><cite>Rebecca Cameron</cite> Wedding, photo &amp; video</figcaption></figure>
@@ -436,9 +458,9 @@ dialog[open]{display:grid;place-items:center}
     <div class="more-films">
       <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=GTXysf9DsBY" data-yt="GTXysf9DsBY" data-t="Danani &amp; Pamela's wedding day" target="_blank" rel="noopener" aria-label="Play film: Danani and Pamela's wedding day, 4 minutes 17 seconds"><img src="images/andrew/film-wedding-pamela.webp" width="800" height="450" loading="lazy" decoding="async" alt="Bride greeting guests at an evening reception"><span class="play" aria-hidden="true"></span><span class="len">4:17</span></a></div><figcaption><b>Danani &amp; Pamela’s wedding day</b>Wedding film</figcaption></figure>
       <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=YYbavDG750E" data-yt="YYbavDG750E" data-t="Alpha Pharm event, GrandWest, 2024" target="_blank" rel="noopener" aria-label="Play film: Alpha Pharm event at GrandWest, 2 minutes 56 seconds"><img src="images/andrew/film-alpha-pharm.webp" width="800" height="450" loading="lazy" decoding="async" alt="Delegate smiling at the Alpha Pharm event"><span class="play" aria-hidden="true"></span><span class="len">2:56</span></a></div><figcaption><b>Alpha Pharm, GrandWest 2024</b>Corporate event</figcaption></figure>
-      <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=IGLplCqS5QU" data-yt="IGLplCqS5QU" data-t="A Scottish themed family reunion" target="_blank" rel="noopener" aria-label="Play film: A Scottish themed family reunion, 2 minutes 42 seconds"><img src="images/andrew/film-family-reunion.webp" width="800" height="450" loading="lazy" decoding="async" alt="Guests laughing at a family party"><span class="play" aria-hidden="true"></span><span class="len">2:42</span></a></div><figcaption><b>A Scottish themed family reunion</b>Family celebration</figcaption></figure>
+      <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=IGLplCqS5QU" data-yt="IGLplCqS5QU" data-t="A Scottish themed family reunion" target="_blank" rel="noopener" aria-label="Play film: A Scottish themed family reunion, 2 minutes 42 seconds"><img src="images/andrew/film-family-reunion.webp" width="800" height="450" loading="lazy" decoding="async" alt="Guests laughing at a family party"><span class="play" aria-hidden="true"></span><span class="len">2:42</span></a></div><figcaption><b>A Scottish-themed family reunion</b>Family celebration</figcaption></figure>
       <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=oCOarYnl0x8" data-yt="oCOarYnl0x8" data-t="The delight of a workout" target="_blank" rel="noopener" aria-label="Play film: The delight of a workout, 1 minute 23 seconds"><img src="images/andrew/film-workout.webp" width="800" height="450" loading="lazy" decoding="async" alt="Woman smiling as petals fall around her in a studio"><span class="play" aria-hidden="true"></span><span class="len">1:23</span></a></div><figcaption><b>The delight of a workout</b>Fitness</figcaption></figure>
-      <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=bfz9tEZSei0" data-yt="bfz9tEZSei0" data-t="Signal Hill: elements" target="_blank" rel="noopener" aria-label="Play film: Signal Hill: elements, 1 minute 15 seconds"><img src="images/andrew/film-signal-hill.webp" width="800" height="450" loading="lazy" decoding="async" alt="Lion's Head with cloud drifting over the summit"><span class="play" aria-hidden="true"></span><span class="len">1:15</span></a></div><figcaption><b>Signal Hill: elements</b>Landscape</figcaption></figure>
+      <figure class="film"><div class="yt"><a href="https://www.youtube.com/watch?v=bfz9tEZSei0" data-yt="bfz9tEZSei0" data-t="Signal Hill: elements" target="_blank" rel="noopener" aria-label="Play film: Signal Hill: elements, 1 minute 15 seconds"><img src="images/andrew/film-signal-hill.webp" width="800" height="450" loading="lazy" decoding="async" alt="Lion’s Head with cloud drifting over the summit"><span class="play" aria-hidden="true"></span><span class="len">1:15</span></a></div><figcaption><b>Signal Hill: elements</b>Landscape</figcaption></figure>
     </div>
     <p class="film-note">Highlight films start at R2,300 for one minute. <a href="#pricing">See the rates</a></p>
   </div>
@@ -446,11 +468,11 @@ dialog[open]{display:grid;place-items:center}
 
 <section id="services">
   <div class="wrap">
-    <h2>Photo and film from one person.</h2>
-    <p class="lede">I shoot the photographs and the film myself. One person to brief, one person on the day, and photos and video that belong together.</p>
+    <h2>Photo and video from one person.</h2>
+    <p class="lede">I shoot both myself. One person to brief, one person on the day, and photos and video that belong together.</p>
     <div class="svc">
-      <article><i class="bean"></i><h3>Weddings</h3><p>We plan it together before the wedding, down to the shots that matter to you. On the day I do the photos, the film or both, and you get on with getting married.</p><a href="#enquire" data-pick="Wedding">Check a wedding date</a></article>
-      <article><i class="bean"></i><h3>Couples &amp; proposals</h3><p>Proposals, engagements and couple shoots. I’ll help you choose the spot and what to wear.</p><a href="#enquire" data-pick="Proposal / engagement">Plan a proposal</a></article>
+      <article><i class="bean"></i><h3>Weddings</h3><p>We plan it together before the wedding, down to the shots that matter to you. On the day I shoot the photos, the video or both, and you get on with getting married.</p><a href="#enquire" data-pick="Wedding">Check a wedding date</a></article>
+      <article><i class="bean"></i><h3>Couples &amp; proposals</h3><p>Proposals, engagements and couple shoots, planned with you beforehand.</p><a href="#enquire" data-pick="Proposal / engagement">Plan a proposal</a></article>
       <article><i class="bean"></i><h3>Events &amp; corporate</h3><p>Conferences, launches, year-end functions and cocktail evenings, including four days with SYSPRO in the Winelands. Photo and video from one supplier.</p><a href="#enquire" data-pick="Event / corporate">Get an event quote</a></article>
       <article><i class="bean"></i><h3>Portraits &amp; brands</h3><p>Portraits, fitness, fashion, jewellery and furniture. Photos and short videos your business can put straight onto social media.</p><a href="#enquire" data-pick="Portraits / brand">Book a portrait shoot</a></article>
     </div>
@@ -467,13 +489,13 @@ dialog[open]{display:grid;place-items:center}
       <li><b>Sanlam</b><span>CEO interview shoot</span></li>
       <li><b>PSG</b><span>end-of-year function</span></li>
       <li><b>Toy Kingdom</b><span>launch, V&amp;A Waterfront</span></li>
-      <li><b>Roche Bobois</b><span>cocktail evening, Onyx penthouses</span></li>
+      <li><b>Roche Bobois</b><span>cocktail event, Onyx Hotel penthouses</span></li>
       <li><b>Truman &amp; Orange</b><span>end-of-year staff event</span></li>
       <li><b>Gavin Rajah</b><span>clothing range</span></li>
       <li><b>Luxury Getaways</b><span>villa and property shoots</span></li>
     </ul>
     <ul class="creds">
-      <li><b>Mining Indaba 2027</b>Top-3 finalist to photograph it</li>
+      <li><b>Mining Indaba 2027</b>One of three finalists to photograph it</li>
       <li><b>Sun International</b>Registered as a creative for hire, photo and video</li>
       <li><b>Nokia UK</b>Bought three of my images as phone wallpapers in 2013</li>
     </ul>
@@ -487,12 +509,12 @@ dialog[open]{display:grid;place-items:center}
     </div>
     <div>
       <h2>Hi, I’m Andrew.</h2>
-      <p>I was born and raised in Cape Town and got my first camera at ten. I studied Fine Art at UCT’s Michaelis School, graduating in 2015 with photography as my major, and I’ve since done extra courses in darkroom, car and real estate photography.</p>
-      <p>I’d rather catch a moment than set one up. Smiles look better when they aren’t posed, so I keep things relaxed, chat to people and let the day happen. I’m fussy about the details in every frame, and I usually send the first photos back within a day or two.</p>
-      <p>Since 2021 I’ve photographed around 20 weddings, along with conferences, launches, villas, matric dances, 21sts and proposals, from Cape Point to Franschhoek.</p>
+      <p>I was born and raised in Cape Town and got my first camera at ten. I studied Fine Art at UCT’s Michaelis School, graduating in 2015 with photography as my major, and I’ve also done extra courses in darkroom, car and real estate photography.</p>
+      <p>I’d rather catch a moment than set one up. Smiles look better when they aren’t posed, so I keep things relaxed, chat to people and let the day happen. I’m fussy about the details in every frame.</p>
+      <p>I’ve photographed around 20 weddings, along with conferences, launches, villas, matric dances, 21sts and proposals, from Cape Point to Franschhoek.</p>
       <ul class="bag" aria-label="What I shoot with">
         <li><b>45 MP full-frame</b>A full-frame Canon with 5,000 focus points. Sharp enough to print big.</li>
-        <li><b>4K &amp; 8K video</b>Shot on a DJI RS 3 gimbal, so the footage is smooth and steady.</li>
+        <li><b>Video up to 8K</b>Shot on a DJI RS 3 gimbal, so the footage is smooth and steady.</li>
         <li><b>70–200 f/2.8</b>Canon’s long zoom. I can catch a moment without standing in it.</li>
         <li><b>Clean light</b>A Godox V1 Pro flash with a diffuser, which keeps shadows off faces.</li>
       </ul>
@@ -505,7 +527,7 @@ dialog[open]{display:grid;place-items:center}
     <h2>In their own words.</h2>
     <div class="quotes">
       <figure class="q big"><blockquote>“He spends time with you before the wedding, planning and working with you to understand exactly what you want on the day. Above all, he is kind and wants to make sure that the people he is shooting feel beautiful and seen.”</blockquote><figcaption><cite>Rebecca Cameron</cite> Wedding, photo &amp; video</figcaption></figure>
-      <figure class="q"><blockquote>“I get nervous around new people and I felt so much at ease during this session … We didn’t have to wait for the photographs either … he had them sent within a few hours after the shoot.”</blockquote><figcaption><cite>Nyasha</cite> Portrait session</figcaption></figure>
+      <figure class="q"><blockquote>“I get nervous around new people and I felt so much at ease during this session … We didn’t have to wait for the photographs either … he had them sent within a few hours after the shoot.”</blockquote><figcaption><cite>Nyasha</cite> Photo shoot</figcaption></figure>
       <figure class="q"><blockquote>“He completely exceeded my expectations … jewellery is particularly challenging to capture. We are looking forward to doing many more shoots with Andrew. He is brilliant!”</blockquote><figcaption><cite>Scarab Jewellery Studio</cite> Brand photo &amp; video</figcaption></figure>
     </div>
   </div>
@@ -519,9 +541,9 @@ dialog[open]{display:grid;place-items:center}
       <div class="hourly">
         <h3>Per hour</h3>
         <ul>
-          <li><b>Super premium</b><span>My most meticulous editing. This is my corporate rate.</span><strong>R3,300</strong></li>
-          <li><b>Premium</b><span>Photo and video, with premium editing.</span><strong>R2,500</strong></li>
-          <li><b>Professional</b><span>Professional editing, less extensive than premium.</span><strong>R2,100</strong></li>
+          <li><b>Super premium</b><span>My most meticulous editing. Mostly corporate work.</span><strong>R3,300</strong></li>
+          <li><b>Premium</b><span>Photo and video.</span><strong>R2,500</strong></li>
+          <li><b>Professional</b><span>Less extensive editing than Premium.</span><strong>R2,100</strong></li>
           <li><b>Lighter edit</b><span>Less time spent on each image, at a discounted rate.</span><strong>R1,800</strong></li>
         </ul>
       </div>
@@ -535,7 +557,7 @@ dialog[open]{display:grid;place-items:center}
         </ul>
       </div>
     </div>
-    <p class="fine">Any highlight film can run up to 30 seconds longer. Travel: R150 within Cape Town, R250 northern suburbs, R450 Stellenbosch. Not sure which rate fits? <a href="#enquire">Tell me about the shoot</a> and I’ll suggest one.</p>
+    <p class="fine">Any highlight film can run up to 30 seconds longer. Travel: R150 within Cape Town, R250 northern suburbs, R450&nbsp;Stellenbosch. Not sure which rate fits? <a href="#enquire">Tell me about the shoot</a> and I’ll suggest one.</p>
     <div class="faq">
       <h3 class="label">Good to know</h3>
       <details><summary>Can you do photo and video at the same event?</summary><p>Yes. I shoot both myself, so you deal with one person from the first chat to the final files. I can film in 4K or 8K, steadied on a gimbal.</p></details>
@@ -551,7 +573,7 @@ dialog[open]{display:grid;place-items:center}
   <div class="wrap">
     <aside>
       <h2>Is your date free?</h2>
-      <p>Fill this in and it opens a WhatsApp message to me with your details already typed out. Press send and I’ll reply as soon as I can.</p>
+      <p>Fill in the form and it opens a WhatsApp message to me with your details already typed out. Press send and I’ll reply as soon as I can.</p>
       <ol class="how">
         <li><b>Tell me your date</b><span>Send the date, the place and what you have in mind.</span></li>
         <li><b>We plan it</b><span>A quick chat about the spot, timing and the shots that matter to you.</span></li>
@@ -592,7 +614,7 @@ dialog[open]{display:grid;place-items:center}
       <a href="https://wa.me/27713335678">WhatsApp</a>
       <a href="https://instagram.com/within_worlds_" rel="noopener">Instagram</a>
       <a href="https://www.youtube.com/@within_worlds_" rel="noopener">YouTube</a>
-      <a href="#top">Back to top</a>
+      <a href="#">Back to top</a>
     </nav>
     <p class="legal">© 2026 Andrew Ogterop</p>
   </div>
@@ -612,30 +634,36 @@ dialog[open]{display:grid;place-items:center}
 <script>
 // header + phone menu
 const hdr=document.getElementById('top'),burger=hdr.querySelector('.burger'),nav=document.getElementById('nav');
-const setMenu=o=>{hdr.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.documentElement.style.overflow=o?'hidden':''};
+const setMenu=o=>{hdr.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.documentElement.style.overflow=o?'hidden':'';document.querySelectorAll('main,footer,.wa').forEach(e=>e.inert=o)};
 burger.addEventListener('click',()=>setMenu(!hdr.classList.contains('open')));
 nav.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
 addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
-matchMedia('(min-width:761px)').addEventListener('change',()=>setMenu(false));
+matchMedia('(min-width:47.5625em)').addEventListener('change',()=>setMenu(false));
 
 // header hairline + WhatsApp button (hidden on the first screen and beside the form)
 const wa=document.querySelector('.wa'),enq=document.getElementById('enquire');
-const onScroll=()=>{hdr.classList.toggle('solid',scrollY>40);const r=enq.getBoundingClientRect();wa.classList.toggle('off',scrollY<innerHeight*.6||(r.top<innerHeight*.8&&r.bottom>0))};
+const onScroll=()=>{hdr.classList.toggle('solid',scrollY>40);const r=enq.getBoundingClientRect();wa.classList.toggle('off',scrollY<innerHeight*.6||(r.top<innerHeight&&r.bottom>0))};
 addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
 
 // filters
 const figs=[...document.querySelectorAll('#grid figure')];
+// on wide screens, never leave one photo alone on the last row: three photos share one big row, otherwise the rows get a little shorter until the last one fills
+const grid=document.getElementById('grid'),wide=matchMedia('(min-width:43.8125em)');
+const tidy=()=>{grid.style.removeProperty('--h');figs.forEach(f=>f.classList.remove('lead'));if(!wide.matches)return;const v=figs.filter(f=>!f.classList.contains('hide'));if(v.length===3){v[2].classList.add('lead');return}for(let k=20;k>=13&&v.length>3&&v.at(-1).offsetTop!==v.at(-2).offsetTop;k--)grid.style.setProperty('--h',`calc(var(--gw) * ${k/100})`)};
 document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
   figs.forEach(f=>f.classList.toggle('hide',b.dataset.f!=='all'&&f.dataset.c!==b.dataset.f));
+  tidy();
 }));
+addEventListener('resize',tidy);tidy();
 
 // lightbox (native dialog; pinch-zoom allowed, swipe sideways to change, swipe down to close)
 const lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap'),ln=document.getElementById('lbN');
-let cur=0;
+let cur=0,seq=0;
+const sharp=()=>innerWidth*devicePixelRatio>1700;
 const vis=()=>figs.filter(f=>!f.classList.contains('hide'));
 const pre=f=>{new Image().src=f.querySelector('img').src};
-function show(i){const v=vis();cur=(i+v.length)%v.length;const im=v[cur].querySelector('img');li.src=im.src;li.alt=im.alt;lc.textContent=v[cur].querySelector('figcaption').textContent;ln.textContent=(cur+1)+' / '+v.length;if(v.length>1){pre(v[(cur+1)%v.length]);pre(v[(cur-1+v.length)%v.length])}}
+function show(i){const v=vis();cur=(i+v.length)%v.length;const im=v[cur].querySelector('img'),hi=sharp()&&im.dataset.full,tok=++seq;li.src=im.src;li.alt=im.alt;lc.textContent=v[cur].querySelector('figcaption').textContent;ln.textContent=(cur+1)+' / '+v.length;if(hi){const n=new Image();n.onload=()=>{if(tok===seq&&lb.open)li.src=hi};n.src=hi}if(v.length>1){pre(v[(cur+1)%v.length]);pre(v[(cur-1+v.length)%v.length])}}
 figs.forEach(f=>{f.setAttribute('role','button');f.setAttribute('aria-label','View larger: '+f.querySelector('img').alt);const open=()=>{show(vis().indexOf(f));lb.showModal()};f.addEventListener('click',open);f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
 lb.addEventListener('click',e=>{const a=e.target.dataset.a;if(a==='x'||e.target===lb)lb.close();else if(a)show(cur+ +a)});
 lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});
@@ -646,7 +674,7 @@ lb.addEventListener('touchend',e=>{if(sx===null)return;const t=e.changedTouches[
 
 // films: nothing from YouTube loads until someone presses play
 let live=null;
-document.addEventListener('click',e=>{const a=e.target.closest('a[data-yt]');if(!a)return;e.preventDefault();if(live)live.box.replaceChildren(live.a);const box=a.parentNode,f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=a.dataset.t;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';live={box,a};box.replaceChildren(f)});
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-yt]');if(!a||e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();if(live)live.box.replaceChildren(live.a);const box=a.parentNode,f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=a.dataset.t;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.referrerPolicy='strict-origin-when-cross-origin';live={box,a};box.replaceChildren(f);f.focus();box.scrollIntoView({block:'nearest'})});
 
 // enquiry: buttons marked data-pick pre-select the type of shoot
 const form=document.getElementById('f');
